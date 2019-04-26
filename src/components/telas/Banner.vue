@@ -1,12 +1,16 @@
 <template>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <section class="banner">
-                    <div class="destaque"><p>EM BREVE!</p></div>
-                    <img class="logo-full img-fluid mx-auto d-block" src="../../assets/full-logo.png" alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
-                    <div class="descricao text-center"><p>O maior evento de videogames da cidade.<br>Feito por gamers, para gamers.</p></div>
-                </section>
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section>
+                        <div class="logo-soon-group">
+                            <div class="destaque mx-auto"><p>EM BREVE!</p></div>
+                            <img class="logo-full img-fluid d-block mx-auto my-5" src="../../assets/full-logo.png" alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
+                        </div>
+                        <div class="descricao text-center"><p>O maior evento de videogames da cidade.<br>Feito por gamers, para gamers.</p></div>
+                    </section>
+                </div>
             </div>
         </div>
     </div>
@@ -29,17 +33,19 @@
         width: 150px;
         background: #FCD347;
         color: #545358;
-        font-size: 25px;
+        font-size: 30px;
         text-align: center;
     }
 
     .logo-full {
-        margin-top: 200px;
-        width: 500px;
+        width: 600px;
+    }
+
+    .logo-soon-group {
+        margin-top: 100px;
     }
 
     .descricao {
-        margin-top: 25px;
         color: #FCD347;
         text-transform: uppercase;
         font-size: 25px;

@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-12">
                 <section>
-                    <h1 class="text-center my-4">{{titulo}}</h1>
-                    <p>{{descricao}}</p>
+                    <h1 class="text-center">{{titulo}}</h1>
+                    <p class="mt-3">{{descricao}}</p>
                 </section>
             </div>
         </div>

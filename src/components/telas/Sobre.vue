@@ -1,6 +1,6 @@
 <template>
 
-    <div class="sobre">
+    <div class="sobre py-4">
 
         <Secao titulo="Sobre o #EGPM20"
                descricao="Realizado na FAPAM, o Encontro Gamer de Pará de Minas é o maior evento de videogames da cidade.
@@ -11,7 +11,6 @@
 
         <div class="container">
             <div class="row">
-
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <Card titulo="Campeonatos"
                           urlimagem="https://images.alphacoders.com/983/983650.jpg"
@@ -29,7 +28,6 @@
                           urlimagem="https://cdn.sega.com/sonicmania03_0.png"
                           descricao="Não importa se você quer experimentar os últimos lançamentos ou reviver os clássicos. Aqui temos o melhor dos dois mundos!"></Card>
                 </div>
-
             </div>
         </div>
     </div>
