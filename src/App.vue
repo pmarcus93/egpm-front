@@ -1,15 +1,18 @@
 <template>
   <div id="app">
     <Navbar></Navbar>
+    <Banner></Banner>
   </div>
 </template>
 
 <script>
 import Navbar from "./components/itens/Navbar";
+import Banner from "./components/telas/Banner";
 
 export default {
   name: 'app',
   components: {
+    Banner,
     Navbar
   }
 }
