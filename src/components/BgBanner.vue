@@ -1,10 +1,17 @@
 <template>
-    
+    <section class="banner">
+        <Banner></Banner>
+    </section>
 </template>
 
 <script>
-export default {
-    
+    import Banner from '../components/Banner'
+
+    export default {
+    name: 'BgBanner',
+    components: {
+        Banner
+    }
 }
 </script>
 
