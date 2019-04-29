@@ -1,6 +1,6 @@
 <template>
 
-    <div class="container card">
+    <div class="container custom-card">
         <div class="row">
             <h1 class="header text-uppercase text-center col-12"> {{ titulo }} </h1>
             <div class="imagem col-12"><img class="img-fluid" v-bind:src="urlimagem"></div>
@@ -21,12 +21,12 @@
 
 <style>
 
-    .card {
+    .custom-card {
         background: #212529;
         color: #FCD347;
     }
 
-    .card {
+    .custom-card {
         margin: 25px 0;
     }
 
@@ -34,16 +34,16 @@
         padding: 0;
     }
 
-    .card .header {
+    .custom-card .header {
         font-size: 30px;
         padding: 8px;
     }
 
-    .card .descricao {
+    .custom-card .descricao {
         padding: 10px;
     }
 
-    .card img {
+    .custom-card img {
         width: 100%;
         height: 20vw;
         min-height: 250px;
