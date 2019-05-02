@@ -22,13 +22,12 @@
 
 <script>
 
-    import Secao from "../itens/Secao";
     import Card from "../itens/Card";
     import BlocoIcons from "../itens/BlocoIcons";
 
     export default {
         name: 'Sobre',
-        components: {BlocoIcons, Card, Secao}
+        components: {BlocoIcons, Card}
     }
 
 </script>

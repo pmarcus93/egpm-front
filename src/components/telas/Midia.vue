@@ -57,12 +57,11 @@
 </template>
 
 <script>
-    import Secao from "../itens/Secao";
     import Depoimento from "../itens/Depoimento";
 
     export default {
         name: 'Midia',
-        components: {Depoimento, Secao}
+        components: {Depoimento}
     }
 </script>
 

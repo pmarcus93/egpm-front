@@ -8,12 +8,11 @@
 </template>
 
 <script>
-    import Secao from "../itens/Secao";
     import SecaoLeft from "../itens/SecaoLeft";
 
     export default {
         name: "Palestras",
-        components: {SecaoLeft, Secao}
+        components: {SecaoLeft}
     }
 </script>
 
