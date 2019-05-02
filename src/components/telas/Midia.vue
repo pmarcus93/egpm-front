@@ -69,8 +69,7 @@
 <style>
 
     .midia {
-        /*background: #2F55A6;*/
-        /*color: white;*/
+        background: whitesmoke;
         padding-top: 10%;
         padding-bottom: 10%;
         color: #545457;
