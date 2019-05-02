@@ -1,6 +1,7 @@
 <template>
-    <div id="app">
+    <div id="app" class="wraper">
         <Navbar></Navbar>
+        <Rainbow></Rainbow>
         <Banner></Banner>
         <Sobre></Sobre>
         <Campeonato></Campeonato>
@@ -20,10 +21,12 @@
     import Palestras from "./components/telas/Palestras";
     import Campeonato from "./components/telas/Campeonato";
     import FreePlay from "./components/telas/FreePlay";
+    import Rainbow from "./components/itens/Rainbow";
 
     export default {
         name: 'app',
         components: {
+            Rainbow,
             FreePlay,
             Campeonato,
             Palestras,
@@ -43,6 +46,14 @@
     @font-face {
         font-family: "Archive";
         src: url("/assets/fonts/Archive-Regular.otf");
+    }
+
+    /*Necessário para funcionamento do Parallax*/
+    .wraper {
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        perspective: 2px;
     }
 
 </style>
