@@ -1,5 +1,5 @@
 <template>
-    <div class="col-6 my-auto">
+    <div class="col-sm-12 col-md-6  my-auto">
         <section>
             <h1 class="text-left mb-4 titulo-secao">{{titulo}}</h1>
             <p class="mt-3 text-justify">{{descricao}}</p>
