@@ -2,7 +2,7 @@
     <SecaoRight
     titulo="FREE PLAY"
     classimage="bgfreeplay"
-    descricao="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust ry's standard dummy text ever since the 1500s, whent was popularised in the 1960s with the release of Letr aset she"
+    descricao="Não importa se você quer experimentar os últimos lançamentos ou reviver os clássicos. Aqui temos o melhor dos dois mundos!"
     colorborder="#EA2A3A"
     ></SecaoRight>
 </template>
