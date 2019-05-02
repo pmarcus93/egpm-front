@@ -2,10 +2,7 @@
     <SecaoRight
             classimage="bgcampeonatos"
             titulo="CAMPEONATOS"
-            descricao="is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the indust ry's standard dummy text ever since the
-            1500s, whent was popularised in the 1960s with the release of Letr aset
-             she"
+            descricao="Mortal Kombat 11, Just Dance 2020, Pro Evolution Soccer 2020, Street Fighter V e muitos outros. Confira!"
             colorborder="yellow">
     </SecaoRight>
 </template>

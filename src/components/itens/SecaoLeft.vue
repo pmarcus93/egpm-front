@@ -2,7 +2,7 @@
     <div class="secao-left-body">
         <div class="container-fluid">
             <div class="row">
-                <section class="section static d-flex" :class="classimage">
+                <section class="col-12 section static d-flex" :class="classimage">
                     <div class="col-sm-6 my-auto box-info">
                         <h1 class="text-left mb-4 titulo-secao-left"
                             v-bind:style="{ 'border-bottom':  colorborder + ' solid 3px' }">{{titulo}}</h1>

@@ -6,9 +6,9 @@
         <div class="row">
             <div class="col-12 info-campeonatos">
 
-                        <h3 class="nome-campeonato text-center">{{titulo}}</h3>
+                <h3 class="nome-campeonato text-center">{{titulo}}</h3>
 
-                        <p class="text-center texto-campeonato"></p>
+                <p class="text-center texto-campeonato"></p>
 
             </div>
 
@@ -40,6 +40,10 @@
     .bloco-campeonato {
         padding-bottom: 90px;
         padding-top: 90px;
+    }
+
+    .bloco-campeonato:active .sobre-imagem {
+        background: rgba(0, 0, 0, .4);
     }
 
     .bloco-campeonato:hover .sobre-imagem {
@@ -76,7 +80,7 @@
         width: 100%;
     }
 
-    .info-campeonatos{
+    .info-campeonatos {
         z-index: 3;
     }
 
