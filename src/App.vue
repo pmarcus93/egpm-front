@@ -48,7 +48,7 @@
         src: url("/assets/fonts/Archive-Regular.otf");
     }
 
-    /*Necess·rio para funcionamento do Parallax*/
+    /*Necess√°rio para funcionamento do Parallax*/
     .wraper {
         height: 100vh;
         overflow-x: hidden;
