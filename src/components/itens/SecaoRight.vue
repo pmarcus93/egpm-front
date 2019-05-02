@@ -6,7 +6,7 @@
 
                     <div class="col-sm-6 my-auto secao-right float-right">
                         <section>
-                            <h1 class="text-left mb-4 titulo-secao-right">{{titulo}}</h1>
+                            <h1 class="text-left mb-4 titulo-secao-right" v-bind:style="{ 'border-bottom':  colorborder + ' solid 3px' }">{{titulo}}</h1>
                             <p class="mt-3">{{descricao}}</p>
                         </section>
                     </div>
@@ -22,7 +22,7 @@
 <script>
     export default {
         name: "SecaoRight",
-        props: ["titulo", "imagem", "descricao"],
+        props: ["titulo", "imagem", "descricao", "colorborder"],
     }
 </script>
 
@@ -30,7 +30,6 @@
     .titulo-secao-right{
         font-size: 4em;
         font-family: Archive;
-        border-bottom: yellow 2px solid;
     }
 
     .secao-right-body {

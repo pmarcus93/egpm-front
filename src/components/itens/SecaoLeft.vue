@@ -7,7 +7,7 @@
 
                         <div class="col-sm-6 my-auto secao-left">
                             <section>
-                                <h1 class="text-left mb-4 titulo-secao-left">{{titulo}}</h1>
+                                <h1 class="text-left mb-4 titulo-secao-left"  v-bind:style="{ 'border-bottom':  colorborder + ' solid 3px' }" >{{titulo}}</h1>
                                 <p class="mt-3">{{descricao}}</p>
                             </section>
                         </div>
@@ -25,7 +25,7 @@
 <script>
     export default {
         name: "SecaoLeft",
-        props: ["imagem", "descricao", "titulo"],
+        props: ["imagem", "descricao", "titulo", "colorborder"],
     }
 </script>
 
