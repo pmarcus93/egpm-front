@@ -1,16 +1,14 @@
 <template>
-
     <div class="midia">
         <div class="container">
             <div class="row">
                 <Secao titulo="#EGPM na mídia"
-                       descricao="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust ry's standard dummy text ever since the 1500s, whent was popularised in the 1960s with the release of Letr aset she"></Secao>
+                       descricao="Saiba mais sobre o EGPM!"></Secao>
                 <div class="col-xl-6 col-sm-12">
                     <div class="d-flex justify-content-center">
                         <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/wW9VDhyh2C0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </div>
-
                 </div>
             </div>
 
@@ -37,23 +35,6 @@
         </div>
     </div>
 
-    <!--<div class="midia py-4">-->
-    <!--<div class="container">-->
-    <!--<div class="row">-->
-    <!--<div class="col-12">-->
-    <!--<Secao titulo="#EGPM na mídia"></Secao>-->
-    <!--</div>-->
-
-    <!--<div class="col-12">-->
-    <!--<div class="d-flex justify-content-center">-->
-    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/wW9VDhyh2C0"-->
-    <!--allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
 </template>
 
 <script>

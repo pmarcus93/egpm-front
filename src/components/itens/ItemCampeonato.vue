@@ -1,6 +1,5 @@
 <template>
 
-
     <div class="col-sm-12 col-xl-4 bloco-campeonato ">
 
         <div class="row">
@@ -55,6 +54,7 @@
         font-size: 2em;
         font-weight: bold;
         color: yellow;
+        text-transform: uppercase;
     }
 
     .texto-campeonato {

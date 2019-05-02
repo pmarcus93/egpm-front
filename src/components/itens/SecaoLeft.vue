@@ -2,7 +2,7 @@
     <div class="secao-left-body">
         <div class="container-fluid">
             <div class="row">
-                <section class="col-12 section static d-flex" :class="classimage">
+                <section class="col-12 section d-flex" :class="[classimage, type]">
                     <div class="col-sm-6 my-auto box-info">
                         <h1 class="text-left mb-4 titulo-secao-left"
                             v-bind:style="{ 'border-bottom':  colorborder + ' solid 3px' }">{{titulo}}</h1>
@@ -17,7 +17,7 @@
 <script>
     export default {
         name: "SecaoLeft",
-        props: ["imagem", "descricao", "titulo", "colorborder", "classimage"],
+        props: ["imagem", "descricao", "titulo", "colorborder", "classimage", "type"],
     }
 </script>
 
@@ -47,7 +47,7 @@
 
     .section {
         position: relative;
-        height: 100vh;
+        height: 50vh;
         justify-content: flex-start;
     }
 
