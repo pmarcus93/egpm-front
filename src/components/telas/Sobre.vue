@@ -24,10 +24,11 @@
 
     import Card from "../itens/Card";
     import BlocoIcons from "../itens/BlocoIcons";
+    import Secao from "../itens/Secao";
 
     export default {
         name: 'Sobre',
-        components: {BlocoIcons, Card}
+        components: {BlocoIcons, Card, Secao}
     }
 
 </script>
