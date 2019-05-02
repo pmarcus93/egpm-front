@@ -46,6 +46,7 @@
     @font-face {
         font-family: "Archive";
         src: url("/assets/fonts/Archive-Regular.otf");
+        src: url("/assets/fonts/Archive-Regular.ttf");
     }
 
     /*Necessário para funcionamento do Parallax*/
