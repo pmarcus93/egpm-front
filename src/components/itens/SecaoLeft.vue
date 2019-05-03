@@ -59,7 +59,7 @@
         bottom: 0;
         left: 0;
 
-        transform: translateZ(-1px) scale(1.9);
+        transform: translateZ(-1px) scale(2);
         background-size: 100%;
         z-index: -1;
     }

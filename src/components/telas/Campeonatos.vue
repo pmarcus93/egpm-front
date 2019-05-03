@@ -94,7 +94,7 @@
 
 <style scoped>
     .campeonatos {
-        background: whitesmoke;
+        background: black;
     }
     .titulo-campeonatos {
         color: #545457;
