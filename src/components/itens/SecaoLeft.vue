@@ -3,7 +3,10 @@
         <div class="container-fluid">
             <div class="row">
                 <section class="col-12 section d-flex" :class="[classimage, type]">
-                    <div class="col-sm-6 my-auto box-info">
+                    <div class="col-sm-6 my-auto box-info"
+                         data-animation
+                         data-animation-from=" transform: translateY(250px)"
+                         data-animation-to="transform: translateY(0)">
                         <h1 class="text-left mb-4 titulo-secao-left"
                             v-bind:style="{ 'border-bottom':  colorborder + ' solid 3px' }">{{titulo}}</h1>
                         <p class="mt-3">{{descricao}}</p>
@@ -47,7 +50,7 @@
 
     .section {
         position: relative;
-        height: 50vh;
+        height: 60vh;
         justify-content: flex-start;
     }
 

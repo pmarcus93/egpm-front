@@ -1,15 +1,19 @@
 <template>
-    <div id="app" class="wraper">
-        <Navbar></Navbar>
-        <Rainbow></Rainbow>
-        <Banner></Banner>
-        <Sobre></Sobre>
-        <Campeonato></Campeonato>
-        <Campeonatos></Campeonatos>
-        <Palestras></Palestras>
-        <FreePlay></FreePlay>
-        <Midia></Midia>
-        <Duvida></Duvida>
+    <div id="app">
+        <ButtonTicket></ButtonTicket>
+        <div class="wraper">
+            <Navbar></Navbar>
+            <Rainbow></Rainbow>
+            <Banner></Banner>
+            <Sobre></Sobre>
+            <Campeonato></Campeonato>
+            <Campeonatos></Campeonatos>
+            <Palestras></Palestras>
+            <FreePlay></FreePlay>
+            <Midia></Midia>
+            <Duvida></Duvida>
+            <Localizacao></Localizacao>
+        </div>
     </div>
 </template>
 
@@ -24,10 +28,14 @@
     import FreePlay from "./components/telas/FreePlay";
     import Rainbow from "./components/itens/Rainbow";
     import Duvida from "./components/telas/Duvida";
+    import Localizacao from "./components/telas/Localizacao";
+    import ButtonTicket from "./components/itens/ButtonTicket";
 
     export default {
         name: 'app',
         components: {
+            ButtonTicket,
+            Localizacao,
             Duvida,
             Rainbow,
             FreePlay,
@@ -50,7 +58,6 @@
     window.jQuery = require('jquery');
 
 
-
     document.addEventListener("DOMContentLoaded", function () {
         var $win = $(window);
         var $wraper = $('.wraper');
@@ -69,11 +76,9 @@
         $wraper.on('scroll', function () {
             var scroll = $win.scrollTop();
 
-            console.log("ASDASDASDASD");
-
             $('[data-animation]').each(function () {
                 var elem = $(this);
-                var animation = 'transition: ' + (elem.data('animation') || 'all 0.8s ease');
+                var animation = 'transition: ' + (elem.data('animation') || 'all 0.5s ease');
 
                 var offset = elem.offset().top;
 
@@ -85,7 +90,7 @@
                     }
                 }
 
-                var ref = scroll + $win.height();
+                var ref = scroll + $win.height() - 50;
 
                 if (ref > offset) {
                     setTimeout(function () {

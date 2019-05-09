@@ -1,6 +1,5 @@
 <template>
-
-    <!--Teste-->
+    
         <div class="sobre">
             <div class="container">
                 <div class="row">

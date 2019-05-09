@@ -1,11 +1,9 @@
 <template>
 
-    <div class="col-12 py-4 item-duvida">
-
-            <div class="col-12 text-center my-4"><i class="fa fa-comments fa-3x"></i></div>
-            <div class="col-12 duvida ">{{duvida}}</div>
-            <div class="col-12 resposta  my-4">{{resposta}}</div>
-
+    <div class="col-12 py-5 item-duvida" v-bind:style="{ 'background':  background  }">
+        <div class="col-12 text-center my-4"><i class="fa fa-comments fa-3x"></i></div>
+        <div class="col-12 duvida ">{{duvida}}</div>
+        <div class="col-12 resposta  my-4">{{resposta}}</div>
     </div>
 
 </template>
@@ -13,7 +11,7 @@
 <script>
     export default {
         name: "ItemDuvida",
-        props: ["duvida", "resposta"],
+        props: ["duvida", "resposta", "background"],
     }
 </script>
 
@@ -24,6 +22,18 @@
     }
 
     .item-duvida {
-        background: #c0ffce;
+        background: #50f5b0;
+        cursor: pointer;
+        transition: all linear .2s;
     }
+    .item-duvida:hover {
+        transform: scale(1.05);
+        position: relative;
+        z-index: 1;
+        -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+
+    }
+
 </style>
