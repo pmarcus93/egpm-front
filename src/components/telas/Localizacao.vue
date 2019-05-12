@@ -1,10 +1,13 @@
 <template>
     <div class="localizacao">
         <div class="container">
-            <div class="row">
+            <div class="row"
+                 data-animation
+                 data-animation-from=" transform: translateY(200px)"
+                 data-animation-to="transform: translateY(0)">
+
                 <div class="col-sm-12 col-md-6 my-auto">
                     <h1 class="text-left mb-4 titulo-secao">EGMP3</h1>
-                    <p class="mt-3">
                     <h2>LOCAL</h2>
                     <p>
                         FAPAM - Faculda de Pará de Minas <br>

@@ -4,9 +4,9 @@
          data-animation-from=" transform: translateY(250px)"
          data-animation-to="transform: translateY(0)">
         <div class="row no-gutters">
-            <div class="col-md-3 col-sm-12 my-auto  ">
+            <div class="col-md-3 col-sm-12 my-auto">
                 <section>
-                    <h1 class="text-left mb-4 titulo-secao">Dúvidas</h1>
+                    <h1 class="text-left my-4 titulo-secao">Dúvidas</h1>
                     <p class="mt-3 ">As dúvidas mais frequentes respondidas.<br>
                         <a href="#">Outras dúvidas</a></p>
                 </section>

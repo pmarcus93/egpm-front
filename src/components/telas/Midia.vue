@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row"
                  data-animation
-                 data-animation-from=" transform: translateY(250px)"
+                 data-animation-from=" transform: translateY(200px)"
                  data-animation-to="transform: translateY(0)">
                 <Secao titulo="#EGPM na mídia"
                        descricao="Saiba mais sobre o EGPM!"></Secao>

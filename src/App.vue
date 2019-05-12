@@ -13,6 +13,8 @@
             <Midia></Midia>
             <Duvida></Duvida>
             <Localizacao></Localizacao>
+            <Patrocinadores></Patrocinadores>
+            <Rodape></Rodape>
         </div>
     </div>
 </template>
@@ -30,10 +32,14 @@
     import Duvida from "./components/telas/Duvida";
     import Localizacao from "./components/telas/Localizacao";
     import ButtonTicket from "./components/itens/ButtonTicket";
+    import Patrocinadores from "./components/telas/Patrocinadores";
+    import Rodape from "./components/telas/Rodape";
 
     export default {
         name: 'app',
         components: {
+            Rodape,
+            Patrocinadores,
             ButtonTicket,
             Localizacao,
             Duvida,
@@ -111,7 +117,6 @@
 
     @font-face {
         font-family: "Archive";
-        src: url("/assets/fonts/Archive-Regular.otf");
         src: url("/assets/fonts/Archive-Regular.ttf");
     }
 
