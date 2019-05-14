@@ -1,30 +1,15 @@
 <template>
-
     <div class="col-sm-12 col-xl-4 bloco-campeonato ">
-
         <div class="row">
             <div class="col-12 info-campeonatos">
-
                 <h3 class="nome-campeonato text-center">{{titulo}}</h3>
-
                 <p class="text-center texto-campeonato"></p>
-
             </div>
-
             <div class="fundo-imagem" v-bind:style="{ 'background': 'url(' + imagem + ') center/cover' }">
-
             </div>
-
-            <div class="sobre-imagem">
-
-            </div>
-
+            <div class="sobre-imagem"></div>
         </div>
-
     </div>
-
-    </div>
-
 </template>
 
 <script>
@@ -49,11 +34,10 @@
         background: rgba(0, 0, 0, .4);
     }
 
-
     .nome-campeonato {
+        color: yellow;
         font-size: 2em;
         font-weight: bold;
-        color: yellow;
         text-transform: uppercase;
     }
 
@@ -63,26 +47,24 @@
 
     .sobre-imagem {
         background: rgba(0, 0, 0, .8);
-        position: absolute;
-        z-index: 2;
-        top: 0px;
         height: 100%;
-        width: 100%;
+        position: absolute;
+        top: 0;
         transition: all linear .2s;
+        width: 100%;
+        z-index: 2;
     }
 
     .fundo-imagem {
-
-        position: absolute;
-        z-index: 1;
-        top: 0px;
         height: 100%;
+        position: absolute;
+        top: 0;
         width: 100%;
+        z-index: 1;
     }
 
     .info-campeonatos {
         z-index: 3;
     }
-
 
 </style>
