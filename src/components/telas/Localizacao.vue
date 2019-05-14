@@ -33,11 +33,8 @@
 </template>
 
 <script>
-    import Secao from "../itens/Secao";
-
     export default {
         name: "Localizacao",
-        components: {Secao}
     }
 </script>
 
