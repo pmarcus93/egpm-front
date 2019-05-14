@@ -52,11 +52,6 @@
             Sobre,
             Banner,
             Navbar
-        },
-        methods: {
-            teste: function () {
-                alert("Aquinmkvaksjgfjbna");
-            }
         }
     }
 
