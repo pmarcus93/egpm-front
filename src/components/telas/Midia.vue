@@ -1,10 +1,7 @@
 <template>
     <div class="midia">
         <div class="container">
-            <div class="row"
-                 data-animation
-                 data-animation-from=" transform: translateY(200px)"
-                 data-animation-to="transform: translateY(0)">
+            <div class="row">
                 <Secao titulo="#EGPM na mídia"
                        descricao="Saiba mais sobre o EGPM!"></Secao>
                 <div class="col-xl-6 col-sm-12">
@@ -15,10 +12,7 @@
                 </div>
             </div>
 
-            <div class="row"
-                 data-animation
-                 data-animation-from=" transform: translateY(250px)"
-                 data-animation-to="transform: translateY(0)">
+            <div class="row">
                 <div class="col-12 titulo-depoimentos mt-5 text-center">O QUE ELES ACHARAM DO EGPM</div>
 
                 <Depoimento
@@ -37,7 +31,6 @@
                 </Depoimento>
 
             </div>
-
         </div>
     </div>
 
@@ -64,9 +57,9 @@
 
     .video {
         border: none;
-        -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+        box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
     }
 
     .titulo-depoimentos {
