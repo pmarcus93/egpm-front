@@ -39,11 +39,10 @@
 
 <script>
     import ItemDuvida from "../itens/ItemDuvida";
-    import Secao from "../itens/Secao";
 
     export default {
         name: "Duvida",
-        components: {ItemDuvida, Secao}
+        components: {ItemDuvida}
     }
 </script>
 
@@ -52,5 +51,4 @@
         font-family: Archive;
         font-size: 3em;
     }
-
 </style>
