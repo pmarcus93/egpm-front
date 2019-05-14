@@ -1,8 +1,8 @@
 <template>
-    
-        <div class="sobre">
-            <div class="container">
-                <div class="row">
+
+    <div class="sobre">
+        <div class="container">
+            <div class="row">
                 <Secao titulo="Sobre o #EGPM20"
                        descricao="Realizado na FAPAM, o Encontro Gamer de Pará de Minas é o maior evento de videogames da cidade.
            Com campeonatos, palestras e free play, são dois dias de muito aprendizado, competição e diversão!
@@ -21,25 +21,21 @@
 
 <script>
 
-    import Card from "../itens/Card";
-    import BlocoIcons from "../itens/BlocoIcons";
+    import BlocoIcons from "../itens/IconesSobre";
     import Secao from "../itens/Secao";
 
     export default {
         name: 'Sobre',
-        components: {BlocoIcons, Card, Secao}
+        components: {BlocoIcons, Secao}
     }
 
 </script>
 
 <style scoped>
-
     .sobre {
         background: whitesmoke;
         padding-top: 10%;
         padding-bottom: 10%;
         color: #545457;
     }
-
-
 </style>
