@@ -17,7 +17,7 @@
 
 <style scoped>
 
-    .logoParceiro{
+    .logoParceiro {
         transition: linear all .2s;
     }
 

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import SecaoRight from "../itens/SecaoRight";
+    import SecaoRight from "../itens/SecaoTextoDireita";
 
     export default {
         name: "Campeonato",

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import SecaoLeft from "../itens/SecaoLeft";
+    import SecaoLeft from "../itens/SecaoTextoEsquerda";
 
     export default {
         name: "Palestras",
