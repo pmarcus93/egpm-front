@@ -55,55 +55,6 @@
         }
     }
 
-    window.$ = require('jquery');
-    window.jQuery = require('jquery');
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-        var $win = $(window);
-        var $wraper = $('.wraper');
-
-        // ANIMATE ITEMS
-        $('[data-animation]').each(function () {
-            var elem = $(this);
-
-            elem.data('animation-from', elem.data('animation-from') || 'opacity: 0; transform: scale(0);');
-            elem.data('animation-to', elem.data('animation-to') || 'opacity: 1; transform: scale(1);');
-
-            elem.attr('style', elem.data('animation-from'));
-            $wraper.trigger('scroll');
-        });
-
-        $wraper.on('scroll', function () {
-            var scroll = $win.scrollTop();
-
-            $('[data-animation]').each(function () {
-                var elem = $(this);
-                var animation = 'transition: ' + (elem.data('animation') || 'all 0.5s ease');
-
-                var offset = elem.offset().top;
-
-                var elem_offset = elem.data('animation-offset');
-                if (elem_offset) {
-                    elem_offset = $(elem_offset);
-                    if (elem_offset.length) {
-                        offset = elem_offset.offset().top;
-                    }
-                }
-
-                var ref = scroll + $win.height() - 50;
-
-                if (ref > offset) {
-                    setTimeout(function () {
-                        elem.attr('style', animation + '; ' + elem.data('animation-to'));
-                    }, elem.data('animation-delay') || 1);
-                } else {
-                    elem.attr('style', elem.data('animation-from'));
-                }
-            });
-        });
-    });
-
 </script>
 
 <style>

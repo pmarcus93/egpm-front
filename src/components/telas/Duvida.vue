@@ -1,8 +1,5 @@
 <template>
-    <div class="container"
-         data-animation
-         data-animation-from=" transform: translateY(250px)"
-         data-animation-to="transform: translateY(0)">
+    <div class="container">
         <div class="row no-gutters">
             <div class="col-md-3 col-sm-12 my-auto">
                 <section>
