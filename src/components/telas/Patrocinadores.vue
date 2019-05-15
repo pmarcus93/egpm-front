@@ -1,22 +1,16 @@
 <template>
     <div class="patrocinadores">
-        <div class="container"
-             data-animation
-             data-animation-from=" transform: translateY(200px)"
-             data-animation-to="transform: translateY(0)">
+        <div class="container">
 
             <div class="row">
-
                 <div class="col-12 py-2 mb-4 tipo-patrocinador"><h4>REALIZAÇÃO:</h4></div>
 
                 <ItemPatrocinador
                         imagem="http://fapam.edu.br/escolheportal/img/fapam.png"
                 ></ItemPatrocinador>
-
             </div>
 
             <div class="row my-3">
-
                 <div class="col-12 py-2 mb-4 tipo-patrocinador">
                     <div class="row">
                         <div class="col-6 my-auto"><h4>APOIO:</h4></div>

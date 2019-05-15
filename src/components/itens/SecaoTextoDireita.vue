@@ -3,10 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <section class="col-12 section d-flex" :class="[classimage, type]">
-                    <div class="col-sm-6 my-auto box-info"
-                         data-animation
-                         data-animation-from="opacity : 0; transform: translateX(250px)"
-                         data-animation-to="opacity : 1; transform: translateX(0)">
+                    <div class="col-sm-6 my-auto box-info">
                         <h1 class=" text-left mb-4 titulo-secao-right"
                             v-bind:style="{ 'border-bottom':  colorborder + ' solid 3px' }">{{titulo}}</h1>
                         <p class="mt-3">{{descricao}}</p>
