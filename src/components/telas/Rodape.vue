@@ -1,6 +1,9 @@
 <template>
 
         <div class="container-full">
+
+            <Rainbow></Rainbow>
+
             <div class="row">
                 <div class="col-12 rodape my-auto py-3">
                     <p class="text-center my-auto">© 2019 EGMP3. Direitos reservados a FAPAM - Faculdade de Pará de Minas.
@@ -13,14 +16,16 @@
 </template>
 
 <script>
+    import Rainbow from "../itens/Rainbow";
     export default {
-        name: "Rodape"
+        name: "Rodape",
+        components: {Rainbow}
     }
 </script>
 
 <style scoped>
     .rodape {
-        border-top: 1px solid #9b9b9b;
-        background: whitesmoke;
+        background: #111;
+        color: whitesmoke;
     }
 </style>

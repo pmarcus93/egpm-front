@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <h3 class="titulo p-4"> <i class="fa fa-comments "></i> {{pergunta}}</h3>
         <div class="resposta pb-3">
             <p>
@@ -20,5 +19,7 @@
 <style scoped>
     .titulo {
         background: whitesmoke;
+        border-radius: 5px;
     }
+
 </style>

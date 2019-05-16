@@ -1,13 +1,11 @@
 <template>
     <div class="row">
-        <div class="banner col-12 my-auto text-center">
-            <h1 class="titulo-secao">Dúvidas</h1>
-            <p class="texto-secao">As dúvidas mais frequentes respondidas.</p>
+        <div class=" col-12  text-center">
+            <div class="col-12 banner">
+                <h1 class="titulo-secao">Dúvidas</h1>
+                <p class="texto-secao">As dúvidas mais frequentes respondidas.</p>
+            </div>
         </div>
-
-        <div class="banner-foto"></div>
-        <div class="sobre-banner"></div>
-
     </div>
 </template>
 
@@ -19,32 +17,14 @@
 
 <style scoped>
     .banner {
-        height: 50vh;
-        z-index: 3;
-    }
-
-    .sobre-banner {
-        width: 100%;
-        height: 50vh;
-        background: rgba(0,0,0,.5);
-        position: absolute;
-        z-index: 1;
-    }
-
-    .banner-foto {
-        position: absolute;
-        width: 100%;
-        height: 50vh;
-        background: url('../../assets/background-04.jpg') center/cover;
-        z-index: 0;
-
+        padding: 70px 0;
     }
 
     .titulo-secao {
         font-family: Archive;
         font-size: 5em;
         color: yellow;
-        margin-top: 80px;
+
     }
 
     .texto-secao {

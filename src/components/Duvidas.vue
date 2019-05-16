@@ -1,5 +1,6 @@
 <template>
     <div class="pagina-duvidas">
+        <FundoFixo></FundoFixo>
         <Navbar></Navbar>
         <div class="container-fluid">
             <Rainbow></Rainbow>
@@ -7,40 +8,41 @@
         </div>
         <div class="container">
             <div class="row no-gutters">
-
                 <div v-for="(item, indice) in duvidas" v-if="indice<4" class="col-md-3 col-sm-12 ">
-                        <ItemDuvida v-if="indice%2 == 0"
+                    <ItemDuvida v-if="indice%2 == 0"
                                 :duvida="item.pergunta"
                                 :resposta="item.resposta"
-                        ></ItemDuvida>
-
-                        <ItemDuvida v-else
-                                    background="#89FFC7"
-                                    :duvida="item.pergunta"
-                                    :resposta="item.resposta"
-                        ></ItemDuvida>
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-12 mt-4">
-
-                    <div v-for="(item, indice) in duvidas">
-                        <DuvidaBox
-                                :pergunta="item.pergunta"
+                    ></ItemDuvida>
+                    <ItemDuvida v-else
+                                background="#89FFC7"
+                                :duvida="item.pergunta"
                                 :resposta="item.resposta"
-                        ></DuvidaBox>
-                    </div>
-
+                    ></ItemDuvida>
                 </div>
             </div>
-
         </div>
+
+        <div class="fundo-duvidas">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-12 mt-4 perguntas">
+                        <div v-for="(item, indice) in duvidas">
+                            <DuvidaBox
+                                    :pergunta="item.pergunta"
+                                    :resposta="item.resposta"
+                            ></DuvidaBox>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <Patrocinadores></Patrocinadores>
+
         <div class="container-fluid">
-            <Patrocinadores></Patrocinadores>
             <Rodape></Rodape>
         </div>
+
     </div>
 </template>
 
@@ -54,10 +56,11 @@
     import Rodape from "./telas/Rodape";
     import Patrocinadores from "./telas/Patrocinadores";
     import DuvidaBox from "./DuvidaBox";
+    import FundoFixo from "./itens/FundoFixo";
 
     export default {
         name: "Duvidas",
-        components: {DuvidaBox, Patrocinadores, Rodape, ItemDuvida, BannerMenor, Rainbow, Navbar, Duvida},
+        components: {FundoFixo, DuvidaBox, Patrocinadores, Rodape, ItemDuvida, BannerMenor, Rainbow, Navbar, Duvida},
         data: function () {
             return {
                 duvidas: [
@@ -90,8 +93,12 @@
 
 <style scoped>
 
-    .pagina-duvidas {
-
+    .fundo-duvidas {
+        background: #fff;
+        margin-top: 20px;
+        -webkit-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.75);
     }
 
 </style>
