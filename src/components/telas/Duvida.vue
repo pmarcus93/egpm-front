@@ -5,7 +5,8 @@
                 <section>
                     <h1 class="text-left my-4 titulo-secao">Dúvidas</h1>
                     <p class="mt-3 ">As dúvidas mais frequentes respondidas.<br>
-                        <a href="#">Outras dúvidas</a></p>
+                        <router-link to='/duvidas'>Outras dúvidas</router-link>
+                    </p>
                 </section>
             </div>
 
