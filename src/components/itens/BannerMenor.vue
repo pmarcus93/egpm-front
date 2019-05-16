@@ -19,13 +19,13 @@
 
 <style scoped>
     .banner {
-        height: 40vh;
+        height: 50vh;
         z-index: 3;
     }
 
     .sobre-banner {
         width: 100%;
-        height: 40vh;
+        height: 50vh;
         background: rgba(0,0,0,.5);
         position: absolute;
         z-index: 1;
@@ -34,7 +34,7 @@
     .banner-foto {
         position: absolute;
         width: 100%;
-        height: 40vh;
+        height: 50vh;
         background: url('../../assets/background-04.jpg') center/cover;
         z-index: 0;
 
@@ -42,7 +42,7 @@
 
     .titulo-secao {
         font-family: Archive;
-        font-size: 3em;
+        font-size: 5em;
         color: yellow;
         margin-top: 80px;
     }

@@ -1,42 +1,41 @@
 <template>
-    <div>
+    <div class="pagina-duvidas">
+        <Navbar></Navbar>
         <div class="container-fluid">
-            <Navbar></Navbar>
             <Rainbow></Rainbow>
             <BannerMenor></BannerMenor>
         </div>
         <div class="container">
             <div class="row no-gutters">
-                <div class="col-md-3 col-sm-12 ">
-                    <ItemDuvida
-                            duvida="Menores de idade podem participar do envento?"
-                            resposta="Sim. Desde que tenham um responsável como acompanhamte."
-                    ></ItemDuvida>
+
+                <div v-for="(item, indice) in duvidas" v-if="indice<4" class="col-md-3 col-sm-12 ">
+                        <ItemDuvida v-if="indice%2 == 0"
+                                :duvida="item.pergunta"
+                                :resposta="item.resposta"
+                        ></ItemDuvida>
+
+                        <ItemDuvida v-else
+                                    background="#89FFC7"
+                                    :duvida="item.pergunta"
+                                    :resposta="item.resposta"
+                        ></ItemDuvida>
                 </div>
 
-                <div class="col-md-3 col-sm-12 ">
-                    <ItemDuvida
-                            background="#89FFC7"
-                            duvida="Ingresso é válido para os 2 dias de evento?"
-                            resposta="Sim. O ingresso é único e válida para participar durante todos os dias de evento."
-                    ></ItemDuvida>
-                </div>
+            </div>
 
-                <div class="col-md-3 col-sm-12 ">
-                    <ItemDuvida
-                            duvida="Posso participar de mais de um campeonato?"
-                            resposta="Sim. Desde que seja feita a inscrição previamente e que não haja conflitos de horários."
-                    ></ItemDuvida>
-                </div>
+            <div class="row">
+                <div class="col-12 mt-4">
 
-                <div class="col-md-3 col-sm-12 ">
-                    <ItemDuvida
-                            background="#89FFC7"
-                            duvida="Posso participar de mais de um campeonato?"
-                            resposta="Sim. Desde que seja feita a inscrição previamente e que não haja conflitos de horários."
-                    ></ItemDuvida>
+                    <div v-for="(item, indice) in duvidas">
+                        <DuvidaBox
+                                :pergunta="item.pergunta"
+                                :resposta="item.resposta"
+                        ></DuvidaBox>
+                    </div>
+
                 </div>
             </div>
+
         </div>
         <div class="container-fluid">
             <Patrocinadores></Patrocinadores>
@@ -46,6 +45,7 @@
 </template>
 
 <script>
+
     import Duvida from "./telas/Duvida";
     import Navbar from "./itens/Navbar";
     import Rainbow from "./itens/Rainbow";
@@ -53,13 +53,45 @@
     import ItemDuvida from "./itens/ItemDuvida";
     import Rodape from "./telas/Rodape";
     import Patrocinadores from "./telas/Patrocinadores";
+    import DuvidaBox from "./DuvidaBox";
 
     export default {
         name: "Duvidas",
-        components: {Patrocinadores, Rodape, ItemDuvida, BannerMenor, Rainbow, Navbar, Duvida}
+        components: {DuvidaBox, Patrocinadores, Rodape, ItemDuvida, BannerMenor, Rainbow, Navbar, Duvida},
+        data: function () {
+            return {
+                duvidas: [
+                    {
+                        pergunta: "Menores de idade podem participar do envento?",
+                        resposta: "Sim. Desde que tenham um responsável como acompanhamte.",
+                        rota: "menores-de-idade"
+                    },
+                    {
+                        pergunta: "Ingresso é válido para os 2 dias de evento?",
+                        resposta: "Sim. O ingresso é único e válida para participar durante todos os dias de evento.",
+                        rota: "ingresso-valido"
+                    },
+                    {
+                        pergunta: "Posso participar de mais de um campeonato?",
+                        resposta: "Sim. Desde que seja feita a inscrição previamente e que não haja conflitos de horários.",
+                        rota: "posso-participar"
+                    },
+                    {
+                        pergunta: "Posso participar de mais de um campeonato?",
+                        resposta: "Sim. Desde que seja feita a inscrição previamente e que não haja conflitos de horários.",
+                        rota: "posso-participar"
+                    }
+                ]
+            }
+        }
     }
+
 </script>
 
 <style scoped>
+
+    .pagina-duvidas {
+
+    }
 
 </style>
