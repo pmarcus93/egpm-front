@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="animate">
         <ButtonTicket></ButtonTicket>
         <div class="wraper">
             <Navbar></Navbar>

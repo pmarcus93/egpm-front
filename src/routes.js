@@ -1,19 +1,26 @@
 // routes.js
 
-import App from './App.vue';
 import Duvidas from "./components/Duvidas.vue";
 import Home from "./components/Home";
-import DuvidaBox from "./components/DuvidaBox";
+import CampeonatoTela from "./components/CampeonatoTela";
+import DescricaoCampeonato from "./components/DescricaoCampeonato";
 
 
 const routes = [
     {
         path: '/duvidas',
         component: Duvidas,
-        children : [{path: '/duvidas/:nome/:id', component: DuvidaBox}],
     },
     {path: '/inicio', component: Home},
     {path: '/', component: Home},
+    {
+        path: '/campeonatos',
+        component: CampeonatoTela
+    },
+    {
+        path: '/campeonatos/:jogo',
+        component: DescricaoCampeonato
+    },
 ];
 
 export default routes;

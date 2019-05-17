@@ -31,4 +31,23 @@
         perspective: 2px;
     }
 
+
+    .animate {
+        display: block;
+        position: relative;
+        animation: animacao 1s;
+    }
+
+    @keyframes animacao {
+        from {
+            top: -100px;
+            opacity: 0
+        }
+        to {
+            top: 0px;
+            opacity: 1
+        }
+    }
+
+
 </style>

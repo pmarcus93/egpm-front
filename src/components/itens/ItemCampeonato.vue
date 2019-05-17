@@ -1,14 +1,16 @@
 <template>
     <div class="col-sm-12 col-xl-4 bloco-campeonato ">
-        <div class="row">
-            <div class="col-12 info-campeonatos">
-                <h3 class="nome-campeonato text-center">{{titulo}}</h3>
-                <p class="text-center texto-campeonato"></p>
+        <router-link to="/campeonatos/jogo">
+            <div class="row">
+                <div class="col-12 info-campeonatos">
+                    <h3 class="nome-campeonato text-center">{{titulo}}</h3>
+                    <p class="text-center texto-campeonato"></p>
+                </div>
+                <div class="fundo-imagem" v-bind:style="{ 'background': 'url(' + imagem + ') center/cover' }">
+                </div>
+                <div class="sobre-imagem"></div>
             </div>
-            <div class="fundo-imagem" v-bind:style="{ 'background': 'url(' + imagem + ') center/cover' }">
-            </div>
-            <div class="sobre-imagem"></div>
-        </div>
+        </router-link>
     </div>
 </template>
 
@@ -65,6 +67,10 @@
 
     .info-campeonatos {
         z-index: 3;
+    }
+
+    .bloco-campeonato > * {
+        text-decoration: none;
     }
 
 </style>
