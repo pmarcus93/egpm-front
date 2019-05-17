@@ -1,36 +1,46 @@
 <template>
     <div class="pagina-duvidas animate">
-        <FundoFixo></FundoFixo>
+        <FundoFixo
+        :imagem="campeonatos[$route.params.jogo].imagem"
+        ></FundoFixo>
         <Navbar></Navbar>
         <div class="container-fluid">
             <Rainbow></Rainbow>
             <BannerJogo
-                    titulo="Nome do Jogo"
+                    :titulo="campeonatos[$route.params.jogo].titulo"
+                    :video="campeonatos[$route.params.jogo].video"
+                    :descricao="campeonatos[$route.params.jogo].descricao"
+                    :lancamento="campeonatos[$route.params.jogo].lancamento"
+                    :estilo="campeonatos[$route.params.jogo].estilo"
             ></BannerJogo>
 
 
             <div class="row lista-jogo-dados text-center my-auto">
-                <div class="col-md-3 col-sm-6 bloco py-4">
-                    <div class="col-12 icone"><i class="fa fa-clock"></i></div>
-                    <div class="col-12 texto">INSCRIÇÃO NO LOCAL</div>
+                <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                    <div class="col-12 icone"><i class="fa fa-file-alt"></i></div>
+                    <div class="col-12 texto">{{campeonatos[$route.params.jogo].inscricao}}</div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 bloco py-4">
-                    <div class="col-12 icone"><i class="fa fa-clock"></i></div>
-                    <div class="col-12 texto">100 VAGAS</div>
+                <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                    <div class="col-12 icone"><i class="fa fa-users"></i></div>
+                    <div class="col-12 texto">{{campeonatos[$route.params.jogo].vagas}}</div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 bloco py-4">
-                    <div class="col-12 icone"><i class="fa fa-clock"></i></div>
-                    <div class="col-12 texto">PLAYSTATION 4</div>
+                <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                    <div class="col-12 icone"><i class="fa fa-gamepad"></i></div>
+                    <div class="col-12 texto">{{campeonatos[$route.params.jogo].console}}</div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 bloco py-4">
+                <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                    <div class="col-12 icone"><i class="fa fa-calendar"></i></div>
+                    <div class="col-12 texto">{{campeonatos[$route.params.jogo].data}}</div>
+                </div>
+
+                <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
                     <div class="col-12 icone"><i class="fa fa-clock"></i></div>
-                    <div class="col-12 texto">14/02 - 11h</div>
+                    <div class="col-12 texto">{{campeonatos[$route.params.jogo].horario}}</div>
                 </div>
             </div>
-
         </div>
 
         <div class="conteudo-regra">
@@ -38,42 +48,10 @@
                 <div class="row ">
                     <div class="col-12 py-4">
                         <h3 class="titulo-regras text-center">REGRAS</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt semper viverra.
-                            Ut in tortor ut lorem sollicitudin fermentum eget quis eros. Suspendisse malesuada, quam at
-                            mollis ultrices, dui nulla mattis nisi, in accumsan quam magna rutrum turpis. Nulla a
-                            viverra tellus, eu consequat est. Quisque bibendum mi magna, vitae elementum lacus elementum
-                            non. Pellentesque mi mauris, tempus eget quam sed, luctus vulputate orci. Aenean metus eros,
-                            feugiat a molestie id, auctor a lectus. Etiam ultricies nec augue convallis lacinia.
-                            Nulla tristique quis ligula in bibendum. Cras iaculis orci luctus ipsum laoreet facilisis
-                            suscipit vel quam. Etiam in auctor sem. Ut vel accumsan turpis. Duis pellentesque, lorem ac
-                            mattis malesuada, neque nulla elementum lacus, et imperdiet orci tellus at sem. Etiam sed
-                            ligula nec nunc congue hendrerit in vel erat. Maecenas massa nibh, venenatis sed ante in,
-                            lacinia mollis enim. Ut eleifend elit eros, ac facilisis nisi gravida auctor. Aliquam
-                            venenatis mattis tortor, quis auctor enim ullamcorper id. Phasellus consectetur enim sed
-                            ultrices bibendum. Aenean tincidunt sodales ex, eu semper diam cursus at. Lorem ipsum dolor
-                            sit amet, consectetur adipiscing elit. Quisque sit amet sem sit amet nibh consectetur
-                            facilisis a eget metus. Sed convallis neque at sagittis aliquam.</p>
-
+                        <p>{{campeonatos[$route.params.jogo].regras}}</p>
                         <hr>
-
                         <h3 class="titulo-observacoes text-center">OBSERVAÇÕES</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt semper viverra.
-                            Ut in tortor ut lorem sollicitudin fermentum eget quis eros. Suspendisse malesuada, quam at
-                            mollis ultrices, dui nulla mattis nisi, in accumsan quam magna rutrum turpis. Nulla a
-                            viverra tellus, eu consequat est. Quisque bibendum mi magna, vitae elementum lacus elementum
-                            non. Pellentesque mi mauris, tempus eget quam sed, luctus vulputate orci. Aenean metus eros,
-                            feugiat a molestie id, auctor a lectus. Etiam ultricies nec augue convallis lacinia.
-                            Nulla tristique quis ligula in bibendum. Cras iaculis orci luctus ipsum laoreet facilisis
-                            suscipit vel quam. Etiam in auctor sem. Ut vel accumsan turpis. Duis pellentesque, lorem ac
-                            mattis malesuada, neque nulla elementum lacus, et imperdiet orci tellus at sem. Etiam sed
-                            ligula nec nunc congue hendrerit in vel erat. Maecenas massa nibh, venenatis sed ante in,
-                            lacinia mollis enim. Ut eleifend elit eros, ac facilisis nisi gravida auctor. Aliquam
-                            venenatis mattis tortor, quis auctor enim ullamcorper id. Phasellus consectetur enim sed
-                            ultrices bibendum. Aenean tincidunt sodales ex, eu semper diam cursus at. Lorem ipsum dolor
-                            sit amet, consectetur adipiscing elit. Quisque sit amet sem sit amet nibh consectetur
-                            facilisis a eget metus. Sed convallis neque at sagittis aliquam.</p>
-
-
+                        <p>{{campeonatos[$route.params.jogo].observacoes}}</p>
                     </div>
                 </div>
             </div>
@@ -100,13 +78,41 @@
 
     export default {
         name: "DescricaoCampeonato",
-        components: {BannerJogo, ItemCampeonato, FundoFixo, Navbar, Rainbow, BannerMenor, Patrocinadores, Rodape}
+        components: {BannerJogo, ItemCampeonato, FundoFixo, Navbar, Rainbow, BannerMenor, Patrocinadores, Rodape},
+        data: function () {
+            return {
+                campeonatos:
+                    {
+                        mortalkombat: {
+                            titulo: "Mortal Kombat 11",
+                            imagem: "https://www.trueachievements.com/customimages/093902.jpg",
+                            video: "https://www.youtube.com/embed/7zwQPJmg-Kg?start=3",
+                            descricao: "Mortal Kombat 11 is a fighting video game developed by NetherRealm Studios and published by Warner Bros. Interactive Entertainment.",
+                            lancamento: "14/07/2019",
+                            estilo: "Luta",
+                            console: "PLAYSTATION 4",
+                            data: "14/02/2020",
+                            horario: "14H",
+                            inscricao: "NO LOCAL DO EVENTO",
+                            vagas: "100 VAGAS",
+                            regras: "Regras",
+                            observacoes: "Observações"
+                        },
+                        fifa: {
+                            titulo: "FIFA",
+                            imagem: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_EASportsFifa19_image1600w.jpg",
+                            video: "https://www.youtube.com/embed/zX0AV6yxyrQ"
+                        }
+                    },
+
+            }
+        }
     }
 </script>
 
 <style scoped>
     .lista-jogo-dados {
-        background: #fffc28;
+        background: whitesmoke;
     }
 
     .bloco {
@@ -114,7 +120,7 @@
     }
 
     .bloco:hover {
-        background: #e7e429;
+        background: #e7e7e7;
         transform: scale(1.06);
     }
 
