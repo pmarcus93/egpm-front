@@ -6,14 +6,12 @@
             <Rainbow></Rainbow>
         </div>
 
-        <div class="col-12 text-center py-4">
-            <h1 class="py-3">ERRO 404</h1>
-            <h3>A página procurada não foi encontrada!<br>
-                Separamos para você alguns links que podem lhe ajudar!</h3>
-        </div>
-
+        <ItemErro
+        erro="Erro 404"
+        subtitulo="A página procurada não foi encontrada!"
+        descricao="Separamos para você alguns links que podem lhe ajudar!"
+        ></ItemErro>
         <Links></Links>
-
         <Patrocinadores></Patrocinadores>
 
         <div class="container-fluid">
@@ -30,25 +28,14 @@
     import Rodape from "./telas/Rodape";
     import Patrocinadores from "./telas/Patrocinadores";
     import Links from "./itens/Links";
+    import ItemErro from "./itens/ItemErro";
 
     export default {
         name: "Erro404",
-        components: {Links, Patrocinadores, Rodape, FundoFixo, Navbar, Rainbow}
+        components: {ItemErro, Links, Patrocinadores, Rodape, FundoFixo, Navbar, Rainbow}
     }
 </script>
 
 <style scoped>
-    h1 {
-        font-family: Archive;
-        font-size: 5em;
-    }
-
-    h1, h3 {
-        color: yellow;
-    }
-
-    .links {
-
-    }
 
 </style>

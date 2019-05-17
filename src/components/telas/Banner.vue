@@ -30,11 +30,13 @@
     }
 
     .destaque {
-        width: 150px;
+        width: 170px;
         background: #FCD347;
         color: #545358;
         font-size: 30px;
         text-align: center;
+        font-weight: bold;
+
     }
 
     .logo-full {
