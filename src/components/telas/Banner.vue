@@ -25,7 +25,7 @@
 <style scoped>
 
     .banner {
-        height: calc(100vh - 51.6px);
+        height: 100vh;
         background: url("../../assets/banner-background.jpg") center/cover;
     }
 

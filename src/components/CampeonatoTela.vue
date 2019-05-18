@@ -1,9 +1,11 @@
 <template>
     <div class="pagina-duvidas animate">
         <FundoFixo></FundoFixo>
-        <Navbar></Navbar>
-        <div class="container-fluid">
+        <div class="fixed">
+            <Navbar></Navbar>
             <Rainbow></Rainbow>
+        </div>
+        <div class="container-fluid conteudo">
             <BannerMenor
                     titulo="CAMPEONATOS"
                     descricao="Selecione um game para conferir detalhes.

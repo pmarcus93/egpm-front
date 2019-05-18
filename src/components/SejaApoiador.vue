@@ -2,11 +2,11 @@
     <div class="pagina-duvidas animate">
         <FundoFixo
         ></FundoFixo>
-        <Navbar></Navbar>
-        <div class="container-fluid">
+        <div class="fixed">
+            <Navbar></Navbar>
             <Rainbow></Rainbow>
-
-
+        </div>
+        <div class="container-fluid conteudo">
             <BannerMenor
                     titulo="Seja Apoiador"
                     descricao="Marque presença no maior encontro de gamers de Pará de Minas."
@@ -21,7 +21,7 @@
                 <div class="col-6 my-auto">
                     <h2>Como ser um apoiador?</h2>
                     <p>Preencha o formulário ao lado com as suas informações que entraremos em contato com você o mais
-                    breve possível.</p>
+                        breve possível.</p>
                 </div>
 
                 <div class="col-6">

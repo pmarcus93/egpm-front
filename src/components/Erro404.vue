@@ -1,17 +1,19 @@
 <template>
     <div class="pagina-duvidas animate">
         <FundoFixo></FundoFixo>
-        <Navbar></Navbar>
-        <div class="container-fluid">
+        <div class="fixed">
+            <Navbar></Navbar>
             <Rainbow></Rainbow>
         </div>
+        <div class="container-fluid conteudo">
 
-        <ItemErro
-        erro="Erro 404"
-        subtitulo="A página procurada não foi encontrada!"
-        descricao="Separamos para você alguns links que podem lhe ajudar!"
-        ></ItemErro>
-        <Links></Links>
+            <ItemErro
+                    erro="Erro 404"
+                    subtitulo="A página procurada não foi encontrada!"
+                    descricao="Separamos para você alguns links que podem lhe ajudar!"
+            ></ItemErro>
+            <Links></Links>
+        </div>
         <Patrocinadores></Patrocinadores>
 
         <div class="container-fluid">

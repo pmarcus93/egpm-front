@@ -5,9 +5,11 @@
             <FundoFixo
                     :imagem="campeonatos[$route.params.jogo].imagem"
             ></FundoFixo>
-            <Navbar></Navbar>
-            <div class="container-fluid">
-                <Rainbow></Rainbow>
+            <div class="fixed">
+                    <Navbar></Navbar>
+                    <Rainbow></Rainbow>
+            </div>
+            <div class="container-fluid conteudo">
                 <BannerJogo
                         :titulo="campeonatos[$route.params.jogo].titulo"
                         :video="campeonatos[$route.params.jogo].video"
@@ -15,7 +17,6 @@
                         :lancamento="campeonatos[$route.params.jogo].lancamento"
                         :estilo="campeonatos[$route.params.jogo].estilo"
                 ></BannerJogo>
-
 
                 <div class="row lista-jogo-dados text-center my-auto">
                     <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
@@ -61,10 +62,11 @@
         </div>
         <div v-else>
             <FundoFixo></FundoFixo>
-            <Navbar></Navbar>
-            <div class="container-fluid">
+            <div class="fixed">
+                <Navbar></Navbar>
                 <Rainbow></Rainbow>
-
+            </div>
+            <div class="container-fluid conteudo">
                 <ItemErro
                         erro="ERRO 404"
                         subtitulo="Ops, parece que você entrou unma página de campeonato inválida."

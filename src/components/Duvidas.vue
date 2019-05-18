@@ -1,12 +1,14 @@
 <template>
     <div class="pagina-duvidas animate">
         <FundoFixo></FundoFixo>
-        <Navbar></Navbar>
-        <div class="container-fluid">
+        <div class="fixed">
+            <Navbar></Navbar>
             <Rainbow></Rainbow>
+        </div>
+        <div class="container-fluid conteudo">
             <BannerMenor
-            titulo="Dúvidas"
-            descricao="As dúvidas mais frequentes respondidas."
+                    titulo="Dúvidas"
+                    descricao="As dúvidas mais frequentes respondidas."
             ></BannerMenor>
         </div>
         <div class="container">
