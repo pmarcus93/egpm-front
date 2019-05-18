@@ -7,6 +7,7 @@
                         <h1 class=" text-left mb-4 titulo-secao-right"
                             v-bind:style="{ 'border-bottom':  colorborder + ' solid 3px' }">{{titulo}}</h1>
                         <p class="mt-3">{{descricao}}</p>
+                        <router-link class="btn btn-light" :to="rota">{{textobotao}}</router-link>
                     </div>
                 </section>
             </div>
@@ -17,7 +18,7 @@
 <script>
     export default {
         name: "SecaoRight",
-        props: ["titulo", "imagem", "descricao", "colorborder", "classimage", "type"],
+        props: ["titulo", "imagem", "descricao", "colorborder", "classimage", "type", "rota", "textobotao"],
     }
 </script>
 
@@ -71,7 +72,7 @@
     }
 
 
-    .static::after{
+    .static::after {
         content: " ";
         position: absolute;
         top: 0;

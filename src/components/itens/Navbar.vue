@@ -1,9 +1,10 @@
 <template>
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+
+        <router-link class="navbar-brand" to='/inicio'>
             <img src="../../assets/logoegpm3.png" width="150px"
                  class="d-inline-block align-top" alt="">
-        </a>
+        </router-link>
 
         <div class="navbar-icons">
             <a href="https://www.facebook.com/FAPAM/" class="color-facebook"><i class="fab fa-facebook fa-2x ml-3"></i></a>

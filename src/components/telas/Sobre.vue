@@ -9,11 +9,8 @@
            Temos jogo de esporte, musicais, de dança, de luta... traga toda a família e se divirta!
            Acompanhe a hashtag oficial do evento nas redes sociais e fique por dentro de datas e atrações! #EGMP3">
                 </Secao>
-
                 <BlocoIcons>
-
                 </BlocoIcons>
-
             </div>
         </div>
     </div>
