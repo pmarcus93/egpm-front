@@ -6,10 +6,30 @@
                  class="d-inline-block align-top" alt="">
         </router-link>
 
+
+        <router-link class="navbar-brand link" to='/inicio'>
+            INÍCIO
+        </router-link>
+
+        <router-link class="navbar-brand link" to='/campeonatos'>
+            CAMPEONATOS
+        </router-link>
+
+        <router-link class="navbar-brand link" to='/duvidas'>
+            DÚVIDAS
+        </router-link>
+
+        <router-link class="navbar-brand link" to='/apoie'>
+            APOIO
+        </router-link>
+
+
         <div class="navbar-icons">
             <a href="https://www.facebook.com/FAPAM/" class="color-facebook"><i class="fab fa-facebook fa-2x ml-3"></i></a>
             <a href="https://www.instagram.com/fapam_oficial/" class="color-instagram"><i
                     class="fab fa-instagram fa-2x ml-3"></i></a>
+            <button class="burguer"><i class="fa fa-bars fa-2x ml-3"></i></button>
+
         </div>
 
     </nav>
@@ -41,5 +61,50 @@
     .color-instagram:hover {
         color: #D10869;
     }
+
+    .burguer {
+        background: none;
+        border: none;
+    }
+
+    .burguer:focus {
+        border-color: none !important;
+        outline: 0;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+
+    .link:hover {
+        transform: scale(1.2);
+    }
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (max-width: 992px) {
+        .link {
+            font-weight: 600;
+            transition: linear all 0.2s;
+            display: none !important;
+        }
+
+        .burguer {
+            display: inline;
+        }
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 992px) {
+        .link {
+            font-weight: 600;
+            transition: linear all 0.2s;
+            display: block;
+        }
+
+        .burguer {
+            display: none;
+        }
+    }
+
+
 
 </style>

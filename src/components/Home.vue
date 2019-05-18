@@ -1,13 +1,12 @@
 <template>
-    <div class="animate">
+    <div>
         <ButtonTicket></ButtonTicket>
         <div class="area-fixa">
             <Navbar></Navbar>
             <Rainbow></Rainbow>
         </div>
 
-        <div class="wraper">
-
+        <div class="wraper animate">
             <Banner></Banner>
             <Sobre></Sobre>
             <Campeonato></Campeonato>

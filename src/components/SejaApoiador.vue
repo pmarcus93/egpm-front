@@ -1,65 +1,67 @@
 <template>
-    <div class="pagina-duvidas animate">
+    <div class="pagina-duvidas">
         <FundoFixo
         ></FundoFixo>
         <div class="fixed">
             <Navbar></Navbar>
             <Rainbow></Rainbow>
         </div>
-        <div class="container-fluid conteudo">
-            <BannerMenor
-                    titulo="Seja Apoiador"
-                    descricao="Marque presença no maior encontro de gamers de Pará de Minas."
-            >
-            </BannerMenor>
+        <div class="animate">
+            <div class="container-fluid conteudo">
+                <BannerMenor
+                        titulo="Seja Apoiador"
+                        descricao="Marque presença no maior encontro de gamers de Pará de Minas."
+                >
+                </BannerMenor>
 
-        </div>
-
-        <div class="container apoie py-5 mb-5">
-            <div class="row">
-
-                <div class="col-6 my-auto">
-                    <h2>Como ser um apoiador?</h2>
-                    <p>Preencha o formulário ao lado com as suas informações que entraremos em contato com você o mais
-                        breve possível.</p>
-                </div>
-
-                <div class="col-6">
-                    <!--TODO: COLOCAR NAME NOS INPUTS-->
-                    <form>
-                        <div class="row">
-                            <div class="form-group col-md-6 col-sm-12">
-                                <label>Nome:</label>
-                                <input type="text" class="form-control">
-                            </div>
-
-                            <div class="form-group col-md-6 col-sm-12">
-                                <label>Empresa:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6 col-sm-12">
-                                <label>Email:</label>
-                                <input type="email" class="form-control">
-                            </div>
-
-                            <div class="form-group col-md-6 col-sm-12">
-                                <label>Telefone:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
 
-        </div>
-        <Patrocinadores></Patrocinadores>
+            <div class="container apoie py-5 mb-5">
+                <div class="row">
 
-        <div class="container-fluid">
-            <Rodape></Rodape>
-        </div>
+                    <div class="col-md-6 col-sm-12 my-auto">
+                        <h2>Como ser um apoiador?</h2>
+                        <p>Preencha o formulário ao lado com as suas informações que entraremos em contato com você o
+                            mais
+                            breve possível.</p>
+                    </div>
 
+                    <div class="col-md-6 col-sm-12">
+                        <!--TODO: COLOCAR NAME NOS INPUTS-->
+                        <form>
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <label>Nome:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <label>Empresa:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <label>Email:</label>
+                                    <input type="email" class="form-control">
+                                </div>
+
+                                <div class="form-group col-md-6 col-sm-12">
+                                    <label>Telefone:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <Patrocinadores></Patrocinadores>
+
+            <div class="container-fluid">
+                <Rodape></Rodape>
+            </div>
+        </div>
     </div>
 </template>
 
