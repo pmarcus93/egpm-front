@@ -12,10 +12,10 @@
                         35660-398
                     </p>
 
-                    <h2>HORÁRIOS</h2>
+                    <h2>DATAS & HORÁRIOS</h2>
                     <p>
-                        Sáb - 10h às 20h <br>
-                        Dom - 10h às 20h <br>
+                        01/01/20 Sábado - 10h às 20h <br>
+                        02/02/20 Domingo - 10h às 20h <br>
                     </p>
 
                 </div>
