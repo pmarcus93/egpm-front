@@ -22,7 +22,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
     .banner {
         height: 100vh;
@@ -31,7 +31,7 @@
 
     .destaque {
         width: 170px;
-        background: #FCD347;
+        background: $color-primary;
         color: #545358;
         font-size: 30px;
         text-align: center;
@@ -48,7 +48,7 @@
     }
 
     .descricao {
-        color: #FCD347;
+        color: $color-primary;
         text-transform: uppercase;
         font-size: 25px;
     }

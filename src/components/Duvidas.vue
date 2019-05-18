@@ -95,14 +95,14 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
     .fundo-duvidas {
-        background: #fff;
+        background: $bg-light;
         margin-top: 20px;
-        -webkit-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0 0 19px 0 rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0 0 19px 0 rgba(0, 0, 0, 0.75);
+        box-shadow: 0 0 19px 0 rgba(0, 0, 0, 0.75);
     }
 
 </style>
