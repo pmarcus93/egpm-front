@@ -48,4 +48,15 @@
     }
 
 
+    .fixed {
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+        top: 0;
+    }
+
+    .conteudo {
+        margin-top: 62px;
+    }
+
 </style>

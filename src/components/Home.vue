@@ -1,9 +1,12 @@
 <template>
-    <div class="animate">
+    <div>
         <ButtonTicket></ButtonTicket>
-        <div class="wraper">
+        <div class="area-fixa">
             <Navbar></Navbar>
             <Rainbow></Rainbow>
+        </div>
+
+        <div class="wraper animate">
             <Banner></Banner>
             <Sobre></Sobre>
             <Campeonato></Campeonato>
@@ -58,5 +61,9 @@
 </script>
 
 <style scoped>
-
+    .area-fixa {
+        position: fixed;
+        z-index: 5;
+        width: 100%;
+    }
 </style>

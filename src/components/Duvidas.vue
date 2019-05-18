@@ -1,51 +1,52 @@
 <template>
-    <div class="pagina-duvidas animate">
+    <div class="pagina-duvidas">
         <FundoFixo></FundoFixo>
-        <Navbar></Navbar>
-        <div class="container-fluid">
+        <div class="fixed">
+            <Navbar></Navbar>
             <Rainbow></Rainbow>
-            <BannerMenor
-            titulo="Dúvidas"
-            descricao="As dúvidas mais frequentes respondidas."
-            ></BannerMenor>
         </div>
-        <div class="container">
-            <div class="row no-gutters">
-                <div v-for="(item, indice) in duvidas" v-if="indice<4" class="col-md-3 col-sm-12 ">
-                    <ItemDuvida v-if="indice%2 == 0"
-                                :duvida="item.pergunta"
-                                :resposta="item.resposta"
-                    ></ItemDuvida>
-                    <ItemDuvida v-else
-                                background="#89FFC7"
-                                :duvida="item.pergunta"
-                                :resposta="item.resposta"
-                    ></ItemDuvida>
+        <div class="animate">
+            <div class="container-fluid conteudo">
+                <BannerMenor
+                        titulo="Dúvidas"
+                        descricao="As dúvidas mais frequentes respondidas."
+                ></BannerMenor>
+            </div>
+            <div class="container">
+                <div class="row no-gutters">
+                    <div v-for="(item, indice) in duvidas" v-if="indice<4" class="col-md-3 col-sm-12 ">
+                        <ItemDuvida v-if="indice%2 == 0"
+                                    :duvida="item.pergunta"
+                                    :resposta="item.resposta"
+                        ></ItemDuvida>
+                        <ItemDuvida v-else
+                                    background="#89FFC7"
+                                    :duvida="item.pergunta"
+                                    :resposta="item.resposta"
+                        ></ItemDuvida>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="fundo-duvidas">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-12 mt-4 perguntas">
-                        <div v-for="(item, indice) in duvidas">
-                            <DuvidaBox
-                                    :pergunta="item.pergunta"
-                                    :resposta="item.resposta"
-                            ></DuvidaBox>
+            <div class="fundo-duvidas">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-12 mt-4 perguntas">
+                            <div v-for="(item, indice) in duvidas">
+                                <DuvidaBox
+                                        :pergunta="item.pergunta"
+                                        :resposta="item.resposta"
+                                ></DuvidaBox>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <Patrocinadores></Patrocinadores>
+            <div class="container-fluid">
+                <Rodape></Rodape>
+            </div>
         </div>
-
-        <Patrocinadores></Patrocinadores>
-
-        <div class="container-fluid">
-            <Rodape></Rodape>
-        </div>
-
     </div>
 </template>
 

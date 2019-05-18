@@ -1,59 +1,62 @@
 <template>
-    <div class="pagina-duvidas animate">
+    <div class="pagina-duvidas">
         <!--Verifica se o jogo existe-->
         <div v-if="campeonatos[$route.params.jogo]">
             <FundoFixo
                     :imagem="campeonatos[$route.params.jogo].imagem"
             ></FundoFixo>
-            <Navbar></Navbar>
-            <div class="container-fluid">
+            <div class="fixed">
+                <Navbar></Navbar>
                 <Rainbow></Rainbow>
-                <BannerJogo
-                        :titulo="campeonatos[$route.params.jogo].titulo"
-                        :video="campeonatos[$route.params.jogo].video"
-                        :descricao="campeonatos[$route.params.jogo].descricao"
-                        :lancamento="campeonatos[$route.params.jogo].lancamento"
-                        :estilo="campeonatos[$route.params.jogo].estilo"
-                ></BannerJogo>
+            </div>
+            <div class="animate">
+                <div class="container-fluid conteudo">
+                    <BannerJogo
+                            :titulo="campeonatos[$route.params.jogo].titulo"
+                            :video="campeonatos[$route.params.jogo].video"
+                            :descricao="campeonatos[$route.params.jogo].descricao"
+                            :lancamento="campeonatos[$route.params.jogo].lancamento"
+                            :estilo="campeonatos[$route.params.jogo].estilo"
+                    ></BannerJogo>
 
+                    <div class="row lista-jogo-dados text-center my-auto">
+                        <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                            <div class="col-12 icone"><i class="fa fa-file-alt"></i></div>
+                            <div class="col-12 texto">{{campeonatos[$route.params.jogo].inscricao}}</div>
+                        </div>
 
-                <div class="row lista-jogo-dados text-center my-auto">
-                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                        <div class="col-12 icone"><i class="fa fa-file-alt"></i></div>
-                        <div class="col-12 texto">{{campeonatos[$route.params.jogo].inscricao}}</div>
-                    </div>
+                        <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                            <div class="col-12 icone"><i class="fa fa-users"></i></div>
+                            <div class="col-12 texto">{{campeonatos[$route.params.jogo].vagas}}</div>
+                        </div>
 
-                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                        <div class="col-12 icone"><i class="fa fa-users"></i></div>
-                        <div class="col-12 texto">{{campeonatos[$route.params.jogo].vagas}}</div>
-                    </div>
+                        <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                            <div class="col-12 icone"><i class="fa fa-gamepad"></i></div>
+                            <div class="col-12 texto">{{campeonatos[$route.params.jogo].console}}</div>
+                        </div>
 
-                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                        <div class="col-12 icone"><i class="fa fa-gamepad"></i></div>
-                        <div class="col-12 texto">{{campeonatos[$route.params.jogo].console}}</div>
-                    </div>
+                        <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                            <div class="col-12 icone"><i class="fa fa-calendar"></i></div>
+                            <div class="col-12 texto">{{campeonatos[$route.params.jogo].data}}</div>
+                        </div>
 
-                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                        <div class="col-12 icone"><i class="fa fa-calendar"></i></div>
-                        <div class="col-12 texto">{{campeonatos[$route.params.jogo].data}}</div>
-                    </div>
-
-                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                        <div class="col-12 icone"><i class="fa fa-clock"></i></div>
-                        <div class="col-12 texto">{{campeonatos[$route.params.jogo].horario}}</div>
+                        <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                            <div class="col-12 icone"><i class="fa fa-clock"></i></div>
+                            <div class="col-12 texto">{{campeonatos[$route.params.jogo].horario}}</div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="conteudo-regra">
-                <div class="container">
-                    <div class="row ">
-                        <div class="col-12 py-4">
-                            <h3 class="titulo-regras text-center">REGRAS</h3>
-                            <p>{{campeonatos[$route.params.jogo].regras}}</p>
-                            <hr>
-                            <h3 class="titulo-observacoes text-center">OBSERVAÇÕES</h3>
-                            <p>{{campeonatos[$route.params.jogo].observacoes}}</p>
+                <div class="conteudo-regra">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-12 py-4">
+                                <h3 class="titulo-regras text-center">REGRAS</h3>
+                                <p>{{campeonatos[$route.params.jogo].regras}}</p>
+                                <hr>
+                                <h3 class="titulo-observacoes text-center">OBSERVAÇÕES</h3>
+                                <p>{{campeonatos[$route.params.jogo].observacoes}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,22 +64,25 @@
         </div>
         <div v-else>
             <FundoFixo></FundoFixo>
-            <Navbar></Navbar>
-            <div class="container-fluid">
+            <div class="fixed">
+                <Navbar></Navbar>
                 <Rainbow></Rainbow>
-
-                <ItemErro
-                        erro="ERRO 404"
-                        subtitulo="Ops, parece que você entrou unma página de campeonato inválida."
-                        descricao="Selecione um dos campeonatos disponíveis:"></ItemErro>
             </div>
-            <div class="container py-5">
-                <Campeonatos></Campeonatos>
+            <div class="animate">
+                <div class="container-fluid conteudo">
+                    <ItemErro
+                            erro="ERRO 404"
+                            subtitulo="Ops, parece que você entrou unma página de campeonato inválida."
+                            descricao="Selecione um dos campeonatos disponíveis:"></ItemErro>
+                </div>
+                <div class="container py-5">
+                    <Campeonatos></Campeonatos>
+                </div>
             </div>
-        </div>
-        <Patrocinadores></Patrocinadores>
-        <div class="container-fluid">
-            <Rodape></Rodape>
+            <Patrocinadores></Patrocinadores>
+            <div class="container-fluid">
+                <Rodape></Rodape>
+            </div>
         </div>
     </div>
 </template>
