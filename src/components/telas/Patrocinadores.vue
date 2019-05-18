@@ -15,7 +15,9 @@
                     <div class="row">
                         <div class="col-6 my-auto"><h4>APOIO:</h4></div>
                         <div class="col-6 my-auto">
-                            <button class="btn btn-success float-right">SEJA UM APOIADOR</button>
+                            <router-link to="/apoie">
+                                <button class="btn btn-success float-right">SEJA UM APOIADOR</button>
+                            </router-link>
                         </div>
                     </div>
                 </div>
