@@ -66,9 +66,9 @@
                 <Rainbow></Rainbow>
 
                 <ItemErro
-                        erro="Erro 404"
-                        subtitulo="Ops! Esse campeonato não foi configurado."
-                        descricao="Confira abaixo alguns campeonatos que vão acontecer."></ItemErro>
+                        erro="ERRO 404"
+                        subtitulo="Ops, parece que você entrou unma página de campeonato inválida."
+                        descricao="Selecione um dos campeonatos disponíveis:"></ItemErro>
             </div>
             <div class="container py-5">
                 <Campeonatos></Campeonatos>
