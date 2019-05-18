@@ -132,9 +132,9 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .lista-jogo-dados {
-        background: whitesmoke;
+        background: $bg-light;
     }
 
     .bloco {
@@ -142,7 +142,7 @@
     }
 
     .bloco:hover {
-        background: #e7e7e7;
+        background: $bg-light;
         transform: scale(1.06);
     }
 
