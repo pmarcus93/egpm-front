@@ -16,9 +16,9 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .titulo {
-        background: whitesmoke;
+        background: $bg-light;
         border-radius: 5px;
     }
 
