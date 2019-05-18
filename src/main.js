@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Home from './components/Home.vue'
 import Bootstrap from 'bootstrap'
 import VueRouter from 'vue-router'
 import routes from './routes';
