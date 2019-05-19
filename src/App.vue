@@ -48,6 +48,42 @@
     }
 
 
+    .animateslice {
+        display: block;
+        position: relative;
+        animation: animateslice 0.2s;
+    }
+
+    @keyframes animateslice {
+        from {
+            right: -500px;
+            opacity: 0
+        }
+        to {
+            right: 0;
+            opacity: 1
+        }
+    }
+
+    .animatescale {
+        display: block;
+        position: relative;
+        animation: animatescale 0.2s;
+    }
+
+    @keyframes animatescale {
+        from {
+            transform: scale(2);
+            opacity: 0
+        }
+        to {
+            transform: scale(1);
+            opacity: 1
+        }
+    }
+
+
+
     .fixed {
         position: fixed;
         width: 100%;
@@ -57,6 +93,10 @@
 
     .conteudo {
         margin-top: 62px;
+    }
+
+    .container-fluid {
+        overflow: hidden;
     }
 
 </style>
