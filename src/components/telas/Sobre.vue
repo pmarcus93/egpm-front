@@ -1,5 +1,4 @@
 <template>
-
     <div class="sobre">
         <div class="container">
             <div class="row">
@@ -30,9 +29,9 @@
 
 <style scoped>
     .sobre {
-        background: whitesmoke;
-        padding-top: 10%;
-        padding-bottom: 10%;
+        background: #f5f5f5;
+        padding-top: 5%;
+        padding-bottom: 5%;
         color: #545457;
     }
 </style>

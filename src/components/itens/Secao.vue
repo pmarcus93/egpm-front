@@ -16,40 +16,28 @@
     }
 </script>
 
-<style>
+<style scoped>
 
     @font-face {
         font-family: "Archive";
         src: url("../../assets/fonts/Archive-Regular.ttf");
     }
 
-    .titulo-secao {
-        font-family: Archive;
-    }
-
     /* Small devices (landscape phones, 576px and up) */
-    @media (min-width: 576px) {
+    @media (max-width: 576px) {
         .titulo-secao {
-            font-size: 2em;
+            font-family: Archive;
+            font-size: 2.5em;
+            text-align: center !important;
         }
     }
 
     /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 768px) {
+    @media (min-width: 576px) {
         .titulo-secao {
+            font-family: Archive;
             font-size: 3em;
         }
     }
-
-    /* Large devices (desktops, 992px and up) */
-    @media (min-width: 992px) {
-
-    }
-
-    /* Extra large devices (large desktops, 1200px and up)*/
-    @media (min-width: 1200px) {
-
-    }
-
 
 </style>

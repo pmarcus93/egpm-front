@@ -7,7 +7,7 @@
                     allowfullscreen></iframe>
         </div>
 
-        <div class="col-md-6 col-st-12 my-auto info-game text-left">
+        <div class="col-md-6 col-st-12 my-auto info-game">
             <h2 class="titulo-secao">{{titulo}}</h2>
             <p class="texto-info" v-if="descricao">
                 {{descricao}}
@@ -34,8 +34,20 @@
 
 <style scoped>
 
-    .info-game {
-        color: whitesmoke;
+    /* Small devices (landscape phones, 576px and up) */
+    @media (max-width: 576px) {
+        .info-game {
+            color: #f5f5f5;
+            margin-top: 30px !important;
+            text-align: center;
+        }
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 576px) {
+        .info-game {
+            color: #f5f5f5;
+        }
     }
 
     .texto-info {
