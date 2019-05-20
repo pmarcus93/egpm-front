@@ -5,15 +5,21 @@ import VueRouter from 'vue-router'
 import routes from './routes';
 
 Vue.use(VueRouter)
-const router = new VueRouter({mode: 'history', routes});
+const router = new VueRouter({
+    mode: 'history',
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        return {x: 0, y: 0};
+    }
+});
 
 import 'bootstrap/dist/css/bootstrap.css'
 
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  render: h => h(App),
+    router,
+    render: h => h(App),
 }).$mount('#app');
 
 Vue.use(Bootstrap);
