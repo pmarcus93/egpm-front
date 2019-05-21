@@ -4,7 +4,7 @@
             <div class="row">
                 <section class="col-12 section d-flex" :class="[classimage, type]">
                     <div class="col-sm-6 my-auto box-info">
-                        <h1 class=" text-left mb-4 titulo-secao-right"
+                        <h1 class=" mb-4 titulo-secao-right"
                             v-bind:style="{ 'border-bottom':  colorborder + ' solid 3px' }">{{titulo}}</h1>
                         <p class="mt-3">{{descricao}}</p>
                         <router-link class="btn btn-light" :to="rota">{{textobotao}}</router-link>
@@ -29,10 +29,6 @@
         src: url("../../assets/fonts/Archive-Regular.ttf");
     }
 
-    .titulo-secao-right {
-        font-family: Archive;
-    }
-
     .secao-right-body {
         color: whitesmoke;
     }
@@ -43,34 +39,32 @@
         justify-content: flex-end;
     }
 
-    .box-info {
-        z-index: 2;
-    }
-
     /* Small devices (landscape phones, 576px and up) */
-    @media (min-width: 576px) {
+    @media (max-width: 576px) {
         .titulo-secao-right {
-            font-size: 2em;
+            font-size: 2.5em;
+            font-family: Archive;
+            text-align: center;
         }
+
+        .box-info {
+            z-index: 2;
+            text-align: center;
+        }
+
     }
 
     /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 768px) {
+    @media (min-width: 576px) {
         .titulo-secao-right {
             font-size: 4em;
+            font-family: Archive;
+        }
+
+        .box-info {
+            z-index: 2;
         }
     }
-
-    /* Large devices (desktops, 992px and up) */
-    @media (min-width: 992px) {
-
-    }
-
-    /* Extra large devices (large desktops, 1200px and up)*/
-    @media (min-width: 1200px) {
-
-    }
-
 
     .static::after {
         content: " ";

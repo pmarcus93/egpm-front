@@ -1,10 +1,8 @@
 <template>
     <div class="patrocinadores">
         <div class="container">
-
             <div class="row">
-                <div class="col-12 py-2 mb-4 tipo-patrocinador"><h4>REALIZAÇÃO:</h4></div>
-
+                <div class="col-12 py-2 mb-4 tipo-patrocinador center-mobile"><h4>REALIZAÇÃO:</h4></div>
                 <ItemPatrocinador
                         imagem="http://fapam.edu.br/escolheportal/img/fapam.png"
                 ></ItemPatrocinador>
@@ -73,6 +71,14 @@
 </script>
 
 <style scoped>
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (max-width: 576px) {
+        .center-mobile {
+            text-align: center;
+        }
+    }
+
     .patrocinadores {
         background: white;
         padding-top: 5%;

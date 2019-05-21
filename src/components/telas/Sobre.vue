@@ -1,5 +1,4 @@
 <template>
-
     <div class="sobre">
         <div class="container">
             <div class="row">
@@ -28,11 +27,10 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .sobre {
-        background: whitesmoke;
-        padding-top: 10%;
-        padding-bottom: 10%;
+        background: $bg-light;
+        padding: 5% 0;
         color: #545457;
     }
 </style>

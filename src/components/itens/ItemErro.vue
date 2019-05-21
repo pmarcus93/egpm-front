@@ -18,13 +18,29 @@
 </script>
 
 <style scoped>
-    h1 {
-        font-family: Archive;
-        font-size: 5em;
-    }
 
     h1, h3 {
         color: yellow;
+    }
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (max-width: 576px) {
+        h1 {
+            font-family: Archive;
+            font-size: 3em;
+        }
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 576px) {
+        h1 {
+            font-family: Archive;
+            font-size: 5em;
+        }
+
+        h3 {
+
+        }
     }
 
 </style>

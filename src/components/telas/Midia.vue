@@ -55,17 +55,37 @@
         color: #545457;
     }
 
-    .video {
-        border: none;
-        -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
-        box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+    /* Small devices (landscape phones, 576px and up) */
+    @media (max-width: 576px) {
+        .video {
+            margin-top: 30px;
+            border: none;
+            -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+        }
+
+        .titulo-depoimentos {
+            font-size: 2em;
+            font-family: Archive;
+
+        }
     }
 
-    .titulo-depoimentos {
-        font-size: 3em;
-        font-family: Archive;
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 576px) {
+        .video {
+            border: none;
+            -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+        }
 
+        .titulo-depoimentos {
+            font-size: 2.5em;
+            font-family: Archive;
+
+        }
     }
 
 

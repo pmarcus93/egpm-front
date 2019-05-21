@@ -7,16 +7,13 @@
                     <span class="col-12 text-box-sobre text-center">32 HORAS</span>
                 </div>
             </div>
-
             <div class="col-6 bloco-icon py-4">
                 <div class="row">
                     <span class="col-12 icon-box-sobre text-center my-auto"><i class="fa fa-user"></i></span>
                     <span class="col-12 text-box-sobre text-center">150 PLAYERS</span>
                 </div>
             </div>
-
         </div>
-
         <div class="row">
             <div class="col-6 bloco-icon py-4">
                 <div class="row">
@@ -24,16 +21,13 @@
                     <span class="col-12 text-box-sobre text-center">40 CAMPEONATOS</span>
                 </div>
             </div>
-
             <div class="col-6 bloco-icon py-4">
                 <div class="row">
                     <span class="col-12 icon-box-sobre text-center my-auto"><i class="fa fa-trophy"></i></span>
                     <span class="col-12 text-box-sobre text-center">900 VISITANTES</span>
                 </div>
             </div>
-
         </div>
-
     </div>
 </template>
 
@@ -52,11 +46,11 @@
         transform: scale(1.09);
     }
     .icon-box-sobre {
-        font-size: 4em;
+        font-size: 3em;
     }
 
     .text-box-sobre {
-        font-size: 1.5em;
+        font-size: 1.2em;
         font-weight: bold;
     }
 

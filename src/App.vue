@@ -48,6 +48,40 @@
     }
 
 
+    .animateslice {
+        display: block;
+        position: relative;
+        animation: animateslice 0.2s;
+    }
+
+    @keyframes animateslice {
+        from {
+            right: -500px;
+            opacity: 0
+        }
+        to {
+            right: 0;
+            opacity: 1
+        }
+    }
+
+    .animatescale {
+        display: block;
+        position: relative;
+        animation: animatescale 0.2s;
+    }
+
+    @keyframes animatescale {
+        from {
+            transform: scale(2);
+            opacity: 0
+        }
+        to {
+            transform: scale(1);
+            opacity: 1
+        }
+    }
+
     .fixed {
         position: fixed;
         width: 100%;
@@ -57,6 +91,21 @@
 
     .conteudo {
         margin-top: 62px;
+    }
+
+    .container-fluid {
+        overflow: hidden;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #F4F4F4;
+    }
+    ::-webkit-scrollbar {
+        width: 6px;
+        background: #F4F4F4;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #dad7d7;
     }
 
 </style>

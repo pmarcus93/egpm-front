@@ -1,47 +1,104 @@
 <template>
-    <nav class="navbar navbar-light bg-light">
+    <div>
+        <nav class="navbar navbar-light bg-light">
 
-        <router-link class="navbar-brand" to='/inicio'>
-            <img src="../../assets/logoegpm3.png" width="150px"
-                 class="d-inline-block align-top" alt="">
-        </router-link>
+            <router-link class="navbar-brand" to='/inicio'>
+                <img src="../../assets/logoegpm3.png" width="150px"
+                     class="d-inline-block align-top" alt="">
+            </router-link>
+
+            <router-link class="navbar-brand link" to='/inicio'>
+                INÍCIO
+            </router-link>
+
+            <router-link class="navbar-brand link" to='/campeonatos'>
+                CAMPEONATOS
+            </router-link>
+
+            <router-link class="navbar-brand link" to='/duvidas'>
+                DÚVIDAS
+            </router-link>
+
+            <router-link class="navbar-brand link" to='/apoie'>
+                APOIO
+            </router-link>
 
 
-        <router-link class="navbar-brand link" to='/inicio'>
-            INÍCIO
-        </router-link>
+            <div class="navbar-icons ">
+                <a href="https://www.facebook.com/FAPAM/" class="color-facebook social"><i
+                        class="fab fa-facebook fa-2x ml-3"></i></a>
+                <a href="https://www.instagram.com/fapam_oficial/" class="color-instagram social"><i
+                        class="fab fa-instagram fa-2x ml-3"></i></a>
+                <button class="burguer" v-on:click="controlmenu">
+                    <i v-if="!menuativo" class=" fa fa-bars fa-2x ml-3"></i>
+                    <i v-else class=" fa fa-times fa-2x ml-3 animatescale"></i>
+                </button>
 
-        <router-link class="navbar-brand link" to='/campeonatos'>
-            CAMPEONATOS
-        </router-link>
+            </div>
 
-        <router-link class="navbar-brand link" to='/duvidas'>
-            DÚVIDAS
-        </router-link>
+        </nav>
+        <div class="menu-mobile col-12 navbar bg-light animateslice" v-if="menuativo">
 
-        <router-link class="navbar-brand link" to='/apoie'>
-            APOIO
-        </router-link>
+            <div class="col-12">
+                <router-link class="navbar-brand" to='/inicio'>
+                    INÍCIO
+                </router-link>
+            </div>
 
+            <div class="col-12">
+                <router-link class="navbar-brand " to='/campeonatos'>
+                    CAMPEONATOS
+                </router-link>
+            </div>
 
-        <div class="navbar-icons">
-            <a href="https://www.facebook.com/FAPAM/" class="color-facebook"><i class="fab fa-facebook fa-2x ml-3"></i></a>
-            <a href="https://www.instagram.com/fapam_oficial/" class="color-instagram"><i
-                    class="fab fa-instagram fa-2x ml-3"></i></a>
-            <button class="burguer"><i class="fa fa-bars fa-2x ml-3"></i></button>
+            <div class="col-12">
+                <router-link class="navbar-brand " to='/duvidas'>
+                    DÚVIDAS
+                </router-link>
+            </div>
+
+            <div class="col-12">
+                <router-link class="navbar-brand " to='/apoie'>
+                    APOIO
+                </router-link>
+            </div>
+
+            <div class="col-12">
+                <div class="navbar-icons ">
+                    <a href="https://www.facebook.com/FAPAM/" class="color-facebook "><i
+                            class="fab fa-facebook fa-2x mx-3"></i></a>
+                    <a href="https://www.instagram.com/fapam_oficial/" class="color-instagram "><i
+                            class="fab fa-instagram fa-2x mx-3"></i></a>
+                </div>
+            </div>
 
         </div>
-
-    </nav>
+    </div>
 </template>
 
 <script>
     export default {
-        name: 'Navbar'
+        name: 'Navbar',
+        methods: {
+            controlmenu: function () {
+                if (this.menuativo) {
+                    this.menuativo = false;
+                    return;
+                }
+                    this.menuativo = true;
+
+            }
+        },
+        data: function () {
+            return {
+                menuativo: false
+            }
+        }
     }
 </script>
 
 <style>
+
     .navbar-icons a {
         color: #545457;
     }
@@ -90,6 +147,16 @@
         .burguer {
             display: inline;
         }
+
+        .menu-mobile {
+            display: inline;
+            text-align: center;
+            height: calc(100vh - 62px);
+        }
+
+        .social {
+            display: none;
+        }
     }
 
     /* Medium devices (tablets, 768px and up) */
@@ -103,8 +170,15 @@
         .burguer {
             display: none;
         }
-    }
 
+        .menu-mobile {
+            display: none !important;
+        }
+
+        .social {
+            display: inline;
+        }
+    }
 
 
 </style>
