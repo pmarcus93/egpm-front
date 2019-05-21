@@ -46,7 +46,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
     /* Small devices (landscape phones, 576px and up) */
     @media (max-width: 576px) {
@@ -69,7 +69,7 @@
         }
     }
     .duvida {
-        color: #545457;
+        color: $color-title;
     }
 
 </style>

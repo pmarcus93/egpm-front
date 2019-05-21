@@ -27,11 +27,10 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .sobre {
-        background: #f5f5f5;
-        padding-top: 5%;
-        padding-bottom: 5%;
+        background: $bg-light;
+        padding: 5% 0;
         color: #545457;
     }
 </style>
