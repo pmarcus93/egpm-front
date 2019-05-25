@@ -6,6 +6,7 @@ import CampeonatoTela from "./components/CampeonatoTela";
 import DescricaoCampeonato from "./components/DescricaoCampeonato";
 import Erro404 from "./components/Erro404";
 import SejaApoiador from "./components/SejaApoiador";
+import Login from "./components/Login";
 
 
 const routes = [
@@ -32,6 +33,10 @@ const routes = [
     {
         path: '/apoie',
         component: SejaApoiador
+    },
+    {
+        path: '/login',
+        component: Login
     },
     {
         path: '*',
