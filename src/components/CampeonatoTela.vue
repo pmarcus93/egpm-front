@@ -18,9 +18,9 @@
                 <div class="row">
 
                     <ItemCampeonato v-for="(item, indice) in campeonatos"
-                                    :titulo="item.titulo"
-                                    :imagem="item.imagem"
-                                    :rota="item.rota"
+                                    :titulo="item.st_nome"
+                                    :imagem="item.st_imagem"
+                                    :rota="item.id_jogo"
                     ></ItemCampeonato>
                 </div>
             </div>
@@ -46,76 +46,15 @@
     export default {
         name: "CampeonatoTela",
         components: {ItemCampeonato, FundoFixo, Navbar, Rainbow, BannerMenor, Patrocinadores, Rodape},
+        created() {
+            var self = this;
+            EgpmApi.getAllCampeonatos(campeonatos => {
+                self.campeonatos = campeonatos.data;
+            })
+        },
         data: function () {
             return {
-                campeonatos: [
-                    {
-                        titulo: "Mortal Kombat 11",
-                        imagem: "https://www.trueachievements.com/customimages/093902.jpg",
-                        rota: "mortalkombat"
-                    },
-                    {
-                        titulo: "The King Of Fighters",
-                        imagem: "https://i.ytimg.com/vi/3nfdHDhT6UQ/maxresdefault.jpg"
-                    },
-                    {
-                        titulo: "FIFA",
-                        imagem: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_EASportsFifa19_image1600w.jpg",
-                        rota: "fifa"
-                    },
-                    {
-                        titulo: "Mortal Kombat 11",
-                        imagem: "https://www.trueachievements.com/customimages/093902.jpg"
-                    },
-                    {
-                        titulo: "The King Of Fighters",
-                        imagem: "https://i.ytimg.com/vi/3nfdHDhT6UQ/maxresdefault.jpg"
-                    },
-                    {
-                        titulo: "FIFA",
-                        imagem: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_EASportsFifa19_image1600w.jpg"
-                    },
-
-                    {
-                        titulo: "Mortal Kombat 11",
-                        imagem: "https://www.trueachievements.com/customimages/093902.jpg"
-                    },
-                    {
-                        titulo: "The King Of Fighters",
-                        imagem: "https://i.ytimg.com/vi/3nfdHDhT6UQ/maxresdefault.jpg"
-                    },
-                    {
-                        titulo: "FIFA",
-                        imagem: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_EASportsFifa19_image1600w.jpg"
-                    },
-
-                    {
-                        titulo: "Mortal Kombat 11",
-                        imagem: "https://www.trueachievements.com/customimages/093902.jpg"
-                    },
-                    {
-                        titulo: "The King Of Fighters",
-                        imagem: "https://i.ytimg.com/vi/3nfdHDhT6UQ/maxresdefault.jpg"
-                    },
-                    {
-                        titulo: "FIFA",
-                        imagem: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_EASportsFifa19_image1600w.jpg"
-                    },
-
-                    {
-                        titulo: "Mortal Kombat 11",
-                        imagem: "https://www.trueachievements.com/customimages/093902.jpg"
-                    },
-                    {
-                        titulo: "The King Of Fighters",
-                        imagem: "https://i.ytimg.com/vi/3nfdHDhT6UQ/maxresdefault.jpg"
-                    },
-                    {
-                        titulo: "FIFA",
-                        imagem: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_EASportsFifa19_image1600w.jpg"
-                    },
-
-                ]
+                campeonatos: []
             }
         }
     }
