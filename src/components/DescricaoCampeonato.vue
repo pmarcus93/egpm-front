@@ -1,9 +1,9 @@
 <template>
     <div class="pagina-duvidas">
         <!--Verifica se o jogo existe-->
-        <div v-if="campeonatos[$route.params.jogo]">
+        <div v-if="campeonato.id_jogo">
             <FundoFixo
-                    :imagem="campeonatos[$route.params.jogo].imagem"
+                    :imagem="campeonato.st_imagem"
             ></FundoFixo>
             <div class="fixed">
                 <Navbar></Navbar>
@@ -12,37 +12,37 @@
             <div class="animate">
                 <div class="container-fluid conteudo">
                     <BannerJogo
-                            :titulo="campeonatos[$route.params.jogo].titulo"
-                            :video="campeonatos[$route.params.jogo].video"
-                            :descricao="campeonatos[$route.params.jogo].descricao"
-                            :lancamento="campeonatos[$route.params.jogo].lancamento"
-                            :estilo="campeonatos[$route.params.jogo].estilo"
+                            :titulo="campeonato.st_nome"
+                            :descricao="campeonato.st_descricao"
+                            :lancamento="campeonato.dt_lancamento"
+                            :estilo="campeonato.st_estilo"
+                            :video="campeonato.st_video"
                     ></BannerJogo>
 
                     <div class="row lista-jogo-dados text-center my-auto">
                         <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
                             <div class="col-12 icone"><i class="fa fa-file-alt"></i></div>
-                            <div class="col-12 texto">{{campeonatos[$route.params.jogo].inscricao}}</div>
+                            <div class="col-12 texto">{{campeonato.st_ingresso}}</div>
                         </div>
 
                         <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
                             <div class="col-12 icone"><i class="fa fa-users"></i></div>
-                            <div class="col-12 texto">{{campeonatos[$route.params.jogo].vagas}}</div>
+                            <div class="col-12 texto">{{campeonato.nu_vaga}}</div>
                         </div>
 
                         <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
                             <div class="col-12 icone"><i class="fa fa-gamepad"></i></div>
-                            <div class="col-12 texto">{{campeonatos[$route.params.jogo].console}}</div>
+                            <div class="col-12 texto">{{campeonato.st_plataforma}}</div>
                         </div>
 
                         <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
                             <div class="col-12 icone"><i class="fa fa-calendar"></i></div>
-                            <div class="col-12 texto">{{campeonatos[$route.params.jogo].data}}</div>
+                            <div class="col-12 texto">{{campeonato.dt_jogo}}</div>
                         </div>
 
                         <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
                             <div class="col-12 icone"><i class="fa fa-clock"></i></div>
-                            <div class="col-12 texto">{{campeonatos[$route.params.jogo].horario}}</div>
+                            <div class="col-12 texto">{{campeonato.hr_jogo}}</div>
                         </div>
                     </div>
                 </div>
@@ -52,10 +52,10 @@
                         <div class="row ">
                             <div class="col-12 py-4">
                                 <h3 class="titulo-regras text-center">REGRAS</h3>
-                                <p>{{campeonatos[$route.params.jogo].regras}}</p>
+                                <p>{{campeonato.st_regra}}</p>
                                 <hr>
                                 <h3 class="titulo-observacoes text-center">OBSERVAÇÕES</h3>
-                                <p>{{campeonatos[$route.params.jogo].observacoes}}</p>
+                                <p>{{campeonato.st_observacao}}</p>
                             </div>
                         </div>
                     </div>
@@ -79,10 +79,10 @@
                     <Campeonatos></Campeonatos>
                 </div>
             </div>
-            <Patrocinadores></Patrocinadores>
-            <div class="container-fluid">
-                <Rodape></Rodape>
-            </div>
+        </div>
+        <Patrocinadores></Patrocinadores>
+        <div class="container-fluid">
+            <Rodape></Rodape>
         </div>
     </div>
 </template>
@@ -106,35 +106,26 @@
         components: {
             Campeonatos,
             ItemErro,
-            BannerJogo, ItemCampeonato, FundoFixo, Navbar, Rainbow, BannerMenor, Patrocinadores, Rodape
+            BannerJogo,
+            ItemCampeonato,
+            FundoFixo,
+            Navbar,
+            Rainbow,
+            BannerMenor,
+            Patrocinadores,
+            Rodape
         },
-        data: function () {
+        data() {
             return {
-                campeonatos:
-                    {
-                        mortalkombat: {
-                            titulo: "Mortal Kombat 11",
-                            imagem: "https://www.trueachievements.com/customimages/093902.jpg",
-                            video: "https://www.youtube.com/embed/7zwQPJmg-Kg?start=3",
-                            descricao: "Mortal Kombat 11 is a fighting video game developed by NetherRealm Studios and published by Warner Bros. Interactive Entertainment.",
-                            lancamento: "14/07/2019",
-                            estilo: "Luta",
-                            console: "PLAYSTATION 4",
-                            data: "14/02/2020",
-                            horario: "14H",
-                            inscricao: "NO LOCAL DO EVENTO",
-                            vagas: "100 VAGAS",
-                            regras: "Regras",
-                            observacoes: "Observações"
-                        },
-                        fifa: {
-                            titulo: "FIFA",
-                            imagem: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_EASportsFifa19_image1600w.jpg",
-                            video: "https://www.youtube.com/embed/zX0AV6yxyrQ"
-                        }
-                    },
-
+                campeonato: {}
             }
+        },
+        created() {
+            var self = this;
+
+            EgpmApi.getCampeonato(this.$route.params.jogo, campeonato => {
+                self.campeonato = campeonato.data;
+            })
         }
     }
 </script>
