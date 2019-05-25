@@ -99,6 +99,7 @@
     import BannerJogo from "./itens/BannerJogo";
     import ItemErro from "./itens/ItemErro";
     import Campeonatos from "./telas/Campeonatos";
+    import EgpmApi from "@/services/EgpmApi.js";
 
     export default {
         name: "DescricaoCampeonato",

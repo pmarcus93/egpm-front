@@ -41,6 +41,7 @@
     import Navbar from "./itens/Navbar";
     import FundoFixo from "./itens/FundoFixo";
     import ItemCampeonato from "./itens/ItemCampeonato";
+    import EgpmApi from "@/services/EgpmApi.js";
 
     export default {
         name: "CampeonatoTela",
