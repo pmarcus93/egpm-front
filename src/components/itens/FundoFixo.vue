@@ -9,7 +9,12 @@
             <div class="banner-foto"></div>
         </div>
 
-        <div class="sobre-banner"></div>
+        <div v-if="sobreimagem">
+            <div class="sobre-banner" :style="'background:' + sobreimagem"></div>
+        </div>
+        <div v-else>
+            <div class="sobre-banner"></div>
+        </div>
     </div>
 </template>
 
@@ -17,7 +22,8 @@
     export default {
         name: "FundoFixo",
         props: [
-            'imagem'
+            'imagem',
+            'sobreimagem'
         ]
     }
 </script>
