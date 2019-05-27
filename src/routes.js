@@ -7,6 +7,7 @@ import DescricaoCampeonato from "./components/DescricaoCampeonato";
 import Erro404 from "./components/Erro404";
 import SejaApoiador from "./components/SejaApoiador";
 import Login from "./components/Login";
+import Painel from "./components/Painel";
 
 
 const routes = [
@@ -37,6 +38,11 @@ const routes = [
     {
         path: '/login',
         component: Login
+    },
+    {
+        path: '/painel',
+        name: 'painel',
+        component: Painel
     },
     {
         path: '*',

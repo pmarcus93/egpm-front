@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 const urlbase = 'http://egpmdeveloper.lucasjunior.com.br/';
 
 export default {
@@ -19,5 +18,25 @@ export default {
                 callback(campeonato);
             }
         })
-    }
+    },
+
+    postLogin: (usuario, callback) => {
+        var urlcampeonato = urlbase + "Login/";
+        axios.post(urlcampeonato, usuario).then((campeonato) => {
+            if (callback) {
+                callback(campeonato);
+            }
+        })
+    },
+
+    verificaLogin: (credenciais, callback) => {
+        var urlcampeonato = urlbase + "Login/" + credenciais.id_usuario + "/verificalogin";
+        axios.post(urlcampeonato, credenciais).then((result) => {
+            if (callback) {
+                callback(result);
+            }
+        })
+    },
+
+
 }
