@@ -15,6 +15,7 @@
 <style lang="scss">
 
     @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
     @font-face {
         font-family: "Archive";

@@ -8,6 +8,11 @@ import Erro404 from "./components/Erro404";
 import SejaApoiador from "./components/SejaApoiador";
 import Login from "./components/Login";
 import Painel from "./components/Painel";
+import Duvida from "./components/telas/Duvida";
+import ViewCampeonato from "./components/Painel/ViewCampeonato";
+import ItemErro from "./components/itens/ItemErro";
+import Dashboard from "./components/Painel/Dashboard";
+import FormCampeonatos from "./components/Painel/FormCampeonatos";
 
 
 const routes = [
@@ -42,7 +47,21 @@ const routes = [
     {
         path: '/painel',
         name: 'painel',
-        component: Painel
+        component: Painel,
+        children: [
+            {
+                path: 'campeonatos',
+                component: ViewCampeonato,
+            },
+            {
+                path: 'campeonatos/adicionar',
+                component: FormCampeonatos
+            },
+            {
+                path: '*',
+                component: Dashboard
+            }
+        ]
     },
     {
         path: '*',

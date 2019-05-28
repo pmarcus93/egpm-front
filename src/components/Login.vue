@@ -2,7 +2,7 @@
     <div>
         <FundoFixo
                 imagem="https://lh3.googleusercontent.com/Uz5M0FOZIlrbBeWyXSnGOpLjoHnlbX1z6hDANfygYVx5CZwYvPfxAzIDKhNf0KeA0lswisNZMv2qk2ndZQqGj-_QtQxSGhe390IsEYn2UiB_jVVzFRHb4YHR2gmGqo29y_vnl4t1B4377s2Mt_dCIK3uf2s4jlKunz5Z7XW49qVMDBLG8rTkcHoh4qqPE4NJZjAMLt50q1O-qlP9eIX4czoRSViBJRWosbO0_nuF-ZK61G9FFlbbl7c8ju8LehHwNF82T9w6MZVMNEU2zTW0vtXAR5TXIndBaCsvQqLUPZok5j0P0FvNDKnVjnBc1AbQGoPpAaIDkmOw0LPZcnEq9yBctn1c7DlPWlPcc69xnSceBjaNQsdLXVbpwU4f6I1Sd4-5JbwCAcSwCC-fgatTrv9m3tJJ2QUIT9odt7HCH9WQFt7kAvAYckCoeI23s5i9vaCU4weYHLvmrSojbf8wPdtQa8MsC8kEHJMC43oJwLxx5jhHvg5jpZZDNhadmjW1Aj0L2WGGlaDBUyUEM1LEvhBPSKGuYfYZnAwW2sNdszceXCvKM88dbY-jqecw_F2quFgcckj1yySFjUxUSCQFlJP5YJ2992FN1p_aklsbco41Resy0sfRG5ZbUCQvFXUT5pxAvZG98LAQUmVP9K2iv031HwVgILpB=w1043-h695-no"
-                sobreimagem="rgba(0,255,0,0.1)"
+                sobreimagem="rgba(0,0,0,0.1)"
         >
         </FundoFixo>
 
