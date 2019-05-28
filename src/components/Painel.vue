@@ -33,6 +33,16 @@
                         icone="quote-left"
                 ></ItemMenuPainel>
 
+                <ItemMenuPainel
+                        titulo="Sobre"
+                        icone="user"
+                ></ItemMenuPainel>
+
+                <ItemMenuPainel
+                        titulo="Datas"
+                        icone="clock"
+                ></ItemMenuPainel>
+
             </div>
 
             <div class="col-9 view-info">
