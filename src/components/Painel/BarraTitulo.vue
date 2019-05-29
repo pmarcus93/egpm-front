@@ -48,7 +48,6 @@
         ],
         methods: {
             save: function () {
-                var self = this;
                 this.$parent.save();
             }
         }

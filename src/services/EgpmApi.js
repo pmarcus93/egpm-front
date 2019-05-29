@@ -4,9 +4,11 @@ const urlbase = 'http://egpmdeveloper.lucasjunior.com.br/';
 export default {
 
     pushAutenticationobject: (object) => {
-        object.st_token = localStorage.getItem('st_token'),
-        object.id_usuario = localStorage.getItem('id_usuario')
-
+        if (object === null){
+            object = {};
+        }
+        object.st_token = localStorage.getItem('st_token');
+        object.id_usuario = localStorage.getItem('id_usuario');
         return object;
     },
 
@@ -49,6 +51,15 @@ export default {
     postCampeonato: (campeonato, callback) => {
         var urlcampeonato = urlbase + "Jogo/";
         axios.post(urlcampeonato, campeonato).then((campeonato) => {
+            if (callback) {
+                callback(campeonato);
+            }
+        })
+    },
+
+    deleteCampeonato: (id, token, callback) => {
+        var urlcampeonato = urlbase + "Jogo/" + id;
+        axios.delete(urlcampeonato, token).then((campeonato) => {
             if (callback) {
                 callback(campeonato);
             }

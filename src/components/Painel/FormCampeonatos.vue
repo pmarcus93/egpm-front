@@ -44,7 +44,8 @@
                                 <input required v-model="campeonato.st_imagem" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                                 <div class="input-group-append">
                                     <span v-if="campeonato.st_imagem" class="input-group-text p-0"> <button class="btn btn-success"> <i class="fa fa-eye"></i> </button></span>
-                                    <span v-else class="input-group-text p-0"> <button disabled class="btn btn-success disabled"> <i class="fa fa-eye"></i> </button></span>
+                                    <span v-else class="input-group-text p-0"> <button disabled class="btn btn-success disabled"> <i
+                                            class="fa fa-eye"></i> </button></span>
                                 </div>
                             </div>
                         </div>
@@ -55,8 +56,10 @@
                             <div class="input-group">
                                 <input required v-model="campeonato.st_video" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                                 <div class="input-group-append">
-                                    <span v-if="campeonato.st_video" class="input-group-text p-0"> <button class="btn btn-success"> <i class="fa fa-eye"></i> </button></span>
-                                    <span v-else class="input-group-text p-0"> <button disabled class="btn btn-success disabled"> <i class="fa fa-eye"></i> </button></span>
+                                    <span v-if="campeonato.st_video" class="input-group-text p-0"> <button class="btn btn-success"> <i
+                                            class="fa fa-eye"></i> </button></span>
+                                    <span v-else class="input-group-text p-0"> <button disabled class="btn btn-success disabled"> <i
+                                            class="fa fa-eye"></i> </button></span>
                                 </div>
                             </div>
                         </div>
@@ -123,6 +126,14 @@
     export default {
         name: "FormCampeonatos",
         components: {BarraTitulo},
+        created() {
+            if (this.$route.params.id_jogo) {
+                var self = this;
+                EgpmApi.getCampeonato(this.$route.params.id_jogo, campeonato => {
+                    self.campeonato = campeonato.data;
+                })
+            }
+        },
         data() {
             return {
                 campeonato: {
@@ -148,7 +159,7 @@
                 var self = this;
                 EgpmApi.postCampeonato(EgpmApi.pushAutenticationobject(self.campeonato), result => {
                     if (result.data.status) {
-
+                        alert("Sucesso!" + result.data.message);
                     } else {
                         alert("Erro!" + result.data.erro.message);
                     }

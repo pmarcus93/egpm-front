@@ -41,6 +41,7 @@ const routes = [
         component: SejaApoiador
     },
     {
+        name: 'login',
         path: '/login',
         component: Login
     },
@@ -55,6 +56,10 @@ const routes = [
             },
             {
                 path: 'campeonatos/adicionar',
+                component: FormCampeonatos
+            },
+            {
+                path: 'campeonatos/editar/:id_jogo',
                 component: FormCampeonatos
             },
             {

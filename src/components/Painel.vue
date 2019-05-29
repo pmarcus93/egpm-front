@@ -43,6 +43,16 @@
                         icone="clock"
                 ></ItemMenuPainel>
 
+                <ItemMenuPainel
+                        titulo="Patrocinadores"
+                        icone="hand-holding-usd"
+                ></ItemMenuPainel>
+
+                <ItemMenuPainel
+                        titulo="Social"
+                        icone="share"
+                ></ItemMenuPainel>
+
             </div>
 
             <div class="col-9 view-info">
@@ -69,7 +79,7 @@
             verificaLogin: function () {
                 var self = this;
                 EgpmApi.verificaLogin(self.credenciais, result => {
-                    if (!self.usuario.bl_statuslogin) {
+                    if (!result.data.status) {
                         this.$router.push({
                             name: 'login',
                         })
