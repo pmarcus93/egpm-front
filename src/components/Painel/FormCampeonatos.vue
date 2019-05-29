@@ -4,7 +4,7 @@
                 titulo="CAMPEONATO"
                 icon="check"
                 texto-botao="Salvar"
-                rota="/painel/campeonatos/adicionar"
+                action="save"
         >
         </BarraTitulo>
 
@@ -15,41 +15,60 @@
                         <h4>Dados básicos:</h4>
                         <div class="form-group">
                             <label for="st_jogo">Nome do campeonato:</label>
-                            <input v-model="campeonato.st_nome" name="st_jogo" type="text" class="form-control" id="st_jogo">
+                            <input required v-model="campeonato.st_nome" name="st_jogo" type="text" class="form-control"
+                                   id="st_jogo">
                         </div>
 
                         <div class="form-group">
                             <label for="">Descição do campeonato:</label>
-                            <textarea v-model="campeonato.st_descricao" name="st_descricao" class="form-control" style="height: 124px">
+                            <textarea required v-model="campeonato.st_descricao" name="st_descricao" class="form-control"
+                                      style="height: 124px">
                         </textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="">Estilo campeonato:</label>
-                            <input v-model="campeonato.st_estilo" name="st_estilo" type="text" class="form-control" id="exampleInputEmail1">
+                            <input required v-model="campeonato.st_estilo" name="st_estilo" type="text" class="form-control"
+                                   id="exampleInputEmail1">
                         </div>
 
                         <div class="form-group">
                             <label for="">Lançamento do campeonato:</label>
-                            <input v-model="campeonato.dt_lancamento" name="dt_lancamento" type="text " class="form-control datepicker" id="datepicker">
+                            <input required v-model="campeonato.dt_lancamento" name="dt_lancamento" type="text "
+                                   class="form-control datepicker" id="datepicker">
                         </div>
 
                         <div class="form-group">
                             <label for="">Imagem (url):</label>
-                            <input v-model="campeonato.st_imagem" name="st_imagem" type="text " class="form-control datepicker" id="datepicker">
+                            <div class="input-group">
+                                <input required v-model="campeonato.st_imagem" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                <div class="input-group-append">
+                                    <span v-if="campeonato.st_imagem" class="input-group-text p-0"> <button class="btn btn-success"> <i class="fa fa-eye"></i> </button></span>
+                                    <span v-else class="input-group-text p-0"> <button disabled class="btn btn-success disabled"> <i class="fa fa-eye"></i> </button></span>
+                                </div>
+                            </div>
                         </div>
+
 
                         <div class="form-group">
                             <label for="">Video (Youtube):</label>
-                            <input v-model="campeonato.st_video" name="st_video" type="text " class="form-control datepicker" id="datepicker">
+                            <div class="input-group">
+                                <input required v-model="campeonato.st_video" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                <div class="input-group-append">
+                                    <span v-if="campeonato.st_video" class="input-group-text p-0"> <button class="btn btn-success"> <i class="fa fa-eye"></i> </button></span>
+                                    <span v-else class="input-group-text p-0"> <button disabled class="btn btn-success disabled"> <i class="fa fa-eye"></i> </button></span>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
                     <div class="col-6">
                         <h4>Detalhes:</h4>
                         <div class="form-group">
                             <label for="">Local de inscrição:</label>
-                            <input v-model="campeonato.st_ingresso" name="st_inscricao" type="text " class="form-control">
+                            <input v-model="campeonato.st_ingresso" name="st_inscricao" type="text "
+                                   class="form-control">
                         </div>
 
                         <div class="form-group">
@@ -59,7 +78,8 @@
 
                         <div class="form-group">
                             <label for="">Plataforma:</label>
-                            <input v-model="campeonato.st_plataforma" name="st_plataforma" type="text " class="form-control">
+                            <input v-model="campeonato.st_plataforma" name="st_plataforma" type="text "
+                                   class="form-control">
                         </div>
 
                         <div class="form-group">
@@ -98,6 +118,7 @@
 
 <script>
     import BarraTitulo from "./BarraTitulo";
+    import EgpmApi from "../../services/EgpmApi";
 
     export default {
         name: "FormCampeonatos",
@@ -120,6 +141,20 @@
                     st_regra: null,
                     st_video: null
                 },
+            }
+        },
+        methods: {
+            save: function () {
+                var self = this;
+                EgpmApi.postCampeonato(EgpmApi.pushAutenticationobject(self.campeonato), result => {
+                    if (result.data.status) {
+
+                    } else {
+                        alert("Erro!" + result.data.erro.message);
+                    }
+                })
+
+
             }
         }
     }

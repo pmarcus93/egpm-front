@@ -19,7 +19,7 @@
 
     export default {
         name: "ViewCampeonato",
-        components: {BarraTitulo}
+        components: {BarraTitulo},
 
     }
 </script>

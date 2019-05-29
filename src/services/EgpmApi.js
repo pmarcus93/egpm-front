@@ -2,6 +2,14 @@ import axios from 'axios';
 const urlbase = 'http://egpmdeveloper.lucasjunior.com.br/';
 
 export default {
+
+    pushAutenticationobject: (object) => {
+        object.st_token = localStorage.getItem('st_token'),
+        object.id_usuario = localStorage.getItem('id_usuario')
+
+        return object;
+    },
+
     getAllCampeonatos: (callback) => {
         var urlcampeonatos = urlbase + "Jogo/";
         axios.get(urlcampeonatos).then((campeonatos) => {
@@ -38,5 +46,13 @@ export default {
         })
     },
 
+    postCampeonato: (campeonato, callback) => {
+        var urlcampeonato = urlbase + "Jogo/";
+        axios.post(urlcampeonato, campeonato).then((campeonato) => {
+            if (callback) {
+                callback(campeonato);
+            }
+        })
+    },
 
 }
