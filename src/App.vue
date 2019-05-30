@@ -1,11 +1,10 @@
 <template>
     <div id="app">
-        <router-view />
+        <router-view/>
     </div>
 </template>
 
 <script>
-
     export default {
         name: 'app',
     }
@@ -29,7 +28,6 @@
         overflow-y: auto;
         perspective: 2px;
     }
-
 
     .animate {
         display: block;
@@ -101,10 +99,12 @@
     ::-webkit-scrollbar-track {
         background-color: #F4F4F4;
     }
+
     ::-webkit-scrollbar {
         width: 6px;
         background: #F4F4F4;
     }
+
     ::-webkit-scrollbar-thumb {
         background: #dad7d7;
     }

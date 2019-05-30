@@ -1,22 +1,37 @@
 <template>
     <div class="animate row">
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalimg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Imagem</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <img :src="campeonato.st_imagem" width="100%">
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalvideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" >Vídeo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe width="100%" height="315" :src="campeonato.st_video" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -43,7 +58,8 @@
 
                         <div class="form-group">
                             <label for="">Descição do campeonato:</label>
-                            <textarea required v-model="campeonato.st_descricao" name="st_descricao" class="form-control"
+                            <textarea required v-model="campeonato.st_descricao" name="st_descricao"
+                                      class="form-control"
                                       style="height: 124px">
                         </textarea>
                         </div>
@@ -51,24 +67,28 @@
 
                         <div class="form-group">
                             <label for="">Estilo campeonato:</label>
-                            <input required v-model="campeonato.st_estilo" name="st_estilo" type="text" class="form-control"
+                            <input required v-model="campeonato.st_estilo" name="st_estilo" type="text"
+                                   class="form-control"
                                    id="exampleInputEmail1">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group datepicker">
                             <label for="">Lançamento do campeonato:</label>
                             <input required v-model="campeonato.dt_lancamento" name="dt_lancamento" type="date"
                                    class="form-control ">
                         </div>
 
-
                         <div class="form-group">
                             <label for="">Imagem (url):</label>
                             <div class="input-group">
-                                <input required v-model="campeonato.st_imagem" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                <input required v-model="campeonato.st_imagem" type="text" class="form-control"
+                                       aria-label="Amount (to the nearest dollar)">
                                 <div class="input-group-append">
-                                    <span v-if="campeonato.st_imagem" v-on:click.prevent="abremodal" class="input-group-text p-0"> <button class="btn btn-success"> <i class="fa fa-eye"></i> </button></span>
-                                    <span v-else class="input-group-text p-0"> <button disabled  class="btn btn-success disabled"> <i
+                                    <span v-if="campeonato.st_imagem" v-on:click.prevent="abremodal"
+                                          class="input-group-text p-0"> <button class="btn btn-success"> <i
+                                            class="fa fa-eye"></i> </button></span>
+                                    <span v-else class="input-group-text p-0"> <button disabled
+                                                                                       class="btn btn-success disabled"> <i
                                             class="fa fa-eye"></i> </button></span>
                                 </div>
                             </div>
@@ -78,11 +98,14 @@
                         <div class="form-group">
                             <label for="">Video (Youtube):</label>
                             <div class="input-group">
-                                <input required v-model="campeonato.st_video" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                <input required v-model="campeonato.st_video"  type="text" class="form-control"
+                                       aria-label="Amount (to the nearest dollar)">
                                 <div class="input-group-append">
-                                    <span v-if="campeonato.st_video" class="input-group-text p-0"> <button class="btn btn-success"> <i
+                                    <span v-if="campeonato.st_video" class="input-group-text p-0"> <button
+                                            v-on:click.prevent="abremodalvideo" class="btn btn-success"> <i
                                             class="fa fa-eye"></i> </button></span>
-                                    <span v-else class="input-group-text p-0"> <button disabled class="btn btn-success disabled"> <i
+                                    <span v-else class="input-group-text p-0"> <button disabled
+                                                                                       class="btn btn-success disabled"> <i
                                             class="fa fa-eye"></i> </button></span>
                                 </div>
                             </div>
@@ -125,16 +148,16 @@
                 <div class="row">
                     <div class="col-12">
                         <h4>Informações:</h4>
+
                         <div class="form-group">
                             <label for="exampleInputEmail1">Regras:</label>
-                            <textarea v-model="campeonato.st_regra" class="form-control" style="height: 124px">
-                                </textarea>
+                            <ckeditor v-model="campeonato.st_regra" :editor="editor" :config="editorConfig"></ckeditor>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Observações:</label>
-                            <textarea v-model="campeonato.st_observacao" class="form-control" style="height: 124px">
-                                </textarea>
+                            <ckeditor v-model="campeonato.st_observacao" :editor="editor" :config="editorConfig"></ckeditor>
+
                         </div>
                     </div>
                 </div>
@@ -146,15 +169,13 @@
 <script>
     import BarraTitulo from "./BarraTitulo";
     import EgpmApi from "../../services/EgpmApi";
+    import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
     export default {
         name: "FormCampeonatos",
         components: {BarraTitulo},
         mounted() {
-          $(".datepicker").datepicker({
-              format: 'mm/dd/yyyy',
-              startDate: '-3d'
-          });
+            $('#datetimepicker4').datetimepicker({pickTime: false});
         },
         created() {
             if (this.$route.params.id_jogo) {
@@ -182,6 +203,11 @@
                     st_regra: null,
                     st_video: null
                 },
+                editor: ClassicEditor,
+                editorConfig: {
+                    // The configuration of the editor.
+                }
+
             }
         },
         methods: {
@@ -189,15 +215,28 @@
                 var self = this;
                 EgpmApi.postCampeonato(EgpmApi.pushAutenticationobject(self.campeonato), result => {
                     if (result.data.status) {
-                        alert("Sucesso!" + result.data.message);
+                        var opts = {};
+                        opts.title = 'Sucesso';
+                        opts.text = "Campeonato salvo com sucesso.";
+                        opts.type = 'success';
+                        PNotify.alert(opts);
+
                     } else {
-                        alert("Erro!" + result.data.erro.message);
+                        var opts = {};
+                        opts.title = 'Erro';
+                        opts.text = result.data.erro.message;
+                        opts.type = 'error';
+                        PNotify.alert(opts);
+
                     }
                 })
             },
             abremodal: function () {
-                alert(",vsdljvkd");
-                $('#myModal').modal('show');
+                $('#modalimg').modal('show');
+
+            },
+            abremodalvideo: function () {
+                $('#modalvideo').modal('show');
 
             }
         }

@@ -1,6 +1,5 @@
 <template>
     <div class="container-fluid p-0">
-
         <div class="row barra-topo">
             <div class="col-md-3">
                 <div class="text-center">
@@ -15,6 +14,7 @@
         </div>
 
         <div class="row">
+
             <div class="col-md-3 menu p-0">
 
                 <ItemMenuPainel
@@ -71,6 +71,14 @@
         name: "Painel",
         components: {ItemMenuPainel},
         mounted() {
+            // this.$notify({
+            //     title: 'Success!',
+            //     text: 'That thing that you were trying to do worked.',
+            //     style: 'success',
+            //     sticky: true
+
+            // });
+
             this.credenciais.st_token = localStorage.getItem('st_token');
             this.credenciais.id_usuario = localStorage.getItem('id_usuario');
             this.verificaLogin();
@@ -92,7 +100,11 @@
                 credenciais: {
                     id_usuario: null,
                     st_token: null
-                }
+                },
+                options: {
+
+
+                },
             }
         }
     }
@@ -128,5 +140,6 @@
         width: auto;
         margin-top: 7.5px !important;
     }
+
 
 </style>
