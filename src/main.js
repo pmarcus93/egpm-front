@@ -3,6 +3,10 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import routes from './routes';
 
+import jQuery from 'jquery'
+global.jQuery = jQuery
+global.$ = jQuery
+
 Vue.use(VueRouter)
 const router = new VueRouter({
     mode: 'history',
@@ -13,6 +17,7 @@ const router = new VueRouter({
 });
 
 import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap'
 
 Vue.config.productionTip = false
 

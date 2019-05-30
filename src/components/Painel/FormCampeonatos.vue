@@ -1,5 +1,27 @@
 <template>
     <div class="animate row">
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <BarraTitulo
                 titulo="CAMPEONATO"
                 icon="check"
@@ -26,6 +48,7 @@
                         </textarea>
                         </div>
 
+
                         <div class="form-group">
                             <label for="">Estilo campeonato:</label>
                             <input required v-model="campeonato.st_estilo" name="st_estilo" type="text" class="form-control"
@@ -34,17 +57,18 @@
 
                         <div class="form-group">
                             <label for="">Lançamento do campeonato:</label>
-                            <input required v-model="campeonato.dt_lancamento" name="dt_lancamento" type="text "
-                                   class="form-control datepicker" id="datepicker">
+                            <input required v-model="campeonato.dt_lancamento" name="dt_lancamento" type="date"
+                                   class="form-control ">
                         </div>
+
 
                         <div class="form-group">
                             <label for="">Imagem (url):</label>
                             <div class="input-group">
                                 <input required v-model="campeonato.st_imagem" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                                 <div class="input-group-append">
-                                    <span v-if="campeonato.st_imagem" class="input-group-text p-0"> <button class="btn btn-success"> <i class="fa fa-eye"></i> </button></span>
-                                    <span v-else class="input-group-text p-0"> <button disabled class="btn btn-success disabled"> <i
+                                    <span v-if="campeonato.st_imagem" v-on:click.prevent="abremodal" class="input-group-text p-0"> <button class="btn btn-success"> <i class="fa fa-eye"></i> </button></span>
+                                    <span v-else class="input-group-text p-0"> <button disabled  class="btn btn-success disabled"> <i
                                             class="fa fa-eye"></i> </button></span>
                                 </div>
                             </div>
@@ -126,6 +150,12 @@
     export default {
         name: "FormCampeonatos",
         components: {BarraTitulo},
+        mounted() {
+          $(".datepicker").datepicker({
+              format: 'mm/dd/yyyy',
+              startDate: '-3d'
+          });
+        },
         created() {
             if (this.$route.params.id_jogo) {
                 var self = this;
@@ -164,7 +194,10 @@
                         alert("Erro!" + result.data.erro.message);
                     }
                 })
-
+            },
+            abremodal: function () {
+                alert(",vsdljvkd");
+                $('#myModal').modal('show');
 
             }
         }
