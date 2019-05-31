@@ -13,6 +13,8 @@ import ViewCampeonato from "./components/Painel/ViewCampeonato";
 import ItemErro from "./components/itens/ItemErro";
 import Dashboard from "./components/Painel/Dashboard";
 import FormCampeonatos from "./components/Painel/FormCampeonatos";
+import ViewPatrocinador from "./components/Painel/ViewPatrocinador";
+import FormPatrocinadores from "./components/Painel/FormPatrocinadores";
 
 
 const routes = [
@@ -51,6 +53,7 @@ const routes = [
         component: Painel,
         children: [
             {
+                name: 'viewcampeonato',
                 path: 'campeonatos',
                 component: ViewCampeonato,
             },
@@ -61,6 +64,19 @@ const routes = [
             {
                 path: 'campeonatos/editar/:id_jogo',
                 component: FormCampeonatos
+            },
+            {
+                name: 'viewpatrocinador',
+                path: 'patrocinadores',
+                component: ViewPatrocinador,
+            },
+            {
+                path: 'patrocinadores/adicionar',
+                component: FormPatrocinadores
+            },
+            {
+                path: 'patrocinadores/editar/:id_patrocinador',
+                component: FormPatrocinadores
             },
             {
                 path: '*',

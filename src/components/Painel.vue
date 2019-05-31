@@ -46,10 +46,16 @@
                 <ItemMenuPainel
                         titulo="Patrocinadores"
                         icone="hand-holding-usd"
+                        route="patrocinadores"
                 ></ItemMenuPainel>
 
                 <ItemMenuPainel
                         titulo="Social"
+                        icone="share"
+                ></ItemMenuPainel>
+
+                <ItemMenuPainel
+                        titulo="Ícones"
                         icone="share"
                 ></ItemMenuPainel>
 
@@ -71,14 +77,6 @@
         name: "Painel",
         components: {ItemMenuPainel},
         mounted() {
-            // this.$notify({
-            //     title: 'Success!',
-            //     text: 'That thing that you were trying to do worked.',
-            //     style: 'success',
-            //     sticky: true
-
-            // });
-
             this.credenciais.st_token = localStorage.getItem('st_token');
             this.credenciais.id_usuario = localStorage.getItem('id_usuario');
             this.verificaLogin();
@@ -101,10 +99,7 @@
                     id_usuario: null,
                     st_token: null
                 },
-                options: {
-
-
-                },
+                options: {},
             }
         }
     }

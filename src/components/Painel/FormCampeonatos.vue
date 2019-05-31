@@ -23,7 +23,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" >Vídeo</h5>
+                        <h5 class="modal-title">Vídeo</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -98,7 +98,7 @@
                         <div class="form-group">
                             <label for="">Video (Youtube):</label>
                             <div class="input-group">
-                                <input required v-model="campeonato.st_video"  type="text" class="form-control"
+                                <input required v-model="campeonato.st_video" type="text" class="form-control"
                                        aria-label="Amount (to the nearest dollar)">
                                 <div class="input-group-append">
                                     <span v-if="campeonato.st_video" class="input-group-text p-0"> <button
@@ -174,9 +174,6 @@
     export default {
         name: "FormCampeonatos",
         components: {BarraTitulo},
-        mounted() {
-            $('#datetimepicker4').datetimepicker({pickTime: false});
-        },
         created() {
             if (this.$route.params.id_jogo) {
                 var self = this;
@@ -204,9 +201,7 @@
                     st_video: null
                 },
                 editor: ClassicEditor,
-                editorConfig: {
-                    // The configuration of the editor.
-                }
+                editorConfig: {}
 
             }
         },
@@ -220,6 +215,9 @@
                         opts.text = "Campeonato salvo com sucesso.";
                         opts.type = 'success';
                         PNotify.alert(opts);
+                        this.$router.push({
+                            name: 'viewcampeonato',
+                        })
 
                     } else {
                         var opts = {};
