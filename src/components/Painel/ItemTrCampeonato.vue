@@ -2,7 +2,6 @@
     <tr class="align-items-center text-center">
         <td>
             <div class="capa" :style="'background: url(' + imagem + ') center/cover' ">
-
             </div>
         </td>
         <td>{{nome}}</td>
@@ -21,12 +20,11 @@
             <button class="btn btn-danger" v-on:click="remover(id)"><i class="fa fa-trash"></i></button>
         </td>
 
-
     </tr>
 </template>
 
 <script>
-    import EgpmApi from "../../services/EgpmApi";
+    import EgpmApi from "@/services/EgpmApi";
 
     export default {
         name: "ItemTrCampeonato",

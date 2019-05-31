@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <div v-if="imagem">
             <div class="banner-foto" :style="'background: url(' + imagem + ') center/cover' "></div>
         </div>
@@ -46,7 +45,6 @@
         height: 100vh;
         background: url('../../assets/background-04.jpg') center/cover;
         z-index: -2;
-
     }
 
 </style>

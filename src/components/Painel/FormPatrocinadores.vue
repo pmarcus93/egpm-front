@@ -14,32 +14,30 @@
                     <div class="col-6">
                         <h4>Dados básicos:</h4>
                         <div class="form-group">
-                            <label for="">Nome patrocinador:</label>
-                            <input v-model="patrocinador.st_nome" type="text"
+                            <label for="st_nome">Nome patrocinador:</label>
+                            <input id="st_nome" v-model="patrocinador.st_nome" type="text"
                                    class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <label for="">Email Patrocinador:</label>
-                            <input v-model="patrocinador.st_email" type="email" class="form-control">
+                            <label for="st_email">Email Patrocinador:</label>
+                            <input id="st_email" v-model="patrocinador.st_email" type="email" class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <label for="">Imagem (Logo):</label>
-                            <input v-model="patrocinador.st_imagem" type="text"
+                            <label for="st_imagem">Imagem (Logo):</label>
+                            <input id="st_imagem" v-model="patrocinador.st_imagem" type="text"
                                    class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <label for="">Site patrocinador:</label>
-                            <input v-model="patrocinador.st_website" type="text" class="form-control"
+                            <label for="st_website">Site patrocinador:</label>
+                            <input id="st_website" v-model="patrocinador.st_website" type="text" class="form-control"
                             >
                         </div>
 
                     </div>
                 </div>
-
-
             </form>
         </div>
     </div>
@@ -47,16 +45,15 @@
 
 <script>
     import BarraTitulo from "./BarraTitulo";
-    import PatrocinadorApi from "../../services/PatrocinadorApi";
+    import PatrocinadorApi from "@/services/PatrocinadorApi";
 
     export default {
         name: "FormPatrocinadores",
         components: {BarraTitulo},
         created() {
             if (this.$route.params.id_patrocinador) {
-                var self = this;
                 PatrocinadorApi.getPatrocinador(this.$route.params.id_patrocinador, patrocinador => {
-                    self.patrocinador = patrocinador.data;
+                    this.patrocinador = patrocinador.data;
                 })
             }
         },
@@ -74,8 +71,7 @@
         },
         methods: {
             save: function () {
-                var self = this;
-                PatrocinadorApi.postPatrocinador(PatrocinadorApi.pushAutenticationobject(self.patrocinador), result => {
+                PatrocinadorApi.postPatrocinador(PatrocinadorApi.pushAutenticationobject(this.patrocinador), result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';

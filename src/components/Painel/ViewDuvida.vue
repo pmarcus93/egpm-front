@@ -10,7 +10,6 @@
             </BarraTitulo>
 
             <div class="col-12">
-
                 <table class="table">
                     <thead>
                     <tr>
@@ -25,21 +24,16 @@
                     <tbody>
 
                     <ItemTrDuvida v-for="(item) in duvidas"
-                                      :duvida="item.st_duvida"
-                                      :resposta="item.st_resposta"
-                                      :id="item.id_duvida"
-                                      :ordem="item.nu_order"
-                                   >
-
+                                  :duvida="item.st_duvida"
+                                  :resposta="item.st_resposta"
+                                  :id="item.id_duvida"
+                                  :ordem="item.nu_order"
+                    >
                     </ItemTrDuvida>
 
                     </tbody>
-
                 </table>
-
             </div>
-
-
         </div>
     </div>
 </template>
@@ -47,17 +41,15 @@
 <script>
     import BarraTitulo from "./BarraTitulo";
     import ItemTrDuvida from "./ItemTrDuvida";
-    import EgpmApi from "../../services/EgpmApi";
+    import EgpmApi from "@/services/EgpmApi";
 
     export default {
         name: "ViewDuvida",
         components: {ItemTrDuvida, BarraTitulo},
         created() {
-            var self = this;
             EgpmApi.getAllDuvidas(retorno => {
-                self.duvidas = retorno.data;
+                this.duvidas = retorno.data;
             })
-
         },
         data: function () {
             return {

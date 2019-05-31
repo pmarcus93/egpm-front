@@ -15,27 +15,23 @@
                         <h4>Dados básicos:</h4>
 
                         <div class="form-group">
-                            <label for="">Dúvida:</label>
-                              <textarea v-model="duvida.st_duvida" class="form-control"></textarea>
-
+                            <label for="st_duvida">Dúvida:</label>
+                            <textarea id="st_duvida" v-model="duvida.st_duvida" class="form-control"></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="">Resposta:</label>
-                            <textarea v-model="duvida.st_resposta" class="form-control"></textarea>
-
+                            <label for="st_resposta">Resposta:</label>
+                            <textarea id="st_resposta" v-model="duvida.st_resposta" class="form-control"></textarea>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="">Ordem:</label>
-                            <input v-model="duvida.nu_order" type="number" min="0"
+                            <label for="nu_ordem">Ordem:</label>
+                            <input id="nu_ordem" v-model="duvida.nu_order" type="number" min="0"
                                    class="form-control">
                         </div>
-
                     </div>
                 </div>
-
 
             </form>
         </div>
@@ -44,7 +40,7 @@
 
 <script>
 
-    import EgpmApi from "../../services/EgpmApi";
+    import EgpmApi from "@/services/EgpmApi";
     import BarraTitulo from "./BarraTitulo";
 
     export default {
@@ -52,9 +48,8 @@
         components: {BarraTitulo},
         created() {
             if (this.$route.params.id_duvida) {
-                var self = this;
                 EgpmApi.getDuvida(this.$route.params.id_duvida, resposta => {
-                    self.duvida = resposta.data;
+                    this.duvida = resposta.data;
                 })
             }
         },
@@ -71,8 +66,7 @@
         },
         methods: {
             save: function () {
-                var self = this;
-                EgpmApi.postDuvida(EgpmApi.pushAutenticationobject(self.duvida), result => {
+                EgpmApi.postDuvida(EgpmApi.pushAutenticationobject(this.duvida), result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';

@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import EgpmApi from "../../services/EgpmApi";
+    import EgpmApi from "@/services/EgpmApi";
 
     export default {
         name: "ItemTrDuvida",

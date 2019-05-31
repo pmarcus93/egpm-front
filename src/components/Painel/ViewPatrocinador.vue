@@ -11,7 +11,6 @@
             </BarraTitulo>
 
             <div class="col-12">
-
                 <table class="table">
                     <thead>
                     <tr>
@@ -22,41 +21,34 @@
                         <th>Excluir</th>
                     </tr>
                     </thead>
-
                     <tbody>
 
                     <ItemTrPatrocinador v-for="(item) in patrocinadores"
-                                      :nome="item.st_nome"
-                                      :email="item.st_email"
-                                      :id="item.id_patrocinador"
-                                      :imagem="item.st_imagem">
+                                        :nome="item.st_nome"
+                                        :email="item.st_email"
+                                        :id="item.id_patrocinador"
+                                        :imagem="item.st_imagem">
 
                     </ItemTrPatrocinador>
 
                     </tbody>
-
                 </table>
-
             </div>
-
-
         </div>
     </div>
 </template>
 
 <script>
     import BarraTitulo from "./BarraTitulo";
-    import PatrocinadorApi from "../../services/PatrocinadorApi";
+    import PatrocinadorApi from "@/services/PatrocinadorApi";
     import ItemTrPatrocinador from "./ItemTrPatrocinador";
-
 
     export default {
         name: "ViewPatrocinador",
         components: {ItemTrPatrocinador, BarraTitulo},
         created() {
-            var self = this;
             PatrocinadorApi.getAllPatrocinadores(retorno => {
-                self.patrocinadores = retorno.data;
+                this.patrocinadores = retorno.data;
             })
 
         },

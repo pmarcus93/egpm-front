@@ -1,8 +1,6 @@
 <template>
     <div class="animate row">
-
-        <div class="modal fade" id="modalimg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-             aria-hidden="true">
+        <div class="modal fade" id="modalimg" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -18,8 +16,7 @@
             </div>
         </div>
 
-        <div class="modal fade" id="modalvideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-             aria-hidden="true">
+        <div class="modal fade" id="modalvideo" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -64,7 +61,6 @@
                         </textarea>
                         </div>
 
-
                         <div class="form-group">
                             <label for="">Estilo campeonato:</label>
                             <input required v-model="campeonato.st_estilo" name="st_estilo" type="text"
@@ -94,7 +90,6 @@
                             </div>
                         </div>
 
-
                         <div class="form-group">
                             <label for="">Video (Youtube):</label>
                             <div class="input-group">
@@ -110,7 +105,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="col-6">
@@ -156,7 +150,8 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Observações:</label>
-                            <ckeditor v-model="campeonato.st_observacao" :editor="editor" :config="editorConfig"></ckeditor>
+                            <ckeditor v-model="campeonato.st_observacao" :editor="editor"
+                                      :config="editorConfig"></ckeditor>
 
                         </div>
                     </div>
@@ -168,7 +163,7 @@
 
 <script>
     import BarraTitulo from "./BarraTitulo";
-    import EgpmApi from "../../services/EgpmApi";
+    import EgpmApi from "@/services/EgpmApi";
     import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
     export default {
@@ -176,9 +171,8 @@
         components: {BarraTitulo},
         created() {
             if (this.$route.params.id_jogo) {
-                var self = this;
                 EgpmApi.getCampeonato(this.$route.params.id_jogo, campeonato => {
-                    self.campeonato = campeonato.data;
+                    this.campeonato = campeonato.data;
                 })
             }
         },

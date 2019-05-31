@@ -10,7 +10,6 @@
             </BarraTitulo>
 
             <div class="col-12">
-
                 <table class="table">
                     <thead>
                     <tr>
@@ -22,31 +21,25 @@
                         <th>Excluir</th>
                     </tr>
                     </thead>
-
                     <tbody>
 
-                    <ItemTrCampeonato v-for="(item, indice) in campeonatos"
-                    :nome="item.st_nome"
-                    :descricao="item.st_descricao"
-                    :id="item.id_jogo"
-                    :imagem="item.st_imagem">
-
+                    <ItemTrCampeonato v-for="(item) in campeonatos"
+                                      :nome="item.st_nome"
+                                      :descricao="item.st_descricao"
+                                      :id="item.id_jogo"
+                                      :imagem="item.st_imagem">
                     </ItemTrCampeonato>
 
                     </tbody>
-
                 </table>
-
             </div>
-
-
         </div>
     </div>
 </template>
 
 <script>
     import BarraTitulo from "./BarraTitulo";
-    import EgpmApi from "../../services/EgpmApi";
+    import EgpmApi from "@/services/EgpmApi";
     import ItemTrCampeonato from "./ItemTrCampeonato";
 
     export default {
