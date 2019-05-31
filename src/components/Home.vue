@@ -2,6 +2,7 @@
     <div>
         <ButtonTicket></ButtonTicket>
         <Toasty></Toasty>
+
         <div class="area-fixa">
             <Navbar></Navbar>
             <Rainbow></Rainbow>
