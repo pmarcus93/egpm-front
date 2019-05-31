@@ -8,9 +8,7 @@ import Erro404 from "./components/Erro404";
 import SejaApoiador from "./components/SejaApoiador";
 import Login from "./components/Login";
 import Painel from "./components/Painel";
-import Duvida from "./components/telas/Duvida";
 import ViewCampeonato from "./components/Painel/ViewCampeonato";
-import ItemErro from "./components/itens/ItemErro";
 import Dashboard from "./components/Painel/Dashboard";
 import FormCampeonatos from "./components/Painel/FormCampeonatos";
 import ViewPatrocinador from "./components/Painel/ViewPatrocinador";
@@ -81,7 +79,7 @@ const routes = [
                 component: FormPatrocinadores
             },
             {
-                name: 'viewpduvidas',
+                name: 'viewduvidas',
                 path: 'duvidas',
                 component: ViewDuvida,
             },

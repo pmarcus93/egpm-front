@@ -7,9 +7,19 @@
         </td>
         <td>{{nome}}</td>
         <td>{{descricao}}</td>
-        <td> <router-link :to="'/campeonatos/'+id"><button class="btn btn-primary"> <i class="fa fa-link"></i> </button></router-link></td>
-        <td> <router-link :to="'/painel/campeonatos/editar/'+ id"><button class="btn btn-primary"> <i class="fa fa-edit"></i> </button></router-link>  </td>
-        <td><button class="btn btn-danger" v-on:click="remover(id)" > <i class="fa fa-trash"></i> </button> </td>
+        <td>
+            <router-link :to="'/campeonatos/'+id">
+                <button class="btn btn-primary"><i class="fa fa-link"></i></button>
+            </router-link>
+        </td>
+        <td>
+            <router-link :to="'/painel/campeonatos/editar/'+ id">
+                <button class="btn btn-primary"><i class="fa fa-edit"></i></button>
+            </router-link>
+        </td>
+        <td>
+            <button class="btn btn-danger" v-on:click="remover(id)"><i class="fa fa-trash"></i></button>
+        </td>
 
 
     </tr>
@@ -28,12 +38,25 @@
             'imagem',
         ],
         methods: {
-            remover : function (id) {
+
+            remover: function (id) {
                 EgpmApi.deleteCampeonato(id, EgpmApi.pushAutenticationobject(null), result => {
+                    var opts = {};
                     if (result.data.status) {
-                        alert("Sucesso!" + result.data.message);
+                        opts.title = 'Sucesso';
+                        opts.text = "Campeonato removido com sucesso.";
+                        opts.type = 'success';
+                        PNotify.alert(opts);
+                        EgpmApi.getAllCampeonatos(retorno => {
+                            this.$parent.campeonatos = retorno.data;
+                        })
+
                     } else {
-                        alert("Erro!" + result.data.erro.message);
+                        opts.title = 'Erro';
+                        opts.text = result.data.erro.message;
+                        opts.type = 'error';
+                        PNotify.alert(opts);
+
                     }
                 })
             }

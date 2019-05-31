@@ -24,10 +24,11 @@
 
                     <tbody>
 
-                    <ItemTrDuvida v-for="(item, indice) in duvidas"
-                                      :nome="item.st_nome"
-                                      :descricao="item.st_descricao"
-                                      :id="item.id_jogo"
+                    <ItemTrDuvida v-for="(item) in duvidas"
+                                      :duvida="item.st_duvida"
+                                      :resposta="item.st_resposta"
+                                      :id="item.id_duvida"
+                                      :ordem="item.nu_order"
                                    >
 
                     </ItemTrDuvida>
@@ -60,7 +61,13 @@
         },
         data: function () {
             return {
-                duvidas: []
+                duvidas: [],
+                duvida: {
+                    id_duvida: null,
+                    nu_order: null,
+                    st_duvida: null,
+                    st_resposta: null
+                }
             }
         }
     }

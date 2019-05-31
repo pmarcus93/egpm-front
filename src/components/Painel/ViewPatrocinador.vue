@@ -25,7 +25,7 @@
 
                     <tbody>
 
-                    <ItemTrPatrocinador v-for="(item, indice) in patrocinadores"
+                    <ItemTrPatrocinador v-for="(item) in patrocinadores"
                                       :nome="item.st_nome"
                                       :email="item.st_email"
                                       :id="item.id_patrocinador"
@@ -46,7 +46,7 @@
 
 <script>
     import BarraTitulo from "./BarraTitulo";
-    import EgpmApi from "../../services/EgpmApi";
+    import PatrocinadorApi from "../../services/PatrocinadorApi";
     import ItemTrPatrocinador from "./ItemTrPatrocinador";
 
 
@@ -55,7 +55,7 @@
         components: {ItemTrPatrocinador, BarraTitulo},
         created() {
             var self = this;
-            EgpmApi.getAllPatrocinadore(retorno => {
+            PatrocinadorApi.getAllPatrocinadores(retorno => {
                 self.patrocinadores = retorno.data;
             })
 

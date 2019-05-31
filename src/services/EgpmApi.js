@@ -97,5 +97,37 @@ export default {
             }
         })
     },
+    getDuvida: (id_duvida, callback) => {
+        var url = urlbase + "Duvida/" + id_duvida;
+        axios.get(url).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
+    postDuvida: (duvida, callback) => {
+        var url = urlbase + "Duvida/";
+        axios.post(url, duvida).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
+    deleteDuvida: (id, token, callback) => {
+        var url = urlbase + "Duvida/" + id;
+        axios.delete(url, token).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
+    deletePatrocinador: (id, token, callback) => {
+        var url = urlbase + "Patrocinador/" + id;
+        axios.delete(url, token).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
 
 }

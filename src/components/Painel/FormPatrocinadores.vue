@@ -15,7 +15,7 @@
                         <h4>Dados básicos:</h4>
                         <div class="form-group">
                             <label for="">Nome patrocinador:</label>
-                            <input v-model="patrocinador.st_nome" type="text "
+                            <input v-model="patrocinador.st_nome" type="text"
                                    class="form-control">
                         </div>
 
@@ -26,13 +26,13 @@
 
                         <div class="form-group">
                             <label for="">Imagem (Logo):</label>
-                            <input v-model="patrocinador.st_imagem" type="text "
+                            <input v-model="patrocinador.st_imagem" type="text"
                                    class="form-control">
                         </div>
 
                         <div class="form-group">
                             <label for="">Site patrocinador:</label>
-                            <input v-model="patrocinador.st_website" type="text " class="form-control"
+                            <input v-model="patrocinador.st_website" type="text" class="form-control"
                             >
                         </div>
 
@@ -47,7 +47,7 @@
 
 <script>
     import BarraTitulo from "./BarraTitulo";
-    import EgpmApi from "../../services/EgpmApi";
+    import PatrocinadorApi from "../../services/PatrocinadorApi";
 
     export default {
         name: "FormPatrocinadores",
@@ -55,7 +55,7 @@
         created() {
             if (this.$route.params.id_patrocinador) {
                 var self = this;
-                EgpmApi.getPatrocinador(this.$route.params.id_patrocinador, patrocinador => {
+                PatrocinadorApi.getPatrocinador(this.$route.params.id_patrocinador, patrocinador => {
                     self.patrocinador = patrocinador.data;
                 })
             }
@@ -75,7 +75,7 @@
         methods: {
             save: function () {
                 var self = this;
-                EgpmApi.postPatrocinador(EgpmApi.pushAutenticationobject(self.patrocinador), result => {
+                PatrocinadorApi.postPatrocinador(PatrocinadorApi.pushAutenticationobject(self.patrocinador), result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
