@@ -1,6 +1,8 @@
 <template>
     <div>
         <ButtonTicket></ButtonTicket>
+        <Toasty></Toasty>
+
         <div class="area-fixa">
             <Navbar></Navbar>
             <Rainbow></Rainbow>
@@ -38,10 +40,12 @@
     import ButtonTicket from "./itens/ButtonTicket";
     import Patrocinadores from "./telas/Patrocinadores";
     import Rodape from "./telas/Rodape";
+    import Toasty from "./itens/Toasty";
 
     export default {
         name: "Home",
         components: {
+            Toasty,
             Rodape,
             Patrocinadores,
             ButtonTicket,
