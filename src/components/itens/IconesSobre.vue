@@ -1,5 +1,5 @@
 <template>
-    <div class="col-sm-6 py-2">
+    <div class="col-12 py-2">
         <div class="row mb-3">
             <div class="col-6 bloco-icon py-4">
                 <div class="row">

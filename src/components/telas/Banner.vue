@@ -1,18 +1,14 @@
 <template>
     <div class="banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <section>
-                        <div class="logo-soon-group">
-                            <div class="destaque mx-auto"><p>EM BREVE!</p></div>
-                            <img class="logo-full img-fluid d-block mx-auto my-5" src="../../assets/full-logo.png" alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
-                        </div>
-                        <div class="descricao text-center"><p>O maior evento de videogames da cidade.<br>Feito por gamers, para gamers.</p></div>
-                    </section>
-                </div>
+        <section>
+            <div class="logo-soon-group">
+                <p class="destaque mx-auto">EM BREVE!</p>
+                <img class="logo-full img-fluid d-block mx-auto my-5" src="../../assets/full-logo.png"
+                     alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
             </div>
-        </div>
+            <div class="descricao text-center"><p>O maior evento de videogames da cidade.<br>Feito por gamers,
+                para gamers.</p></div>
+        </section>
     </div>
 </template>
 
@@ -25,22 +21,24 @@
 <style lang="scss" scoped>
 
     .banner {
-        height: 100vh;
+        align-items: center;
         background: url("../../assets/banner-background.jpg") center/cover;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
     }
 
     .destaque {
-        width: 170px;
         background: $color-primary;
-        color: #545358;
-        font-size: 30px;
-        text-align: center;
+        color: $color-title;
+        font-size: 20px;
         font-weight: bold;
-
+        text-align: center;
+        max-width: 125px;
     }
 
     .logo-full {
-        width: 600px;
+        width: 350px;
     }
 
     .logo-soon-group {
@@ -49,13 +47,19 @@
 
     .descricao {
         color: $color-primary;
+        font-size: 17px;
         text-transform: uppercase;
-        font-size: 25px;
     }
 
     /* Small devices (landscape phones, 576px and up) */
     @media (min-width: 576px) {
+        .descricao {
+            font-size: 20px;
+        }
 
+        .logo-full {
+            width: 450px;
+        }
     }
 
     /* Medium devices (tablets, 768px and up) */
@@ -65,13 +69,23 @@
 
     /* Large devices (desktops, 992px and up) */
     @media (min-width: 992px) {
+        .descricao {
+            font-size: 25px;
+        }
 
+        .destaque {
+            font-size: 30px;
+            max-width: 200px;
+        }
+
+        .logo-full {
+            width: 600px;
+        }
     }
 
     /* Extra large devices (large desktops, 1200px and up)*/
     @media (min-width: 1200px) {
 
     }
-
 
 </style>
