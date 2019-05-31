@@ -30,13 +30,12 @@
     }
 
     .destaque {
-        width: 170px;
         background: $color-primary;
         color: #545358;
         font-size: 30px;
-        text-align: center;
         font-weight: bold;
-
+        text-align: center;
+        width: 170px;
     }
 
     .logo-full {
@@ -49,8 +48,8 @@
 
     .descricao {
         color: $color-primary;
-        text-transform: uppercase;
         font-size: 25px;
+        text-transform: uppercase;
     }
 
     /* Small devices (landscape phones, 576px and up) */
