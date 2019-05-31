@@ -76,8 +76,8 @@
             save: function () {
                 var self = this;
                 EgpmApi.postPatrocinador(EgpmApi.pushAutenticationobject(self.patrocinador), result => {
+                    var opts = {};
                     if (result.data.status) {
-                        var opts = {};
                         opts.title = 'Sucesso';
                         opts.text = "Patrocinador salvo com sucesso.";
                         opts.type = 'success';
@@ -87,7 +87,6 @@
                         })
 
                     } else {
-                        var opts = {};
                         opts.title = 'Erro';
                         opts.text = result.data.erro.message;
                         opts.type = 'error';

@@ -209,8 +209,8 @@
             save: function () {
                 var self = this;
                 EgpmApi.postCampeonato(EgpmApi.pushAutenticationobject(self.campeonato), result => {
+                    var opts = {};
                     if (result.data.status) {
-                        var opts = {};
                         opts.title = 'Sucesso';
                         opts.text = "Campeonato salvo com sucesso.";
                         opts.type = 'success';
@@ -220,7 +220,6 @@
                         })
 
                     } else {
-                        var opts = {};
                         opts.title = 'Erro';
                         opts.text = result.data.erro.message;
                         opts.type = 'error';
