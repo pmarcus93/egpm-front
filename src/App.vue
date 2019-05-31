@@ -1,11 +1,10 @@
 <template>
     <div id="app">
-        <router-view />
+        <router-view/>
     </div>
 </template>
 
 <script>
-
     export default {
         name: 'app',
     }
@@ -15,6 +14,7 @@
 <style lang="scss">
 
     @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
     @font-face {
         font-family: "Archive";
@@ -28,7 +28,6 @@
         overflow-y: auto;
         perspective: 2px;
     }
-
 
     .animate {
         display: block;
@@ -100,12 +99,22 @@
     ::-webkit-scrollbar-track {
         background-color: #F4F4F4;
     }
+
     ::-webkit-scrollbar {
         width: 6px;
         background: #F4F4F4;
     }
+
     ::-webkit-scrollbar-thumb {
         background: #dad7d7;
+    }
+
+    .ck-editor__editable_inline {
+        min-height: 300px !important;
+    }
+
+    :host ::ng-deep .ck-editor__editable_inline {
+        min-height: 300px !important;
     }
 
 </style>
