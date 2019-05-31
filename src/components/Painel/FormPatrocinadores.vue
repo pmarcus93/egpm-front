@@ -1,7 +1,7 @@
 <template>
     <div class="animate row">
         <BarraTitulo
-                titulo="CAMPEONATO"
+                titulo="PATROCINADORES"
                 icon="check"
                 texto-botao="Salvar"
                 action="save"

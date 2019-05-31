@@ -89,5 +89,13 @@ export default {
             }
         })
     },
+    getAllDuvidas: (callback) => {
+        var url = urlbase + "Duvida/";
+        axios.get(url).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
 
 }

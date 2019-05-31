@@ -26,6 +26,7 @@
                 <ItemMenuPainel
                         titulo="Dúvidas"
                         icone="comments"
+                        route="duvidas"
                 ></ItemMenuPainel>
 
                 <ItemMenuPainel

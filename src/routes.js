@@ -15,6 +15,8 @@ import Dashboard from "./components/Painel/Dashboard";
 import FormCampeonatos from "./components/Painel/FormCampeonatos";
 import ViewPatrocinador from "./components/Painel/ViewPatrocinador";
 import FormPatrocinadores from "./components/Painel/FormPatrocinadores";
+import ViewDuvida from "./components/Painel/ViewDuvida";
+import FormDuvidas from "./components/Painel/FormDuvidas";
 
 
 const routes = [
@@ -77,6 +79,19 @@ const routes = [
             {
                 path: 'patrocinadores/editar/:id_patrocinador',
                 component: FormPatrocinadores
+            },
+            {
+                name: 'viewpduvidas',
+                path: 'duvidas',
+                component: ViewDuvida,
+            },
+            {
+                path: 'duvidas/adicionar',
+                component: FormDuvidas
+            },
+            {
+                path: 'duvidas/editar/:id_duvida',
+                component: FormDuvidas
             },
             {
                 path: '*',

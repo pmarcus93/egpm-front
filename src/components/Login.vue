@@ -17,7 +17,7 @@
                         <label for="st_login" class="label-login">Usuário:</label>
                         <input v-model="usuario.st_login" id="st_login" class="form-control">
 
-                        <label for="st_senha" class="label-login mt-2">Senha:</label>
+                        <label for="st_senha" class="label-login mt-4 ">Senha:</label>
                         <input v-model="usuario.st_senha" id="st_senha" type="password" class="form-control">
 
                         <button class="btn-primary btn form-control mt-4">Entrar</button>
