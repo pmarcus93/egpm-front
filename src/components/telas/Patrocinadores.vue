@@ -20,7 +20,7 @@
                     </div>
                 </div>
 
-                <ItemPatrocinador v-for="(patrocinador) in patrocinadores"
+                <ItemPatrocinador :v-if="patrocinadores[0].st_nome" v-for="(patrocinador) in patrocinadores"
                                   :imagem="patrocinador.st_imagem"
                                   :link="patrocinador.st_website"
                                   :altimg="patrocinador.st_nome"
@@ -38,7 +38,7 @@
     export default {
         name: "Patrocinadores",
         components: {ItemPatrocinador},
-        created() {
+        mounted() {
             PatrocinadorApi.getAllPatrocinadores(retorno => {
                 this.patrocinadores = retorno.data;
             })
