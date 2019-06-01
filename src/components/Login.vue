@@ -47,6 +47,15 @@
                 var self = this;
 
                 EgpmApi.postLogin(self.usuario, result => {
+
+                    var opts = {};
+                    if (!result.data.status) {
+                        opts.title = 'Erro';
+                        opts.text = result.data.erro.message;
+                        opts.type = 'error';
+                        PNotify.alert(opts);
+                    } 
+
                     self.usuario.bl_statuslogin = result.data.status;
                     self.credenciais = result.data.data;
                     localStorage.setItem('st_token', result.data.data.st_token);

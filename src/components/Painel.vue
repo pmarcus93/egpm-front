@@ -3,12 +3,15 @@
         <div class="row barra-topo">
             <div class="col-md-3">
                 <div class="text-center">
-                    <img class="col-10 logo" src="../assets/logoegpm3.png">
+                    <router-link to="/">
+                        <img class="col-10 logo" src="../assets/logoegpm3.png">
+                    </router-link>
                 </div>
             </div>
             <div class="col-md-9  my-auto">
-                <div class="d-inline "><i class="fa fa-arrow-left fa-2x"></i></div>
-                <div class="d-inline float-right my-auto mr-4"><i class=" mr-2 fa fa-user fa-2x"></i> Administrador
+<!--                <div class="d-inline "><i class="fa fa-arrow-left fa-2x"></i></div>-->
+                <div class="d-inline float-right my-auto mr-4"><span class="nome-adm mx-4 px-4">Administrador </span>
+                    <i class="clicavel mr-2 fa fa-cog fa-2x"></i> <i v-on:click="logout" class="clicavel mr-2 fa fa-sign-in-alt fa-2x"></i>
                 </div>
             </div>
         </div>
@@ -84,9 +87,17 @@
         },
         methods: {
             verificaLogin: function () {
-                var self = this;
-                EgpmApi.verificaLogin(self.credenciais, result => {
+                EgpmApi.verificaLogin(this.credenciais, result => {
                     if (!result.data.status) {
+                        this.$router.push({
+                            name: 'login',
+                        })
+                    }
+                })
+            },
+            logout: function () {
+                EgpmApi.logout(this.credenciais, result => {
+                    if (result.data.status) {
                         this.$router.push({
                             name: 'login',
                         })
@@ -106,7 +117,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
     .menu {
         background: #343957;
@@ -137,5 +148,19 @@
         margin-top: 7.5px !important;
     }
 
+    .nome-adm {
+        font-size: 1.5em;
+        border-right: 2px solid $color-primary-painel;
+    }
+
+    .clicavel {
+        cursor: pointer;
+        transition: all linear .2s;
+    }
+
+    .clicavel:hover {
+        opacity: .8;
+        transform: scale(1.2);
+    }
 
 </style>
