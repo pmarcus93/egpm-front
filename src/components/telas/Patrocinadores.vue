@@ -1,5 +1,5 @@
 <template>
-    <div class="patrocinadores my-4">
+    <div class="patrocinadores py-4">
         <div class="container">
             <div class="row">
                 <div class="col-12 py-2 mb-4 tipo-patrocinador center-mobile"><h4>REALIZAÇÃO:</h4></div>
