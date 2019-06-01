@@ -1,5 +1,5 @@
 <template>
-    <SecaoRight
+    <SecaoTextoDireita
             classimage="bgcampeonatos"
             titulo="CAMPEONATOS"
             descricao="Mortal Kombat 11, Just Dance 2020, Pro Evolution
@@ -8,15 +8,15 @@
             textobotao="Lista de Campeonatos"
             colorborder="yellow"
             type="parallax">
-    </SecaoRight>
+    </SecaoTextoDireita>
 </template>
 
 <script>
-    import SecaoRight from "../itens/SecaoTextoDireita";
+    import SecaoTextoDireita from "../itens/SecaoTextoDireita";
 
     export default {
         name: "Campeonato",
-        components: {SecaoRight}
+        components: {SecaoTextoDireita}
     }
 </script>
 
