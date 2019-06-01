@@ -43,6 +43,7 @@
                 </div>
             </div>
             <Patrocinadores></Patrocinadores>
+            <Rainbow></Rainbow>
             <div class="container-fluid">
                 <Rodape></Rodape>
             </div>
