@@ -1,9 +1,6 @@
 <template>
 
     <div class="container-fluid">
-
-        <Rainbow></Rainbow>
-
         <div class="row">
             <div class="col-12 rodape my-auto py-3 text-center">
                 <p>Made with ❤ in Pará de Minas<br>

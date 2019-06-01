@@ -1,5 +1,5 @@
 import axios from 'axios';
-const urlbase = 'http://egpmdeveloper.lucasjunior.com.br/';
+global.urlbase = 'http://egpmdeveloper.lucasjunior.com.br/';
 
 export default {
 
@@ -121,9 +121,26 @@ export default {
             }
         })
     },
-    deletePatrocinador: (id, token, callback) => {
-        var url = urlbase + "Patrocinador/" + id;
-        axios.delete(url, token).then((retorno) => {
+
+    logout: (credenciais, callback) => {
+        var url = urlbase + "Login/" + credenciais.id_usuario + "/logout";
+        axios.post(url, credenciais).then((result) => {
+            if (callback) {
+                callback(result);
+            }
+        })
+    },
+    getUsuario: (credenciais, callback) => {
+        var url = urlbase + "Usuario/" + credenciais.id_usuario;
+        axios.get(url, credenciais).then((result) => {
+            if (callback) {
+                callback(result);
+            }
+        })
+    },
+    postUsuario: (usuario, callback) => {
+        var url = urlbase + "Usuario/";
+        axios.post(url, usuario).then((retorno) => {
             if (callback) {
                 callback(retorno);
             }

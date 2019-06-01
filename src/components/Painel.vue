@@ -3,12 +3,16 @@
         <div class="row barra-topo">
             <div class="col-md-3">
                 <div class="text-center">
-                    <img class="col-10 logo" src="../assets/logoegpm3.png">
+                    <router-link to="/">
+                        <img class="col-10 logo" src="../assets/logoegpm3.png" alt="Logo EGPM3">
+                    </router-link>
                 </div>
             </div>
             <div class="col-md-9  my-auto">
-                <div class="d-inline "><i class="fa fa-arrow-left fa-2x"></i></div>
-                <div class="d-inline float-right my-auto mr-4"><i class=" mr-2 fa fa-user fa-2x"></i> Administrador
+                <!--                <div class="d-inline "><i class="fa fa-arrow-left fa-2x"></i></div>-->
+                <div class="d-inline float-right my-auto mr-4"><span class="nome-adm mx-4 px-4">{{usuario.st_nome}} </span>
+                    <router-link :to="'/painel/usuario/editar/'+usuario.id_usuario"> <i class="clicavel mr-2 fa fa-cog fa-2x"></i> </router-link>
+                    <i v-on:click="logout" class="clicavel mr-2 fa fa-sign-in-alt fa-2x"></i>
                 </div>
             </div>
         </div>
@@ -17,47 +21,10 @@
 
             <div class="col-md-3 menu p-0">
 
-                <ItemMenuPainel
-                        titulo="Campeonatos"
-                        icone="gamepad"
-                        route="campeonatos"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Dúvidas"
-                        icone="comments"
-                        route="duvidas"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Comentários"
-                        icone="quote-left"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Sobre"
-                        icone="user"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Datas"
-                        icone="clock"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Patrocinadores"
-                        icone="hand-holding-usd"
-                        route="patrocinadores"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Social"
-                        icone="share"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Ícones"
-                        icone="share"
+                <ItemMenuPainel v-for="(item) in menu"
+                        :titulo="item.titulo"
+                        :icone="item.icone"
+                        :route="item.route"
                 ></ItemMenuPainel>
 
             </div>
@@ -84,9 +51,21 @@
         },
         methods: {
             verificaLogin: function () {
-                var self = this;
-                EgpmApi.verificaLogin(self.credenciais, result => {
+                EgpmApi.verificaLogin(this.credenciais, result => {
                     if (!result.data.status) {
+                        this.$router.push({
+                            name: 'login',
+                        })
+                    } else {
+                        EgpmApi.getUsuario(this.credenciais, result => {
+                            this.usuario = result.data;
+                        })
+                    }
+                })
+            },
+            logout: function () {
+                EgpmApi.logout(this.credenciais, result => {
+                    if (result.data.status) {
                         this.$router.push({
                             name: 'login',
                         })
@@ -101,12 +80,61 @@
                     st_token: null
                 },
                 options: {},
+                usuario: {
+                    id_usuario: null,
+                    st_nome: null,
+                    st_login: null
+                },
+                menu: [
+                    {
+                        titulo : "Campeonatos",
+                        icone : "gamepad",
+                        route : "campeonatos",
+                    },
+
+                    {
+                        titulo : "Dúvidas",
+                        icone : "comments",
+                    },
+
+                    {
+                        titulo : "Comentários",
+                        icone : "quote-left",
+                        route : "comentarios"
+                    },
+
+                    {
+                        titulo : "Sobre",
+                        icone : "user",
+                    },
+
+                    {
+                        titulo : "Datas",
+                        icone : "clock",
+                    },
+
+                    {
+                        titulo : "Patrocinadores",
+                        icone : "hand-holding-usd",
+                        route : "patrocinadores",
+                    },
+                    {
+
+                        titulo : "Social",
+                        icone : "share",
+                    },
+
+                    {
+                        titulo : "Ícones",
+                        icone : "box-open",
+                    },
+                ]
             }
         }
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
     .menu {
         background: #343957;
@@ -135,6 +163,22 @@
         height: 45px;
         width: auto;
         margin-top: 7.5px !important;
+    }
+
+    .nome-adm {
+        font-size: 1.5em;
+        border-right: 2px solid $color-primary-painel;
+    }
+
+    .clicavel {
+        cursor: pointer;
+        transition: all linear .2s;
+        color: $color-primary-painel !important;
+    }
+
+    .clicavel:hover {
+        opacity: .8;
+        transform: scale(1.2);
     }
 
 

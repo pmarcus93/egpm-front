@@ -2,7 +2,9 @@
     <div class="col-4 col-sm-4 col-md-2 my-auto">
         <div class="row">
             <div class="col-12 logoParceiro">
-                <img :src="imagem">
+                <a :href="link">
+                    <img :src="imagem" :title="'Logo da empresa ' + altimg">
+                </a>
             </div>
         </div>
     </div>
@@ -11,7 +13,11 @@
 <script>
     export default {
         name: "ItemPatrocinador",
-        props: ["imagem"]
+        props: [
+            "imagem",
+            "link",
+            "altimg"
+        ]
     }
 </script>
 
