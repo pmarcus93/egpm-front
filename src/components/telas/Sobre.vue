@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 my-auto">
-                    <Secao titulo="Sobre o #EGPM20"
+                    <Secao titulo="Sobre o #EGPM3"
                            descricao="Realizado na FAPAM, o Encontro Gamer de Pará de Minas é o maior evento de videogames da cidade.
            Com campeonatos, palestras e free play, são dois dias de muito aprendizado, competição e diversão!
            Temos jogo de esporte, musicais, de dança, de luta... traga toda a família e se divirta!

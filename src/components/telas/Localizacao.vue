@@ -2,12 +2,11 @@
     <div class="localizacao">
         <div class="container">
             <div class="row">
-
                 <div class="col-sm-12 col-md-6 my-auto conteudo-texto">
                     <h1 class="mb-4 titulo-secao">EGMP3</h1>
                     <h2>LOCAL</h2>
                     <p>
-                        FAPAM - Faculda de Pará de Minas <br>
+                        FAPAM - Faculdade de Pará de Minas <br>
                         R. Ricardo Marinho, 110 - São Geraldo, Pará de Minas - MG, <br>
                         35660-398
                     </p>
