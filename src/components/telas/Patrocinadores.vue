@@ -20,7 +20,7 @@
                     </div>
                 </div>
 
-                <ItemPatrocinador :v-if="patrocinadores[0].st_nome" v-for="(patrocinador) in patrocinadores"
+                <ItemPatrocinador :v-if="patrocinadores[0]" v-for="(patrocinador) in patrocinadores"
                                   :imagem="patrocinador.st_imagem"
                                   :link="patrocinador.st_website"
                                   :altimg="patrocinador.st_nome"
@@ -46,11 +46,7 @@
         data: function () {
             return {
                 patrocinadores: {
-                    id_patrocinador: null,
-                    st_email: null,
-                    st_imagem: null,
-                    st_nome: null,
-                    st_website: null
+
                 }
             }
         }
