@@ -4,7 +4,7 @@
             <div class="col-md-3">
                 <div class="text-center">
                     <router-link to="/">
-                        <img class="col-10 logo" src="../assets/logoegpm3.png">
+                        <img class="col-10 logo" src="../assets/logoegpm3.png" alt="Logo EGPM3">
                     </router-link>
                 </div>
             </div>
@@ -173,11 +173,13 @@
     .clicavel {
         cursor: pointer;
         transition: all linear .2s;
+        color: $color-primary-painel !important;
     }
 
     .clicavel:hover {
         opacity: .8;
         transform: scale(1.2);
     }
+
 
 </style>
