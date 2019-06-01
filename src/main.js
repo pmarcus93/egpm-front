@@ -26,12 +26,12 @@ import 'pnotify/dist/es/PNotifyButtons';
 import CKEditor from '@ckeditor/ckeditor5-vue';
 Vue.use( CKEditor );
 
-global.PNotify = require('pnotify/dist/umd/PNotify')
+global.PNotify = require('pnotify/dist/umd/PNotify');
 global.PNotify.defaults.delay = 3000;
 global.PNotify.defaults.icons = 'fontawesome4';
 global.PNotify.defaults.styling = 'bootstrap4';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
     router,
