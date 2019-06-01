@@ -2,15 +2,13 @@
     <div class="col-12 p-0">
         <div class="titulo p-3">
             <h2><span>{{titulo}}</span>
-                <span class="float-right mr-5">
-
+                <span v-if="textoBotao" class="float-right mr-5">
                     <div v-if="rota">
                             <router-link :to="rota">
                                 <button class="btn btn-painel-primary">
                                     <i v-if="icon" :class="'fa fa-'+icon"></i>
                                     <i v-else class="'fa fa-'+icon"></i>
-                                    <span v-if="textoBotao"> {{textoBotao}}</span>
-                                    <span v-else> Adicionar</span>
+                                    <span> {{textoBotao}}</span>
                                 </button>
 
                             </router-link>
@@ -19,15 +17,13 @@
                                 <button v-if="action" v-on:click="save()" class="btn btn-painel-primary">
                                     <i v-if="icon" :class="'fa fa-'+icon"></i>
                                     <i v-else class="'fa fa-'+icon"></i>
-                                    <span v-if="textoBotao"> {{textoBotao}}</span>
-                                    <span v-else> Adicionar</span>
+                                    <span> {{textoBotao}}</span>
                                 </button>
 
                                 <button v-else class="btn btn-painel-primary">
                                     <i v-if="icon" :class="'fa fa-'+icon"></i>
                                     <i v-else class="'fa fa-'+icon"></i>
-                                    <span v-if="textoBotao"> {{textoBotao}}</span>
-                                    <span v-else> Adicionar</span>
+                                    <span> {{textoBotao}}</span>
                                 </button>
                         </div>
                         </span>

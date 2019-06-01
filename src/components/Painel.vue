@@ -95,6 +95,7 @@
                     {
                         titulo : "Dúvidas",
                         icone : "comments",
+                        route : "duvidas"
                     },
 
                     {
@@ -104,24 +105,15 @@
                     },
 
                     {
-                        titulo : "Sobre",
-                        icone : "user",
-                    },
-
-                    {
-                        titulo : "Datas",
-                        icone : "clock",
-                    },
-
-                    {
                         titulo : "Patrocinadores",
                         icone : "hand-holding-usd",
                         route : "patrocinadores",
                     },
-                    {
 
-                        titulo : "Social",
-                        icone : "share",
+                    {
+                        titulo : "Mensagem",
+                        icone : "handshake",
+                        route : "apoios",
                     },
 
                     {
