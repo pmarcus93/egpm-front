@@ -18,6 +18,7 @@ import FormDuvidas from "./components/Painel/FormDuvidas";
 import FormUsuarios from "./components/Painel/FormUsuarios";
 import ViewComentario from "./components/Painel/ViewComentario";
 import FormComentarios from "./components/Painel/FormComentarios";
+import ViewApoio from "./components/Painel/ViewApoio";
 
 
 const routes = [
@@ -110,6 +111,11 @@ const routes = [
             {
                 path: 'comentarios/editar/:id_comentario',
                 component: FormComentarios
+            },
+
+            {
+                path: 'apoios',
+                component: ViewApoio
             },
             {
                 name: 'dashboard',
