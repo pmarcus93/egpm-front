@@ -20,41 +20,11 @@
                     </div>
                 </div>
 
-                <ItemPatrocinador
-                        imagem="https://www.wilsonfamilychiropracticcenter.net/wp-content/uploads/2018/12/placeholder-logo-2.png">
-                </ItemPatrocinador>
-
-                <ItemPatrocinador
-                        imagem="https://www.wilsonfamilychiropracticcenter.net/wp-content/uploads/2018/12/placeholder-logo-2.png">
-                </ItemPatrocinador>
-
-                <ItemPatrocinador
-                        imagem="https://www.wilsonfamilychiropracticcenter.net/wp-content/uploads/2018/12/placeholder-logo-2.png">
-                </ItemPatrocinador>
-
-                <ItemPatrocinador
-                        imagem="https://www.wilsonfamilychiropracticcenter.net/wp-content/uploads/2018/12/placeholder-logo-2.png">
-                </ItemPatrocinador>
-
-                <ItemPatrocinador
-                        imagem="https://www.wilsonfamilychiropracticcenter.net/wp-content/uploads/2018/12/placeholder-logo-2.png">
-                </ItemPatrocinador>
-
-                <ItemPatrocinador
-                        imagem="https://www.wilsonfamilychiropracticcenter.net/wp-content/uploads/2018/12/placeholder-logo-2.png">
-                </ItemPatrocinador>
-
-                <ItemPatrocinador
-                        imagem="https://www.wilsonfamilychiropracticcenter.net/wp-content/uploads/2018/12/placeholder-logo-2.png">
-                </ItemPatrocinador>
-
-                <ItemPatrocinador
-                        imagem="https://www.wilsonfamilychiropracticcenter.net/wp-content/uploads/2018/12/placeholder-logo-2.png">
-                </ItemPatrocinador>
-
-                <ItemPatrocinador
-                        imagem="https://www.wilsonfamilychiropracticcenter.net/wp-content/uploads/2018/12/placeholder-logo-2.png">
-                </ItemPatrocinador>
+                <ItemPatrocinador v-for="(patrocinador) in patrocinadores"
+                                  :imagem="patrocinador.st_imagem"
+                                  :link="patrocinador.st_website"
+                                  :altimg="patrocinador.st_nome"
+                ></ItemPatrocinador>
 
             </div>
         </div>
@@ -63,10 +33,27 @@
 
 <script>
     import ItemPatrocinador from "../itens/ItemPatrocinador";
+    import PatrocinadorApi from "@/services/PatrocinadorApi"
 
     export default {
         name: "Patrocinadores",
-        components: {ItemPatrocinador}
+        components: {ItemPatrocinador},
+        created() {
+            PatrocinadorApi.getAllPatrocinadores(retorno => {
+                this.patrocinadores = retorno.data;
+            })
+        },
+        data: function () {
+            return {
+                patrocinadores: {
+                    id_patrocinador: null,
+                    st_email: null,
+                    st_imagem: null,
+                    st_nome: null,
+                    st_website: null
+                }
+            }
+        }
     }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
     <div class="animate row">
         <BarraTitulo
-                titulo="DÚVIDAS"
+                titulo="COMENTÁRIOS"
                 icon="check"
                 texto-botao="Salvar"
                 action="save"

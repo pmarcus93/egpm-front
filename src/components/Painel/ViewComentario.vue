@@ -2,7 +2,7 @@
     <div class="animate">
         <div class="row">
             <BarraTitulo
-                    titulo="COMENTARIOS"
+                    titulo="COMENTÁRIOS"
                     icon="plus"
                     texto-botao="Adicionar"
                     rota="/painel/comentarios/adicionar"
