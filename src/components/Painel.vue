@@ -9,9 +9,10 @@
                 </div>
             </div>
             <div class="col-md-9  my-auto">
-<!--                <div class="d-inline "><i class="fa fa-arrow-left fa-2x"></i></div>-->
-                <div class="d-inline float-right my-auto mr-4"><span class="nome-adm mx-4 px-4">Administrador </span>
-                    <i class="clicavel mr-2 fa fa-cog fa-2x"></i> <i v-on:click="logout" class="clicavel mr-2 fa fa-sign-in-alt fa-2x"></i>
+                <!--                <div class="d-inline "><i class="fa fa-arrow-left fa-2x"></i></div>-->
+                <div class="d-inline float-right my-auto mr-4"><span class="nome-adm mx-4 px-4">{{usuario.st_nome}} </span>
+                    <router-link :to="'/painel/usuario/editar/'+usuario.id_usuario"> <i class="clicavel mr-2 fa fa-cog fa-2x"></i> </router-link>
+                    <i v-on:click="logout" class="clicavel mr-2 fa fa-sign-in-alt fa-2x"></i>
                 </div>
             </div>
         </div>
@@ -60,7 +61,7 @@
 
                 <ItemMenuPainel
                         titulo="Ícones"
-                        icone="share"
+                        icone="box-open"
                 ></ItemMenuPainel>
 
             </div>
@@ -92,6 +93,10 @@
                         this.$router.push({
                             name: 'login',
                         })
+                    } else {
+                        EgpmApi.getUsuario(this.credenciais, result => {
+                            this.usuario = result.data;
+                        })
                     }
                 })
             },
@@ -112,6 +117,11 @@
                     st_token: null
                 },
                 options: {},
+                usuario: {
+                    id_usuario: null,
+                    st_nome: null,
+                    st_login: null
+                }
             }
         }
     }

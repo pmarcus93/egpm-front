@@ -130,5 +130,21 @@ export default {
             }
         })
     },
+    getUsuario: (credenciais, callback) => {
+        var url = urlbase + "Usuario/" + credenciais.id_usuario;
+        axios.get(url, credenciais).then((result) => {
+            if (callback) {
+                callback(result);
+            }
+        })
+    },
+    postUsuario: (usuario, callback) => {
+        var url = urlbase + "Usuario/";
+        axios.post(url, usuario).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
 
 }
