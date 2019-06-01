@@ -1,23 +1,21 @@
 <template>
-    <div class="secao-right-body">
-        <div class="container-fluid">
-            <div class="row">
-                <section class="col-12 section d-flex" :class="[classimage, type]">
-                    <div class="col-sm-6 my-auto box-info">
-                        <h1 class=" mb-4 titulo-secao-right"
-                            v-bind:style="{ 'border-bottom':  colorborder + ' solid 3px' }">{{titulo}}</h1>
-                        <p class="mt-3">{{descricao}}</p>
-                        <router-link class="btn btn-light" :to="rota">{{textobotao}}</router-link>
-                    </div>
-                </section>
-            </div>
+    <div class="secao-right-body container-fluid">
+        <div class="row">
+            <section class="col-12 section d-flex" :class="[classimage, type]">
+                <div class="col-md-6 my-auto box-info">
+                    <h1 class="mb-2 titulo-secao-right"
+                        v-bind:style="{ 'border-bottom':  colorborder + ' solid 3px' }">{{titulo}}</h1>
+                    <p class="mt-2 descricao">{{descricao}}</p>
+                    <router-link v-if="rota" class="btn btn-light" :to="rota">{{textobotao}}</router-link>
+                </div>
+            </section>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "SecaoRight",
+        name: "SecaoTextoDireita",
         props: ["titulo", "imagem", "descricao", "colorborder", "classimage", "type", "rota", "textobotao"],
     }
 </script>
@@ -35,20 +33,25 @@
 
     .section {
         position: relative;
-        height: 60vh;
+        height: 50vh;
         justify-content: flex-end;
     }
 
     /* Small devices (landscape phones, 576px and up) */
     @media (max-width: 576px) {
+
+        .box-info {
+            text-align: center;
+            z-index: 2;
+        }
+
+        .descricao {
+            font-size: 1.2rem;
+        }
+
         .titulo-secao-right {
             font-size: 2.5em;
             font-family: Archive;
-            text-align: center;
-        }
-
-        .box-info {
-            z-index: 2;
             text-align: center;
         }
 
@@ -56,13 +59,20 @@
 
     /* Medium devices (tablets, 768px and up) */
     @media (min-width: 576px) {
-        .titulo-secao-right {
-            font-size: 4em;
-            font-family: Archive;
-        }
 
         .box-info {
             z-index: 2;
+            text-align: center;
+        }
+
+        .descricao {
+            font-size: 1.5rem;
+        }
+
+        .titulo-secao-right {
+            font-size: 3em;
+            font-family: Archive;
+            text-align: center;
         }
     }
 

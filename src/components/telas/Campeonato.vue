@@ -1,22 +1,22 @@
 <template>
-    <SecaoRight
+    <SecaoTextoDireita
             classimage="bgcampeonatos"
             titulo="CAMPEONATOS"
             descricao="Mortal Kombat 11, Just Dance 2020, Pro Evolution
             Soccer 2020, Street Fighter V e muitos outros. Confira!"
             rota="/campeonatos"
-            textobotao="Todos Campeonatos"
+            textobotao="Lista de Campeonatos"
             colorborder="yellow"
             type="parallax">
-    </SecaoRight>
+    </SecaoTextoDireita>
 </template>
 
 <script>
-    import SecaoRight from "../itens/SecaoTextoDireita";
+    import SecaoTextoDireita from "../itens/SecaoTextoDireita";
 
     export default {
         name: "Campeonato",
-        components: {SecaoRight}
+        components: {SecaoTextoDireita}
     }
 </script>
 

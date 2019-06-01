@@ -1,19 +1,19 @@
 <template>
-    <SecaoLeft
+    <SecaoTextoEsquerda
     titulo="PALESTRAS"
     descricao="Quer saber como funciona a indústria dos games? Nossos palestrantes contam os segredos dos bastidores!"
     colorborder="#3255A5"
     classimage="bgpalestra"
     type="parallax">
-    </SecaoLeft>
+    </SecaoTextoEsquerda>
 </template>
 
 <script>
-    import SecaoLeft from "../itens/SecaoTextoEsquerda";
+    import SecaoTextoEsquerda from "../itens/SecaoTextoEsquerda";
 
     export default {
         name: "Palestras",
-        components: {SecaoLeft}
+        components: {SecaoTextoEsquerda}
     }
 </script>
 

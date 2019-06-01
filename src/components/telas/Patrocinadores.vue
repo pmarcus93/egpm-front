@@ -1,5 +1,5 @@
 <template>
-    <div class="patrocinadores">
+    <div class="patrocinadores my-4">
         <div class="container">
             <div class="row">
                 <div class="col-12 py-2 mb-4 tipo-patrocinador center-mobile"><h4>REALIZAÇÃO:</h4></div>
@@ -8,7 +8,7 @@
                 ></ItemPatrocinador>
             </div>
 
-            <div class="row my-3">
+            <div class="row my-5">
                 <div class="col-12 py-2 mb-4 tipo-patrocinador">
                     <div class="row">
                         <div class="col-6 my-auto"><h4>APOIO:</h4></div>
@@ -68,8 +68,6 @@
 
     .patrocinadores {
         background: white;
-        padding-top: 5%;
-        padding-bottom: 5%;
         color: #545457;
     }
 
