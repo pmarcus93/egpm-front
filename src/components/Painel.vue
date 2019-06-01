@@ -21,47 +21,10 @@
 
             <div class="col-md-3 menu p-0">
 
-                <ItemMenuPainel
-                        titulo="Campeonatos"
-                        icone="gamepad"
-                        route="campeonatos"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Dúvidas"
-                        icone="comments"
-                        route="duvidas"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Comentários"
-                        icone="quote-left"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Sobre"
-                        icone="user"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Datas"
-                        icone="clock"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Patrocinadores"
-                        icone="hand-holding-usd"
-                        route="patrocinadores"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Social"
-                        icone="share"
-                ></ItemMenuPainel>
-
-                <ItemMenuPainel
-                        titulo="Ícones"
-                        icone="box-open"
+                <ItemMenuPainel v-for="(item) in menu"
+                        :titulo="item.titulo"
+                        :icone="item.icone"
+                        :route="item.route"
                 ></ItemMenuPainel>
 
             </div>
@@ -121,7 +84,51 @@
                     id_usuario: null,
                     st_nome: null,
                     st_login: null
-                }
+                },
+                menu: [
+                    {
+                        titulo : "Campeonatos",
+                        icone : "gamepad",
+                        route : "campeonatos",
+                    },
+
+                    {
+                        titulo : "Dúvidas",
+                        icone : "comments",
+                    },
+
+                    {
+                        titulo : "Comentários",
+                        icone : "quote-left",
+                        route : "comentarios"
+                    },
+
+                    {
+                        titulo : "Sobre",
+                        icone : "user",
+                    },
+
+                    {
+                        titulo : "Datas",
+                        icone : "clock",
+                    },
+
+                    {
+                        titulo : "Patrocinadores",
+                        icone : "hand-holding-usd",
+                        route : "patrocinadores",
+                    },
+                    {
+
+                        titulo : "Social",
+                        icone : "share",
+                    },
+
+                    {
+                        titulo : "Ícones",
+                        icone : "box-open",
+                    },
+                ]
             }
         }
     }
