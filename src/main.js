@@ -5,10 +5,11 @@ import routes from './routes';
 
 import jQuery from 'jquery'
 
-global.jQuery = jQuery
-global.$ = jQuery
+global.jQuery = jQuery;
+global.$ = jQuery;
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+
 const router = new VueRouter({
     mode: 'history',
     routes,
