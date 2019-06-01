@@ -14,7 +14,7 @@
 
 <script>
     export default {
-        name: "SecaoLeft",
+        name: "SecaoTextoEsquerda",
         props: ["imagem", "descricao", "titulo", "colorborder", "classimage", "type"],
     }
 </script>
