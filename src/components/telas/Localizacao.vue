@@ -2,7 +2,6 @@
     <div class="localizacao">
         <div class="container">
             <div class="row">
-
                 <div class="col-sm-12 col-md-6 my-auto conteudo-texto">
                     <h1 class="mb-4 titulo-secao">EGMP3</h1>
                     <h2>LOCAL</h2>
