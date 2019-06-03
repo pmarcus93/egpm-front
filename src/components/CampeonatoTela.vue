@@ -16,8 +16,7 @@
 
             <div class="container pb-5">
                 <div class="row">
-
-                    <ItemCampeonato v-for="(item, indice) in campeonatos"
+                    <ItemCampeonato v-for="(item) in campeonatos"
                                     :titulo="item.st_nome"
                                     :imagem="item.st_imagem"
                                     :rota="item.id_jogo"

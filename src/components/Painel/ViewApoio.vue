@@ -21,12 +21,12 @@
                     <tbody>
 
                     <ItemTrApoio v-for="(item) in apoios"
-                                      :nome="item.st_nome"
-                                      :empresa="item.st_empresa"
-                                      :email="item.st_email"
-                                      :telefone="item.st_telefone"
-                                      :analisado="item.bl_analisado"
-                                      :id="item.id_apoio"
+                                 :nome="item.st_nome"
+                                 :empresa="item.st_empresa"
+                                 :email="item.st_email"
+                                 :telefone="item.st_telefone"
+                                 :analisado="item.bl_analisado"
+                                 :id="item.id_apoio"
                     >
                     </ItemTrApoio>
 
@@ -47,6 +47,14 @@
         components: {ItemTrApoio, BarraTitulo},
         created() {
             ApoioApi.getAll(result => {
+                var opts = {};
+                if (!result.data[0] && !result.data.status) {
+                    opts.title = 'Erro';
+                    opts.text = result.data.erro.message;
+                    opts.type = 'error';
+                    PNotify.alert(opts);
+                    return;
+                }
                 this.apoios = result.data;
             })
 

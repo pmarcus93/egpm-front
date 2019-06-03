@@ -117,6 +117,18 @@
                     },
 
                     {
+                        titulo : "Seções",
+                        icone : "columns",
+                        route : "secoes",
+                    },
+
+                    {
+                        titulo : "Outros",
+                        icone : "share",
+                        route : "apoios",
+                    },
+
+                    {
                         titulo : "Ícones",
                         icone : "box-open",
                     },

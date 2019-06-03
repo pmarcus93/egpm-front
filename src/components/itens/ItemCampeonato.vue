@@ -1,5 +1,5 @@
 <template>
-    <div class="col-sm-12 col-xl-4 bloco-campeonato ">
+    <div class="col-sm-12 col-xl-4 bloco-campeonato">
         <router-link :to="'/campeonatos/' + rota">
             <div class="row">
                 <div class="col-12 info-campeonatos">
