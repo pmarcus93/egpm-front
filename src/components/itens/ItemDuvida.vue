@@ -2,8 +2,8 @@
     <div class="col-12 py-5 item-duvida text-center" v-bind:style="{'color' : color}">
         <div class="row" >
             <div class="col-12 my-4"><i class="fa fa-comments fa-3x"></i></div>
-            <div class="col-12 duvida"  v-bind:style="{'color' : color}">{{duvida}}</div>
-            <div class="col-12 resposta  my-4">{{resposta}}</div>
+            <div class="col-12 duvida" v-bind:style="{'color' : color}">{{duvida}}</div>
+            <div class="col-12 resposta my-4">{{resposta}}</div>
         </div>
     </div>
 </template>
