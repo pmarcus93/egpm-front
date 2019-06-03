@@ -123,15 +123,11 @@
                     },
 
                     {
-                        titulo : "Outros",
-                        icone : "share",
-                        route : "apoios",
-                    },
-
-                    {
-                        titulo : "Ícones",
+                        titulo : "Outras",
                         icone : "box-open",
-                    },
+                        route : "apoios",
+                    }
+
                 ]
             }
         }

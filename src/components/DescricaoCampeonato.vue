@@ -84,11 +84,7 @@
                 </div>
             </div>
         </div>
-        <Patrocinadores></Patrocinadores>
-        <Rainbow></Rainbow>
-        <div class="container-fluid">
-            <Rodape></Rodape>
-        </div>
+        <BlocoRodape></BlocoRodape>
     </div>
 </template>
 
@@ -105,10 +101,12 @@
     import ItemErro from "./itens/ItemErro";
     import Campeonatos from "./telas/Campeonatos";
     import EgpmApi from "@/services/EgpmApi.js";
+    import BlocoRodape from "./itens/BlocoRodape";
 
     export default {
         name: "DescricaoCampeonato",
         components: {
+            BlocoRodape,
             Campeonatos,
             ItemErro,
             BannerJogo,
