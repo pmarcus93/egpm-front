@@ -51,11 +51,15 @@
                     <div class="container">
                         <div class="row ">
                             <div class="col-12 py-4">
-                                <h3 class="titulo-regras text-center">REGRAS</h3>
-                                <p>{{campeonato.st_regra}}</p>
-                                <hr>
-                                <h3 class="titulo-observacoes text-center">OBSERVAÇÕES</h3>
-                                <p>{{campeonato.st_observacao}}</p>
+                                <div v-if="campeonato.st_regra">
+                                    <h3 class="titulo-regras text-center">REGRAS</h3>
+                                    <p v-html="campeonato.st_regra"></p>
+                                    <hr>
+                                </div>
+                                <div v-if="campeonato.st_observacao">
+                                    <h3 class="titulo-observacoes text-center">OBSERVAÇÕES</h3>
+                                    <p v-html="campeonato.st_observacao"></p>
+                                </div>
                             </div>
                         </div>
                     </div>
