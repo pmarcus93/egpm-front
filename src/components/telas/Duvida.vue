@@ -1,8 +1,9 @@
 <template>
     <div class="container duvida">
-        <div class="row no-gutters">
-            <div class="col-md-3 col-sm-12 my-auto">
-                <section>
+        <div class="row">
+
+            <div class="col-md-12 col-lg-3">
+                <section class="">
                     <h1 class="my-4 titulo-secao">Dúvidas</h1>
                     <p class="mt-3 subtitulo">As dúvidas mais frequentes respondidas.<br>
                         <router-link to='/duvidas'>
@@ -12,25 +13,27 @@
                 </section>
             </div>
 
-            <div class="col-md-3 col-sm-12 ">
-                <ItemDuvida
-                        duvida="Menores de idade podem participar do envento?"
-                        resposta="Sim. Desde que tenham um responsável como acompanhamte."
-                ></ItemDuvida>
-            </div>
-
-            <div class="col-md-3 col-sm-12 ">
+            <div class="col-md-12 col-lg-3">
                 <ItemDuvida
                         background="#89FFC7"
-                        duvida="Ingresso é válido para os 2 dias de evento?"
-                        resposta="Sim. O ingresso é único e válida para participar durante todos os dias de evento."
+                        duvida="Menores de idade podem participar do envento?"
+                        resposta="Sim. Desde que acompanhado por um responsável."
                 ></ItemDuvida>
             </div>
 
-            <div class="col-md-3 col-sm-12 ">
+            <div class="col-md-12 col-lg-3">
                 <ItemDuvida
+                        background="#EA2A3A"
+                        duvida="Ingresso é válido para os 2 dias de evento?"
+                        resposta="Sim. O ingresso é único e válido para ambos os dias do evento."
+                ></ItemDuvida>
+            </div>
+
+            <div class="col-md-12 col-lg-3">
+                <ItemDuvida
+                        background="#FCD047"
                         duvida="Posso participar de mais de um campeonato?"
-                        resposta="Sim. Desde que seja feita a inscrição previamente e que não haja conflitos de horários."
+                        resposta="Sim. Desde que não haja conflito de horários."
                 ></ItemDuvida>
             </div>
         </div>
@@ -68,6 +71,7 @@
             font-size: 3em;
         }
     }
+
     .duvida {
         color: $color-title;
     }
