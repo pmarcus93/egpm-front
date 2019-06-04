@@ -4,13 +4,13 @@
             <div class="col-6 bloco-icon py-4">
                 <div class="row">
                     <span class="col-12 icon-box-sobre text-center my-auto"><i class="fa fa-clock"></i></span>
-                    <span class="col-12 text-box-sobre text-center">32 HORAS</span>
+                    <span class="col-12 text-box-sobre text-center">+ DE 37 HORAS</span>
                 </div>
             </div>
             <div class="col-6 bloco-icon py-4">
                 <div class="row">
                     <span class="col-12 icon-box-sobre text-center my-auto"><i class="fa fa-user"></i></span>
-                    <span class="col-12 text-box-sobre text-center">150 PLAYERS</span>
+                    <span class="col-12 text-box-sobre text-center">+ DE 700 VISITANTES</span>
                 </div>
             </div>
         </div>
@@ -18,13 +18,13 @@
             <div class="col-6 bloco-icon py-4">
                 <div class="row">
                     <span class="col-12 icon-box-sobre text-center my-auto"><i class="fa fa-gamepad"></i></span>
-                    <span class="col-12 text-box-sobre text-center">40 CAMPEONATOS</span>
+                    <span class="col-12 text-box-sobre text-center">+ DE 20 CAMPEONATOS</span>
                 </div>
             </div>
             <div class="col-6 bloco-icon py-4">
                 <div class="row">
                     <span class="col-12 icon-box-sobre text-center my-auto"><i class="fa fa-trophy"></i></span>
-                    <span class="col-12 text-box-sobre text-center">900 VISITANTES</span>
+                    <span class="col-12 text-box-sobre text-center">+ DE 100 PREMIAÇÕES</span>
                 </div>
             </div>
         </div>
