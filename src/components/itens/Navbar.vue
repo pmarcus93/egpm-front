@@ -20,7 +20,7 @@
             </router-link>
 
             <router-link class="navbar-brand link" to='/apoie'>
-                APOIO
+                QUERO SER APOIADOR
             </router-link>
 
 

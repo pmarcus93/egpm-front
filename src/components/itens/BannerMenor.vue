@@ -1,10 +1,8 @@
 <template>
     <div class="row">
-        <div class=" col-12  text-center">
-            <div class="col-12 banner">
-                <h1 class="titulo-secao">{{titulo}}</h1>
-                <p class="texto-secao">{{descricao}}</p>
-            </div>
+        <div class="col-12 banner text-center">
+            <h1 class="titulo-secao">{{titulo}}</h1>
+            <p class="texto-secao">{{descricao}}</p>
         </div>
     </div>
 </template>
@@ -23,6 +21,7 @@
 
     .texto-secao {
         color: yellow;
+        font-size: 1.5em;
     }
 
     /* Small devices (landscape phones, 576px and up) */

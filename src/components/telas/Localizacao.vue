@@ -13,8 +13,9 @@
 
                     <h2>DATAS & HORÁRIOS</h2>
                     <p>
-                        01/01/20 Sábado - 10h às 20h <br>
-                        02/02/20 Domingo - 10h às 20h <br>
+                        Datas à definir! <br>
+                        Sábado - 10h às 20h <br>
+                        Domingo - 10h às 20h <br>
                     </p>
 
                 </div>

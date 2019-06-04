@@ -15,25 +15,25 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .border-rainbow {
         height: 4px;
     }
 
     .rainbow-blue {
-        background: #3255A5;
+        background: $rainbow-blue;
     }
 
     .rainbow-green {
-        background: #3BAC7A;
+        background: $rainbow-green;
     }
 
     .rainbow-red {
-        background: #EA2A3A;
+        background: $rainbow-red;
     }
 
     .rainbow-yellow {
-        background: #FCD047;
+        background: $rainbow-yellow;
     }
 
 </style>

@@ -6,7 +6,7 @@
             <Rainbow></Rainbow>
         </div>
         <div class="animate">
-            <div class="container-fluid conteudo">
+            <div class="container conteudo">
                 <BannerMenor
                         titulo="CAMPEONATOS"
                         descricao="Selecione um game para conferir detalhes.
