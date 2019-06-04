@@ -7,10 +7,11 @@
             <Rainbow></Rainbow>
         </div>
         <div class="animate">
-            <div class="container-fluid conteudo">
+            <div class="container conteudo">
                 <BannerMenor
-                        titulo="Seja Apoiador"
-                        descricao="Marque presença no maior encontro de gamers de Pará de Minas."
+                        titulo="Seja um apoiador"
+                        descricao="Marque presença no maior encontro de games de Pará de Minas. Apoie o evento
+                        e garanta a visibilidade da sua marca!"
                 >
                 </BannerMenor>
 
@@ -20,10 +21,8 @@
                 <div class="row">
 
                     <div class="col-md-6 col-sm-12 my-auto">
-                        <h2>Como ser um apoiador?</h2>
-                        <p>Preencha o formulário ao lado com as suas informações que entraremos em contato com você o
-                            mais
-                            breve possível.</p>
+                        <h2>Quero ser apoiador!</h2>
+                        <p>Preencha o formulário de contato ao lado e entraremos em contato.</p>
                     </div>
 
                     <div class="col-md-6 col-sm-12">
