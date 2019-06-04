@@ -60,6 +60,14 @@
             var usuariorota = {id_usuario: this.$route.params.id_usuario};
             if (this.$route.params.id_usuario) {
                 EgpmApi.getUsuario(EgpmApi.pushAutenticationobject(usuariorota), resposta => {
+                    var opts = {};
+                    if (!resposta.data.id_usuario && !resposta.data.status) {
+                        opts.title = 'Erro';
+                        opts.text = resposta.data.erro.message;
+                        opts.type = 'error';
+                        PNotify.alert(opts);
+                        return;
+                    }
                     this.usuario = resposta.data;
                 })
             }

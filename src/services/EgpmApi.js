@@ -146,5 +146,40 @@ export default {
             }
         })
     },
+    getAllSecao: (callback) => {
+        var url = urlbase + "Secao/";
+        axios.get(url).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
+    getIconeSecao: (id_secao, callback) => {
+        var url = urlbase + "Icone/"+id_secao+"/secao";
+        axios.get(url).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
+
+    salvarsessao: (data, callback) => {
+        var url = urlbase + "Secao/";
+        axios.post(url, data).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
+
+    salvarIconeSobre: (data, callback) => {
+        var url = urlbase + "Icone/";
+        axios.post(url, data).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
+
 
 }

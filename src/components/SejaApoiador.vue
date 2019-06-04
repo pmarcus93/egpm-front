@@ -64,11 +64,7 @@
                 </div>
 
             </div>
-            <Patrocinadores></Patrocinadores>
-            <Rainbow></Rainbow>
-            <div class="container-fluid">
-                <Rodape></Rodape>
-            </div>
+            <BlocoRodape></BlocoRodape>
         </div>
     </div>
 </template>
@@ -82,10 +78,11 @@
     import Patrocinadores from "./telas/Patrocinadores";
     import BannerMenor from "./itens/BannerMenor";
     import ApoioApi from "@/services/ApoioApi";
+    import BlocoRodape from "./itens/BlocoRodape";
 
     export default {
         name: "SejaApoiador",
-        components: {BannerMenor, Patrocinadores, Rodape, Rainbow, Navbar, FundoFixo},
+        components: {BlocoRodape, BannerMenor, Patrocinadores, Rodape, Rainbow, Navbar, FundoFixo},
         data() {
             return {
                 apoio: {

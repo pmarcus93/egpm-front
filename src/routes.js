@@ -19,6 +19,8 @@ import FormUsuarios from "./components/Painel/FormUsuarios";
 import ViewComentario from "./components/Painel/ViewComentario";
 import FormComentarios from "./components/Painel/FormComentarios";
 import ViewApoio from "./components/Painel/ViewApoio";
+import FormSecoes from "./components/Painel/FormSecoes";
+import FormGeral from "./components/Painel/FormGeral";
 
 
 const routes = [
@@ -114,9 +116,20 @@ const routes = [
             },
 
             {
+                path: 'secoes',
+                component: FormSecoes
+            },
+
+            {
                 path: 'apoios',
                 component: ViewApoio
             },
+
+            {
+                path: 'geral',
+                component: FormGeral
+            },
+
             {
                 name: 'dashboard',
                 path: '*',

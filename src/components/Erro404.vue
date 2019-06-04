@@ -14,11 +14,7 @@
                 ></ItemErro>
                 <Links></Links>
             </div>
-            <Patrocinadores></Patrocinadores>
-            <Rainbow></Rainbow>
-            <div class="container-fluid">
-                <Rodape></Rodape>
-            </div>
+            <BlocoRodape></BlocoRodape>
         </div>
     </div>
 </template>
@@ -31,10 +27,11 @@
     import Patrocinadores from "./telas/Patrocinadores";
     import Links from "./itens/Links";
     import ItemErro from "./itens/ItemErro";
+    import BlocoRodape from "./itens/BlocoRodape";
 
     export default {
         name: "Erro404",
-        components: {ItemErro, Links, Patrocinadores, Rodape, FundoFixo, Navbar, Rainbow}
+        components: {BlocoRodape, ItemErro, Links, Patrocinadores, Rodape, FundoFixo, Navbar, Rainbow}
     }
 </script>
 

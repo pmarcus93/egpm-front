@@ -42,11 +42,7 @@
                     </div>
                 </div>
             </div>
-            <Patrocinadores></Patrocinadores>
-            <Rainbow></Rainbow>
-            <div class="container-fluid">
-                <Rodape></Rodape>
-            </div>
+            <BlocoRodape></BlocoRodape>
         </div>
     </div>
 </template>
@@ -62,10 +58,14 @@
     import Patrocinadores from "./telas/Patrocinadores";
     import DuvidaBox from "./DuvidaBox";
     import FundoFixo from "./itens/FundoFixo";
+    import BlocoRodape from "./itens/BlocoRodape";
 
     export default {
         name: "Duvidas",
-        components: {FundoFixo, DuvidaBox, Patrocinadores, Rodape, ItemDuvida, BannerMenor, Rainbow, Navbar, Duvida},
+        components: {
+            BlocoRodape,
+            FundoFixo, DuvidaBox, Patrocinadores, Rodape, ItemDuvida, BannerMenor, Rainbow, Navbar, Duvida
+        },
         data: function () {
             return {
                 duvidas: [

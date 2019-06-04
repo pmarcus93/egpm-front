@@ -117,9 +117,23 @@
                     },
 
                     {
-                        titulo : "Ícones",
-                        icone : "box-open",
+                        titulo : "Seções",
+                        icone : "columns",
+                        route : "secoes",
                     },
+
+                    {
+                        titulo : "Geral",
+                        icone : "box-open",
+                        route : "geral",
+                    },
+
+                    {
+                        titulo : "Imagens",
+                        icone : "images",
+                        route : "imagens",
+                    }
+
                 ]
             }
         }

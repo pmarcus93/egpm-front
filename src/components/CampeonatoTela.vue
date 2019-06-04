@@ -16,19 +16,14 @@
 
             <div class="container pb-5">
                 <div class="row">
-
-                    <ItemCampeonato v-for="(item, indice) in campeonatos"
+                    <ItemCampeonato v-for="(item) in campeonatos"
                                     :titulo="item.st_nome"
                                     :imagem="item.st_imagem"
                                     :rota="item.id_jogo"
                     ></ItemCampeonato>
                 </div>
             </div>
-            <Patrocinadores></Patrocinadores>
-            <Rainbow></Rainbow>
-            <div class="container-fluid">
-                <Rodape></Rodape>
-            </div>
+            <BlocoRodape></BlocoRodape>
         </div>
     </div>
 
@@ -43,10 +38,11 @@
     import FundoFixo from "./itens/FundoFixo";
     import ItemCampeonato from "./itens/ItemCampeonato";
     import EgpmApi from "@/services/EgpmApi.js";
+    import BlocoRodape from "./itens/BlocoRodape";
 
     export default {
         name: "CampeonatoTela",
-        components: {ItemCampeonato, FundoFixo, Navbar, Rainbow, BannerMenor, Patrocinadores, Rodape},
+        components: {BlocoRodape, ItemCampeonato, FundoFixo, Navbar, Rainbow, BannerMenor, Patrocinadores, Rodape},
         created() {
             var self = this;
             EgpmApi.getAllCampeonatos(campeonatos => {
