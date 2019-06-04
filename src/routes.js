@@ -20,6 +20,7 @@ import ViewComentario from "./components/Painel/ViewComentario";
 import FormComentarios from "./components/Painel/FormComentarios";
 import ViewApoio from "./components/Painel/ViewApoio";
 import FormSecoes from "./components/Painel/FormSecoes";
+import FormGeral from "./components/Painel/FormGeral";
 
 
 const routes = [
@@ -122,6 +123,11 @@ const routes = [
             {
                 path: 'apoios',
                 component: ViewApoio
+            },
+
+            {
+                path: 'geral',
+                component: FormGeral
             },
 
             {

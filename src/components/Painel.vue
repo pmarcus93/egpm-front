@@ -123,9 +123,15 @@
                     },
 
                     {
-                        titulo : "Outras",
+                        titulo : "Geral",
                         icone : "box-open",
-                        route : "apoios",
+                        route : "geral",
+                    },
+
+                    {
+                        titulo : "Imagens",
+                        icone : "images",
+                        route : "imagens",
                     }
 
                 ]
