@@ -6,6 +6,7 @@
                     icon="check"
                     texto-botao="Salvar"
                     action="save"
+                    :loadingbutton="loadingbutton"
             ></BarraTitulo>
 
             <div class="col-12 pt-3">
@@ -23,11 +24,21 @@
                             </div>
 
                             <div class="col-6">
-                                <div class="custom-file">
-                                    <input v-on:change="handleFileUpload()" type="file" ref="file" class="custom-file-input" id="st_arquivo" required>
-                                    <label class="custom-file-label" for="st_arquivo">Escolher arquivo...</label>
+                                <div class="form-group">
+                                    <label for="st_alt">Descrição (Alt):</label>
+                                    <input v-model="imagem.st_alt" id="st_alt" type="text"
+                                           class="form-control">
                                 </div>
                             </div>
+
+                            <div class="col-6">
+                                <div class="custom-file">
+                                    <input v-on:change="handleFileUpload()" type="file" ref="file"
+                                           class="custom-file-input" id="st_arquivo" required>
+                                    <label class="custom-file-label" for="st_arquivo">{{labelimputfile}}</label>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </form>
@@ -52,22 +63,46 @@
                 let formData = new FormData();
                 formData.append('st_arquivo', this.file);
                 formData.append('st_nome', this.imagem.st_nome);
+                formData.append('st_alt', this.imagem.st_alt);
 
-                EgpmApi.uploadImagem(formData, retorno => {
+                this.loadingbutton = true;
 
+                EgpmApi.uploadImagem(formData, result => {
+                    var opts = {};
+                    if (result.data.status) {
+                        opts.title = 'Sucesso';
+                        opts.text = "Imagem salva com sucesso.";
+                        opts.type = 'success';
+                        PNotify.alert(opts);
+                        this.$router.push({
+                            name: 'viewimagens',
+                        })
+
+                    } else {
+                        opts.title = 'Erro';
+                        opts.text = result.data.erro.message;
+                        opts.type = 'error';
+                        PNotify.alert(opts);
+                        this.loadingbutton = false;
+                    }
                 })
 
             },
             handleFileUpload() {
                 this.file = this.$refs.file.files[0];
+                this.labelimputfile = this.$refs.file.files[0].name;
+
             }
         },
         data() {
             return {
                 imagem: {
                     st_nome: "",
+                    st_alt: ""
                 },
-                file: ''
+                file: '',
+                labelimputfile: "Escolher Arquivo...",
+                loadingbutton: false
             }
         }
     }

@@ -84,12 +84,4 @@
         border-bottom: whitesmoke 2px solid;
     }
 
-    .label-titulo {
-        font-size: 1.3em;
-    }
-
-    .textarea-sobre {
-        height: 331px;
-    }
-
 </style>

@@ -132,6 +132,7 @@ const routes = [
                 component: FormGeral
             },
             {
+                name: 'viewimagens',
                 path: 'imagens',
                 component: ViewImagem
             },
