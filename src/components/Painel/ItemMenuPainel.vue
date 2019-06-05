@@ -1,8 +1,10 @@
 <template>
-    <div class=" col-10 mx-auto pl-5 item-menu py-2 my-4">
+    <div class="container-menu">
         <router-link :to="'/painel/'+route">
-            <span class="icon p-2"><i :class="'fa fa-'+icone"></i> </span> <span
-                class="text-nav"> {{titulo}}</span>
+            <div class=" col-10 mx-auto pl-5 item-menu py-2 my-4">
+                <span class="icon p-2"><i :class="'fa fa-'+icone"></i> </span> <span
+                    class="text-nav"> {{titulo}}</span>
+            </div>
         </router-link>
     </div>
 </template>
@@ -25,23 +27,23 @@
         background: $color-primary-painel;
     }
 
-    .item-menu > * {
-        text-decoration: none;
+    .container-menu > * {
+        text-decoration: none !important;
         color: #fff;
     }
 
     .item-menu {
         cursor: pointer;
         border-radius: 25px;
-        font-size: 1.5em;
+        font-size: 1em;
         transition: all linear .2s;
-        color: #19c2ff !important;
+
     }
 
     .item-menu:hover {
         background: $color-primary-painel-variant !important;
         border-radius: 25px;
-        color: white !important;
     }
+
 
 </style>

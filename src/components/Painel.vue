@@ -145,19 +145,18 @@
     .menu {
         background: #343957;
         height: calc(100vh - 60px);
-        font-family: Roboto;
 
     }
 
     .view-info {
-        height: calc(100vh - 60px);
+        height: calc(100vh - 50px);
         overflow-y: scroll;
     }
 
     .barra-topo {
         color: #343957;
         background: #fff;
-        height: 60px;
+        height: 50px;
         -webkit-box-shadow: 0 0 19px 0 rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 0 0 19px 0 rgba(0, 0, 0, 0.75);
         box-shadow: 0 0 19px 0 rgba(0, 0, 0, 0.75);
@@ -166,7 +165,7 @@
     }
 
     .logo {
-        height: 45px;
+        height: 40px;
         width: auto;
         margin-top: 7.5px !important;
     }
