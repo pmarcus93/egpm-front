@@ -1,6 +1,5 @@
 <template>
     <div class="animate">
-        <!--Verifica se o jogo existe-->
 
         <FundoFixo
                 :imagem="campeonato.st_imagem"

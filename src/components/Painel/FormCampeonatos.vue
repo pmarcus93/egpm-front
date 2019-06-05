@@ -10,7 +10,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img :src="campeonato.st_imagem" :alt="'Imagem do jogo'campeonato.st_nome" width="100%">
+                        <img :src="campeonato.st_imagem" :alt="'Imagem do jogo'+campeonato.st_nome" width="100%">
                     </div>
                 </div>
             </div>
