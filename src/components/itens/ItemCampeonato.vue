@@ -30,8 +30,8 @@
 <style scoped>
 
     .icone-campeonato {
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         margin-left: 10px;
         color: yellow;
 
