@@ -1,102 +1,93 @@
 <template>
-    <div class="pagina-duvidas">
+    <div class="animate">
         <!--Verifica se o jogo existe-->
+
+        <FundoFixo
+                :imagem="campeonato.st_imagem"
+        ></FundoFixo>
+        <div class="fixed">
+            <Navbar></Navbar>
+            <Rainbow></Rainbow>
+        </div>
+
         <div v-if="campeonato.id_jogo">
-            <FundoFixo
-                    :imagem="campeonato.st_imagem"
-            ></FundoFixo>
-            <div class="fixed">
-                <Navbar></Navbar>
-                <Rainbow></Rainbow>
-            </div>
-            <div class="animate">
-                <div class="container-fluid conteudo">
-                    <BannerJogo
-                            :titulo="campeonato.st_nome"
-                            :descricao="campeonato.st_descricao"
-                            :lancamento="campeonato.dt_lancamento"
-                            :estilo="campeonato.st_estilo"
-                            :video="campeonato.st_video"
-                    ></BannerJogo>
+            <div class="container-fluid conteudo">
+                <BannerJogo
+                        :titulo="campeonato.st_nome"
+                        :descricao="campeonato.st_descricao"
+                        :lancamento="campeonato.dt_lancamento"
+                        :estilo="campeonato.st_estilo"
+                        :video="campeonato.st_video"
+                ></BannerJogo>
 
-                    <div class="row lista-jogo-dados text-center my-auto">
-                        <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                            <div class="col-12 icone"><i class="fa fa-file-alt"></i></div>
-                            <div class="col-12 texto">{{campeonato.st_ingresso}}</div>
-                        </div>
+                <div v-if="+campeonato.bl_campeonato" class="row lista-jogo-dados text-center my-auto">
+                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                        <div class="col-12 icone"><i class="fa fa-file-alt"></i></div>
+                        <div class="col-12 texto">{{campeonato.st_ingresso}}</div>
+                    </div>
 
-                        <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                            <div class="col-12 icone"><i class="fa fa-users"></i></div>
-                            <div class="col-12 texto">{{campeonato.nu_vaga}}</div>
-                        </div>
+                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                        <div class="col-12 icone"><i class="fa fa-users"></i></div>
+                        <div class="col-12 texto">{{campeonato.nu_vaga}}</div>
+                    </div>
 
-                        <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                            <div class="col-12 icone"><i class="fa fa-gamepad"></i></div>
-                            <div class="col-12 texto">{{campeonato.st_plataforma}}</div>
-                        </div>
+                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                        <div class="col-12 icone"><i class="fa fa-gamepad"></i></div>
+                        <div class="col-12 texto">{{campeonato.st_plataforma}}</div>
+                    </div>
 
-                        <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                            <div class="col-12 icone"><i class="fa fa-calendar"></i></div>
-                            <div class="col-12 texto">{{campeonato.dt_jogo}}</div>
-                        </div>
+                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                        <div class="col-12 icone"><i class="fa fa-calendar"></i></div>
+                        <div class="col-12 texto">{{campeonato.dt_jogo}}</div>
+                    </div>
 
-                        <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                            <div class="col-12 icone"><i class="fa fa-clock"></i></div>
-                            <div class="col-12 texto">{{campeonato.hr_jogo}}</div>
-                        </div>
+                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
+                        <div class="col-12 icone"><i class="fa fa-clock"></i></div>
+                        <div class="col-12 texto">{{campeonato.hr_jogo}}</div>
                     </div>
                 </div>
+            </div>
 
-                <div class="conteudo-regra">
-                    <div class="container">
-                        <div class="row ">
-                            <div class="col-12 py-4">
-                                <div v-if="campeonato.st_regra">
-                                    <h3 class="titulo-regras text-center">REGRAS</h3>
-                                    <p v-html="campeonato.st_regra"></p>
-                                    <hr>
-                                </div>
-                                <div v-if="campeonato.st_observacao">
-                                    <h3 class="titulo-observacoes text-center">OBSERVAÇÕES</h3>
-                                    <p v-html="campeonato.st_observacao"></p>
-                                </div>
+            <div class="conteudo-regra">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-12 py-4">
+                            <div v-if="campeonato.st_regra">
+                                <h3 class="titulo-regras text-center">REGRAS</h3>
+                                <p v-html="campeonato.st_regra"></p>
+                                <hr>
+                            </div>
+                            <div v-if="campeonato.st_observacao">
+                                <h3 class="titulo-observacoes text-center">OBSERVAÇÕES</h3>
+                                <p v-html="campeonato.st_observacao"></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div v-else>
-            <FundoFixo></FundoFixo>
-            <div class="fixed">
-                <Navbar></Navbar>
-                <Rainbow></Rainbow>
+        <div v-else-if="dadoscarregados">
+            <div class="container-fluid conteudo">
+                <ItemErro
+                        erro="ERRO 404"
+                        subtitulo="Ops, parece que você entrou em uma página de campeonato inválida."
+                        descricao="Selecione um dos campeonatos disponíveis:">
+                </ItemErro>
             </div>
-            <div class="animate">
-                <div class="container-fluid conteudo">
-                    <ItemErro
-                            erro="ERRO 404"
-                            subtitulo="Ops, parece que você entrou em uma página de campeonato inválida."
-                            descricao="Selecione um dos campeonatos disponíveis:"></ItemErro>
-                </div>
-                <div class="container py-5">
-                    <Campeonatos></Campeonatos>
-                </div>
+            <div class="container py-5">
+                <Campeonatos></Campeonatos>
             </div>
         </div>
+
         <BlocoRodape></BlocoRodape>
     </div>
 </template>
 
 <script>
 
-    import Rodape from "./telas/Rodape";
-    import Patrocinadores from "./telas/Patrocinadores";
-    import BannerMenor from "./itens/BannerMenor";
     import Rainbow from "./itens/Rainbow";
     import Navbar from "./itens/Navbar";
     import FundoFixo from "./itens/FundoFixo";
-    import ItemCampeonato from "./itens/ItemCampeonato";
     import BannerJogo from "./itens/BannerJogo";
     import ItemErro from "./itens/ItemErro";
     import Campeonatos from "./telas/Campeonatos";
@@ -110,24 +101,20 @@
             Campeonatos,
             ItemErro,
             BannerJogo,
-            ItemCampeonato,
             FundoFixo,
             Navbar,
             Rainbow,
-            BannerMenor,
-            Patrocinadores,
-            Rodape
         },
         data() {
             return {
-                campeonato: {}
+                campeonato: {},
+                dadoscarregados: false
             }
         },
         created() {
-            var self = this;
-
             EgpmApi.getCampeonato(this.$route.params.jogo, campeonato => {
-                self.campeonato = campeonato.data;
+                this.campeonato = campeonato.data;
+                this.dadoscarregados = true;
             })
         }
     }
@@ -138,17 +125,8 @@
         background: $bg-light;
     }
 
-    .bloco {
-        transition: all linear .2s;
-    }
-
-    .bloco:hover {
-        background: $bg-light;
-        transform: scale(1.06);
-    }
-
     .icone {
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     .texto {
@@ -182,7 +160,7 @@
             opacity: 0
         }
         to {
-            top: 0px;
+            top: 0;
             opacity: 1
         }
     }
