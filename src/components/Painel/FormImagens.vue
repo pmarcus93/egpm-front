@@ -31,7 +31,15 @@
                                 </div>
                             </div>
 
-                            <div class="col-6">
+                            <div v-if="imagem.st_arquivo" class="col-6">
+                                <div class="form-group">
+                                    <label for="st_arquivo">Link:</label>
+                                    <input v-model="imagem.st_arquivo" id="st_arquivo" type="text"
+                                           class="form-control disabled" disabled>
+                                </div>
+                            </div>
+
+                            <div v-else class="col-6">
                                 <div class="custom-file">
                                     <input v-on:change="handleFileUpload()" type="file" ref="file"
                                            class="custom-file-input" id="st_arquivo" required>
@@ -56,14 +64,20 @@
         name: "FormImagens",
         components: {BarraTitulo},
         created() {
-
+            if (this.$route.params.id_imagem) {
+                EgpmApi.getImagem(this.$route.params.id_imagem, result => {
+                    this.imagem = result.data;
+                })
+            }
         },
         methods: {
             save: function () {
                 let formData = new FormData();
-                formData.append('st_arquivo', this.file);
+                formData.append('st_file', this.file);
                 formData.append('st_nome', this.imagem.st_nome);
                 formData.append('st_alt', this.imagem.st_alt);
+                formData.append('st_arquivo', this.imagem.st_arquivo);
+                formData.append('id_imagem', this.imagem.id_imagem);
 
                 this.loadingbutton = true;
 
@@ -98,7 +112,9 @@
             return {
                 imagem: {
                     st_nome: "",
-                    st_alt: ""
+                    st_alt: "",
+                    st_arquivo: "",
+                    id_imagem: ""
                 },
                 file: '',
                 labelimputfile: "Escolher Arquivo...",

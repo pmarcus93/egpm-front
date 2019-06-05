@@ -10,6 +10,11 @@
             <button v-on:click="copia(id)" class="btn btn-primary"><i class="fa fa-copy"></i></button>
         </td>
         <td>
+            <router-link :to="'/painel/imagens/editar/'+id" >
+                <button class="btn btn-primary"><i class="fa fa-edit"></i></button>
+            </router-link>
+        </td>
+        <td>
             <button class="btn btn-danger" v-on:click="remover(id)"><i class="fa fa-trash"></i></button>
         </td>
 
@@ -28,7 +33,7 @@
         ],
         methods: {
             copia: function (id) {
-                $("#" + id).attr("disabled",false);
+                $("#" + id).attr("disabled", false);
                 $("#" + id).select();
                 var copiar = document.execCommand('copy');
                 var opts = {};
@@ -44,7 +49,7 @@
                     opts.type = 'error';
                     PNotify.alert(opts);
                 }
-                $("#" + id).attr("disabled",true);
+                $("#" + id).attr("disabled", true);
 
             },
             remover: function (id) {

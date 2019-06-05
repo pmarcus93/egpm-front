@@ -22,6 +22,15 @@ export default {
         })
     },
 
+    getImagem: (id, callback) => {
+        var url = urlbase + "Imagem/" + id;
+        axios.get(url).then((result) => {
+            if (callback) {
+                callback(result);
+            }
+        })
+    },
+
     uploadImagem: (formData, callback) => {
         var url = urlbase + "Imagem/";
         axios.post(url,

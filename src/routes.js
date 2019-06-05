@@ -140,6 +140,10 @@ const routes = [
                 path: 'imagens/adicionar',
                 component: FormImagens
             },
+            {
+                path: 'imagens/editar/:id_imagem',
+                component: FormImagens
+            },
 
             {
                 name: 'dashboard',
