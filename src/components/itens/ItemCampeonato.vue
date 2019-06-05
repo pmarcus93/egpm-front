@@ -9,7 +9,7 @@
                 </div>
                 <div class="sobre-imagem"></div>
                 <div class="icones">
-                    <div class="d-flex align-items-center justify-content-center">
+                    <div v-if="iscampeonato === 1" class="d-flex align-items-center justify-content-center">
                         <span style="color: yellow;">CAMPEONATO</span>
                         <img src="../../assets/icons/swords.svg" class="icone-campeonato">
                     </div>
@@ -23,7 +23,7 @@
 <script>
     export default {
         name: "ItemCampeonato",
-        props: ["titulo", "imagem", "texto", "rota"],
+        props: ["titulo", "imagem", "texto", "rota", "iscampeonato"],
     }
 </script>
 
