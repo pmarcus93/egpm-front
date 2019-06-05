@@ -37,7 +37,14 @@
         name: "ItemFormRedesSociais",
         data: function () {
             return {
-                social: [],
+                social: [
+                    {
+                        st_link: ""
+                    },
+                    {
+                        st_link: ""
+                    }
+                ],
             }
         },
         methods: {
