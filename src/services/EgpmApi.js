@@ -13,6 +13,15 @@ export default {
         return object;
     },
 
+    getAllImagens: (callback) => {
+        var url = urlbase + "Imagem/";
+        axios.get(url).then((result) => {
+            if (callback) {
+                callback(result);
+            }
+        })
+    },
+
     uploadImagem: (formData, callback) => {
         var url = urlbase + "Imagem/";
         axios.post(url,
@@ -80,6 +89,15 @@ export default {
         axios.delete(urlcampeonato, token).then((campeonato) => {
             if (callback) {
                 callback(campeonato);
+            }
+        })
+    },
+
+    deleteImagem: (id, token, callback) => {
+        var url = urlbase + "Imagem/" + id;
+        axios.delete(url, token).then((retorno) => {
+            if (callback) {
+                callback(retorno);
             }
         })
     },
