@@ -6,7 +6,6 @@
                     <h1 class="mb-2 titulo-secao-right"
                         v-bind:style="{ 'border-bottom':  colorborder + ' solid 3px' }">{{titulo}}</h1>
                     <p class="mt-2 descricao">{{descricao}}</p>
-                    <router-link v-if="rota" class="btn btn-light" :to="rota">{{textobotao}}</router-link>
                 </div>
             </section>
         </div>
@@ -16,7 +15,7 @@
 <script>
     export default {
         name: "SecaoTextoDireita",
-        props: ["titulo", "imagem", "descricao", "colorborder", "classimage", "type", "rota", "textobotao"],
+        props: ["titulo", "imagem", "descricao", "colorborder", "classimage", "type", "rota"],
     }
 </script>
 
