@@ -15,7 +15,7 @@
 <script>
     export default {
         name: "SecaoTextoDireita",
-        props: ["titulo", "imagem", "descricao", "colorborder", "classimage", "type", "rota", "textobotao"],
+        props: ["titulo", "imagem", "descricao", "colorborder", "classimage", "type", "rota"],
     }
 </script>
 
