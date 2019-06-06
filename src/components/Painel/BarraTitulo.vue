@@ -3,7 +3,7 @@
         <div class="titulo p-3">
             <h2><span>{{titulo}}</span>
                 <span v-if="textoBotao" class="float-right mr-5">
-                    <div v-if="rota">
+                    <span v-if="rota">
                             <router-link :to="rota">
                                 <button class="btn btn-painel-primary">
                                     <i v-if="icon" :class="'fa fa-'+icon"></i>
@@ -12,11 +12,20 @@
                                 </button>
 
                             </router-link>
-                        </div>
-                        <div v-else>
+                        </span>
+                        <span v-else>
                                 <button v-if="action" v-on:click="save()" class="btn btn-painel-primary">
-                                    <i v-if="icon" :class="'fa fa-'+icon"></i>
-                                    <i v-else class="'fa fa-'+icon"></i>
+
+                                    <span v-if="loadingbutton" class="spinner-border spinner-border-sm text-light"
+                                          role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </span>
+
+                                    <span v-else>
+                                        <i v-if="icon" :class="'fa fa-'+icon"></i>
+                                        <i v-else class="'fa fa-'+icon"></i>
+                                    </span>
+
                                     <span> {{textoBotao}}</span>
                                 </button>
 
@@ -25,7 +34,7 @@
                                     <i v-else class="'fa fa-'+icon"></i>
                                     <span> {{textoBotao}}</span>
                                 </button>
-                        </div>
+                        </span>
                         </span>
             </h2>
         </div>
@@ -40,7 +49,8 @@
             'icon',
             'rota',
             'textoBotao',
-            'action'
+            'action',
+            'loadingbutton'
         ],
         methods: {
             save: function () {
@@ -52,7 +62,7 @@
 
 <style lang="scss" scoped>
     h2 {
-        font-family: Roboto;
+        font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
         font-weight: bold;
         color: $color-primary-painel;
     }

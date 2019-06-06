@@ -21,6 +21,8 @@ import FormComentarios from "./components/Painel/FormComentarios";
 import ViewApoio from "./components/Painel/ViewApoio";
 import FormSecoes from "./components/Painel/FormSecoes";
 import FormGeral from "./components/Painel/FormGeral";
+import ViewImagem from "./components/Painel/ViewImagem";
+import FormImagens from "./components/Painel/FormImagens";
 
 
 const routes = [
@@ -128,6 +130,19 @@ const routes = [
             {
                 path: 'geral',
                 component: FormGeral
+            },
+            {
+                name: 'viewimagens',
+                path: 'imagens',
+                component: ViewImagem
+            },
+            {
+                path: 'imagens/adicionar',
+                component: FormImagens
+            },
+            {
+                path: 'imagens/editar/:id_imagem',
+                component: FormImagens
             },
 
             {

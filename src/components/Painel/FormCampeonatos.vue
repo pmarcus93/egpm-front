@@ -135,6 +135,15 @@
 
                     <div class="col-6">
                         <h4>Detalhes de Campeonatos:</h4>
+
+                        <div class="custom-control custom-checkbox my-2">
+                            <input v-if="+campeonato.bl_campeonato === 1" v-on:change="marcacheckbox" checked ref="bl_campeonato"
+                                   type="checkbox" class="custom-control-input" id="bl_campeonato">
+
+                            <input v-else type="checkbox" class="custom-control-input" v-on:change="marcacheckbox" ref="bl_campeonato" id="bl_campeonato">
+                            <label class="custom-control-label" for="bl_campeonato">Campeonato</label>
+                        </div>
+
                         <div class="form-group">
                             <label for="st_ingresso">Local de inscrição:</label>
                             <input id="st_ingresso"
@@ -248,6 +257,9 @@
             }
         },
         methods: {
+            marcacheckbox: function () {
+                this.campeonato.bl_campeonato = this.$refs.bl_campeonato.checked;
+            },
             save: function () {
                 var self = this;
                 EgpmApi.postCampeonato(EgpmApi.pushAutenticationobject(self.campeonato), result => {
