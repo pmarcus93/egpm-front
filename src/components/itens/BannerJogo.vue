@@ -4,12 +4,16 @@
 
 
             <div class="col-md-6 col-st-12 my-auto info-game">
-                <h1 class="titulo-secao text-center">{{titulo}}</h1>
+                <h1 class="titulo-secao text-center mb-4">{{titulo}}</h1>
+
                 <p class="texto-info" v-if="descricao">
                     {{descricao}}
                 </p>
-                <div class="texto-info" v-if="estilo"><b>Categoria: </b>{{estilo}}</div>
-                <div class="texto-info" v-if="estilo"><b>Classificação indicativa: </b>18 anos</div>
+
+                <div class="my-3">
+                    <div class="texto-info" v-if="estilo"><b>Categoria: </b>{{estilo}}</div>
+                    <div class="texto-info" v-if="estilo"><b>Classificação indicativa: </b>18 anos</div>
+                </div>
 
             </div>
 
