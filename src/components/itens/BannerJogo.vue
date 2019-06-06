@@ -42,10 +42,6 @@
 
 <style scoped lang="scss">
 
-    .titulo-secao {
-        font-weight: 600;
-    }
-
     .info-game {
         color: $light-text;
         margin-top: 30px !important; //TODO: verificar a possibilidade de remover !important.
@@ -55,6 +51,10 @@
     .texto-info {
         font-size: 1.2em;
         font-weight: 300;
+    }
+
+    .titulo-secao {
+        font-weight: 600;
     }
 
 </style>
