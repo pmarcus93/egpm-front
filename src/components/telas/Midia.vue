@@ -54,43 +54,29 @@
 <style lang="scss">
 
     .midia {
-        background: whitesmoke;
+        background: $bg-light;
+        color: $color-title;
         padding-top: 5%;
         padding-bottom: 5%;
-        color: #545457;
     }
 
-    /* Small devices (landscape phones, 576px and up) */
-    @media (max-width: 576px) {
-        .video {
-            margin-top: 30px;
-            border: none;
-            -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
-        }
-
-        .titulo-depoimentos {
-            font-size: 2em;
-            font-family: $font-archive;
-        }
+    .video {
+        margin-top: 30px;
+        border: none;
+        box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
     }
 
-    /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 576px) {
-        .video {
-            border: none;
-            -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
-        }
+    .titulo-depoimentos {
+        font-size: 2em;
+        font-family: $font-archive;
 
-        .titulo-depoimentos {
+        @include sm {
             font-size: 2.5em;
-            font-family: $font-archive;
+
         }
     }
-
 
 </style>
 
