@@ -1,12 +1,12 @@
 <template>
     <div class="campeonatos">
-        <div class="container-fluid">
-            <div class="row">
-                <ItemCampeonato v-for="(campeonato, indice) in campeonatos"
+        <div class="container-fluid ">
+            <div class="row ">
+                <ItemCampeonato v-for="(campeonato) in campeonatos"
                                 :titulo="campeonato.st_nome"
                                 :imagem="campeonato.st_imagem"
                                 :rota="campeonato.id_jogo"
-                                :iscampeonato = "campeonato.bl_campeonato"
+                                :iscampeonato="campeonato.bl_campeonato"
                 ></ItemCampeonato>
             </div>
         </div>
@@ -35,7 +35,6 @@
 
 <style scoped>
     .campeonatos {
-        background: black;
+        background: transparent;
     }
-
 </style>
