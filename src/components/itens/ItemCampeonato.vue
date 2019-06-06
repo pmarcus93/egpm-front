@@ -10,8 +10,8 @@
                 <div class="sobre-imagem"></div>
                 <div class="icones">
                     <div v-if="+iscampeonato === 1" class="d-flex align-items-center justify-content-center">
-                        <span style="color: yellow;">CAMPEONATO</span>
-                        <img src="../../assets/icons/swords.svg" class="icone-campeonato">
+                        <span class="campeonato-txt">CAMPEONATO</span>
+                        <img src="../../assets/icons/swords.svg" alt="Ícone indicativo de campeonato. Duas espadas cruzadas." class="icone-campeonato">
                     </div>
 
                 </div>
@@ -27,14 +27,17 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+    .campeonato-txt {
+        color: $color-primary;
+    }
 
     .icone-campeonato {
         height: 30px;
         width: 30px;
         margin-left: 10px;
-        color: yellow;
-
+        color: $color-primary;
     }
     
     .icones {
@@ -59,7 +62,7 @@
     }
 
     .nome-campeonato {
-        color: yellow;
+        color: $color-primary;
         font-size: 2em;
         font-weight: bold;
         text-transform: uppercase;
