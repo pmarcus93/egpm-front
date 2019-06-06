@@ -2,7 +2,7 @@
     <div class="patrocinadores py-4">
         <div class="container">
             <div class="row">
-                <div class="col-12 py-2 mb-4 tipo-patrocinador center-mobile"><h4>REALIZAÇÃO:</h4></div>
+                <div class="col-12 py-2 mb-4 tipo-patrocinador center-mobile"><h4>REALIZAÇÃO</h4></div>
                 <ItemPatrocinador
                         imagem="http://fapam.edu.br/escolheportal/img/fapam.png"
                 ></ItemPatrocinador>
@@ -11,12 +11,7 @@
             <div class="row my-5">
                 <div class="col-12 py-2 mb-4 tipo-patrocinador">
                     <div class="row">
-                        <div class="col-6 my-auto"><h4>APOIO:</h4></div>
-                        <div class="col-6 my-auto">
-                            <router-link to="/apoie">
-                                <button class="btn btn-success float-right">SEJA UM APOIADOR</button>
-                            </router-link>
-                        </div>
+                        <div class="col-6 my-auto"><h4>APOIO</h4></div>
                     </div>
                 </div>
 
