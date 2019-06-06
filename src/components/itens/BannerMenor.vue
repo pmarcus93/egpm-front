@@ -27,7 +27,7 @@
     /* Small devices (landscape phones, 576px and up) */
     @media (max-width: 576px) {
         .titulo-secao {
-            font-family: Archive;
+            font-family: $font-archive;
             font-size: 3em;
             color: $color-primary;
         }
@@ -36,7 +36,7 @@
     /* Medium devices (tablets, 768px and up) */
     @media (min-width: 576px) {
         .titulo-secao {
-            font-family: Archive;
+            font-family: $font-archive;
             font-size: 5em;
             color: $color-primary;
         }

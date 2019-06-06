@@ -56,7 +56,7 @@
     /* Small devices (landscape phones, 576px and up) */
     @media (max-width: 576px) {
         .titulo-secao {
-            font-family: Archive;
+            font-family: $font-archive;
             font-size: 3em;
             text-align: center;
         }
@@ -69,7 +69,7 @@
     /* Medium devices (tablets, 768px and up) */
     @media (min-width: 576px) {
         .titulo-secao {
-            font-family: Archive;
+            font-family: $font-archive;
             font-size: 3em;
         }
     }

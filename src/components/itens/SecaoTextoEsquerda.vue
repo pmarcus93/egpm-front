@@ -19,7 +19,7 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
     @font-face {
         font-family: "Archive";
@@ -78,7 +78,7 @@
 
         .titulo-secao-left {
             font-size: 2.5em;
-            font-family: Archive;
+            font-family: $font-archive;
             text-align: center;
         }
     }
@@ -97,7 +97,7 @@
 
         .titulo-secao-left {
             font-size: 3em;
-            font-family: Archive;
+            font-family: $font-archive;
             text-align: center;
         }
 

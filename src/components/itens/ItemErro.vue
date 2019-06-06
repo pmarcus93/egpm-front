@@ -24,7 +24,7 @@
     }
 
     h1 {
-        font-family: Archive;
+        font-family: $font-archive;
         font-size: 3em;
 
         @include sm {

@@ -138,12 +138,12 @@
     }
 
     .titulo-regras {
-        font-family: Archive;
+        font-family: $font-archive;
         font-size: 3em;
     }
 
     .titulo-observacoes {
-        font-family: Archive;
+        font-family: $font-archive;
         font-size: 2.5em;
     }
 

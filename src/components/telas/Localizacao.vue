@@ -34,7 +34,7 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .localizacao {
         background: whitesmoke;
         padding-top: 5%;
@@ -45,7 +45,7 @@
     /* Small devices (landscape phones, 576px and up) */
     @media (max-width: 576px) {
         .titulo-secao {
-            font-family: Archive;
+            font-family: $font-archive;
             font-size: 2.5em;
         }
 
@@ -61,10 +61,9 @@
     /* Medium devices (tablets, 768px and up) */
     @media (min-width: 576px) {
         .titulo-secao {
-            font-family: Archive;
+            font-family: $font-archive;
             font-size: 3em;
         }
     }
-
 
 </style>

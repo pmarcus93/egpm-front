@@ -82,7 +82,7 @@
 
     .titulo-secao-right {
         font-size: 2.5em;
-        font-family: Archive;
+        font-family: $font-archive;
         text-align: center;
 
         @include md {
