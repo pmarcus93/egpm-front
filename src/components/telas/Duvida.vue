@@ -7,9 +7,9 @@
                     <section>
                         <h1 class="my-4 titulo-secao">Dúvidas</h1>
                         <p class="mt-3 subtitulo">As dúvidas mais frequentes, respondidas aqui! <br>
-                                                        <router-link to='/duvidas'>
-                                                            <button class="btn btn-light my-1">Outras dúvidas</button>
-                                                        </router-link>
+                            <router-link to='/duvidas'>
+                                <button class="btn btn-light my-1">Outras dúvidas</button>
+                            </router-link>
                         </p>
                     </section>
                 </div>
@@ -53,34 +53,25 @@
 
 <style lang="scss" scoped>
 
-    /* Small devices (landscape phones, 576px and up) */
-    @media (max-width: 576px) {
-        .titulo-secao {
-            font-family: $font-archive;
-            font-size: 3em;
-            text-align: center;
-        }
-
-        .subtitulo {
-            text-align: center;
-        }
-    }
-
-    /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 576px) {
-        .titulo-secao {
-            font-family: $font-archive;
-            font-size: 3em;
-        }
-    }
-
     .duvida {
         color: $color-title;
     }
-
+    
     .secao-duvidas {
         display: flex;
         align-self: center;
+    }
+
+    .subtitulo {
+        @include sm {
+            text-align: center;
+        }
+    }
+
+    .titulo-secao {
+        font-family: $font-archive;
+        font-size: 3em;
+        text-align: center;
     }
 
 </style>
