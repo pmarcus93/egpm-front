@@ -13,7 +13,7 @@
 
                     <h4>DATAS & HORÁRIOS</h4>
                     <p>
-                        Datas à definir! <br>
+                        Datas em breve! <br>
                         Sábado - 10h às 20h <br>
                         Domingo - 10h às 20h <br>
                     </p>
