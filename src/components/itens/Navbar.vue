@@ -29,7 +29,7 @@
                         class="fab fa-facebook fa-2x ml-3"></i></a>
                 <a href="https://www.instagram.com/fapam_oficial/" target="_blank" rel="noopener" class="color-instagram social"><i
                         class="fab fa-instagram fa-2x ml-3"></i></a>
-                <button class="burguer" v-on:click="controlmenu">
+                <button class="burger" v-on:click="controlmenu">
                     <i v-if="!menuativo" class=" fa fa-bars fa-2x ml-3"></i>
                     <i v-else class=" fa fa-times fa-2x ml-3 animatescale"></i>
                 </button>
@@ -85,7 +85,7 @@
                     this.menuativo = false;
                     return;
                 }
-                    this.menuativo = true;
+                this.menuativo = true;
 
             }
         },
@@ -97,7 +97,54 @@
     }
 </script>
 
-<style>
+<style lang="scss">
+
+    .burger {
+        background: none;
+        border: none;
+        display: inline;
+        @include lg {
+            display: none;
+        }
+    }
+
+    .burger:focus {
+        border-color: transparent !important;
+        outline: 0;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    .color-facebook:hover {
+        color: #3A5895;
+    }
+
+    .color-instagram:hover {
+        color: #D10869;
+    }
+
+    .link {
+        font-weight: 600;
+        transition: linear all 0.2s;
+        display: none !important;
+        @include lg {
+            display: block;
+        }
+    }
+
+    .link:hover {
+        transform: scale(1.2);
+    }
+
+    .menu-mobile {
+        display: inline;
+        text-align: center;
+        height: calc(100vh - 62px);
+
+        @include lg {
+            display: none !important;
+        }
+    }
 
     .navbar-icons a {
         color: #545457;
@@ -111,74 +158,11 @@
         transform: scale(1.2);
     }
 
-    .color-facebook:hover {
-        color: #3A5895;
-    }
-
-    .color-instagram:hover {
-        color: #D10869;
-    }
-
-    .burguer {
-        background: none;
-        border: none;
-    }
-
-    .burguer:focus {
-        border-color: none !important;
-        outline: 0;
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-    }
-
-
-    .link:hover {
-        transform: scale(1.2);
-    }
-
-    /* Small devices (landscape phones, 576px and up) */
-    @media (max-width: 992px) {
-        .link {
-            font-weight: 600;
-            transition: linear all 0.2s;
-            display: none !important;
-        }
-
-        .burguer {
-            display: inline;
-        }
-
-        .menu-mobile {
-            display: inline;
-            text-align: center;
-            height: calc(100vh - 62px);
-        }
-
-        .social {
-            display: none;
-        }
-    }
-
-    /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 992px) {
-        .link {
-            font-weight: 600;
-            transition: linear all 0.2s;
-            display: block;
-        }
-
-        .burguer {
-            display: none;
-        }
-
-        .menu-mobile {
-            display: none !important;
-        }
-
-        .social {
+    .social {
+        display: none;
+        @include lg {
             display: inline;
         }
     }
-
 
 </style>
