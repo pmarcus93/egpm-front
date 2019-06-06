@@ -63,47 +63,47 @@
         </div>
 
         <div class="col-12 pt-3">
-            <div class="row">
-                <div class="col-12 py-2">
-                    <div class="col-12 titulo mb-3">
-                        <h4>Campeonato:</h4>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="st_nome" class="label-titulo">Texto Campeonato:</label>
-                                <textarea v-model="secoes[1].st_texto" id="st_nome" class="form-control"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h4>Jogos:</h4>
+            <div class="form-group">
+                <label for="st_nome" class="label-titulo">Texto Jogo:</label>
+                <textarea v-model="secoes[1].st_texto" id="st_nome" class="form-control text-area-geral"></textarea>
+            </div>
+        </div>
+
+
+        <div class="col-12 pt-3">
+            <h4>Free Play:</h4>
+            <div class="form-group">
+                <label for="st_nome" class="label-titulo">Texto Free Play:</label>
+                <textarea v-model="secoes[3].st_texto" id="st_nome"
+                          class="form-control text-area-geral"></textarea>
             </div>
         </div>
 
         <div class="col-12 pt-3">
-            <div class="row">
-                <div class="col-12 py-2">
-                    <div class="col-12 titulo mb-3">
-                        <h4>Free Play:</h4>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="st_nome" class="label-titulo">Texto Free Play:</label>
-                                <textarea v-model="secoes[2].st_texto" id="st_nome" class="form-control"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h4>Palestras:</h4>
+            <div class="form-group">
+                <label for="st_nome" class="label-titulo">Texto Palestras:</label>
+                <textarea v-model="secoes[2].st_texto" id="st_nome"
+                          class="form-control text-area-geral"></textarea>
             </div>
         </div>
+
+        <div class="col-12 pt-3">
+            <h4>Mídia:</h4>
+            <div class="form-group">
+                <label for="st_link" class="label-titulo">Link do vídeo de Mídia:</label>
+                <input v-model="secoes[4].st_link" id="st_link"
+                       class="form-control">
+            </div>
+        </div>
+
     </div>
 </template>
 
 <script>
     import BarraTitulo from "./BarraTitulo";
     import EgpmApi from "@/services/EgpmApi";
-
 
     export default {
         name: "FormSecoes",
@@ -120,7 +120,23 @@
         data: function () {
             return {
                 iconessobre: [],
-                secoes: []
+                secoes: [
+                    {
+                        st_texto : "Texto Sobre"
+                    },
+                    {
+                        st_texto : "Texto Jogo"
+                    },
+                    {
+                        st_texto : "Texto Palestra"
+                    },
+                    {
+                        st_texto : "Texto Free Play"
+                    },
+                    {
+                        st_link : "Link de vídeo"
+                    },
+                ]
 
             }
         },
@@ -187,6 +203,10 @@
 
     .textarea-sobre {
         height: 331px;
+    }
+
+    .text-area-geral {
+        height: 100px;
     }
 
 </style>
