@@ -116,11 +116,11 @@
     }
 
     .color-facebook:hover {
-        color: #3A5895;
+        color: $facebook-color;
     }
 
     .color-instagram:hover {
-        color: #D10869;
+        color: $instagram-color;
     }
 
     .link {
