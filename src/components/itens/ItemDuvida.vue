@@ -24,7 +24,6 @@
     }
 
     .item-duvida {
-        /*background: #50f5b0;*/
         cursor: pointer;
         transition: all linear .2s;
         height: 100%;
