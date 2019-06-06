@@ -128,7 +128,7 @@
         transition: linear all 0.2s;
         display: none !important;
         @include lg {
-            display: block;
+            display: block !important;
         }
     }
 
