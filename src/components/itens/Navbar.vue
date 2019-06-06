@@ -25,9 +25,9 @@
 
 
             <div class="navbar-icons ">
-                <a href="https://www.facebook.com/FAPAM/" class="color-facebook social"><i
+                <a href="https://www.facebook.com/FAPAM/" target="_blank" rel="noopener" class="color-facebook social"><i
                         class="fab fa-facebook fa-2x ml-3"></i></a>
-                <a href="https://www.instagram.com/fapam_oficial/" class="color-instagram social"><i
+                <a href="https://www.instagram.com/fapam_oficial/" target="_blank" rel="noopener" class="color-instagram social"><i
                         class="fab fa-instagram fa-2x ml-3"></i></a>
                 <button class="burguer" v-on:click="controlmenu">
                     <i v-if="!menuativo" class=" fa fa-bars fa-2x ml-3"></i>
