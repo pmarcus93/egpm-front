@@ -31,7 +31,8 @@
 <style scoped lang="scss">
 
     .bloco-campeonato {
-        padding: 90px 0;
+        padding-bottom: 90px;
+        padding-top: 90px;
     }
 
     .bloco-campeonato > * {

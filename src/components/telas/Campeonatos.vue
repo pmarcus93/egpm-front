@@ -35,6 +35,6 @@
 
 <style scoped>
     .campeonatos {
-        background: transparent;
+        background: #000000;
     }
 </style>
