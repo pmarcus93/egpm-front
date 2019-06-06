@@ -19,7 +19,7 @@
     }
 
     .depoimento {
-        transition: linear .2s all;
+        transition: all linear .2s ;
     }
 
     .depoimento:hover {
