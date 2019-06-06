@@ -35,6 +35,11 @@
         font-weight: bold;
         text-align: center;
         max-width: 125px;
+
+        @include lg {
+            font-size: 30px;
+            max-width: 200px;
+        }
     }
 
     .logo-full {
@@ -47,45 +52,18 @@
 
     .descricao {
         color: $color-primary;
-        font-size: 17px;
         text-transform: uppercase;
-    }
-
-    /* Small devices (landscape phones, 576px and up) */
-    @media (min-width: 576px) {
-        .descricao {
-            font-size: 20px;
-        }
-
-        .logo-full {
-            width: 450px;
-        }
-    }
-
-    /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 768px) {
-
-    }
-
-    /* Large devices (desktops, 992px and up) */
-    @media (min-width: 992px) {
-        .descricao {
+        font-size: 17px;
+        @include lg {
             font-size: 25px;
         }
-
-        .destaque {
-            font-size: 30px;
-            max-width: 200px;
-        }
-
-        .logo-full {
-            width: 600px;
-        }
     }
 
-    /* Extra large devices (large desktops, 1200px and up)*/
-    @media (min-width: 1200px) {
-
+    .logo-full {
+        width: 450px;
+        @include lg {
+            width: 600px;
+        }
     }
 
 </style>
