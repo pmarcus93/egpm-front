@@ -1,6 +1,6 @@
 <template>
     <div class="col-12 py-5 item-duvida text-center" v-bind:style="{'color' : color}">
-        <div class="row" >
+        <div class="row">
             <div class="col-12 my-4"><i class="fa fa-comments fa-3x"></i></div>
             <div class="col-12 duvida" v-bind:style="{'color' : color}">{{duvida}}</div>
             <div class="col-12 resposta my-4">{{resposta}}</div>
@@ -15,21 +15,20 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
     .duvida {
         font-size: 1.5em;
         font-weight: bold;
-        color: #fafafa;
+        color: $light-text;
     }
 
     .item-duvida {
         cursor: pointer;
         transition: all linear .2s;
         height: 100%;
-        padding-left: 40px;
-        padding-right: 40px;
-        color: #fafafa;
+        padding: 0 40px;
+        color: $light-text;
     }
 
     .item-duvida:hover {
@@ -37,4 +36,5 @@
         position: relative;
         z-index: 1;
     }
+
 </style>
