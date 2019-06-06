@@ -97,5 +97,7 @@
 </script>
 
 <style scoped>
-
+    .titulo {
+        border-bottom: whitesmoke 2px solid;
+    }
 </style>
