@@ -14,13 +14,13 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .banner {
         padding: 70px 0;
     }
 
     .texto-secao {
-        color: yellow;
+        color: $color-primary;
         font-size: 1.5em;
     }
 
@@ -29,8 +29,7 @@
         .titulo-secao {
             font-family: Archive;
             font-size: 3em;
-            color: yellow;
-
+            color: $color-primary;
         }
     }
 
@@ -39,8 +38,7 @@
         .titulo-secao {
             font-family: Archive;
             font-size: 5em;
-            color: yellow;
-
+            color: $color-primary;
         }
     }
 

@@ -17,10 +17,10 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
     h1, h3 {
-        color: yellow;
+        color: $color-primary;
     }
 
     /* Small devices (landscape phones, 576px and up) */
