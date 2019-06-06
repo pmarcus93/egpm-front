@@ -4,16 +4,16 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 my-auto conteudo-texto">
                     <h1 class="mb-4 titulo-secao">EGMP3</h1>
-                    <h2>LOCAL</h2>
+                    <h4>LOCAL</h4>
                     <p>
                         FAPAM - Faculdade de Pará de Minas <br>
                         R. Ricardo Marinho, 110 - São Geraldo, Pará de Minas - MG, <br>
                         35660-398
                     </p>
 
-                    <h2>DATAS & HORÁRIOS</h2>
+                    <h4>DATAS & HORÁRIOS</h4>
                     <p>
-                        Datas à definir! <br>
+                        Datas em breve! <br>
                         Sábado - 10h às 20h <br>
                         Domingo - 10h às 20h <br>
                     </p>
@@ -34,37 +34,32 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
     .localizacao {
-        background: whitesmoke;
+        background: $light-text;
         padding-top: 5%;
         padding-bottom: 5%;
         color: #545457;
     }
 
-    /* Small devices (landscape phones, 576px and up) */
-    @media (max-width: 576px) {
-        .titulo-secao {
-            font-family: Archive;
-            font-size: 2.5em;
-        }
-
-        .conteudo-texto {
-            text-align: center;
-        }
-
-        .mapa {
-            margin-top: 30px;
-        }
-    }
-
-    /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 576px) {
-        .titulo-secao {
-            font-family: Archive;
+    .titulo-secao {
+        font-family: $font-archive;
+        font-size: 2.5em;
+        @include sm {
             font-size: 3em;
         }
     }
 
+    .conteudo-texto {
+        text-align: center;
+        @include sm {
+            text-align: left;
+        }
+    }
+
+    .mapa {
+        margin-top: 30px;
+    }
 
 </style>

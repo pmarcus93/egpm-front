@@ -23,23 +23,12 @@
         color: $color-primary;
     }
 
-    /* Small devices (landscape phones, 576px and up) */
-    @media (max-width: 576px) {
-        h1 {
-            font-family: Archive;
-            font-size: 3em;
-        }
-    }
+    h1 {
+        font-family: $font-archive;
+        font-size: 3em;
 
-    /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 576px) {
-        h1 {
-            font-family: Archive;
+        @include sm {
             font-size: 5em;
-        }
-
-        h3 {
-
         }
     }
 

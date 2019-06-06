@@ -38,13 +38,16 @@
 </script>
 
 <style scoped>
-    .bloco-icon{
+
+    .bloco-icon {
         transition: all linear .2s;
     }
+
     .bloco-icon:hover {
         background: #f5ffe1;
         transform: scale(1.09);
     }
+
     .icon-box-sobre {
         font-size: 3em;
     }

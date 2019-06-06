@@ -51,7 +51,7 @@
     }
 </script>
 
-<style>
+<style lang="scss">
 
     .midia {
         background: whitesmoke;
@@ -72,8 +72,7 @@
 
         .titulo-depoimentos {
             font-size: 2em;
-            font-family: Archive;
-
+            font-family: $font-archive;
         }
     }
 
@@ -88,8 +87,7 @@
 
         .titulo-depoimentos {
             font-size: 2.5em;
-            font-family: Archive;
-
+            font-family: $font-archive;
         }
     }
 

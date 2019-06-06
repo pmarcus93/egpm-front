@@ -40,31 +40,21 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
-    .titulo-secao {
-        font-weight: 600;
-    }
-
-    /* Small devices (landscape phones, 576px and up) */
-    @media (max-width: 576px) {
-        .info-game {
-            color: #f5f5f5;
-            margin-top: 30px !important;
-            text-align: center;
-        }
-    }
-
-    /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 576px) {
-        .info-game {
-            color: #f5f5f5;
-        }
+    .info-game {
+        color: $light-text;
+        margin-top: 30px !important; //TODO: verificar a possibilidade de remover !important.
+        text-align: center;
     }
 
     .texto-info {
         font-size: 1.2em;
         font-weight: 300;
+    }
+
+    .titulo-secao {
+        font-weight: 600;
     }
 
 </style>

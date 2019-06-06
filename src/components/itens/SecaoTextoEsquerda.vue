@@ -19,7 +19,7 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
     @font-face {
         font-family: "Archive";
@@ -27,7 +27,7 @@
     }
 
     .secao-left-body {
-        color: whitesmoke;
+        color: $light-text;
     }
 
     .static::after {
@@ -61,46 +61,28 @@
 
     .bgpalestra::after {
         background: url('../../assets/background-01.jpg') center/cover;
-
     }
 
-    /* Small devices (landscape phones, 576px and up) */
-    @media (max-width: 576px) {
-
-        .box-info {
-            text-align: center;
-            z-index: 2;
-        }
-
-        .descricao {
-            font-size: 1.2rem;
-        }
-
-        .titulo-secao-left {
-            font-size: 2.5em;
-            font-family: Archive;
-            text-align: center;
-        }
+    .box-info {
+        text-align: center;
+        z-index: 2;
     }
 
-    /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 576px) {
-
-        .box-info {
-            z-index: 2;
-            text-align: center;
-        }
-
-        .descricao {
+    .descricao {
+        font-size: 1.2rem;
+        @include sm {
             font-size: 1.5rem;
         }
+    }
 
-        .titulo-secao-left {
+    .titulo-secao-left {
+        font-size: 2.5em;
+        font-family: $font-archive;
+        text-align: center;
+
+        @include md {
             font-size: 3em;
-            font-family: Archive;
-            text-align: center;
         }
-
     }
 
 </style>

@@ -27,30 +27,15 @@
     }
 </script>
 
+
 <style scoped lang="scss">
 
-    .campeonato-txt {
-        color: $color-primary;
-    }
-
-    .icone-campeonato {
-        height: 30px;
-        width: 30px;
-        margin-left: 10px;
-        color: $color-primary;
-    }
-    
-    .icones {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: 3;
-        padding: 15px;
-    }
-
     .bloco-campeonato {
-        padding-bottom: 90px;
-        padding-top: 90px;
+        padding: 90px 0;
+    }
+
+    .bloco-campeonato > * {
+        text-decoration: none;
     }
 
     .bloco-campeonato:active .sobre-imagem {
@@ -61,21 +46,8 @@
         background: rgba(0, 0, 0, .4);
     }
 
-    .nome-campeonato {
+    .campeonato-txt {
         color: $color-primary;
-        font-size: 2em;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-    
-    .sobre-imagem {
-        background: rgba(0, 0, 0, .8);
-        height: 100%;
-        position: absolute;
-        top: 0;
-        transition: all linear .2s;
-        width: 100%;
-        z-index: 2;
     }
 
     .fundo-imagem {
@@ -90,8 +62,36 @@
         z-index: 3;
     }
 
-    .bloco-campeonato > * {
-        text-decoration: none;
+    .icone-campeonato {
+        color: $color-primary;
+        height: 30px;
+        margin-left: 10px;
+        width: 30px;
+    }
+
+    .icones {
+        bottom: 0;
+        padding: 15px;
+        position: absolute;
+        right: 0;
+        z-index: 3;
+    }
+
+    .nome-campeonato {
+        color: $color-primary;
+        font-size: 2em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .sobre-imagem {
+        background: rgba(0, 0, 0, .8);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        transition: all linear .2s;
+        width: 100%;
+        z-index: 2;
     }
 
 </style>

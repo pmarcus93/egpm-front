@@ -3,15 +3,28 @@ $color-primary-variant: #FFFF00;
 $color-secondary: #FFFFFF;
 $color-secondary-variant: #000000;
 
+$light-text: #F5F5F5;
 $color-title: #545457;
 $bg-light: #E7E7E7;
 
 $color-primary-painel: #434970 ;
 $color-primary-painel-variant: #007AFF;
 
+//Social colors.
+$facebook-color: #3A5895;
+$instagram-color: #D10869;
 
 //Rainbow colors.
 $rainbow-blue: #3255A5;
 $rainbow-green: #3BAC7A;
 $rainbow-red: #EA2A3A;
 $rainbow-yellow: #FCD047;
+
+//Fonte Archive com fallback:
+$font-archive: Archive,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Roboto",
+        "Helvetica Neue", Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
