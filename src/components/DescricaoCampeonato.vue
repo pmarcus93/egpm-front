@@ -1,22 +1,20 @@
 <template>
     <div class="animate">
 
-        <FundoFixo
-                :imagem="campeonato.st_imagem"
-        ></FundoFixo>
         <div class="fixed">
             <Navbar></Navbar>
             <Rainbow></Rainbow>
         </div>
 
         <div v-if="campeonato.id_jogo">
-            <div class="container-fluid conteudo">
+            <div class="container-fluid conteudo p-0">
                 <BannerJogo
                         :titulo="campeonato.st_nome"
                         :descricao="campeonato.st_descricao"
                         :lancamento="campeonato.dt_lancamento"
                         :estilo="campeonato.st_estilo"
                         :video="campeonato.st_video"
+                        :imagem="campeonato.st_imagem"
                 ></BannerJogo>
 
                 <div v-if="+campeonato.bl_campeonato" class="row lista-jogo-dados text-center my-auto">
@@ -65,6 +63,7 @@
                 </div>
             </div>
         </div>
+
         <div v-else-if="dadoscarregados">
             <div class="container-fluid conteudo">
                 <ItemErro
@@ -77,7 +76,6 @@
                 <Campeonatos></Campeonatos>
             </div>
         </div>
-
         <BlocoRodape></BlocoRodape>
     </div>
 </template>

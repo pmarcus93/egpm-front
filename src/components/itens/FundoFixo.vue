@@ -31,18 +31,18 @@
 
     .sobre-banner {
         width: 100%;
-        height: 100vh;
-        top: 0px;
+        height: 100%;
+        top: 0;
         background: rgba(0, 0, 0, .8);
         position: fixed;
         z-index: -1;
     }
 
     .banner-foto {
-        top: 0px;
+        top: 0;
         position: fixed;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background: url('../../assets/background-04.jpg') center/cover;
         z-index: -2;
     }
