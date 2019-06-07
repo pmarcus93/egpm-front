@@ -16,54 +16,8 @@
                         :video="campeonato.st_video"
                         :imagem="campeonato.st_imagem"
                 ></BannerJogo>
-
-                <div v-if="+campeonato.bl_campeonato" class="row lista-jogo-dados text-center my-auto">
-                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                        <div class="col-12 icone"><i class="fa fa-file-alt"></i></div>
-                        <div class="col-12 texto">{{campeonato.st_ingresso}}</div>
-                    </div>
-
-                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                        <div class="col-12 icone"><i class="fa fa-users"></i></div>
-                        <div class="col-12 texto">{{campeonato.nu_vaga}}</div>
-                    </div>
-
-                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                        <div class="col-12 icone"><i class="fa fa-gamepad"></i></div>
-                        <div class="col-12 texto">{{campeonato.st_plataforma}}</div>
-                    </div>
-
-                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                        <div class="col-12 icone"><i class="fa fa-calendar"></i></div>
-                        <div class="col-12 texto">{{campeonato.dt_jogo}}</div>
-                    </div>
-
-                    <div class="col-md-2 col-sm-12 bloco py-4 mx-auto">
-                        <div class="col-12 icone"><i class="fa fa-clock"></i></div>
-                        <div class="col-12 texto">{{campeonato.hr_jogo}}</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="conteudo-regra">
-                <div class="container">
-                    <div class="row ">
-                        <div class="col-12 py-4">
-                            <div v-if="campeonato.st_regra">
-                                <h3 class="titulo-regras text-center">REGRAS</h3>
-                                <p v-html="campeonato.st_regra"></p>
-                                <hr>
-                            </div>
-                            <div v-if="campeonato.st_observacao">
-                                <h3 class="titulo-observacoes text-center">OBSERVAÇÕES</h3>
-                                <p v-html="campeonato.st_observacao"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-
         <div v-else-if="dadoscarregados">
             <div class="container-fluid conteudo">
                 <ItemErro
@@ -76,6 +30,51 @@
                 <Campeonatos></Campeonatos>
             </div>
         </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <h2>Campeonato</h2>
+                    
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <h4>Regras</h4>
+                            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda atque deleniti dolore, doloremque ducimus eligendi esse eum facere incidunt laboriosam maiores numquam provident quo rerum sed sit voluptatibus. Aperiam!</span><span>Ad atque cumque deleniti distinctio dolore excepturi exercitationem in maxime tenetur, velit? Assumenda autem consequuntur dicta eos expedita harum maxime optio sunt suscipit vel? Consectetur fugiat pariatur rem sit veniam?</span></p>
+                        </div>
+                        <div class="col-6">
+                            <h4>Detalhes</h4>
+                            <ul>
+                                <li>100 vagas</li>
+                                <li>Plataforma: PS4</li>
+                                <li>Sábado, 17h</li>
+                                <li>Domingo, 17h</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--            <div class="conteudo-regra">-->
+<!--                <div class="container">-->
+<!--                    <div class="row ">-->
+<!--                        <div class="col-12 py-4">-->
+<!--                            <div v-if="campeonato.st_regra">-->
+<!--                                <h3 class="titulo-regras text-center">REGRAS</h3>-->
+<!--                                <p v-html="campeonato.st_regra"></p>-->
+<!--                                <hr>-->
+<!--                            </div>-->
+<!--                            <div v-if="campeonato.st_observacao">-->
+<!--                                <h3 class="titulo-observacoes text-center">OBSERVAÇÕES</h3>-->
+<!--                                <p v-html="campeonato.st_observacao"></p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
         <BlocoRodape></BlocoRodape>
     </div>
 </template>

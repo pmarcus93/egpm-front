@@ -9,14 +9,16 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 col-st-12 my-auto info-game">
-                                <h1 class="titulo-secao text-center mb-4">{{titulo}}</h1>
+                                <h1 class="titulo-secao mb-4">{{titulo}}</h1>
 
-                                <p class="texto-info" v-if="descricao">
+                                <p class="texto-info text-justify" v-if="descricao">
                                     {{descricao}}
                                 </p>
 
-                                <div class="my-3">
+                                <div class="my-3 text-left">
                                     <div class="texto-info" v-if="estilo"><b>Categoria: </b>{{estilo}}</div>
+                                    <div class="texto-info" v-if="estilo"><b>Jogadores: </b>2</div>
+                                    <div class="texto-info" v-if="estilo"><b>Plataformas: </b>Xbox One, PS4, Nintendo Switch e PC</div>
                                     <div class="texto-info" v-if="estilo"><b>Classificação indicativa: </b>18 anos</div>
                                 </div>
 
