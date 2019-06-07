@@ -15,6 +15,7 @@
                         :estilo="campeonato.st_estilo"
                         :video="campeonato.st_video"
                         :imagem="campeonato.st_imagem"
+                        :classificacaoindicativa="campeonato.st_classificacaoindicativa"
                 ></BannerJogo>
 
                 <div v-if="+campeonato.bl_campeonato" class="row lista-jogo-dados text-center my-auto">
