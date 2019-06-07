@@ -17,7 +17,7 @@
 
                                 <div class="my-3">
                                     <div class="texto-info" v-if="estilo"><b>Categoria: </b>{{estilo}}</div>
-                                    <div class="texto-info" v-if="estilo"><b>Classificação indicativa: </b>18 anos</div>
+                                    <div class="texto-info" v-if="classificacaoindicativa"><b>Classificação indicativa: </b>18 anos</div>
                                 </div>
 
                             </div>
@@ -32,32 +32,6 @@
                 </div>
             </div>
         </div>
-
-
-        <!--        <div class="container">-->
-        <!--            <div class="row py-5">-->
-
-        <!--                <div class="col-md-6 col-st-12 my-auto info-game">-->
-        <!--                    <h1 class="titulo-secao text-center mb-4">{{titulo}}</h1>-->
-
-        <!--                    <p class="texto-info" v-if="descricao">-->
-        <!--                        {{descricao}}-->
-        <!--                    </p>-->
-
-        <!--                    <div class="my-3">-->
-        <!--                        <div class="texto-info" v-if="estilo"><b>Categoria: </b>{{estilo}}</div>-->
-        <!--                        <div class="texto-info" v-if="estilo"><b>Classificação indicativa: </b>18 anos</div>-->
-        <!--                    </div>-->
-
-        <!--                </div>-->
-
-        <!--                <div class="col-md-6 col-st-12 align-middle text-center">-->
-        <!--                    <iframe width="100%" height="315" :src="video" frameborder="0"-->
-        <!--                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
-        <!--                            allowfullscreen></iframe>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
     </div>
 </template>
 
@@ -70,7 +44,8 @@
             'estilo',
             'video',
             'descricao',
-            'imagem'
+            'imagem',
+            'classificacaoindicativa'
         ]
     }
 </script>

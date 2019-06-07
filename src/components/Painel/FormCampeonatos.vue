@@ -78,11 +78,20 @@
                         </div>
 
                         <div class="form-group datepicker">
-                            <label for="dt_lancamento">Lançamento do campeonato:</label>
+                            <label for="dt_lancamento">Lançamento do Jogo:</label>
                             <input required v-model="campeonato.dt_lancamento"
                                    id="dt_lancamento"
                                    name="dt_lancamento"
                                    type="date"
+                                   class="form-control ">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="st_classificacaoindicativa">Classificação indicativa:</label>
+                            <input required v-model="campeonato.st_classificacaoindicativa"
+                                   id="st_classificacaoindicativa"
+                                   name="st_classificacaoindicativa"
+                                   type="text"
                                    class="form-control ">
                         </div>
 
@@ -95,7 +104,8 @@
                                        type="text"
                                        class="form-control">
                                 <div class="input-group-append">
-                                    <span v-if="campeonato.st_imagem" v-on:click.prevent="abremodal" class="input-group-text p-0">
+                                    <span v-if="campeonato.st_imagem" v-on:click.prevent="abremodal"
+                                          class="input-group-text p-0">
                                         <button class="btn btn-success">
                                             <i class="fa fa-eye"></i>
                                         </button>
@@ -116,7 +126,7 @@
                                        v-model="campeonato.st_video"
                                        type="text"
                                        class="form-control"
-                                       id="st_video" >
+                                       id="st_video">
                                 <div class="input-group-append">
                                     <span v-if="campeonato.st_video" class="input-group-text p-0">
                                         <button v-on:click.prevent="abremodalvideo" class="btn btn-success">
@@ -137,10 +147,12 @@
                         <h4>Detalhes de Campeonatos:</h4>
 
                         <div class="custom-control custom-checkbox my-2">
-                            <input v-if="+campeonato.bl_campeonato === 1" v-on:change="marcacheckbox" checked ref="bl_campeonato"
+                            <input v-if="+campeonato.bl_campeonato === 1" v-on:change="marcacheckbox" checked
+                                   ref="bl_campeonato"
                                    type="checkbox" class="custom-control-input" id="bl_campeonato">
 
-                            <input v-else type="checkbox" class="custom-control-input" v-on:change="marcacheckbox" ref="bl_campeonato" id="bl_campeonato">
+                            <input v-else type="checkbox" class="custom-control-input" v-on:change="marcacheckbox"
+                                   ref="bl_campeonato" id="bl_campeonato">
                             <label class="custom-control-label" for="bl_campeonato">Campeonato</label>
                         </div>
 
@@ -188,6 +200,8 @@
                                    name="st_horario" type="text"
                                    class="form-control">
                         </div>
+
+
                     </div>
                 </div>
 
@@ -196,9 +210,9 @@
                         <h4>Informações:</h4>
                         <div class="form-group">
                             <label>Regras:</label>
-                            <ckeditor  v-model="campeonato.st_regra"
-                                       :editor="editor"
-                                       :config="editorConfig">
+                            <ckeditor v-model="campeonato.st_regra"
+                                      :editor="editor"
+                                      :config="editorConfig">
                             </ckeditor>
                         </div>
 
@@ -249,7 +263,8 @@
                     st_plataforma: null,
                     st_regra: null,
                     st_video: null,
-                    bl_campeonato: null
+                    bl_campeonato: null,
+                    st_classificacaoindicativa: null
                 },
                 editor: ClassicEditor,
                 editorConfig: {}
