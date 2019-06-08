@@ -222,8 +222,7 @@
                                     <input required
                                            v-model="campeonato.datahorario[indice].st_hora"
                                            type="text"
-                                           class="form-control"
-                                           id="st_video">
+                                           class="form-control">
                                 </div>
                             </div>
 
@@ -235,7 +234,6 @@
                                             class="fa fa-trash"></i></button>
                                 </div>
                             </div>
-
 
                         </div>
 
