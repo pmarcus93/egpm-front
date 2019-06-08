@@ -39,9 +39,15 @@
     }
 
     .descricao {
+        font-size: 1.2rem;
         @include sm {
             font-size: 1.3rem;
         }
+
+        @include md {
+            font-size: 1.5rem;
+        }
+
     }
 
     .parallax::after {
@@ -94,7 +100,7 @@
             width: 100%;
         }
 
-        font-size: 2.5em;
+        font-size: 2rem;
         font-family: $font-archive;
         text-align: center;
 
