@@ -20,6 +20,7 @@
                                     :titulo="item.st_nome"
                                     :imagem="item.st_imagem"
                                     :rota="item.id_jogo"
+                                    :iscampeonato="item.bl_campeonato"
                     ></ItemCampeonato>
                 </div>
             </div>
@@ -30,22 +31,20 @@
 </template>
 
 <script>
-    import Rodape from "./telas/Rodape";
-    import Patrocinadores from "./telas/Patrocinadores";
     import BannerMenor from "./itens/BannerMenor";
     import Rainbow from "./itens/Rainbow";
     import Navbar from "./itens/Navbar";
     import FundoFixo from "./itens/FundoFixo";
     import ItemCampeonato from "./itens/ItemCampeonato";
-    import EgpmApi from "@/services/EgpmApi.js";
+    import JogoApi from "@/services/JogoApi.js";
     import BlocoRodape from "./itens/BlocoRodape";
 
     export default {
         name: "CampeonatoTela",
-        components: {BlocoRodape, ItemCampeonato, FundoFixo, Navbar, Rainbow, BannerMenor, Patrocinadores, Rodape},
+        components: {BlocoRodape, ItemCampeonato, FundoFixo, Navbar, Rainbow, BannerMenor},
         created() {
             var self = this;
-            EgpmApi.getAllCampeonatos(campeonatos => {
+            JogoApi.getCampeonatos(campeonatos => {
                 self.campeonatos = campeonatos.data;
             })
         },
