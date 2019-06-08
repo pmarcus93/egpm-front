@@ -16,7 +16,7 @@
 
                                 <div class="my-3 text-left">
                                     <div class="texto-info" v-if="estilo"><b>Categoria: </b>{{estilo}}</div>
-                                    <div class="texto-info" v-if="estilo"><b>Jogadores: </b>2</div>
+                                    <div class="texto-info" v-if="quantidadejogadores"><b>Jogadores: </b>{{quantidadejogadores}}</div>
                                     <div class="texto-info" v-if="plataforma"><b>Plataformas: </b>{{plataforma}}</div>
                                     <div class="texto-info" v-if="classificacaoindicativa"><b>Classificação
                                         indicativa: </b>{{classificacaoindicativa}}

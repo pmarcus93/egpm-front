@@ -77,7 +77,6 @@
 
     import Rainbow from "./itens/Rainbow";
     import Navbar from "./itens/Navbar";
-    import FundoFixo from "./itens/FundoFixo";
     import BannerJogo from "./itens/BannerJogo";
     import ItemErro from "./itens/ItemErro";
     import Campeonatos from "./telas/Campeonatos";
@@ -91,7 +90,6 @@
             Campeonatos,
             ItemErro,
             BannerJogo,
-            FundoFixo,
             Navbar,
             Rainbow,
         },
