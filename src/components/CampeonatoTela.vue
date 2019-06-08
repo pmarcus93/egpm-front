@@ -8,7 +8,7 @@
         <div class="animate">
             <div class="container conteudo">
                 <BannerMenor
-                        titulo="CAMPEONATOS"
+                        titulo="Campeonatos"
                         descricao="Selecione um game para conferir detalhes.
                     Confira as regras do campeonato, quantidade de jogadores, plataforma, categoria, trailer e muito mais!"
                 ></BannerMenor>

@@ -77,6 +77,15 @@
                                    class="form-control">
                         </div>
 
+                        <div class="form-group">
+                            <label for="nu_quantidadejogadores">Número de Jogadores:</label>
+                            <input required v-model="campeonato.nu_quantidadejogadores"
+                                   name="st_estilo"
+                                   type="number"
+                                   id="nu_quantidadejogadores"
+                                   class="form-control">
+                        </div>
+
                         <div class="form-group datepicker">
                             <label for="dt_lancamento">Lançamento do Jogo:</label>
                             <input required v-model="campeonato.dt_lancamento"
@@ -183,24 +192,52 @@
                                    class="form-control">
                         </div>
 
-                        <div class="form-group">
-                            <label for="dt_jogo">Data do Campeonato:</label>
-                            <input id="dt_jogo"
-                                   v-model="campeonato.dt_jogo"
-                                   name="dt_campeonato"
-                                   type="date"
-                                   class="form-control"
-                            >
-                        </div>
+                        <h4>Dias e horários:</h4>
 
-                        <div class="form-group">
-                            <label for="hr_jogo">Horário do Campeonato:</label>
-                            <input id="hr_jogo"
-                                   v-model="campeonato.hr_jogo"
-                                   name="st_horario" type="text"
-                                   class="form-control">
-                        </div>
+                        <button v-if="!campeonato.datahorario[0]" v-on:click.prevent="adicionadatahorario" class=" btn btn-primary"><i
+                                class="fa fa-plus"></i></button>
 
+                        <div v-for="(datahora, indice) in campeonato.datahorario" class="row">
+                            <div class="form-group col-4">
+                                <div class="input-group">
+                                    <div class="input-group-append">
+                                    <span class="input-group-text">
+                                            <i class="fa fa-calendar"></i>
+                                    </span>
+                                    </div>
+                                    <input required
+                                           v-model="campeonato.datahorario[indice].st_diasemana"
+                                           type="text"
+                                           class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-4">
+                                <div class="input-group">
+                                    <div class="input-group-append">
+                                    <span class="input-group-text">
+                                            <i class="fa fa-clock"></i>
+                                    </span>
+                                    </div>
+                                    <input required
+                                           v-model="campeonato.datahorario[indice].st_hora"
+                                           type="text"
+                                           class="form-control"
+                                           id="st_video">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-4">
+                                <div class="btn-group">
+                                    <button v-on:click.prevent="adicionadatahorario" class=" btn btn-primary"><i
+                                            class="fa fa-plus"></i></button>
+                                    <button v-on:click.prevent="removedatahorario(indice)" class=" btn btn-danger"><i
+                                            class="fa fa-trash"></i></button>
+                                </div>
+                            </div>
+
+
+                        </div>
 
                     </div>
                 </div>
@@ -211,14 +248,6 @@
                         <div class="form-group">
                             <label>Regras:</label>
                             <ckeditor v-model="campeonato.st_regra"
-                                      :editor="editor"
-                                      :config="editorConfig">
-                            </ckeditor>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Observações:</label>
-                            <ckeditor v-model="campeonato.st_observacao"
                                       :editor="editor"
                                       :config="editorConfig">
                             </ckeditor>
@@ -264,20 +293,39 @@
                     st_regra: null,
                     st_video: null,
                     bl_campeonato: null,
-                    st_classificacaoindicativa: null
+                    st_classificacaoindicativa: null,
+                    datahorario: [{
+                        id_jogo: "",
+                        st_diasemana: "",
+                        st_hora: ""
+                    }]
                 },
                 editor: ClassicEditor,
-                editorConfig: {}
+                editorConfig: {},
+                datahorariocampeonatoremover: [],
+                nu_quantidadejogadores: ""
 
             }
         },
         methods: {
+            adicionadatahorario: function () {
+                this.campeonato.datahorario.push({});
+            },
+
+            removedatahorario: function (indice) {
+                if (this.campeonato.datahorario[indice].id_datahorariocampeonato) {
+                    this.datahorariocampeonatoremover.push(this.campeonato.datahorario[indice].id_datahorariocampeonato);
+                }
+                this.campeonato.datahorario.splice(indice, 1);
+            },
+
             marcacheckbox: function () {
                 this.campeonato.bl_campeonato = this.$refs.bl_campeonato.checked;
             },
             save: function () {
-                var self = this;
-                EgpmApi.postCampeonato(EgpmApi.pushAutenticationobject(self.campeonato), result => {
+                var data = this.campeonato;
+                data.datahorariocampeonatoremover = this.datahorariocampeonatoremover;
+                EgpmApi.postCampeonato(EgpmApi.pushAutenticationobject(this.campeonato), result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
@@ -286,7 +334,9 @@
                         PNotify.alert(opts);
                         this.$router.push({
                             name: 'viewcampeonato',
-                        })
+                        });
+
+                        this.datahorariocampeonatoremover = [];
 
                     } else {
                         opts.title = 'Erro';

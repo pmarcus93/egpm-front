@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <div class="row py-5 position-relative">
             <div class="col-12 banner-foto" :style="'background: url(' + imagem + ') center/cover' "></div>
             <div class="col-12 sobre-banner"></div>
@@ -9,21 +8,25 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 col-st-12 my-auto info-game">
-                                <h1 class="titulo-secao text-center mb-4">{{titulo}}</h1>
+                                <h1 class="titulo-secao mb-4">{{titulo}}</h1>
 
-                                <p class="texto-info" v-if="descricao">
+                                <p class="texto-info text-justify" v-if="descricao">
                                     {{descricao}}
                                 </p>
 
-                                <div class="my-3">
+                                <div class="my-3 text-left">
                                     <div class="texto-info" v-if="estilo"><b>Categoria: </b>{{estilo}}</div>
-                                    <div class="texto-info" v-if="classificacaoindicativa"><b>Classificação indicativa: </b>18 anos</div>
+                                    <div class="texto-info" v-if="quantidadejogadores"><b>Jogadores: </b>{{quantidadejogadores}}</div>
+                                    <div class="texto-info" v-if="plataforma"><b>Plataformas: </b>{{plataforma}}</div>
+                                    <div class="texto-info" v-if="classificacaoindicativa"><b>Classificação
+                                        indicativa: </b>{{classificacaoindicativa}}
+                                    </div>
                                 </div>
 
                             </div>
 
                             <div class="col-md-6 col-st-12 align-middle text-center">
-                                <iframe width="100%" height="315" :src="video" frameborder="0"
+                                <iframe v-if="video" width="100%" height="315" :src="video" frameborder="0"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
                             </div>
@@ -45,12 +48,18 @@
             'video',
             'descricao',
             'imagem',
-            'classificacaoindicativa'
+            'plataforma',
+            'classificacaoindicativa',
+            'quantidadejogadores'
         ]
     }
 </script>
 
 <style scoped lang="scss">
+
+    h1, h2, h3, h4, h5 {
+        font-family: $font-archive;
+    }
 
     .info-game {
         color: $light-text;
