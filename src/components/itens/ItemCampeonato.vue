@@ -34,19 +34,23 @@
     .bloco-campeonato {
         padding-bottom: 90px;
         padding-top: 90px;
+
+        @include md {
+            :active .sobre-imagem {
+                background: rgba(0, 0, 0, .4);
+            }
+
+            :hover .sobre-imagem {
+                background: rgba(0, 0, 0, .4);
+            }
+        }
+
     }
 
     .bloco-campeonato > * {
         text-decoration: none;
     }
 
-    .bloco-campeonato:active .sobre-imagem {
-        background: rgba(0, 0, 0, .4);
-    }
-
-    .bloco-campeonato:hover .sobre-imagem {
-        background: rgba(0, 0, 0, .4);
-    }
 
     .campeonato-txt {
         color: $color-primary;
@@ -87,13 +91,17 @@
     }
 
     .sobre-imagem {
-        background: rgba(0, 0, 0, .8);
+        background: rgba(0, 0, 0, .5);
         height: 100%;
         position: absolute;
         top: 0;
         transition: all linear .2s;
         width: 100%;
         z-index: 2;
+
+        @include md {
+            background: rgba(0, 0, 0, .8);
+        }
     }
 
 </style>
