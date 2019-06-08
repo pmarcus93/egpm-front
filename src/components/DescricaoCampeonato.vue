@@ -17,6 +17,7 @@
                         :imagem="campeonato.st_imagem"
                         :plataforma="campeonato.st_plataforma"
                         :classificacaoindicativa="campeonato.st_classificacaoindicativa"
+                        :quantidadejogadores="campeonato.nu_quantidadejogadores"
                 ></BannerJogo>
             </div>
         </div>
