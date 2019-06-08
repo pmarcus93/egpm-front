@@ -19,7 +19,6 @@
             <Duvida></Duvida>
             <Localizacao></Localizacao>
             <Patrocinadores></Patrocinadores>
-            <Rainbow></Rainbow>
             <Rodape></Rodape>
         </div>
     </div>

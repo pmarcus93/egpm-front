@@ -29,11 +29,9 @@
 </template>
 
 <script>
-    import ItemDuvida from "../itens/ItemDuvida";
-
     export default {
         name: "Duvida",
-        components: {ItemDuvida}
+        components: {}
     }
 </script>
 
