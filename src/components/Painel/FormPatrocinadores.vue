@@ -37,6 +37,21 @@
                         </div>
 
                     </div>
+
+
+                    <div class="col-6">
+                        <h4>Detalhes:</h4>
+                        <div class="form-group">
+                            <label for="st_nome">Tipo:</label>
+                            <select id="st_nome" v-model="patrocinador.id_tipo" type="text"
+                                    class="form-control">
+                                <option value="1">Patrocinador</option>
+                                <option selected value="2">Apoiador</option>
+                            </select>
+                        </div>
+
+                    </div>
+
                 </div>
             </form>
         </div>
@@ -52,7 +67,7 @@
         components: {BarraTitulo},
         created() {
             if (this.$route.params.id_patrocinador) {
-                PatrocinadorApi.getPatrocinador(this.$route.params.id_patrocinador, patrocinador => {
+                PatrocinadorApi.getOne(this.$route.params.id_patrocinador, patrocinador => {
                     this.patrocinador = patrocinador.data;
                 })
             }
@@ -64,7 +79,8 @@
                     st_email: null,
                     st_imagem: null,
                     st_nome: null,
-                    st_website: null
+                    st_website: null,
+                    id_tipo: 2
                 }
 
             }

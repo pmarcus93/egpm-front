@@ -17,6 +17,7 @@
                         <th></th>
                         <th>Nome</th>
                         <th>Email</th>
+                        <th>Tipo</th>
                         <th>Editar</th>
                         <th>Excluir</th>
                     </tr>
@@ -27,8 +28,8 @@
                                         :nome="item.st_nome"
                                         :email="item.st_email"
                                         :id="item.id_patrocinador"
-                                        :imagem="item.st_imagem">
-
+                                        :imagem="item.st_imagem"
+                                        :tipo="item.id_tipo">
                     </ItemTrPatrocinador>
 
                     </tbody>
@@ -47,7 +48,7 @@
         name: "ViewPatrocinador",
         components: {ItemTrPatrocinador, BarraTitulo},
         created() {
-            PatrocinadorApi.getAllPatrocinadores(retorno => {
+            PatrocinadorApi.getAll(retorno => {
                 this.patrocinadores = retorno.data;
             })
 
@@ -60,7 +61,8 @@
                     st_email: null,
                     st_imagem: null,
                     st_nome: null,
-                    st_website: null
+                    st_website: null,
+                    id_tipo: null
                 }
             }
         }
