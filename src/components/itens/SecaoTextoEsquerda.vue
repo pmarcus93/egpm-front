@@ -3,9 +3,8 @@
         <div class="row">
             <section class="col-12 section d-flex" :class="[classimage, type]">
                 <div class="col-md-6 my-auto box-info">
-                    <h1 class="mb-2 titulo-secao-left"
-                        v-bind:style="{ 'border-bottom':  colorborder + ' solid 3px' }">{{titulo}}</h1>
-                    <p class="mt-2 descricao">{{descricao}}</p>
+                    <h1 class="mb-2 titulo-secao-left"><span>{{titulo}}</span></h1>
+                    <h2 class="mt-2 descricao">{{descricao}}</h2>
                 </div>
             </section>
         </div>
@@ -69,13 +68,27 @@
     }
 
     .descricao {
-        font-size: 1.2rem;
         @include sm {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
     }
 
     .titulo-secao-left {
+        span {
+            position: relative;
+            padding-bottom: 1px;
+        }
+
+        span::after {
+            bottom: 0;
+            border-bottom: 1px solid $color-primary;
+            content: "";
+            height: 1px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+        }
+
         font-size: 2.5em;
         font-family: $font-archive;
         text-align: center;
