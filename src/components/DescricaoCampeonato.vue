@@ -110,21 +110,25 @@
 
 <style lang="scss" scoped>
 
+    @keyframes animacao {
+        from {
+            top: -100px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+
     h1, h2, h3, h4, h5 {
         font-family: $font-archive;
     }
 
-    .lista-jogo-dados {
-        background: $bg-light;
-    }
-
-    .icone {
-        font-size: 2.5em;
-    }
-
-    .texto {
-        font-size: 1.5em;
-        font-weight: 600;
+    .animate {
+        animation: animacao 0.6s;
+        display: block;
+        position: relative;
     }
 
     .conteudo-regra {
@@ -137,10 +141,24 @@
         }
     }
 
+    .icone {
+        font-size: 2.5em;
+    }
+
+
+    .lista-jogo-dados {
+        background: $bg-light;
+    }
+
     .list-group-item-primary {
-        font-family: $font-archive;
         background-color: $color-primary;
         color: $color-secondary-variant;
+        font-family: $font-archive;
+    }
+
+    .texto {
+        font-size: 1.5em;
+        font-weight: 600;
     }
 
     .titulo-regras {
@@ -151,23 +169,6 @@
     .titulo-observacoes {
         font-family: $font-archive;
         font-size: 2.5em;
-    }
-
-    .animate {
-        display: block;
-        position: relative;
-        animation: animacao 0.6s;
-    }
-
-    @keyframes animacao {
-        from {
-            top: -100px;
-            opacity: 0
-        }
-        to {
-            top: 0;
-            opacity: 1
-        }
     }
 
 </style>
