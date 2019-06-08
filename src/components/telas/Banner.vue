@@ -2,7 +2,6 @@
     <div class="banner">
         <section>
             <h2><span class="badge badge-pill badge-em-breve">Em breve!</span></h2>
-
             <div class="logo-soon-group">
                 <img class="logo-full img-fluid d-block mx-auto my-5" src="../../assets/full-logo.png"
                      alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
@@ -22,6 +21,7 @@
 <style lang="scss" scoped>
 
     .banner {
+        margin-top: 30px;
         padding: 0 10px;
         align-items: center;
         background: url("../../assets/banner-background.jpg") center/cover;
