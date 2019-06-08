@@ -1,5 +1,5 @@
 <template>
-    <div class="col-sm-12 col-xl-4 bloco-campeonato">
+    <div class="col-md-6 col-lg-4 bloco-campeonato">
         <router-link :to="'/campeonatos/' + rota">
             <div class="row">
                 <div class="col-12 info-campeonatos">
@@ -11,7 +11,8 @@
                 <div class="icones">
                     <div v-if="+iscampeonato === 1" class="d-flex align-items-center justify-content-center">
                         <span class="campeonato-txt">CAMPEONATO</span>
-                        <img src="../../assets/icons/swords.svg" alt="Ícone indicativo de campeonato. Duas espadas cruzadas." class="icone-campeonato">
+                        <img src="../../assets/icons/swords.svg"
+                             alt="Ícone indicativo de campeonato. Duas espadas cruzadas." class="icone-campeonato">
                     </div>
 
                 </div>
@@ -33,19 +34,23 @@
     .bloco-campeonato {
         padding-bottom: 90px;
         padding-top: 90px;
+
+        @include md {
+            :active .sobre-imagem {
+                background: rgba(0, 0, 0, .4);
+            }
+
+            :hover .sobre-imagem {
+                background: rgba(0, 0, 0, .4);
+            }
+        }
+
     }
 
     .bloco-campeonato > * {
         text-decoration: none;
     }
 
-    .bloco-campeonato:active .sobre-imagem {
-        background: rgba(0, 0, 0, .4);
-    }
-
-    .bloco-campeonato:hover .sobre-imagem {
-        background: rgba(0, 0, 0, .4);
-    }
 
     .campeonato-txt {
         color: $color-primary;
@@ -86,13 +91,17 @@
     }
 
     .sobre-imagem {
-        background: rgba(0, 0, 0, .8);
+        background: rgba(0, 0, 0, .5);
         height: 100%;
         position: absolute;
         top: 0;
         transition: all linear .2s;
         width: 100%;
         z-index: 2;
+
+        @include md {
+            background: rgba(0, 0, 0, .8);
+        }
     }
 
 </style>
