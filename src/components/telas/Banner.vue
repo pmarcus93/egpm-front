@@ -1,8 +1,9 @@
 <template>
     <div class="banner">
         <section>
+            <h2><span class="badge badge-pill badge-em-breve">Em breve!</span></h2>
+
             <div class="logo-soon-group">
-                <p class="destaque mx-auto">EM BREVE!</p>
                 <img class="logo-full img-fluid d-block mx-auto my-5" src="../../assets/full-logo.png"
                      alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
             </div>
@@ -21,11 +22,26 @@
 <style lang="scss" scoped>
 
     .banner {
+        padding: 0 10px;
         align-items: center;
         background: url("../../assets/banner-background.jpg") center/cover;
         display: flex;
-        height: 100vh;
+        height: 75vh;
         justify-content: center;
+        @include sm {
+            height: 100vh;
+        }
+    }
+
+    .badge-em-breve {
+        color: #000;
+        background-color: $color-primary;
+        text-transform: uppercase;
+        font-size: 1rem;
+        @include sm {
+            font-size: 1.5rem;
+        }
+
     }
 
     .destaque {
@@ -53,15 +69,28 @@
     .descricao {
         color: $color-primary;
         text-transform: uppercase;
-        font-size: 17px;
-        @include lg {
-            font-size: 25px;
+        font-size: 1rem;
+        @include sm {
+            font-size: 1.5rem;
         }
     }
 
     .logo-full {
-        width: 450px;
+        width: 300px;
+
+        @include sm {
+            width: 400px;
+        }
+
+        @include md {
+            width: 450px;
+        }
+
         @include lg {
+            width: 500px;
+        }
+
+        @include xl {
             width: 600px;
         }
     }
