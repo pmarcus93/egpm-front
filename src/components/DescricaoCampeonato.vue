@@ -15,6 +15,8 @@
                         :estilo="campeonato.st_estilo"
                         :video="campeonato.st_video"
                         :imagem="campeonato.st_imagem"
+                        :plataforma="campeonato.st_plataforma"
+                        :classificacaoindicativa="campeonato.st_classificacaoindicativa"
                 ></BannerJogo>
             </div>
         </div>
@@ -32,48 +34,39 @@
         </div>
 
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12 mt-4">
-                    <h2>Campeonato</h2>
-                    
-                    <div class="row mt-3">
-                        <div class="col-6">
-                            <h4>Regras</h4>
-                            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda atque deleniti dolore, doloremque ducimus eligendi esse eum facere incidunt laboriosam maiores numquam provident quo rerum sed sit voluptatibus. Aperiam!</span><span>Ad atque cumque deleniti distinctio dolore excepturi exercitationem in maxime tenetur, velit? Assumenda autem consequuntur dicta eos expedita harum maxime optio sunt suscipit vel? Consectetur fugiat pariatur rem sit veniam?</span></p>
-                        </div>
-                        <div class="col-6">
-                            <h4>Detalhes</h4>
-                            <ul>
-                                <li>100 vagas</li>
-                                <li>Plataforma: PS4</li>
-                                <li>Sábado, 17h</li>
-                                <li>Domingo, 17h</li>
-                            </ul>
-                        </div>
-                    </div>
+        <div v-if="campeonato" class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 my-4">
+                        <div class="row mt-3">
+                            <div class="col-md-8">
+                                <h2>Campeonato</h2>
 
+                                <h4>Regras</h4>
+                                <p class="text-justify"><span>Os competidores lutarão em esquema de chaves, no estilo melhor de três. Quem vencer três lutas completas primeiro avança.
+                                Não há restrições de personagens. Fatalities não são permitidos. Mercies e Brutalities são permitidos. Os jogadores podem
+                             trazer seus próprios controles, seja DualShock 4 padrão ou controle arcade.</span></p>
+                            </div>
+                            <div class="col-md-4">
+                                <ul class="list-group detalhes-campeonato">
+                                    <li class="list-group-item list-group-item-primary">Detalhes</li>
+                                    <li v-if="campeonato.st_plataformacampeonato" class="list-group-item"><i
+                                            class="fas fa-gamepad"></i> {{campeonato.st_plataformacampeonato}}
+                                    </li>
+                                    <li v-if="campeonato.nu_vaga" class="list-group-item"><i
+                                            class="fas fa-user-friends"></i> {{campeonato.nu_vaga}} Vagas
+                                    </li>
+                                    <li v-for="item in campeonato.datahorario" class="list-group-item">
+                                        <i class="fas fa-calendar-alt"></i> {{item.st_diasemana}}, {{item.st_hora}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!--            <div class="conteudo-regra">-->
-<!--                <div class="container">-->
-<!--                    <div class="row ">-->
-<!--                        <div class="col-12 py-4">-->
-<!--                            <div v-if="campeonato.st_regra">-->
-<!--                                <h3 class="titulo-regras text-center">REGRAS</h3>-->
-<!--                                <p v-html="campeonato.st_regra"></p>-->
-<!--                                <hr>-->
-<!--                            </div>-->
-<!--                            <div v-if="campeonato.st_observacao">-->
-<!--                                <h3 class="titulo-observacoes text-center">OBSERVAÇÕES</h3>-->
-<!--                                <p v-html="campeonato.st_observacao"></p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
 
         <BlocoRodape></BlocoRodape>
     </div>
@@ -117,6 +110,11 @@
 </script>
 
 <style lang="scss" scoped>
+
+    h1, h2, h3, h4, h5 {
+        font-family: $font-archive;
+    }
+
     .lista-jogo-dados {
         background: $bg-light;
     }
@@ -132,6 +130,18 @@
 
     .conteudo-regra {
         background: white;
+    }
+
+    .detalhes-campeonato {
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    .list-group-item-primary {
+        font-family: $font-archive;
+        background-color: $color-primary;
+        color: $color-secondary-variant;
     }
 
     .titulo-regras {
