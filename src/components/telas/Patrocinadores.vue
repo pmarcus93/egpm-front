@@ -3,8 +3,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 py-2 mb-4 tipo-patrocinador center-mobile"><h4>REALIZAÇÃO</h4></div>
-                <ItemPatrocinador
-                        imagem="http://fapam.edu.br/escolheportal/img/fapam.png"
+                <ItemPatrocinador :v-if="apoiadores[0]" v-for="(apoiador) in apoiadores"
+                                  :imagem="apoiador.st_imagem"
+                                  :link="apoiador.st_website"
+                                  :altimg="apoiador.st_nome"
                 ></ItemPatrocinador>
             </div>
 
@@ -34,15 +36,18 @@
         name: "Patrocinadores",
         components: {ItemPatrocinador},
         mounted() {
-            PatrocinadorApi.getAllPatrocinadores(retorno => {
+            PatrocinadorApi.getPatrocinadores(retorno => {
                 this.patrocinadores = retorno.data;
+            });
+
+            PatrocinadorApi.getApoiadores(retorno => {
+                this.apoiadores = retorno.data;
             })
         },
         data: function () {
             return {
-                patrocinadores: {
-
-                }
+                patrocinadores: [],
+                apoiadores: []
             }
         }
     }

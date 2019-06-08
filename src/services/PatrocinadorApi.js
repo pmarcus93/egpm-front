@@ -12,7 +12,7 @@ export default {
         return object;
     },
 
-    getAllPatrocinadores: (callback) => {
+    getAll: (callback) => {
         var url = urlbase + "Patrocinador/";
         axios.get(url).then((retorno) => {
             if (callback) {
@@ -20,7 +20,26 @@ export default {
             }
         })
     },
-    getPatrocinador: (id_patrocinador, callback) => {
+
+    getPatrocinadores: (callback) => {
+        var url = urlbase + "Patrocinador/2/getAllTipo";
+        axios.get(url).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
+
+    getApoiadores: (callback) => {
+        var url = urlbase + "Patrocinador/1/getAllTipo";
+        axios.get(url).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
+
+    getOne: (id_patrocinador, callback) => {
         var url = urlbase + "Patrocinador/" + id_patrocinador;
         axios.get(url).then((retorno) => {
             if (callback) {

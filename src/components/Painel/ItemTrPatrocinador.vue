@@ -7,6 +7,10 @@
         <td>{{nome}}</td>
         <td>{{email}}</td>
         <td>
+            <span v-if="+tipo === 1"> Patrocinador </span>
+            <span v-if="+tipo === 2"> Apoiador </span>
+        </td>
+        <td>
             <router-link :to="'/painel/patrocinadores/editar/'+ id">
                 <button class="btn btn-primary"><i class="fa fa-edit"></i></button>
             </router-link>
@@ -28,7 +32,8 @@
             'id',
             'imagem',
             'email',
-            'nome'
+            'nome',
+            'tipo'
         ],
         methods: {
             remover: function (id) {
