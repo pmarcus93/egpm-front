@@ -1,7 +1,7 @@
 <template>
     <div class="campeonatos">
         <div class="container-fluid ">
-            <div class="row ">
+            <div class="row">
                 <ItemCampeonato v-for="(campeonato) in campeonatos"
                                 :titulo="campeonato.st_nome"
                                 :imagem="campeonato.st_imagem"

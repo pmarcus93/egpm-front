@@ -1,5 +1,5 @@
 <template>
-    <div class="col-sm-12 col-xl-4 bloco-campeonato">
+    <div class="col-md-6 col-lg-4 bloco-campeonato">
         <router-link :to="'/campeonatos/' + rota">
             <div class="row">
                 <div class="col-12 info-campeonatos">
@@ -11,7 +11,8 @@
                 <div class="icones">
                     <div v-if="+iscampeonato === 1" class="d-flex align-items-center justify-content-center">
                         <span class="campeonato-txt">CAMPEONATO</span>
-                        <img src="../../assets/icons/swords.svg" alt="Ícone indicativo de campeonato. Duas espadas cruzadas." class="icone-campeonato">
+                        <img src="../../assets/icons/swords.svg"
+                             alt="Ícone indicativo de campeonato. Duas espadas cruzadas." class="icone-campeonato">
                     </div>
 
                 </div>
