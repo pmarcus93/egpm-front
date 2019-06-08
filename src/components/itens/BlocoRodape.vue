@@ -2,7 +2,6 @@
 
     <div>
         <Patrocinadores></Patrocinadores>
-        <Rainbow></Rainbow>
         <Rodape></Rodape>
     </div>
 
@@ -10,11 +9,10 @@
 
 <script>
     import Rodape from "../telas/Rodape";
-    import Rainbow from "./Rainbow";
     import Patrocinadores from "../telas/Patrocinadores";
     export default {
         name: "BlocoRodape",
-        components: {Patrocinadores, Rainbow, Rodape}
+        components: {Patrocinadores, Rodape}
     }
 </script>
 
