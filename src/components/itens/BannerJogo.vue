@@ -49,7 +49,8 @@
             'descricao',
             'imagem',
             'plataforma',
-            'classificacaoindicativa'
+            'classificacaoindicativa',
+            'quantidadejogadores'
         ]
     }
 </script>
