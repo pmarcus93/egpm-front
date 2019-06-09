@@ -1,11 +1,5 @@
 <template>
     <div class="animate">
-
-        <div class="fixed">
-            <Navbar></Navbar>
-            <Rainbow></Rainbow>
-        </div>
-
         <div v-if="campeonato.id_jogo">
             <div class="container-fluid conteudo p-0">
                 <BannerJogo
@@ -75,8 +69,6 @@
 
 <script>
 
-    import Rainbow from "./itens/Rainbow";
-    import Navbar from "./itens/Navbar";
     import BannerJogo from "./itens/BannerJogo";
     import ItemErro from "./itens/ItemErro";
     import Campeonatos from "./telas/Campeonatos";
@@ -89,9 +81,7 @@
             BlocoRodape,
             Campeonatos,
             ItemErro,
-            BannerJogo,
-            Navbar,
-            Rainbow,
+            BannerJogo
         },
         data() {
             return {

@@ -1,10 +1,6 @@
 <template>
     <div class="pagina-duvidas">
         <FundoFixo></FundoFixo>
-        <div class="fixed">
-            <Navbar></Navbar>
-            <Rainbow></Rainbow>
-        </div>
         <div class="animate">
             <div class="container conteudo">
                 <BannerMenor
@@ -41,7 +37,7 @@
 
     export default {
         name: "CampeonatoTela",
-        components: {BlocoRodape, ItemCampeonato, FundoFixo, Navbar, Rainbow, BannerMenor},
+        components: {BlocoRodape, ItemCampeonato, FundoFixo, BannerMenor},
         created() {
             var self = this;
             JogoApi.getCampeonatos(campeonatos => {
