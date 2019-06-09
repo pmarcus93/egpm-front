@@ -13,7 +13,7 @@ export default {
     },
 
     getAll: (callback) => {
-        var url = urlbase + "Apoio/";
+        var url = urlbase + "Apoio/?id_usuario=" + localStorage.getItem('id_usuario') + "&st_token=" + localStorage.getItem('st_token');
         axios.get(url).then((retorno) => {
             if (callback) {
                 callback(retorno);
@@ -21,7 +21,7 @@ export default {
         })
     },
     getOne: (id, callback) => {
-        var url = urlbase + "Apoio/" + id;
+        var url = urlbase + "Apoio/" + id + "/?id_usuario=" + localStorage.getItem('id_usuario') + "&st_token=" + localStorage.getItem('st_token');
         axios.get(url).then((retorno) => {
             if (callback) {
                 callback(retorno);

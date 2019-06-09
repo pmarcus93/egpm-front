@@ -6,14 +6,20 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <div class="form-group">
-                        <label for="st_nome">Dia e Horário:</label>
-                        <div v-for="(item, indice) in diahorarios" class="my-2 input-group">
-                            <input v-model="diahorarios[indice].st_diahorario" type="text" class="form-control">
-                            <div class="input-group-append">
-                                    <span v-on:click="removediahorario(indice)" class="input-group-text badge-danger">
+                    <div v-for="(item, indice) in diahorarios" class="my-2">
+                        <div class="row">
+                            <div class="form-group col-10">
+                                <div>
+                                    <input v-model="diahorarios[indice].st_diahorario" type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-2">
+                                <div>
+                                    <button v-on:click="removediahorario(indice)" class="form-control btn btn-danger">
                                         <i class="fa fa-trash"></i>
-                                    </span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

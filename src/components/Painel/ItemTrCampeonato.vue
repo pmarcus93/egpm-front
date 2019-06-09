@@ -7,12 +7,15 @@
         <td>{{nome}}</td>
         <td>{{descricao}}</td>
         <td>
-            <router-link :to="'/campeonatos/'+id">
+            <button v-if="+iscampeonato === 1" class="btn btn-light disabled"><i class="fa fa-check"></i></button>
+        </td>
+        <td>
+            <router-link :to="'/jogos/'+id">
                 <button class="btn btn-primary"><i class="fa fa-link"></i></button>
             </router-link>
         </td>
         <td>
-            <router-link :to="'/painel/campeonatos/editar/'+ id">
+            <router-link :to="'/painel/jogos/editar/'+ id">
                 <button class="btn btn-primary"><i class="fa fa-edit"></i></button>
             </router-link>
         </td>
@@ -34,6 +37,7 @@
             'link',
             'id',
             'imagem',
+            'iscampeonato'
         ],
         methods: {
 

@@ -87,9 +87,9 @@
                 },
                 menu: [
                     {
-                        titulo : "Campeonatos",
+                        titulo : "Jogos",
                         icone : "gamepad",
-                        route : "campeonatos",
+                        route : "jogos",
                     },
 
                     {

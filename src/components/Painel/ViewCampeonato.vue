@@ -2,10 +2,10 @@
     <div class="animate">
         <div class="row">
             <BarraTitulo
-                    titulo="CAMPEONATO"
+                    titulo="JOGO"
                     icon="plus"
                     texto-botao="Adicionar"
-                    rota="/painel/campeonatos/adicionar"
+                    rota="/painel/jogos/adicionar"
             >
             </BarraTitulo>
 
@@ -16,6 +16,7 @@
                         <th></th>
                         <th>Nome</th>
                         <th>Descrição</th>
+                        <th>Campeonato</th>
                         <th>Link</th>
                         <th>Editar</th>
                         <th>Excluir</th>
@@ -27,9 +28,9 @@
                                       :nome="item.st_nome"
                                       :descricao="item.st_descricao"
                                       :id="item.id_jogo"
-                                      :imagem="item.st_imagem">
-                    </ItemTrCampeonato>
-
+                                      :imagem="item.st_imagem"
+                                      :iscampeonato="item.bl_campeonato"
+                    ></ItemTrCampeonato>
                     </tbody>
                 </table>
             </div>
@@ -45,10 +46,20 @@
     export default {
         name: "ViewCampeonato",
         components: {ItemTrCampeonato, BarraTitulo},
+        methods: {
+            limitaTamanhoDescricao: function () {
+                for (let i = 0; i < this.campeonatos.length; i++) {
+                    if (this.campeonatos[i].st_descricao && this.campeonatos[i].st_descricao.length > 100) {
+                        this.campeonatos[i].st_descricao = this.campeonatos[i].st_descricao.substring(0, 100) + "...";
+                    }
+                }
+            }
+        },
         created() {
             var self = this;
             EgpmApi.getAllCampeonatos(campeonatos => {
                 self.campeonatos = campeonatos.data;
+                this.limitaTamanhoDescricao();
             })
 
         },

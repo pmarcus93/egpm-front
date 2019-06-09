@@ -8,20 +8,23 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label for="st_linkfacebook">Facebook:</label>
-                        <input v-if="social[0].st_link" v-model="social[0].st_link" id="st_linkfacebook" class="form-control">
+                        <input v-if="social.data[0].st_link" v-model="social.data[0].st_link" id="st_linkfacebook"
+                               class="form-control">
                     </div>
                 </div>
 
                 <div class="col-6">
                     <div class="form-group">
                         <label for="st_linkinstagram">Instagram:</label>
-                        <input v-if="social[1].st_link" v-model="social[1].st_link" id="st_linkinstagram" class="form-control">
+                        <input v-if="social.data[1].st_link" v-model="social.data[1].st_link" id="st_linkinstagram"
+                               class="form-control">
                     </div>
                 </div>
 
                 <div class="col-12">
                     <div class="form-group">
-                        <button class="btn btn-success float-right" v-on:click="save"> <i class="fa fa-check"></i> Salvar </button>
+                        <button class="btn btn-success float-right" v-on:click="save"><i class="fa fa-check"></i> Salvar
+                        </button>
                     </div>
                 </div>
 
@@ -37,20 +40,22 @@
         name: "ItemFormRedesSociais",
         data: function () {
             return {
-                social: [
-                    {
-                        st_link: ""
-                    },
-                    {
-                        st_link: ""
-                    }
-                ],
+                social: {
+                    data: [
+                        {
+                            st_link: ""
+                        },
+                        {
+                            st_link: ""
+                        }
+                    ]
+                },
             }
         },
         methods: {
 
             save: function () {
-                SocialApi.post( SocialApi.pushAutenticationobject(this.social), result => {
+                SocialApi.post(SocialApi.pushAutenticationobject(this.social), result => {
 
                     var opts = {};
                     if (result.data.status) {
@@ -76,7 +81,7 @@
         },
         created() {
             SocialApi.getAll(result => {
-                this.social = result.data;
+                this.social.data = result.data;
             });
 
         }

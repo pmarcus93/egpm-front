@@ -35,7 +35,7 @@
         </div>
 
         <BarraTitulo
-                titulo="CAMPEONATO"
+                titulo="JOGO"
                 icon="check"
                 texto-botao="Salvar"
                 action="save"

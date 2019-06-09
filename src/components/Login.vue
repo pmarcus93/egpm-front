@@ -20,6 +20,8 @@
                         <label for="st_senha" class="label-login mt-4 ">Senha:</label>
                         <input v-model="usuario.st_senha" id="st_senha" type="password" class="form-control">
 
+                        <div class="g-recaptcha" data-sitekey="6LcE26cUAAAAAKPLu2-RDS9PXx2DcZeuu2b_dc5d"></div>
+
                         <button class="btn-primary btn form-control mt-4">Entrar</button>
                     </div>
                 </form>
@@ -44,9 +46,9 @@
         methods: {
             login: function (form, event) {
                 event.preventDefault();
-                var self = this;
 
-                EgpmApi.postLogin(self.usuario, result => {
+                this.usuario.recaptchatoken = grecaptcha.getResponse();
+                EgpmApi.postLogin(this.usuario, result => {
 
                     var opts = {};
                     if (!result.data.status) {
@@ -54,14 +56,14 @@
                         opts.text = result.data.erro.message;
                         opts.type = 'error';
                         PNotify.alert(opts);
-                    } 
+                    }
 
-                    self.usuario.bl_statuslogin = result.data.status;
-                    self.credenciais = result.data.data;
+                    this.usuario.bl_statuslogin = result.data.status;
+                    this.credenciais = result.data.data;
                     localStorage.setItem('st_token', result.data.data.st_token);
                     localStorage.setItem('id_usuario', result.data.data.id_usuario);
 
-                    if (self.usuario.bl_statuslogin) {
+                    if (this.usuario.bl_statuslogin) {
                         this.$router.push({
                             name: 'painel',
                         })

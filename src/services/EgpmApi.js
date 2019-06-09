@@ -14,7 +14,7 @@ export default {
     },
 
     getAllImagens: (callback) => {
-        var url = urlbase + "Imagem/";
+        var url = urlbase + "Imagem/?id_usuario=" + localStorage.getItem('id_usuario') + "&st_token=" + localStorage.getItem('st_token');
         axios.get(url).then((result) => {
             if (callback) {
                 callback(result);
@@ -23,7 +23,7 @@ export default {
     },
 
     getImagem: (id, callback) => {
-        var url = urlbase + "Imagem/" + id;
+        var url = urlbase + "Imagem/" + id + "?id_usuario=" + localStorage.getItem('id_usuario') + "&st_token=" + localStorage.getItem('st_token');
         axios.get(url).then((result) => {
             if (callback) {
                 callback(result);
@@ -110,30 +110,8 @@ export default {
             }
         })
     },
-    getAllPatrocinadore: (callback) => {
-        var url = urlbase + "Patrocinador/";
-        axios.get(url).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-    getPatrocinador: (id_patrocinador, callback) => {
-        var url = urlbase + "Patrocinador/" + id_patrocinador;
-        axios.get(url).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-    postPatrocinador: (patrocinador, callback) => {
-        var url = urlbase + "Patrocinador/";
-        axios.post(url, patrocinador).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
+
+
     getAllDuvidas: (callback) => {
         var url = urlbase + "Duvida/";
         axios.get(url).then((retorno) => {

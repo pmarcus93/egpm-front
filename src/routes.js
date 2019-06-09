@@ -57,15 +57,15 @@ const routes = [
         children: [
             {
                 name: 'viewcampeonato',
-                path: 'campeonatos',
+                path: 'jogos',
                 component: ViewCampeonato,
             },
             {
-                path: 'campeonatos/adicionar',
+                path: 'jogos/adicionar',
                 component: FormCampeonatos
             },
             {
-                path: 'campeonatos/editar/:id_jogo',
+                path: 'jogos/editar/:id_jogo',
                 component: FormCampeonatos
             },
             {
