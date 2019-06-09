@@ -20,6 +20,7 @@
     "sass-loader": "^7.1.0",
     "vue": "^2.6.10",
     "vue-pnotify": "^1.0.1",
+    "vue-recaptcha": "^1.1.1",
     "vue-router": "^2.7.0"
   },
   "devDependencies": {

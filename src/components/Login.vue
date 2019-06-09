@@ -8,7 +8,7 @@
 
         <div class="col-xl-4 col-md-8 col-sm-12 mx-auto vh-100 align-items-center d-flex">
             <div class="box-login animate">
-                <form action="#" method="post" v-on:submit="login(this, $event)">
+                <form v-on:submit.prevent="submit">
                     <div>
                         <img class="col-12" src="../assets/logoegpm3.png"
                              alt="Logo EGPM (Encontro Gamer Pará de Minas) 3ª Edição">
@@ -20,7 +20,13 @@
                         <label for="st_senha" class="label-login mt-4 ">Senha:</label>
                         <input v-model="usuario.st_senha" id="st_senha" type="password" class="form-control">
 
-                        <div class="g-recaptcha" data-sitekey="6LcE26cUAAAAAKPLu2-RDS9PXx2DcZeuu2b_dc5d"></div>
+                        <vue-recaptcha
+                                ref="recaptcha"
+                                @verify="onCaptchaVerified"
+                                @expired="onCaptchaExpired"
+                                size="invisible"
+                                sitekey="6Lf73qcUAAAAAJjQSVZEFcpseQNTGXCIhkNIEboT">
+                        </vue-recaptcha>
 
                         <button class="btn-primary btn form-control mt-4">Entrar</button>
                     </div>
@@ -33,21 +39,30 @@
 <script>
     import FundoFixo from "./itens/FundoFixo";
     import EgpmApi from "@/services/EgpmApi.js";
+    import VueRecaptcha from 'vue-recaptcha';
 
     export default {
         name: "Login",
-        components: {FundoFixo},
-        mounted() {
+        components: {FundoFixo, VueRecaptcha},
+        created() {
             localStorage.clear();
-            this.credenciais.st_token = localStorage.getItem('st_token');
-            this.credenciais.id_usuario = localStorage.getItem('id_usuario');
-            this.verificaLogin();
+        },
+        data() {
+            return {
+                usuario: {
+                    st_login: '',
+                    st_senha: '',
+                    bl_statuslogin: false
+                },
+                credenciais: {
+                    id_usuario: null,
+                    st_token: null
+                }
+            }
         },
         methods: {
-            login: function (form, event) {
-                event.preventDefault();
-
-                this.usuario.recaptchatoken = grecaptcha.getResponse();
+            login: function (recaptchaToken) {
+                this.usuario.recaptchatoken = recaptchaToken;
                 EgpmApi.postLogin(this.usuario, result => {
 
                     var opts = {};
@@ -83,21 +98,23 @@
                         })
                     }
                 })
-            }
+            },
+            onCaptchaExpired: function () {
+                this.$refs.recaptcha.reset();
+            },
+
+            onCaptchaVerified: function (recaptchaToken) {
+                const self = this;
+                self.$refs.recaptcha.reset();
+                this.login(recaptchaToken);
+
+            },
+
+            submit: function () {
+                this.$refs.recaptcha.execute();
+            },
         },
-        data() {
-            return {
-                usuario: {
-                    st_login: '',
-                    st_senha: '',
-                    bl_statuslogin: false
-                },
-                credenciais: {
-                    id_usuario: null,
-                    st_token: null
-                }
-            }
-        }
+
     }
 </script>
 

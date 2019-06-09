@@ -1,6 +1,7 @@
 <template>
     <div class="pagina-duvidas">
         <FundoFixo
+                sobreimagem="rgba(0,0,0,0)"
         ></FundoFixo>
         <div class="animate">
             <div class="container conteudo">
@@ -23,7 +24,16 @@
                     </div>
 
                     <div class="col-md-6 col-sm-12">
-                        <form v-on:submit.prevent="salvaapoio">
+                        <form v-on:submit.prevent="submit">
+
+                            <vue-recaptcha
+                                    ref="recaptcha"
+                                    @verify="onCaptchaVerified"
+                                    @expired="onCaptchaExpired"
+                                    size="invisible"
+                                    sitekey="6Lf73qcUAAAAAJjQSVZEFcpseQNTGXCIhkNIEboT">
+                            </vue-recaptcha>
+
                             <div class="row">
                                 <div class="form-group col-md-6 col-sm-12">
                                     <label for="st_nome">Nome:</label>
@@ -72,10 +82,11 @@
     import BannerMenor from "./itens/BannerMenor";
     import ApoioApi from "@/services/ApoioApi";
     import BlocoRodape from "./itens/BlocoRodape";
+    import VueRecaptcha from 'vue-recaptcha';
 
     export default {
         name: "SejaApoiador",
-        components: {BlocoRodape, BannerMenor, FundoFixo},
+        components: {BlocoRodape, BannerMenor, FundoFixo, 'vue-recaptcha': VueRecaptcha},
         data() {
             return {
                 apoio: {
@@ -89,24 +100,43 @@
             }
         },
         methods: {
-            salvaapoio: function () {
+            salvaapoio: function (recaptchaToken) {
+
+                this.apoio.recaptchatoken = recaptchaToken;
                 ApoioApi.post(this.apoio, result => {
-                    var opts = {};
-                    if (result.data.status) {
-                        opts.title = 'Sucesso';
-                        opts.text = "Mensagem enviada com sucesso.";
-                        opts.type = 'success';
-                        PNotify.alert(opts);
-                        this.apoio = {};
+                        var opts = {};
+                        if (result.data.status) {
+                            opts.title = 'Sucesso';
+                            opts.text = "Mensagem enviada com sucesso.";
+                            opts.type = 'success';
+                            PNotify.alert(opts);
+                            this.apoio = {};
 
-                    } else {
-                        opts.title = 'Erro';
-                        opts.text = result.data.erro.message;
-                        opts.type = 'error';
-                        PNotify.alert(opts);
+                        } else {
+                            opts.title = 'Erro';
+                            opts.text = result.data.erro.message;
+                            opts.type = 'error';
+                            PNotify.alert(opts);
 
+                        }
                     }
-                })
+                )
+
+            },
+
+            onCaptchaExpired: function () {
+                this.$refs.recaptcha.reset();
+            },
+
+            onCaptchaVerified: function (recaptchaToken) {
+                const self = this;
+                self.$refs.recaptcha.reset();
+                this.salvaapoio(recaptchaToken);
+
+            },
+
+            submit: function () {
+                this.$refs.recaptcha.execute();
             },
         }
     }
