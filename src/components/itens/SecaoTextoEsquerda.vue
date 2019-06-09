@@ -45,6 +45,7 @@
         justify-content: flex-start;
     }
 
+    /*
     .parallax::after {
         content: " ";
         position: absolute;
@@ -57,9 +58,12 @@
         background-size: 100%;
         z-index: -1;
     }
-
-    .bgpalestra::after {
+*/
+    .bgpalestra {
         background: url('../../assets/background-01.jpg') center/cover;
+        ::after {
+            //Antigo código de parallax.
+        }
     }
 
     .box-info {

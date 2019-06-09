@@ -3,7 +3,7 @@
         <ButtonTicket></ButtonTicket>
         <Toasty></Toasty>
 
-        <div class="area-fixa">
+        <div class="fixed-top">
             <Navbar></Navbar>
             <Rainbow></Rainbow>
         </div>
@@ -65,9 +65,5 @@
 </script>
 
 <style scoped>
-    .area-fixa {
-        position: fixed;
-        z-index: 5;
-        width: 100%;
-    }
+
 </style>
