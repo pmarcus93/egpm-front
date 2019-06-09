@@ -2,7 +2,7 @@
     <div class="patrocinadores py-4">
         <div class="container">
             <div class="row">
-                <div class="col-12 py-2 mb-4 tipo-patrocinador"><h4>Realização</h4></div>
+                <div class="col-12 py-2 tipo-patrocinador"><h4>Realização</h4></div>
 
                 <ItemPatrocinador :v-if="apoiadores[0]" v-for="(apoiador) in apoiadores"
                                   :imagem="apoiador.st_imagem"
