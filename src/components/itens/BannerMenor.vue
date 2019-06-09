@@ -1,8 +1,10 @@
 <template>
-    <div class="row">
-        <div class="col-12 banner text-center">
-            <h1 class="titulo-secao"><span>{{titulo}}</span></h1>
-            <p class="texto-secao mt-3">{{descricao}}</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 banner text-center">
+                <h1 class="titulo-secao"><span>{{titulo}}</span></h1>
+                <p class="texto-secao mt-3">{{descricao}}</p>
+            </div>
         </div>
     </div>
 </template>
