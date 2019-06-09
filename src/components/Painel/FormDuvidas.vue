@@ -40,7 +40,7 @@
 
 <script>
 
-    import EgpmApi from "@/services/EgpmApi";
+    import DuvidaApi from "@/services/DuvidaApi";
     import BarraTitulo from "./BarraTitulo";
 
     export default {
@@ -48,7 +48,7 @@
         components: {BarraTitulo},
         created() {
             if (this.$route.params.id_duvida) {
-                EgpmApi.getDuvida(this.$route.params.id_duvida, resposta => {
+                DuvidaApi.getDuvida(this.$route.params.id_duvida, resposta => {
                     this.duvida = resposta.data;
                 })
             }
@@ -66,7 +66,7 @@
         },
         methods: {
             save: function () {
-                EgpmApi.postDuvida(EgpmApi.pushAutenticationobject(this.duvida), result => {
+                DuvidaApi.postDuvida(DuvidaApi.pushAutenticationobject(this.duvida), result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';

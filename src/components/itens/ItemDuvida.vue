@@ -1,40 +1,51 @@
 <template>
-    <div class="col-12 py-5 item-duvida text-center" v-bind:style="{'color' : color}">
-        <div class="row">
-            <div class="col-12 my-4"><i class="fa fa-comments fa-3x"></i></div>
-            <div class="col-12 duvida" v-bind:style="{'color' : color}">{{duvida}}</div>
-            <div class="col-12 resposta my-4">{{resposta}}</div>
+
+    <div :id="'accordion'+id_duvida">
+        <div class="card">
+            <div class="card-header" :id="'heading'+id_duvida">
+                <h5 class="mb-0">
+                    <button class="btn collapsed"
+                            type="button"
+                            data-toggle="collapse"
+                            :data-target="'#collapseOne'+id_duvida"
+                            aria-expanded="true"
+                            :aria-controls="'collapseOne'+id_duvida">
+                        {{duvida}}
+                    </button>
+                </h5>
+            </div>
+
+            <div :id="'collapseOne'+id_duvida"
+                 class="collapse"
+                 :aria-labelledby="'heading'+id_duvida"
+                 :data-parent="'#accordion'+id_duvida">
+
+                <div class="card-body">
+                    {{resposta}}
+                </div>
+
+            </div>
         </div>
     </div>
+
 </template>
 
 <script>
     export default {
         name: "ItemDuvida",
-        props: ["duvida", "resposta", "background", "color"],
+        props: ["duvida", "resposta", "id_duvida"],
     }
 </script>
 
 <style scoped lang="scss">
 
-    .duvida {
-        font-size: 1.5em;
-        font-weight: bold;
-        color: $light-text;
-    }
+    .card-header {
+        background-color: $rainbow-green;
+        font-family: $font-archive;
 
-    .item-duvida {
-        cursor: pointer;
-        transition: all linear .2s;
-        height: 100%;
-        padding: 0 40px;
-        color: $light-text;
-    }
-
-    .item-duvida:hover {
-        transform: scale(1.05);
-        position: relative;
-        z-index: 1;
+        button {
+            color: $light-text;
+        }
     }
 
 </style>

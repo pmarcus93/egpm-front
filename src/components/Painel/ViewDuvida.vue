@@ -41,13 +41,13 @@
 <script>
     import BarraTitulo from "./BarraTitulo";
     import ItemTrDuvida from "./ItemTrDuvida";
-    import EgpmApi from "@/services/EgpmApi";
+    import DuvidaApi from "@/services/DuvidaApi";
 
     export default {
         name: "ViewDuvida",
         components: {ItemTrDuvida, BarraTitulo},
         created() {
-            EgpmApi.getAllDuvidas(retorno => {
+            DuvidaApi.getAllDuvidas(retorno => {
                 this.duvidas = retorno.data;
             })
         },
