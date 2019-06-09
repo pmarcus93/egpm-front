@@ -10,6 +10,7 @@
 
 <script>
     import Navbar from "./components/itens/Navbar";
+
     export default {
         name: 'app',
         components: {Navbar},
@@ -33,6 +34,59 @@
 
     .site-contents {
         margin-top: 62px
+    }
+
+
+    .animate {
+        display: block;
+        position: relative;
+        animation: animacao 1s;
+    }
+
+    @keyframes animacao {
+        from {
+            top: -100px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+
+
+    .animateslice {
+        display: block;
+        position: relative;
+        animation: animateslice 0.2s;
+    }
+
+    @keyframes animateslice {
+        from {
+            right: -500px;
+            opacity: 0
+        }
+        to {
+            right: 0;
+            opacity: 1
+        }
+    }
+
+    .animatescale {
+        display: block;
+        position: relative;
+        animation: animatescale 0.2s;
+    }
+
+    @keyframes animatescale {
+        from {
+            transform: scale(2);
+            opacity: 0
+        }
+        to {
+            transform: scale(1);
+            opacity: 1
+        }
     }
 
 </style>
