@@ -26,7 +26,7 @@
         align-items: center;
         background: url("../../assets/banner-background.jpg") center/cover;
         display: flex;
-        height: 75vh;
+        height: 70vh;
         justify-content: center;
         @include sm {
             height: 80vh;
