@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="fixed-top">
         <nav class="navbar navbar-light bg-light">
 
             <router-link class="navbar-brand" to='/inicio'>

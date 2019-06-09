@@ -2,7 +2,7 @@
     <div>
         <ButtonTicket></ButtonTicket>
         <Toasty></Toasty>
-        <Navbar class="fixed-top"></Navbar>
+        <Navbar></Navbar>
         <div class="wraper animate site-contents">
             <Banner></Banner>
             <Sobre></Sobre>
