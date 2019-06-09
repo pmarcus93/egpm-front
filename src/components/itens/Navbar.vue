@@ -21,10 +21,10 @@
 
 
             <div class="navbar-icons">
-                <a href="https://www.facebook.com/FAPAM/" target="_blank" rel="noopener"
+                <a v-if="social[0].st_link" :href="social[0].st_link" target="_blank" rel="noopener"
                    class="color-facebook social"><i
                         class="fab fa-facebook fa-2x ml-3"></i></a>
-                <a href="https://www.instagram.com/fapam_oficial/" target="_blank" rel="noopener"
+                <a v-if="social[1].st_link" :href="social[1].st_link" target="_blank" rel="noopener"
                    class="color-instagram social"><i
                         class="fab fa-instagram fa-2x ml-3"></i></a>
 
@@ -58,11 +58,12 @@
 
             <div class="col-12">
                 <div class="navbar-icons ">
-                    <a href="https://www.facebook.com/FAPAM/" target="_blank" rel="noopener" class="color-facebook "><i
-                            class="fab fa-facebook fa-2x mx-3"></i></a>
-                    <a href="https://www.instagram.com/fapam_oficial/" target="_blank" rel="noopener"
-                       class="color-instagram "><i
-                            class="fab fa-instagram fa-2x mx-3"></i></a>
+                    <a v-if="social[0].st_link"" :href="social[0].st_link" target="_blank" rel="noopener"
+                    class="color-facebook "><i
+                        class="fab fa-facebook fa-2x mx-3"></i></a>
+                    <a v-if="social[1].st_link"" :href="social[1].st_link" target="_blank" rel="noopener"
+                    class="color-instagram "><i
+                        class="fab fa-instagram fa-2x mx-3"></i></a>
                 </div>
             </div>
 
@@ -73,6 +74,7 @@
 
 <script>
     import Rainbow from "./Rainbow";
+    import SocialApi from "@/services/SocialApi";
 
     export default {
         name: 'Navbar',
@@ -82,9 +84,22 @@
                 this.menuAtivo = !this.menuAtivo;
             },
         },
+        created() {
+            SocialApi.getAll(result => {
+                this.social = result.data;
+            });
+        },
         data: function () {
             return {
-                menuAtivo: false
+                menuAtivo: false,
+                social: [
+                    {
+                        st_link: "https://www.facebook.com/FAPAM/"
+                    },
+                    {
+                        st_link: "https://www.instagram.com/fapam_oficial/1"
+                    }
+                ]
             }
         }
     }
