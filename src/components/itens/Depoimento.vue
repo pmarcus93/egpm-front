@@ -12,19 +12,20 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
     .autor-depoimento {
         font-weight: bold;
     }
 
     .depoimento {
-        transition: all linear .2s ;
-    }
-
-    .depoimento:hover {
-        transform: scale(1.09);
-        background: whitesmoke;
+        @include sm {
+            transition: all linear .2s;
+            :hover {
+                transform: scale(1.09);
+                background: whitesmoke;
+            }
+        }
     }
 
     .texto-depoimento {
