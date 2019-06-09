@@ -3,7 +3,7 @@
         <!-- TODO: Botão de ticket fixo atrapalha a experiência no mobile. -->
         <!--        <ButtonTicket></ButtonTicket>-->
         <Toasty></Toasty>
-        <div class="wraper animate site-contents">
+        <div class="animate site-contents">
             <Banner></Banner>
             <Sobre></Sobre>
             <Campeonato></Campeonato>
