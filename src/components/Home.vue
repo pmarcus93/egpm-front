@@ -2,13 +2,8 @@
     <div>
         <ButtonTicket></ButtonTicket>
         <Toasty></Toasty>
-
-        <div class="fixed-top">
-            <Navbar></Navbar>
-            <Rainbow></Rainbow>
-        </div>
-
-        <div class="wraper animate">
+        <Navbar class="fixed-top"></Navbar>
+        <div class="wraper animate site-contents">
             <Banner></Banner>
             <Sobre></Sobre>
             <Campeonato></Campeonato>
@@ -34,7 +29,6 @@
     import Palestras from "./telas/Palestras";
     import Campeonato from "./telas/Campeonato";
     import FreePlay from "./telas/FreePlay";
-    import Rainbow from "./itens/Rainbow";
     import Duvida from "./telas/Duvida";
     import Localizacao from "./telas/Localizacao";
     import ButtonTicket from "./itens/ButtonTicket";
@@ -51,7 +45,6 @@
             ButtonTicket,
             Localizacao,
             Duvida,
-            Rainbow,
             FreePlay,
             Campeonato,
             Palestras,
@@ -65,5 +58,7 @@
 </script>
 
 <style scoped>
-
+    .site-contents {
+        margin-top: 62px
+    }
 </style>
