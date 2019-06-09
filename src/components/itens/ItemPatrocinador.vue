@@ -25,9 +25,9 @@
 
     .logoParceiro {
         @include sm {
-            transition: linear all .2s;
             :hover {
                 transform: scale(1.1);
+                transition: linear all .2s;
             }
         }
     }

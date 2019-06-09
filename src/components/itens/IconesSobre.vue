@@ -41,10 +41,10 @@
 
     .bloco-icon {
         @include sm {
-            transition: all linear .2s;
             :hover {
                 background: #f5ffe1;
                 transform: scale(1.09);
+                transition: all linear .2s;
             }
         }
     }

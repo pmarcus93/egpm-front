@@ -1,6 +1,8 @@
 <template>
     <div class="pagina-duvidas">
-        <FundoFixo></FundoFixo>
+        <FundoFixo
+        sobreimagem="rgba(0,0,0,0)"
+        ></FundoFixo>
         <div class="animate">
             <div class="container conteudo">
                 <div class="row">
