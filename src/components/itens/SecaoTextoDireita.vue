@@ -30,12 +30,18 @@
         z-index: 2;
     }
 
-    .bgcampeonatos::after {
+    .bgcampeonatos {
         background: url('../../assets/background-04.jpg') center/cover;
+        ::after {
+            //Antigo código de parallax.
+        }
     }
 
-    .bgfreeplay::after {
+    .bgfreeplay {
         background: url('../../assets/background-03.jpg') center/cover;
+        ::after {
+            //Antigo código de parallax.
+        }
     }
 
     .descricao {
@@ -49,7 +55,7 @@
         }
 
     }
-
+/*
     .parallax::after {
         content: " ";
         position: absolute;
@@ -62,7 +68,7 @@
         background-size: 100%;
         z-index: -1;
     }
-
+*/
     .secao-right-body {
         color: whitesmoke;
     }

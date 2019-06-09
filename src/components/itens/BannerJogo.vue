@@ -57,10 +57,6 @@
 
 <style scoped lang="scss">
 
-    h1, h2, h3, h4, h5 {
-        font-family: $font-archive;
-    }
-
     .info-game {
         color: $light-text;
         margin-top: 30px !important; //TODO: verificar a possibilidade de remover !important.

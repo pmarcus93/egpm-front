@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container-fluid">
         <div class="row">
             <div class="col-4 border-rainbow rainbow-green"></div>
             <div class="col-2 border-rainbow rainbow-red"></div>

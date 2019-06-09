@@ -1,14 +1,10 @@
 <template>
     <div>
-        <ButtonTicket></ButtonTicket>
+        <!-- TODO: Botão de ticket fixo atrapalha a experiência no mobile. -->
+        <!--        <ButtonTicket></ButtonTicket>-->
         <Toasty></Toasty>
-
-        <div class="area-fixa">
-            <Navbar></Navbar>
-            <Rainbow></Rainbow>
-        </div>
-
-        <div class="wraper animate">
+        <Navbar></Navbar>
+        <div class="wraper animate site-contents">
             <Banner></Banner>
             <Sobre></Sobre>
             <Campeonato></Campeonato>
@@ -34,7 +30,6 @@
     import Palestras from "./telas/Palestras";
     import Campeonato from "./telas/Campeonato";
     import FreePlay from "./telas/FreePlay";
-    import Rainbow from "./itens/Rainbow";
     import Duvida from "./telas/Duvida";
     import Localizacao from "./telas/Localizacao";
     import ButtonTicket from "./itens/ButtonTicket";
@@ -51,7 +46,6 @@
             ButtonTicket,
             Localizacao,
             Duvida,
-            Rainbow,
             FreePlay,
             Campeonato,
             Palestras,
@@ -65,9 +59,7 @@
 </script>
 
 <style scoped>
-    .area-fixa {
-        position: fixed;
-        z-index: 5;
-        width: 100%;
+    .site-contents {
+        margin-top: 62px
     }
 </style>

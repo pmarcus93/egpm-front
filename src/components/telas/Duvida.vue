@@ -3,10 +3,11 @@
         <div class="row no-gutters">
 
             <div class="col-12">
-                <h1 class="my-4 titulo-secao text-center">Dúvidas</h1>
-                <p class="mt-3 subtitulo text-center">As dúvidas mais frequentes, respondidas aqui! <br>
+                <h1 class="mt-4 titulo-secao text-center">FAQ</h1>
+                <h2 class="mt-2 subtitulo text-center">Respostas para as dúvidas mais frequentes</h2>
 
-                <div class="accordion my-5" id="accordionExample">
+                <!-- TODO: Lucas, acho que aqui você pode definir classes/ids dinâmicos para gerar os cards. -->
+                <div id="accordionExample" class="my-5">
                     <div class="card">
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
@@ -18,11 +19,12 @@
 
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
-                                 anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                Podem, desde que acompanhados de um responsável adulto.
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

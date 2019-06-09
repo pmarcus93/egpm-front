@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="fixed-top">
         <nav class="navbar navbar-light bg-light">
 
             <router-link class="navbar-brand" to='/inicio'>
@@ -73,12 +73,15 @@
             </div>
 
         </div>
+        <Rainbow></Rainbow>
     </div>
 </template>
 
 <script>
+    import Rainbow from "./Rainbow";
     export default {
         name: 'Navbar',
+        components: {Rainbow},
         methods: {
             controlmenu: function () {
                 if (this.menuativo) {
@@ -145,6 +148,7 @@
             display: none !important;
         }
     }
+
 
     .navbar-icons a {
         color: #545457;
