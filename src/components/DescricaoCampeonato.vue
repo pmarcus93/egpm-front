@@ -121,10 +121,6 @@
         }
     }
 
-    h1, h2, h3, h4, h5 {
-        font-family: $font-archive;
-    }
-
     .animate {
         animation: animacao 0.6s;
         display: block;

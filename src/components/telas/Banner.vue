@@ -26,10 +26,10 @@
         align-items: center;
         background: url("../../assets/banner-background.jpg") center/cover;
         display: flex;
-        height: 75vh;
+        height: 70vh;
         justify-content: center;
         @include sm {
-            height: 100vh;
+            height: 80vh;
         }
     }
 
@@ -91,7 +91,7 @@
         }
 
         @include xl {
-            width: 600px;
+            width: 550px;
         }
     }
 

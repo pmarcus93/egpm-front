@@ -1,9 +1,9 @@
 <template>
-    <div class="col-4 col-sm-4 col-md-2 my-auto">
+    <div class="col-sm-12 col-md-2 mt-5">
         <div class="row">
-            <div class="col-12 logoParceiro">
+            <div class="col-12 logoParceiro text-center">
                 <a :href="link">
-                    <img :src="imagem" :title="'Logo da empresa ' + altimg">
+                    <img height="75" :src="imagem" :title="'Logo da empresa ' + altimg">
                 </a>
             </div>
         </div>
@@ -21,18 +21,18 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
     .logoParceiro {
-        transition: linear all .2s;
-    }
-
-    .logoParceiro:hover {
-        transform: scale(1.1);
+        @include sm {
+            transition: linear all .2s;
+            :hover {
+                transform: scale(1.1);
+            }
+        }
     }
 
     .logoParceiro img {
-        width: 100%;
     }
 
 </style>
