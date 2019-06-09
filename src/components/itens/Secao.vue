@@ -1,9 +1,13 @@
 <template>
-    <div class="my-auto">
-        <section>
-            <h1 class="text-left mb-4 titulo-secao">{{titulo}}</h1>
-            <p class="mt-3 text-justify">{{descricao}}</p>
-        </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <section>
+                    <h1 class="text-left mb-4 titulo-secao">{{titulo}}</h1>
+                    <p class="mt-3 text-justify">{{descricao}}</p>
+                </section>
+            </div>
+        </div>
     </div>
 </template>
 

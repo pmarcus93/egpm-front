@@ -3,11 +3,16 @@
         <FundoFixo></FundoFixo>
         <div class="animate">
             <div class="container conteudo">
-                <BannerMenor
-                        titulo="Campeonatos"
-                        descricao="Selecione um game para conferir detalhes.
+                <div class="row">
+                    <div class="col-12">
+                        <BannerMenor
+                                titulo="Campeonatos"
+                                descricao="Selecione um game para conferir detalhes.
                     Confira as regras do campeonato, quantidade de jogadores, plataforma, categoria, trailer e muito mais!"
-                ></BannerMenor>
+                        ></BannerMenor>
+
+                    </div>
+                </div>
             </div>
 
             <div class="container pb-5">

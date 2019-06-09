@@ -4,13 +4,14 @@
         ></FundoFixo>
         <div class="animate">
             <div class="container conteudo">
-                <BannerMenor
-                        titulo="Seja um apoiador"
-                        descricao="Marque presença no maior encontro de games de Pará de Minas. Apoie o evento
+                <div class="col-12">
+                    <BannerMenor
+                            titulo="Seja um apoiador"
+                            descricao="Marque presença no maior encontro de games de Pará de Minas. Apoie o evento
                         e garanta a visibilidade da sua marca!"
-                >
-                </BannerMenor>
-
+                    >
+                    </BannerMenor>
+                </div>
             </div>
 
             <div class="container apoie py-5 mb-5">
