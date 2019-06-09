@@ -111,40 +111,6 @@ export default {
         })
     },
 
-
-    getAllDuvidas: (callback) => {
-        var url = urlbase + "Duvida/";
-        axios.get(url).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-    getDuvida: (id_duvida, callback) => {
-        var url = urlbase + "Duvida/" + id_duvida;
-        axios.get(url).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-    postDuvida: (duvida, callback) => {
-        var url = urlbase + "Duvida/";
-        axios.post(url, duvida).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-    deleteDuvida: (id, token, callback) => {
-        var url = urlbase + "Duvida/" + id;
-        axios.delete(url, token).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-
     logout: (credenciais, callback) => {
         var url = urlbase + "Login/" + credenciais.id_usuario + "/logout";
         axios.post(url, credenciais).then((result) => {

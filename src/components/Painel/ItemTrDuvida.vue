@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import EgpmApi from "@/services/EgpmApi";
+    import DuvidaApi from "@/services/DuvidaApi";
 
     export default {
         name: "ItemTrDuvida",
@@ -27,14 +27,14 @@
         ],
         methods: {
             remover: function (id) {
-                EgpmApi.deleteDuvida(id, EgpmApi.pushAutenticationobject(null), result => {
+                DuvidaApi.deleteDuvida(id, DuvidaApi.pushAutenticationobject(null), result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
                         opts.text = "Dúvida removida com sucesso.";
                         opts.type = 'success';
                         PNotify.alert(opts);
-                        EgpmApi.getAllDuvidas(retorno => {
+                        DuvidaApi.getAllDuvidas(retorno => {
                             this.$parent.duvidas = retorno.data;
                         })
 
