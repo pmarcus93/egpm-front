@@ -37,23 +37,31 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
     .bloco-icon {
-        transition: all linear .2s;
-    }
-
-    .bloco-icon:hover {
-        background: #f5ffe1;
-        transform: scale(1.09);
+        @include sm {
+            transition: all linear .2s;
+            :hover {
+                background: #f5ffe1;
+                transform: scale(1.09);
+            }
+        }
     }
 
     .icon-box-sobre {
-        font-size: 3em;
+        font-size: 2.5rem;
+        @include sm {
+            font-size: 3rem;
+        }
     }
 
     .text-box-sobre {
-        font-size: 1.2em;
+        font-size: 1rem;
+        @include sm {
+            font-size: 1.2em;
+
+        }
         font-weight: bold;
     }
 
