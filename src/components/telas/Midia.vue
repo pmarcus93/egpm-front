@@ -74,7 +74,6 @@
 
         @include sm {
             font-size: 2.5em;
-
         }
     }
 
