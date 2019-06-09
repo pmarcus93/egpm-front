@@ -1,9 +1,9 @@
 <template>
-    <div class="col-sm-12 col-md-2 my-2">
+    <div class="col-sm-12 col-md-2 mt-5">
         <div class="row">
             <div class="col-12 logoParceiro text-center">
                 <a :href="link">
-                    <img class="" :src="imagem" :title="'Logo da empresa ' + altimg">
+                    <img height="75" :src="imagem" :title="'Logo da empresa ' + altimg">
                 </a>
             </div>
         </div>
@@ -33,10 +33,6 @@
     }
 
     .logoParceiro img {
-        max-width: 75%;
-        @include sm {
-            max-width: 100%;
-        }
     }
 
 </style>
