@@ -1,10 +1,6 @@
 <template>
     <div class="pagina-duvidas animate">
         <FundoFixo></FundoFixo>
-        <div class="fixed">
-            <Navbar></Navbar>
-            <Rainbow></Rainbow>
-        </div>
         <div class="animate">
             <div class="container-fluid conteudo">
                 <ItemErro
@@ -20,18 +16,14 @@
 </template>
 
 <script>
-    import Rainbow from "./itens/Rainbow";
-    import Navbar from "./itens/Navbar";
     import FundoFixo from "./itens/FundoFixo";
-    import Rodape from "./telas/Rodape";
-    import Patrocinadores from "./telas/Patrocinadores";
     import Links from "./itens/Links";
     import ItemErro from "./itens/ItemErro";
     import BlocoRodape from "./itens/BlocoRodape";
 
     export default {
         name: "Erro404",
-        components: {BlocoRodape, ItemErro, Links, Patrocinadores, Rodape, FundoFixo, Navbar, Rainbow}
+        components: {BlocoRodape, ItemErro, Links, FundoFixo}
     }
 </script>
 

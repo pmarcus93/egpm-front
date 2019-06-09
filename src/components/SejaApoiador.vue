@@ -2,10 +2,6 @@
     <div class="pagina-duvidas">
         <FundoFixo
         ></FundoFixo>
-        <div class="fixed">
-            <Navbar></Navbar>
-            <Rainbow></Rainbow>
-        </div>
         <div class="animate">
             <div class="container conteudo">
                 <BannerMenor
@@ -72,17 +68,13 @@
 
 <script>
     import FundoFixo from "./itens/FundoFixo";
-    import Navbar from "./itens/Navbar";
-    import Rainbow from "./itens/Rainbow";
-    import Rodape from "./telas/Rodape";
-    import Patrocinadores from "./telas/Patrocinadores";
     import BannerMenor from "./itens/BannerMenor";
     import ApoioApi from "@/services/ApoioApi";
     import BlocoRodape from "./itens/BlocoRodape";
 
     export default {
         name: "SejaApoiador",
-        components: {BlocoRodape, BannerMenor, Patrocinadores, Rodape, Rainbow, Navbar, FundoFixo},
+        components: {BlocoRodape, BannerMenor, FundoFixo},
         data() {
             return {
                 apoio: {
