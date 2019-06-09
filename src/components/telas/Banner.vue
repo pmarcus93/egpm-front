@@ -91,7 +91,7 @@
         }
 
         @include xl {
-            width: 600px;
+            width: 550px;
         }
     }
 
