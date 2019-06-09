@@ -29,7 +29,7 @@
         height: 75vh;
         justify-content: center;
         @include sm {
-            height: 100vh;
+            height: 80vh;
         }
     }
 
