@@ -8,7 +8,7 @@
                         <BannerMenor
                                 titulo="Campeonatos"
                                 descricao="Selecione um game para conferir detalhes.
-                    Confira as regras do campeonato, quantidade de jogadores, plataforma, categoria, trailer e muito mais!"
+                                Confira as regras do campeonato, quantidade de jogadores, plataforma, categoria, trailer e muito mais!"
                         ></BannerMenor>
 
                     </div>
