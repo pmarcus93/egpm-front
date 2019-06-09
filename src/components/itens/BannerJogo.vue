@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="row py-5 position-relative">
+        <div class="row mx-0 py-5 position-relative">
             <div class="col-12 banner-foto" :style="'background: url(' + imagem + ') center/cover' "></div>
             <div class="col-12 sobre-banner"></div>
             <div class="col-12 no-gutters">
