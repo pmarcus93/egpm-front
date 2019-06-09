@@ -35,8 +35,6 @@
 
 <script>
     import BannerMenor from "./itens/BannerMenor";
-    import Rainbow from "./itens/Rainbow";
-    import Navbar from "./itens/Navbar";
     import FundoFixo from "./itens/FundoFixo";
     import ItemCampeonato from "./itens/ItemCampeonato";
     import JogoApi from "@/services/JogoApi.js";
