@@ -20,7 +20,7 @@
             </router-link>
 
 
-            <div class="navbar-icons ">
+            <div class="navbar-icons">
                 <a href="https://www.facebook.com/FAPAM/" target="_blank" rel="noopener"
                    class="color-facebook social"><i
                         class="fab fa-facebook fa-2x ml-3"></i></a>

@@ -69,7 +69,7 @@
     .descricao {
         color: $color-primary;
         text-transform: uppercase;
-        font-size: 1rem;
+        font-size: 2.5vh;
         @include sm {
             font-size: 1.5rem;
         }

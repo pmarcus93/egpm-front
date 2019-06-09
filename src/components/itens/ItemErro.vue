@@ -4,6 +4,7 @@
         <h3>{{subtitulo}}<br>
             {{descricao}}</h3>
     </div>
+
 </template>
 
 <script>
