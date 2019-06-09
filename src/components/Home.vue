@@ -3,7 +3,6 @@
         <!-- TODO: Botão de ticket fixo atrapalha a experiência no mobile. -->
         <!--        <ButtonTicket></ButtonTicket>-->
         <Toasty></Toasty>
-        <Navbar></Navbar>
         <div class="wraper animate site-contents">
             <Banner></Banner>
             <Sobre></Sobre>
@@ -59,7 +58,4 @@
 </script>
 
 <style scoped>
-    .site-contents {
-        margin-top: 62px
-    }
 </style>
