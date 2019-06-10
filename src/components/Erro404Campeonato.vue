@@ -6,12 +6,11 @@
             <div class="container-fluid conteudo">
                 <ItemErro
                         erro="Erro 404"
-                        subtitulo="A página procurada não foi encontrada!"
+                        subtitulo="Ops, parece que você entrou em uma página de campeonato inválida."
                         descricao="Separamos para você alguns links que podem lhe ajudar!"
                 ></ItemErro>
                 <Links></Links>
             </div>
-            <BlocoRodape></BlocoRodape>
         </div>
     </div>
 </template>
@@ -23,7 +22,7 @@
     import BlocoRodape from "./itens/BlocoRodape";
 
     export default {
-        name: "Erro404",
+        name: "Erro404Campeonato",
         components: {BlocoRodape, ItemErro, Links, FundoFixo}
     }
 </script>

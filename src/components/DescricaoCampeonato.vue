@@ -1,5 +1,11 @@
 <template>
     <div class="animate">
+
+        <div v-if="!campeonato.id_jogo && dadoscarregados">
+            <Erro404Campeonato
+            ></Erro404Campeonato>
+        </div>
+
         <div v-if="campeonato.id_jogo">
             <div class="container-fluid conteudo p-0">
                 <BannerJogo
@@ -15,21 +21,8 @@
                 ></BannerJogo>
             </div>
         </div>
-        <div v-else-if="dadoscarregados">
-            <div class="container-fluid conteudo">
-                <ItemErro
-                        erro="ERRO 404"
-                        subtitulo="Ops, parece que você entrou em uma página de campeonato inválida."
-                        descricao="Selecione um dos campeonatos disponíveis:">
-                </ItemErro>
-            </div>
-            <div class="container py-5">
-                <Campeonatos></Campeonatos>
-            </div>
-        </div>
 
-
-        <div v-if="campeonato" class="container-fluid">
+        <div v-if="campeonato.id_jogo" class="container-fluid">
             <div class="container">
                 <div class="row">
                     <div class="col-12 my-4">
@@ -38,9 +31,7 @@
                                 <h2>Campeonato</h2>
 
                                 <h4>Regras</h4>
-                                <p class="text-justify"><span>Os competidores lutarão em esquema de chaves, no estilo melhor de três. Quem vencer três lutas completas primeiro avança.
-                                Não há restrições de personagens. Fatalities não são permitidos. Mercies e Brutalities são permitidos. Os jogadores podem
-                             trazer seus próprios controles, seja DualShock 4 padrão ou controle arcade.</span></p>
+                                <p class="text-justify"><span v-html="campeonato.st_regra"></span></p>
                             </div>
                             <div class="col-md-4">
                                 <ul class="list-group detalhes-campeonato">
@@ -74,10 +65,14 @@
     import Campeonatos from "./telas/Campeonatos";
     import EgpmApi from "@/services/EgpmApi.js";
     import BlocoRodape from "./itens/BlocoRodape";
+    import Erro404 from "./Erro404";
+    import Erro404Campeonato from "./Erro404Campeonato";
 
     export default {
         name: "DescricaoCampeonato",
         components: {
+            Erro404Campeonato,
+            Erro404,
             BlocoRodape,
             Campeonatos,
             ItemErro,
