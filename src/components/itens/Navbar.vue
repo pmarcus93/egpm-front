@@ -58,10 +58,10 @@
 
             <div class="col-12">
                 <div class="navbar-icons ">
-                    <a v-if="social[0].st_link"" :href="social[0].st_link" target="_blank" rel="noopener"
+                    <a v-if="social[0].st_link" :href="social[0].st_link" target="_blank" rel="noopener"
                     class="color-facebook "><i
                         class="fab fa-facebook fa-2x mx-3"></i></a>
-                    <a v-if="social[1].st_link"" :href="social[1].st_link" target="_blank" rel="noopener"
+                    <a v-if="social[1].st_link" :href="social[1].st_link" target="_blank" rel="noopener"
                     class="color-instagram "><i
                         class="fab fa-instagram fa-2x mx-3"></i></a>
                 </div>
