@@ -3,12 +3,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-6 my-auto conteudo-texto">
-                    <h1 class="mb-4 titulo-secao">EGMP3</h1>
+                    <h1 class="mb-4 titulo-secao">#EGMP3</h1>
                     <h4>LOCAL</h4>
                     <p>
                         FAPAM - Faculdade de Pará de Minas <br>
-                        R. Ricardo Marinho, 110 - São Geraldo, Pará de Minas - MG, <br>
-                        35660-398
+                        R. Ricardo Marinho, 110 - São Geraldo, Pará de Minas - MG <br>
                     </p>
 
                     <h4>DATAS & HORÁRIOS</h4>
@@ -44,15 +43,16 @@
     }
 
     .titulo-secao {
+        text-align: center;
         font-family: $font-archive;
-        font-size: 2.5em;
+        font-size: 2.5rem;
         @include sm {
-            font-size: 3em;
+            font-size: 3rem;
         }
     }
 
     .conteudo-texto {
-        text-align: center;
+        text-align: justify;
         @include sm {
             text-align: left;
         }
