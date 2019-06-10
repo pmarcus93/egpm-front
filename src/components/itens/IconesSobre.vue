@@ -38,17 +38,7 @@
 </script>
 
 <style scoped lang="scss">
-
-    .bloco-icon {
-        @include sm {
-            :hover {
-                background: #f5ffe1;
-                transform: scale(1.09);
-                transition: all linear .2s;
-            }
-        }
-    }
-
+    
     .icon-box-sobre {
         font-size: 2.5rem;
         @include sm {
