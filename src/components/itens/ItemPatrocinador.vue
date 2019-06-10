@@ -23,16 +23,4 @@
 
 <style scoped lang="scss">
 
-    .logoParceiro {
-        @include sm {
-            :hover {
-                transform: scale(1.1);
-                transition: linear all .2s;
-            }
-        }
-    }
-
-    .logoParceiro img {
-    }
-
 </style>

@@ -18,16 +18,6 @@
         font-weight: bold;
     }
 
-    .depoimento {
-        @include sm {
-            transition: all linear .2s;
-            :hover {
-                transform: scale(1.09);
-                background: whitesmoke;
-            }
-        }
-    }
-
     .texto-depoimento {
         border-bottom: 3px darkslategray solid;
     }
