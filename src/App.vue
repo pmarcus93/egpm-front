@@ -59,15 +59,16 @@
         display: block;
         position: relative;
         animation: animateslice 0.2s;
+        z-index: -1;
     }
 
     @keyframes animateslice {
         from {
-            right: -500px;
+            top: -1000px;
             opacity: 0
         }
         to {
-            right: 0;
+            top: 0;
             opacity: 1
         }
     }
