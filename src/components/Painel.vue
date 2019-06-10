@@ -1,30 +1,16 @@
 <template>
     <div class="container-fluid p-0">
-        <div class="row barra-topo">
-            <div class="col-md-3">
-                <div class="text-center">
-                    <router-link to="/">
-                        <img class="col-10 logo" src="../assets/logoegpm3.png" alt="Logo EGPM3">
-                    </router-link>
-                </div>
-            </div>
-            <div class="col-md-9  my-auto">
-                <!--                <div class="d-inline "><i class="fa fa-arrow-left fa-2x"></i></div>-->
-                <div class="d-inline float-right my-auto mr-4"><span class="nome-adm mx-4 px-4">{{usuario.st_nome}} </span>
-                    <router-link :to="'/painel/usuario/editar/'+usuario.id_usuario"> <i class="clicavel mr-2 fa fa-cog fa-2x"></i> </router-link>
-                    <i v-on:click="logout" class="clicavel mr-2 fa fa-sign-in-alt fa-2x"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
+        <div class="row mx-0">
 
             <div class="col-md-3 menu p-0">
 
+                <div class="nome-adm p-2"><i class="fa fa-user mr-2 ml-5"></i>{{usuario.st_nome}}</div>
+
                 <ItemMenuPainel v-for="(item) in menu"
-                        :titulo="item.titulo"
-                        :icone="item.icone"
-                        :route="item.route"
+                                :titulo="item.titulo"
+                                :icone="item.icone"
+                                :route="item.route"
+                                :action="item.action"
                 ></ItemMenuPainel>
 
             </div>
@@ -65,12 +51,22 @@
             },
             logout: function () {
                 EgpmApi.logout(this.credenciais, result => {
-                    if (result.data.status) {
-                        this.$router.push({
-                            name: 'login',
-                        })
-                    }
+                    this.$router.push({
+                        name: 'login',
+                    })
                 })
+            },
+            actionpainel: function (acao) {
+
+                if (acao === 'usuario') {
+                    this.$router.push({
+                        path: '/painel/usuario/editar/' + localStorage.getItem("id_usuario"),
+                    })
+                }
+
+                if (acao === "sair") {
+                    this.logout();
+                }
             }
         },
         data() {
@@ -87,51 +83,61 @@
                 },
                 menu: [
                     {
-                        titulo : "Jogos",
-                        icone : "gamepad",
-                        route : "jogos",
+                        titulo: "Usuário",
+                        icone: "cog",
+                        action: "usuario"
+                    },
+                    {
+                        titulo: "Jogos",
+                        icone: "gamepad",
+                        route: "jogos",
+                    },
+                    {
+                        titulo: "Dúvidas",
+                        icone: "comments",
+                        route: "duvidas"
                     },
 
                     {
-                        titulo : "Dúvidas",
-                        icone : "comments",
-                        route : "duvidas"
+                        titulo: "Comentários",
+                        icone: "quote-left",
+                        route: "comentarios"
                     },
 
                     {
-                        titulo : "Comentários",
-                        icone : "quote-left",
-                        route : "comentarios"
+                        titulo: "Patrocinadores",
+                        icone: "hand-holding-usd",
+                        route: "patrocinadores",
                     },
 
                     {
-                        titulo : "Patrocinadores",
-                        icone : "hand-holding-usd",
-                        route : "patrocinadores",
+                        titulo: "Mensagem",
+                        icone: "handshake",
+                        route: "apoios",
                     },
 
                     {
-                        titulo : "Mensagem",
-                        icone : "handshake",
-                        route : "apoios",
+                        titulo: "Seções",
+                        icone: "columns",
+                        route: "secoes",
                     },
 
                     {
-                        titulo : "Seções",
-                        icone : "columns",
-                        route : "secoes",
+                        titulo: "Geral",
+                        icone: "box-open",
+                        route: "geral",
                     },
 
                     {
-                        titulo : "Geral",
-                        icone : "box-open",
-                        route : "geral",
+                        titulo: "Imagens",
+                        icone: "images",
+                        route: "imagens",
                     },
 
                     {
-                        titulo : "Imagens",
-                        icone : "images",
-                        route : "imagens",
+                        titulo: "Sair",
+                        icone: "sign-in-alt",
+                        action: "sair"
                     }
 
                 ]
@@ -144,11 +150,12 @@
 
     .menu {
         background: #343957;
-        height: calc(100vh - 50px);
+        height: calc(100vh - 62px);
+        overflow-y: auto;
     }
 
     .view-info {
-        height: calc(100vh - 50px);
+        height: calc(100vh - 62px);
         overflow-y: scroll;
     }
 
@@ -171,7 +178,9 @@
 
     .nome-adm {
         font-size: 1.5em;
-        border-right: 2px solid $color-primary-painel;
+        color: white;
+        background: #434970;
+
     }
 
     .clicavel {

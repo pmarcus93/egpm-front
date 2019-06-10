@@ -1,11 +1,27 @@
 <template>
-    <div class="container-menu">
-        <router-link :to="'/painel/'+route">
-            <div class=" col-10 mx-auto pl-5 item-menu py-2 my-4">
-                <span class="icon p-2"><i :class="'fa fa-'+icone"></i> </span> <span
-                    class="text-nav"> {{titulo}}</span>
+    <div>
+        <div v-if="!action">
+            <div class="container-menu">
+                <router-link :to="'/painel/'+route">
+                    <div class=" col-10 mx-auto pl-5 item-menu py-2 my-4">
+                    <span class="icon p-2">
+                        <i :class="'fa fa-'+icone"></i>
+                    </span>
+                        <span class="text-nav"> {{titulo}}</span>
+                    </div>
+                </router-link>
             </div>
-        </router-link>
+        </div>
+        <div v-else>
+            <div class="container-menu">
+                <div v-on:click="actionpainel(action)" class="col-10 mx-auto pl-5 item-menu py-2 my-4">
+                    <span class="icon p-2">
+                        <i :class="'fa fa-'+icone"></i>
+                    </span>
+                    <span class="text-nav"> {{titulo}}</span>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -15,8 +31,14 @@
         props: [
             'titulo',
             'icone',
-            'route'
-        ]
+            'route',
+            'action'
+        ],
+        methods: {
+            actionpainel: function (acao) {
+                this.$parent.actionpainel(acao);
+            }
+        }
     }
 </script>
 
