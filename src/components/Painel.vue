@@ -1,27 +1,10 @@
 <template>
     <div class="container-fluid p-0">
-        <!--        <div class="row barra-topo">-->
-        <!--            <div class="col-md-3">-->
-        <!--                <div class="text-center">-->
-        <!--                    <router-link to="/">-->
-        <!--                        <img class="col-10 logo" src="../assets/logoegpm3.png" alt="Logo EGPM3">-->
-        <!--                    </router-link>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--            <div class="col-md-9  my-auto">-->
-        <!--                &lt;!&ndash;                <div class="d-inline "><i class="fa fa-arrow-left fa-2x"></i></div>&ndash;&gt;-->
-        <!--                <div class="d-inline float-right my-auto mr-4"><span class="nome-adm mx-4 px-4">{{usuario.st_nome}} </span>-->
-        <!--                    <router-link :to="'/painel/usuario/editar/'+usuario.id_usuario"> <i class="clicavel mr-2 fa fa-cog fa-2x"></i> </router-link>-->
-        <!--                    <i v-on:click="logout" class="clicavel mr-2 fa fa-sign-in-alt fa-2x"></i>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-
         <div class="row mx-0">
 
             <div class="col-md-3 menu p-0">
 
-                <div class="nome-adm p-2"><i class="fa fa-user mr-2 ml-5"></i>{{usuario.st_nome}} </div>
+                <div class="nome-adm p-2"><i class="fa fa-user mr-2 ml-5"></i>{{usuario.st_nome}}</div>
 
                 <ItemMenuPainel v-for="(item) in menu"
                                 :titulo="item.titulo"
@@ -68,12 +51,22 @@
             },
             logout: function () {
                 EgpmApi.logout(this.credenciais, result => {
-                    if (result.data.status) {
-                        this.$router.push({
-                            name: 'login',
-                        })
-                    }
+                    this.$router.push({
+                        name: 'login',
+                    })
                 })
+            },
+            actionpainel: function (acao) {
+
+                if (acao === 'usuario') {
+                    this.$router.push({
+                        path: '/painel/usuario/editar/' + localStorage.getItem("id_usuario"),
+                    })
+                }
+
+                if (acao === "sair") {
+                    this.logout();
+                }
             }
         },
         data() {
@@ -92,7 +85,7 @@
                     {
                         titulo: "Usuário",
                         icone: "cog",
-                        action: "action('usuario')"
+                        action: "usuario"
                     },
                     {
                         titulo: "Jogos",
@@ -144,8 +137,7 @@
                     {
                         titulo: "Sair",
                         icone: "sign-in-alt",
-                        route: "imagens",
-                        action: "action('sair')"
+                        action: "sair"
                     }
 
                 ]

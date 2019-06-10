@@ -120,7 +120,7 @@ export default {
         })
     },
     getUsuario: (credenciais, callback) => {
-        var url = urlbase + "Usuario/" + credenciais.id_usuario;
+        var url = urlbase + "Usuario/" + credenciais.id_usuario + "/?id_usuario=" + localStorage.getItem('id_usuario') + "&st_token=" + localStorage.getItem('st_token');
         axios.get(url, credenciais).then((result) => {
             if (callback) {
                 callback(result);
