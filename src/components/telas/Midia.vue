@@ -20,19 +20,9 @@
             <div class="row">
                 <div class="col-12 titulo-depoimentos mt-5 text-center">O QUE ELES ACHARAM DO #EGPM</div>
 
-                <Depoimento
-                        depoimento="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust ry's standard dummy text ever since the 1500s, whent was popularised in the 1960s with the release of Letr aset she"
-                        autor="@fulanobbeltrano">
-                </Depoimento>
-
-                <Depoimento
-                        depoimento="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust ry's standard dummy text ever since the 1500s, whent was popularised in the 1960s with the release of Letr aset she"
-                        autor="@fulanobbeltrano">
-                </Depoimento>
-
-                <Depoimento
-                        depoimento="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust ry's standard dummy text ever since the 1500s, whent was popularised in the 1960s with the release of Letr aset she"
-                        autor="@fulanobbeltrano">
+                <Depoimento v-for="(item, indice) in comentarios" v-if="indice<3"
+                        :depoimento="item.st_comentario"
+                        :autor="item.st_autor">
                 </Depoimento>
 
             </div>
@@ -44,10 +34,23 @@
 <script>
     import Secao from "../itens/Secao";
     import Depoimento from "../itens/Depoimento";
+    import ComentarioApi from "@/services/ComentarioApi";
 
     export default {
         name: 'Midia',
-        components: {Depoimento, Secao}
+        components: {Depoimento, Secao},
+
+        created() {
+            ComentarioApi.getAllComentarios(retorno => {
+                this.comentarios = retorno.data;
+            })
+        },
+
+        data() {
+            return {
+                comentarios: []
+            }
+        }
     }
 </script>
 
