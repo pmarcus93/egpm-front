@@ -6,8 +6,8 @@
             <div class="container-fluid conteudo">
                 <ItemErro
                         erro="Erro 404"
-                        subtitulo="A página procurada não foi encontrada!"
-                        descricao="Separamos para você alguns links que podem lhe ajudar!"
+                        subtitulo="A página procurada não foi encontrada. :("
+                        descricao="Separamos alguns links que podem te ajudar!"
                 ></ItemErro>
                 <Links></Links>
             </div>
