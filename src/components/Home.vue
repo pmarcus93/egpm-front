@@ -1,7 +1,6 @@
 <template>
     <div>
-        <!-- TODO: Botão de ticket fixo atrapalha a experiência no mobile. -->
-        <!--        <ButtonTicket></ButtonTicket>-->
+        <ButtonTicket></ButtonTicket>
         <Toasty></Toasty>
         <div class="animate site-contents">
             <Banner></Banner>
@@ -21,7 +20,6 @@
 
 <script>
 
-    import Navbar from "./itens/Navbar";
     import Banner from "./telas/Banner";
     import Sobre from "./telas/Sobre";
     import Midia from "./telas/Midia";
@@ -52,7 +50,6 @@
             Midia,
             Sobre,
             Banner,
-            Navbar
         }
     }
 </script>
