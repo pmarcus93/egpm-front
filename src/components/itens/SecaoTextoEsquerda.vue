@@ -90,7 +90,7 @@
 
         span::after {
             bottom: 0;
-            border-bottom: 1px solid $color-primary;
+            border-bottom: 1px solid $rainbow-green;
             content: "";
             height: 1px;
             left: 0;
