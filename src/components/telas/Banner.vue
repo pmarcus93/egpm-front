@@ -5,7 +5,7 @@
                 <h2 class="text-center"><span class="badge badge-pill badge-em-breve">Em breve!</span></h2>
                 <img class="logo-full img-fluid d-block mx-auto my-4" src="../../assets/full-logo.png"
                      alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
-                <div class="descricao"><p>O maior evento de videogames da cidade.<br>Feito por gamers,
+                <div class="descricao"><p>O maior evento de videogames da região.<br>Feito por gamers,
                     para gamers.</p></div>
             </section>
         </div>

@@ -143,6 +143,14 @@ export default {
             }
         })
     },
+    getSecao: (id, callback) => {
+        var url = urlbase + "Secao/" + id;
+        axios.get(url).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+    },
     getIconeSecao: (id_secao, callback) => {
         var url = urlbase + "Icone/" + id_secao + "/secao";
         axios.get(url).then((retorno) => {

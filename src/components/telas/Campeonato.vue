@@ -2,8 +2,7 @@
     <SecaoTextoDireita
             classimage="bgcampeonatos"
             titulo="JOGOS"
-            descricao="Mortal Kombat 11, Just Dance 2020, Pro Evolution
-            Soccer 2020, Street Fighter V e muitos outros. Confira!"
+            :descricao="secao.st_texto"
             rota="/campeonatos"
             textobotao="Lista de Campeonatos"
             colorborder="yellow"
@@ -13,10 +12,23 @@
 
 <script>
     import SecaoTextoDireita from "../itens/SecaoTextoDireita";
+    import EgpmApi from  "@/services/EgpmApi";
 
     export default {
         name: "Campeonato",
-        components: {SecaoTextoDireita}
+        components: {SecaoTextoDireita},
+        created() {
+            EgpmApi.getSecao(2, result => {
+                this.secao = result.data;
+            })
+        },
+        data() {
+            return {
+                secao: {
+                    st_texto : "Carregando..."
+                }
+            }
+        }
     }
 </script>
 
