@@ -8,25 +8,24 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .ticket {
-        color: #fff;
-        background: #3255A5;
-        border: none;
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        transition: all linear .2s;
-        position: fixed;
-        bottom: 20px;
-        right: 30px;
-        z-index: 5;
+        @include md {
+            color: #fff;
+            background: #3255A5;
+            border: none;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            transition: all linear .2s;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 5;
+            :hover {
+                transform: scale(1.1);
+                color: #fff;
+            }
+        }
     }
-
-    .ticket:hover {
-        transform: scale(1.1);
-        color: #fff;
-    }
-
-
 </style>
