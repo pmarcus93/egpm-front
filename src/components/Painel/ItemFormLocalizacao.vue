@@ -63,7 +63,7 @@
                         PNotify.alert(opts);
 
                         LocalizacaoApi.getOne(1, result => {
-                            this.social = result.data;
+                            this.localizacao = result.data;
                         });
 
                     } else {

@@ -3,6 +3,7 @@
 </template>
 
 <script>
+    import BotaoApi from "@/services/BotaoApi";
     export default {
         name: "ButtonTicket"
     }
@@ -25,7 +26,6 @@
             width: 70px;
             z-index: 5;
             :hover {
-                transform: scale(1.1);
                 color: #fff;
             }
         }

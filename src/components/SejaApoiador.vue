@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <div class="container apoie py-5 mb-5">
+            <div class="container apoie py-5 mb-md-5 mb-sm-0">
                 <div class="row">
 
                     <div class="col-md-6 col-sm-12 my-auto">
