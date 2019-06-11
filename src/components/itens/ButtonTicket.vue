@@ -10,7 +10,9 @@
 
 <style scoped lang="scss">
     .ticket {
+        display: none;
         @include md {
+            display: block;
             color: #fff;
             background: #3255A5;
             border: none;
