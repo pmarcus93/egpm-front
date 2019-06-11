@@ -6,15 +6,14 @@
                     <h1 class="mb-4 titulo-secao">#EGMP3</h1>
                     <h4>LOCAL</h4>
                     <p>
-                        FAPAM - Faculdade de Pará de Minas <br>
-                        R. Ricardo Marinho, 110 - São Geraldo, Pará de Minas - MG <br>
+                        {{localizacao.st_local}} <br>
+                        {{localizacao.st_endereco}} <br>
                     </p>
 
                     <h4>DATAS & HORÁRIOS</h4>
                     <p>
-                        Datas em breve! <br>
-                        Sábado - 10h às 20h <br>
-                        Domingo - 10h às 20h <br>
+                        <span v-if="diahorario.data"
+                              v-for="(item) in diahorario.data">{{item.st_diahorario}} <br></span>
                     </p>
 
                 </div>
@@ -28,8 +27,36 @@
 </template>
 
 <script>
+
+    import LocalizacaoApi from "@/services/LocalizacaoApi";
+    import DiaHorarioApi from "@/services/DiaHorarioApi";
+
     export default {
         name: "Localizacao",
+
+        created() {
+            LocalizacaoApi.getOne(1, result => {
+                this.localizacao = result.data;
+            });
+
+            DiaHorarioApi.getAll(result => {
+                this.diahorario.data = result.data;
+            })
+        },
+        data() {
+            return {
+                localizacao: {
+                    id_localizacao: "",
+                    st_cep: "",
+                    st_endereco: "",
+                    st_local: "",
+                    st_mapa: "",
+                },
+                diahorario: {
+                    data: null
+                }
+            }
+        }
     }
 </script>
 

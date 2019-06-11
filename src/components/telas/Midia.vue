@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-12">
                     <div class="d-flex justify-content-center">
-                        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/wW9VDhyh2C0"
+                        <iframe class="video" width="560" height="315" :src="secao.st_link"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </div>
                 </div>
@@ -36,6 +36,7 @@
     import Secao from "../itens/Secao";
     import Depoimento from "../itens/Depoimento";
     import ComentarioApi from "@/services/ComentarioApi";
+    import EgpmApi from "@/services/EgpmApi";
 
     export default {
         name: 'Midia',
@@ -44,12 +45,19 @@
         created() {
             ComentarioApi.getAllComentarios(retorno => {
                 this.comentarios = retorno.data;
+            });
+
+            EgpmApi.getSecao(5, result => {
+                this.secao = result.data;
             })
         },
 
         data() {
             return {
-                comentarios: []
+                comentarios: [],
+                secao: {
+                    st_link: ""
+                }
             }
         }
     }

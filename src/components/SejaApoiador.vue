@@ -20,34 +20,26 @@
                         <div class="col-12 col-sm-10 col-lg-8 col-xl-6 mx-auto">
 
                             <form v-on:submit.prevent="submit">
-                                <vue-recaptcha
-                                        ref="recaptcha"
-                                        @verify="onCaptchaVerified"
-                                        @expired="onCaptchaExpired"
-                                        size="invisible"
-                                        sitekey="6Lf73qcUAAAAAJjQSVZEFcpseQNTGXCIhkNIEboT">
-                                </vue-recaptcha>
-
                                 <div class="form-group">
                                     <label for="st_nome">Nome:</label>
-                                    <input id="st_nome" v-model="apoio.st_nome" required type="text"
+                                    <input id="st_nome" maxlength="25" v-model="apoio.st_nome" required type="text"
                                            class="form-control">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="st_empresa">Empresa:</label>
-                                    <input id="st_empresa" v-model="apoio.st_empresa" required type="text"
+                                    <input id="st_empresa" maxlength="25" v-model="apoio.st_empresa" required type="text"
                                            class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="st_email">Email:</label>
-                                    <input id="st_email" v-model="apoio.st_email" required type="email"
+                                    <input id="st_email" maxlength="25" v-model="apoio.st_email" required type="email"
                                            class="form-control">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="st_telefone">Telefone:</label>
-                                    <input id="st_telefone" v-model="apoio.st_telefone" required type="tel"
+                                    <input id="st_telefone" maxlength="11" v-model="apoio.st_telefone" required type="tel"
                                            class="form-control">
                                 </div>
 
@@ -64,6 +56,13 @@
 
             <BlocoRodape></BlocoRodape>
         </div>
+        <vue-recaptcha
+                ref="recaptcha"
+                @verify="onCaptchaVerified"
+                @expired="onCaptchaExpired"
+                size="invisible"
+                sitekey="6Lf73qcUAAAAAJjQSVZEFcpseQNTGXCIhkNIEboT">
+        </vue-recaptcha>
     </div>
 </template>
 

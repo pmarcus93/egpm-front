@@ -56,7 +56,7 @@
 
 
     .animateslice {
-        display: flex;
+        display: flex !important;
         position: relative;
         animation: animateslice 0.2s;
         z-index: -1;
