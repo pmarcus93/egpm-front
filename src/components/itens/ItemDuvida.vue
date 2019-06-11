@@ -40,9 +40,8 @@
 <style scoped lang="scss">
 
     .card-header {
-        background-color: $rainbow-green;
-        font-family: $font-archive;
-
+        background-color: $rainbow-blue;
+        
         button {
             color: $light-text;
         }
