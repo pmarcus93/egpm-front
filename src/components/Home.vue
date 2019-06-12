@@ -2,7 +2,7 @@
     <div>
         <ButtonTicket></ButtonTicket>
         <Toasty></Toasty>
-        <div class="animate site-contents">
+        <div class="site-contents">
             <Banner></Banner>
             <Sobre></Sobre>
             <Campeonato></Campeonato>

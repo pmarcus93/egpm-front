@@ -7,7 +7,7 @@
         </FundoFixo>
 
         <div class="col-xl-4 col-md-8 col-sm-12 mx-auto vh-100 align-items-center d-flex">
-            <div class="box-login animate">
+            <div class="box-login">
                 <form v-on:submit.prevent="submit">
                     <div>
                         <img class="col-12" src="../assets/images/logoegpm3.png"

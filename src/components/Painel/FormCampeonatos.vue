@@ -1,5 +1,5 @@
 <template>
-    <div class="animate row">
+    <div class="row">
         <div class="modal fade" id="modalimg" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">

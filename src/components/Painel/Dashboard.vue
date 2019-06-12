@@ -1,5 +1,5 @@
 <template>
-    <div class="animate">
+    <div>
         Dashboard
     </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <div class="animate row">
+    <div class="row">
         <BarraTitulo
                 titulo="DÚVIDAS"
                 icon="check"

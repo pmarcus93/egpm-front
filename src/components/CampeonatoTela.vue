@@ -3,7 +3,7 @@
         <FundoFixo
         sobreimagem="rgba(0,0,0,0)"
         ></FundoFixo>
-        <div class="animate">
+        <div>
             <div class="container conteudo">
                 <div class="row">
                     <div class="col-12">

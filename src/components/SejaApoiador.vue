@@ -3,7 +3,7 @@
         <FundoFixo
                 sobreimagem="rgba(0,0,0,0)"></FundoFixo>
 
-        <div class="animate">
+        <div>
             <div class="container">
                 <div class="col-12">
                     <BannerMenor

@@ -1,8 +1,8 @@
 <template>
-    <div class="pagina-duvidas animate">
+    <div class="pagina-duvidas">
         <FundoFixo
         sobreimagem="rgba(0,0,0,0)"></FundoFixo>
-        <div class="animate">
+        <div>
             <div class="container-fluid conteudo">
                 <ItemErro
                         erro="Erro 404"
