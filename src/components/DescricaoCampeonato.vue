@@ -1,5 +1,5 @@
 <template>
-    <div class="animate">
+    <div>
 
         <div v-if="!campeonato.id_jogo && dadoscarregados">
             <Erro404Campeonato
