@@ -1,12 +1,5 @@
 <template>
     <div id="app">
-        <meta name="viewport" content="width=device-width, user-scalable=no">
-        <meta name="theme-color" content="#000000">
-        <meta property="og:title" content="3º Encontro Gamer de Pará de Minas">
-        <meta property="og:description" content="Confira as atividades do maior evento de videogames da região e garanta já seu ingresso! #EGPM3">
-        <meta property="og:image" content="http://egpm.fapam.edu.br/img/open-graph-default.jpg">
-        <meta property="og:url" content="http://egpm.fapam.edu.br">
-        <link rel="preload" href="/src/assets/fonts/Archive-Regular.ttf" as="font" crossorigin="anonymous" />
         <Navbar></Navbar>
         <div class="site-contents">
             <router-view/>
