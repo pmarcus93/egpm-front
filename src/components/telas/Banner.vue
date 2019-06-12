@@ -21,7 +21,7 @@
 <style lang="scss" scoped>
 
     .background-banner {
-        background: url("../../assets/images/banner-background.jpg") center/cover;
+        background: $color-secondary-variant url("../../assets/images/banner-background.jpg") center/cover;
     }
 
     .badge-em-breve {
