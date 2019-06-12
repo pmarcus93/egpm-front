@@ -20,11 +20,6 @@
 
 <style scoped lang="scss">
 
-    @font-face {
-        font-family: "Archive";
-        src: url("../../assets/fonts/Archive-Regular.ttf");
-    }
-
     .secao-left-body {
         color: $light-text;
     }

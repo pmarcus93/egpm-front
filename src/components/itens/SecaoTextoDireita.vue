@@ -19,12 +19,7 @@
 </script>
 
 <style scoped lang="scss">
-
-    @font-face {
-        font-family: "Archive";
-        src: url("../../assets/fonts/Archive-Regular.ttf");
-    }
-
+    
     .box-info {
         text-align: center;
         z-index: 2;
