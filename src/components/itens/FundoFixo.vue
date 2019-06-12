@@ -43,7 +43,7 @@
         position: fixed;
         width: 100%;
         height: 100%;
-        background: url('../../assets/background-04.jpg') center/cover;
+        background: url('../../assets/images/background-04.jpg') center/cover;
         z-index: -2;
     }
 

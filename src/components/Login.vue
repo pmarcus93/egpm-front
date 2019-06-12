@@ -10,7 +10,7 @@
             <div class="box-login animate">
                 <form v-on:submit.prevent="submit">
                     <div>
-                        <img class="col-12" src="../assets/logoegpm3.png"
+                        <img class="col-12" src="../assets/images/logoegpm3.png"
                              alt="Logo EGPM (Encontro Gamer Pará de Minas) 3ª Edição">
                     </div>
                     <div class="form-group mt-5">
