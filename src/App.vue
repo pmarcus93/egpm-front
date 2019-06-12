@@ -6,6 +6,7 @@
         <meta property="og:description" content="Confira as atividades do maior evento de videogames da região e garanta já seu ingresso! #EGPM3">
         <meta property="og:image" content="http://egpm.fapam.edu.br/img/open-graph-default.jpg">
         <meta property="og:url" content="http://egpm.fapam.edu.br">
+        <link rel="preload" href="/src/assets/fonts/Archive-Regular.ttf" as="font" crossorigin="anonymous" />
         <Navbar></Navbar>
         <div class="site-contents">
             <router-view/>
@@ -26,12 +27,6 @@
 <style lang="scss">
 
     @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
-    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-    @font-face {
-        font-family: $font-archive;
-        src: url("/assets/fonts/Archive-Regular.ttf");
-    }
 
     h1 {
         font-family: $font-archive;
@@ -40,7 +35,6 @@
     .site-contents {
         margin-top: 62px
     }
-
 
     .animate {
         display: block;
@@ -58,7 +52,6 @@
             opacity: 1
         }
     }
-
 
     .animateslice {
         display: flex !important;
