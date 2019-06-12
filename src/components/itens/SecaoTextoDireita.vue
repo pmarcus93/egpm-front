@@ -31,14 +31,14 @@
     }
 
     .bgcampeonatos {
-        background: url('../../assets/background-04.jpg') center/cover;
+        background: url('../../assets/images/background-04.jpg') center/cover;
         ::after {
             //Antigo código de parallax.
         }
     }
 
     .bgfreeplay {
-        background: url('../../assets/background-03.jpg') center/cover;
+        background: url('../../assets/images/background-03.jpg') center/cover;
         ::after {
             //Antigo código de parallax.
         }

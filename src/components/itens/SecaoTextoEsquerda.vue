@@ -60,7 +60,7 @@
     }
 */
     .bgpalestra {
-        background: url('../../assets/background-01.jpg') center/cover;
+        background: url('../../assets/images/background-01.jpg') center/cover;
         ::after {
             //Antigo código de parallax.
         }
