@@ -40,25 +40,8 @@
         justify-content: flex-start;
     }
 
-    /*
-    .parallax::after {
-        content: " ";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        transform: translateZ(-1px) scale(2);
-        background-size: 100%;
-        z-index: -1;
-    }
-*/
     .bgpalestra {
-        background: url('../../assets/images/background-01.jpg') center/cover;
-        ::after {
-            //Antigo código de parallax.
-        }
+        background: $color-secondary url('../../assets/images/background-01.jpg') center/cover;
     }
 
     .box-info {
