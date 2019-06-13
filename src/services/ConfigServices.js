@@ -50,4 +50,19 @@ export default {
         })
     },
 
+    upoloadFormData(rota, data, callback) {
+
+        var cabecalho = {
+            'Authorization': header.Authorization,
+            'Content-Type': 'multipart/form-data'
+        };
+
+        axios.post(urlbase + rota, data, {headers: cabecalho}).then((retorno) => {
+            if (callback) {
+                callback(retorno);
+            }
+        })
+
+    }
+
 }

@@ -58,14 +58,14 @@
 
 <script>
     import BarraTitulo from "./BarraTitulo";
-    import EgpmApi from "@/services/EgpmApi";
+    import ImagemApi from "@/services/ImagemApi";
 
     export default {
         name: "FormImagens",
         components: {BarraTitulo},
         created() {
             if (this.$route.params.id_imagem) {
-                EgpmApi.getImagem(this.$route.params.id_imagem, result => {
+                ImagemApi.get(this.$route.params.id_imagem, result => {
                     this.imagem = result.data;
                 })
             }
@@ -81,7 +81,7 @@
 
                 this.loadingbutton = true;
 
-                EgpmApi.uploadImagem(formData, result => {
+                ImagemApi.upload(formData, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';

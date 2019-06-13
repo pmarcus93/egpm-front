@@ -38,7 +38,7 @@
 <script>
     import BarraTitulo from "./BarraTitulo";
     import ItemTrImagem from "./ItemTrImagem";
-    import EgpmApi from "@/services/EgpmApi";
+    import ImagemApi from "@/services/ImagemApi";
 
     export default {
         name: "ViewImagem",
@@ -49,7 +49,7 @@
             }
         },
         created() {
-            EgpmApi.getAllImagens(resposta => {
+            ImagemApi.getAll(resposta => {
                 this.imagens = resposta.data;
             })
         }

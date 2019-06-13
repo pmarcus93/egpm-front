@@ -13,41 +13,6 @@ export default {
         return object;
     },
 
-    getAllImagens: (callback) => {
-        var url = urlbase + "Imagem/?id_usuario=" + localStorage.getItem('id_usuario') + "&st_token=" + localStorage.getItem('st_token');
-        axios.get(url).then((result) => {
-            if (callback) {
-                callback(result);
-            }
-        })
-    },
-
-    getImagem: (id, callback) => {
-        var url = urlbase + "Imagem/" + id + "?id_usuario=" + localStorage.getItem('id_usuario') + "&st_token=" + localStorage.getItem('st_token');
-        axios.get(url).then((result) => {
-            if (callback) {
-                callback(result);
-            }
-        })
-    },
-
-    uploadImagem: (formData, callback) => {
-        var url = urlbase + "Imagem/";
-        axios.post(url,
-            formData,
-            {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            }
-        ).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-
-    },
-
     getAllCampeonatos: (callback) => {
         var urlcampeonatos = urlbase + "Jogo/";
         axios.get(urlcampeonatos).then((campeonatos) => {
@@ -102,15 +67,6 @@ export default {
         })
     },
 
-    deleteImagem: (id, token, callback) => {
-        var url = urlbase + "Imagem/" + id;
-        axios.delete(url, token).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-
     logout: (credenciais, callback) => {
         var url = urlbase + "Login/" + credenciais.id_usuario + "/logout";
         axios.post(url, credenciais).then((result) => {
@@ -119,22 +75,7 @@ export default {
             }
         })
     },
-    getUsuario: (credenciais, callback) => {
-        var url = urlbase + "Usuario/" + credenciais.id_usuario + "/?id_usuario=" + localStorage.getItem('id_usuario') + "&st_token=" + localStorage.getItem('st_token');
-        axios.get(url, credenciais).then((result) => {
-            if (callback) {
-                callback(result);
-            }
-        })
-    },
-    postUsuario: (usuario, callback) => {
-        var url = urlbase + "Usuario/";
-        axios.post(url, usuario).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
+
     getAllSecao: (callback) => {
         var url = urlbase + "Secao/";
         axios.get(url).then((retorno) => {

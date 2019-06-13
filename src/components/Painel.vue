@@ -24,7 +24,8 @@
 </template>
 
 <script>
-    import EgpmApi from "@/services/EgpmApi.js";
+    import EgpmApi from "@/services/EgpmApi";
+    import UsuarioApi from "@/services/UsuarioApi";
     import ItemMenuPainel from "./Painel/ItemMenuPainel";
 
     export default {
@@ -43,7 +44,7 @@
                             name: 'login',
                         })
                     } else {
-                        EgpmApi.getUsuario(this.credenciais, result => {
+                        UsuarioApi.get(this.credenciais.id_usuario, result => {
                             this.usuario = result.data;
                         })
                     }

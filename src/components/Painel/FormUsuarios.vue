@@ -51,6 +51,7 @@
 
 <script>
     import EgpmApi from "@/services/EgpmApi";
+    import UsuarioApi from "@/services/UsuarioApi";
     import BarraTitulo from "./BarraTitulo";
 
     export default {
@@ -59,7 +60,7 @@
         created() {
             var usuariorota = {id_usuario: this.$route.params.id_usuario};
             if (this.$route.params.id_usuario) {
-                EgpmApi.getUsuario(EgpmApi.pushAutenticationobject(usuariorota), resposta => {
+                UsuarioApi.get(usuariorota.id_usuario, resposta => {
                     var opts = {};
                     if (!resposta.data.id_usuario && !resposta.data.status) {
                         opts.title = 'Erro';
@@ -72,6 +73,7 @@
                 })
             }
         },
+
         data: function () {
             return {
                 usuario: {
@@ -83,6 +85,7 @@
                 }
             }
         },
+
         methods: {
             save: function () {
 
@@ -96,7 +99,7 @@
                     return;
                 }
 
-                EgpmApi.postUsuario(EgpmApi.pushAutenticationobject(this.usuario), result => {
+                UsuarioApi.post(this.usuario, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
