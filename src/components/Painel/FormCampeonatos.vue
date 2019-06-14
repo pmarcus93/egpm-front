@@ -105,6 +105,15 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="st_plataforma">Plataformas:</label>
+                            <input id="st_plataforma"
+                                   v-model="campeonato.st_plataforma"
+                                   name="st_plataforma"
+                                   type="text"
+                                   class="form-control">
+                        </div>
+
+                        <div class="form-group">
                             <label for="st_imagem">Imagem (url):</label>
                             <div class="input-group">
                                 <input id="st_imagem"
@@ -184,9 +193,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="st_plataforma">Plataforma:</label>
-                            <input id="st_plataforma"
-                                   v-model="campeonato.st_plataforma"
+                            <label for="st_plataformacampeonato">Plataforma:</label>
+                            <input id="st_plataformacampeonato"
+                                   v-model="campeonato.st_plataformacampeonato"
                                    name="st_plataforma"
                                    type="text"
                                    class="form-control">
@@ -292,6 +301,7 @@
                     st_video: null,
                     bl_campeonato: null,
                     st_classificacaoindicativa: null,
+                    st_plataformacampeonato: null,
                     datahorario: [{
                         id_jogo: "",
                         st_diasemana: "",
