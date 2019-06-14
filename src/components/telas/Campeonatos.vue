@@ -15,7 +15,6 @@
 
 <script>
     import ItemCampeonato from "../itens/ItemCampeonato";
-    import EgpmApi from "@/services/EgpmApi.js";
     import JogoApi from "@/services/JogoApi";
 
     export default {

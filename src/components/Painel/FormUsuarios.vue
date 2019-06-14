@@ -50,7 +50,6 @@
 </template>
 
 <script>
-    import EgpmApi from "@/services/EgpmApi";
     import UsuarioApi from "@/services/UsuarioApi";
     import BarraTitulo from "./BarraTitulo";
 

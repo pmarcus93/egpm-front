@@ -12,13 +12,13 @@
 
 <script>
     import SecaoTextoDireita from "../itens/SecaoTextoDireita";
-    import EgpmApi from  "@/services/EgpmApi";
+    import SecaoApi from  "@/services/SecaoApi";
 
     export default {
         name: "Campeonato",
         components: {SecaoTextoDireita},
         created() {
-            EgpmApi.getSecao(2, result => {
+            SecaoApi.getSecao(2, result => {
                 this.secao = result.data;
             })
         },

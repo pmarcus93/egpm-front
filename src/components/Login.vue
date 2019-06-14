@@ -38,7 +38,6 @@
 
 <script>
     import FundoFixo from "./itens/FundoFixo";
-    import EgpmApi from "@/services/EgpmApi";
     import LoginApi from "@/services/LoginApi";
     import VueRecaptcha from 'vue-recaptcha';
 

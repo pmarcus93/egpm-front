@@ -23,8 +23,8 @@
 </template>
 
 <script>
-    import EgpmApi from "../../services/EgpmApi";
-    import PatrocinadorApi from "../../services/PatrocinadorApi";
+
+    import PatrocinadorApi from "@/services/PatrocinadorApi";
 
     export default {
         name: "ItemTrPatrocinador",

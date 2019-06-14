@@ -10,13 +10,13 @@
 
 <script>
     import SecaoTextoEsquerda from "../itens/SecaoTextoEsquerda";
-    import EgpmApi from "@/services/EgpmApi";
+    import SecaoApi from "@/services/SecaoApi";
 
     export default {
         name: "Palestras",
         components: {SecaoTextoEsquerda},
         created() {
-            EgpmApi.getSecao(3, result => {
+            SecaoApi.getSecao(3, result => {
                 this.secao = result.data;
             })
         },
