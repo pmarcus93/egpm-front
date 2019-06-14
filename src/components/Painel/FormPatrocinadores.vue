@@ -87,7 +87,7 @@
         },
         methods: {
             save: function () {
-                PatrocinadorApi.postPatrocinador(PatrocinadorApi.pushAutenticationobject(this.patrocinador), result => {
+                PatrocinadorApi.postPatrocinador(this.patrocinador, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
