@@ -9,16 +9,6 @@ function setTokenHeader() {
 
 export default {
 
-
-    pushAutenticationobject(object) {
-        if (object === null) {
-            object = {};
-        }
-        object.st_token = localStorage.getItem('st_token');
-        object.id_usuario = localStorage.getItem('id_usuario');
-        return object;
-    },
-
     getUrl() {
         return urlbase;
     },
