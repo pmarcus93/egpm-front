@@ -38,7 +38,8 @@
 
 <script>
     import FundoFixo from "./itens/FundoFixo";
-    import EgpmApi from "@/services/EgpmApi.js";
+    import EgpmApi from "@/services/EgpmApi";
+    import LoginApi from "@/services/LoginApi";
     import VueRecaptcha from 'vue-recaptcha';
 
     export default {
@@ -63,7 +64,7 @@
         methods: {
             login: function (recaptchaToken) {
                 this.usuario.recaptchatoken = recaptchaToken;
-                EgpmApi.postLogin(this.usuario, result => {
+                LoginApi.postLogin(this.usuario, result => {
 
                     var opts = {};
                     if (!result.data.status) {
@@ -89,7 +90,7 @@
 
             verificaLogin: function () {
                 var self = this;
-                EgpmApi.verificaLogin(self.credenciais, result => {
+                LoginApi.verificaLogin(self.credenciais, result => {
                     self.usuario.bl_statuslogin = result.data.status;
 
                     if (self.usuario.bl_statuslogin) {

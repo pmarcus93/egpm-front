@@ -24,9 +24,9 @@
 </template>
 
 <script>
-    import EgpmApi from "@/services/EgpmApi";
     import UsuarioApi from "@/services/UsuarioApi";
     import ItemMenuPainel from "./Painel/ItemMenuPainel";
+    import LoginApi from "../services/LoginApi";
 
     export default {
         name: "Painel",
@@ -38,7 +38,7 @@
         },
         methods: {
             verificaLogin: function () {
-                EgpmApi.verificaLogin(this.credenciais, result => {
+                LoginApi.verificaLogin(this.credenciais, result => {
                     if (!result.data.status) {
                         this.$router.push({
                             name: 'login',
@@ -51,7 +51,7 @@
                 })
             },
             logout: function () {
-                EgpmApi.logout(this.credenciais, result => {
+                LoginApi.logout(this.credenciais, result => {
                     this.$router.push({
                         name: 'login',
                     })

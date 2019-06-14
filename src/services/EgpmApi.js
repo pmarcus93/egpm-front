@@ -13,33 +13,6 @@ export default {
         return object;
     },
 
-    postLogin: (usuario, callback) => {
-        var urlcampeonato = urlbase + "Login/";
-        axios.post(urlcampeonato, usuario).then((campeonato) => {
-            if (callback) {
-                callback(campeonato);
-            }
-        })
-    },
-
-    verificaLogin: (credenciais, callback) => {
-        var urlcampeonato = urlbase + "Login/" + credenciais.id_usuario + "/verificalogin";
-        axios.post(urlcampeonato, credenciais).then((result) => {
-            if (callback) {
-                callback(result);
-            }
-        })
-    },
-
-    logout: (credenciais, callback) => {
-        var url = urlbase + "Login/" + credenciais.id_usuario + "/logout";
-        axios.post(url, credenciais).then((result) => {
-            if (callback) {
-                callback(result);
-            }
-        })
-    },
-
     getAllSecao: (callback) => {
         var url = urlbase + "Secao/";
         axios.get(url).then((retorno) => {
