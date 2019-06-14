@@ -55,7 +55,7 @@
         methods: {
 
             save: function () {
-                SocialApi.post(SocialApi.pushAutenticationobject(this.social), result => {
+                SocialApi.post(this.social, result => {
 
                     var opts = {};
                     if (result.data.status) {
