@@ -53,7 +53,7 @@
         },
         methods: {
             save: function () {
-                LocalizacaoApi.post(LocalizacaoApi.pushAutenticationobject(this.localizacao), result => {
+                LocalizacaoApi.post(this.localizacao, result => {
 
                     var opts = {};
                     if (result.data.status) {

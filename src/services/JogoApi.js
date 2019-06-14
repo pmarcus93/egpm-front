@@ -1,5 +1,3 @@
-import axios from "axios";
-
 const urljogo = 'Jogo/';
 
 import ConfigServices from "@/services/ConfigServices";
