@@ -61,7 +61,7 @@
         methods: {
 
             save: function () {
-                BotaoApi.post( BotaoApi.pushAutenticationobject(this.botao), result => {
+                BotaoApi.post(this.botao, result => {
 
                     var opts = {};
                     if (result.data.status) {

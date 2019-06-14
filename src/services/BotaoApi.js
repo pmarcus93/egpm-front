@@ -1,31 +1,15 @@
-import axios from 'axios';
+const urlbotao = 'Botao/';
 
-const urlbase = 'http://egpmdeveloper.lucasjunior.com.br/';
+import ConfigServices from "@/services/ConfigServices";
 
 export default {
-    pushAutenticationobject: (object) => {
-        if (object === null) {
-            object = {};
-        }
-        object.st_token = localStorage.getItem('st_token');
-        object.id_usuario = localStorage.getItem('id_usuario');
-        return object;
-    },
 
     getOne: (id, callback) => {
-        var url = urlbase + "Botao/" + id;
-        axios.get(url).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
+        var url = urlbotao + id;
+        ConfigServices.get(url, callback);
     },
-    post: (patrocinador, callback) => {
-        var url = urlbase + "Botao/";
-        axios.post(url, patrocinador).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    }
+
+    post: (botao, callback) => {
+        ConfigServices.post(urlbotao, botao, callback);
+    },
 }

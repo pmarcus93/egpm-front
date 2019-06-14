@@ -12,7 +12,7 @@
             <form>
                 <div class="row">
                     <div class="col-6">
-                        <h4>Dados do  Comentário:</h4>
+                        <h4>Dados do Comentário:</h4>
 
                         <div class="form-group">
                             <label for="st_autor">Nome do autor:</label>
@@ -21,7 +21,8 @@
 
                         <div class="form-group">
                             <label for="st_comentario">Comentário:</label>
-                            <textarea id="st_comentario" v-model="comentario.st_comentario" class="form-control"></textarea>
+                            <textarea id="st_comentario" v-model="comentario.st_comentario"
+                                      class="form-control"></textarea>
                         </div>
 
                         <div class="form-group">
@@ -64,7 +65,7 @@
         },
         methods: {
             save: function () {
-                ComentarioApi.postComentario(ComentarioApi.pushAutenticationobject(this.comentario), result => {
+                ComentarioApi.postComentario(this.comentario, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
