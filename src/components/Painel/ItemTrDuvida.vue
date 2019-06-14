@@ -27,7 +27,7 @@
         ],
         methods: {
             remover: function (id) {
-                DuvidaApi.deleteDuvida(id, DuvidaApi.pushAutenticationobject(null), result => {
+                DuvidaApi.deleteDuvida(id, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
