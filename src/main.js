@@ -1,14 +1,21 @@
-import Vue from 'vue'
-import App from './App.vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import App from './App.vue';
+import VueRouter from 'vue-router';
 import routes from './routes';
+import jQuery from 'jquery';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'pnotify/dist/es/PNotify';
+import 'pnotify/dist/es/PNotifyButtons';
+import CKEditor from '@ckeditor/ckeditor5-vue';
 
-import jQuery from 'jquery'
-
+global.PNotify = require('pnotify/dist/umd/PNotify');
+global.PNotify.defaults.delay = 3000;
+global.PNotify.defaults.styling = 'bootstrap4';
 global.jQuery = jQuery;
 global.$ = jQuery;
 
 Vue.use(VueRouter);
+Vue.use(CKEditor);
 
 const router = new VueRouter({
     mode: 'history',
@@ -17,19 +24,6 @@ const router = new VueRouter({
         return {x: 0, y: 0};
     }
 });
-
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap'
-import 'pnotify/dist/es/PNotify';
-import 'pnotify/dist/es/PNotifyButtons';
-
-import CKEditor from '@ckeditor/ckeditor5-vue';
-Vue.use( CKEditor );
-
-global.PNotify = require('pnotify/dist/umd/PNotify');
-global.PNotify.defaults.delay = 3000;
-global.PNotify.defaults.icons = 'fontawesome4';
-global.PNotify.defaults.styling = 'bootstrap4';
 
 Vue.config.productionTip = false;
 
