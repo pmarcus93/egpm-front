@@ -63,7 +63,7 @@
     import BannerJogo from "./itens/BannerJogo";
     import ItemErro from "./itens/ItemErro";
     import Campeonatos from "./telas/Campeonatos";
-    import EgpmApi from "@/services/EgpmApi.js";
+    import JogoApi from "@/services/JogoApi";
     import BlocoRodape from "./itens/BlocoRodape";
     import Erro404 from "./Erro404";
     import Erro404Campeonato from "./Erro404Campeonato";
@@ -85,7 +85,7 @@
             }
         },
         created() {
-            EgpmApi.getCampeonato(this.$route.params.jogo, campeonato => {
+            JogoApi.getOne(this.$route.params.jogo, campeonato => {
                 this.campeonato = campeonato.data;
                 this.dadoscarregados = true;
             })

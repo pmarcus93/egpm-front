@@ -16,12 +16,13 @@
 <script>
     import ItemCampeonato from "../itens/ItemCampeonato";
     import EgpmApi from "@/services/EgpmApi.js";
+    import JogoApi from "@/services/JogoApi";
 
     export default {
         name: "Campeonatos",
         components: {ItemCampeonato},
         created() {
-            EgpmApi.getAllCampeonatos(campeonatos => {
+            JogoApi.getAll(campeonatos => {
                 this.campeonatos = campeonatos.data;
             })
         },

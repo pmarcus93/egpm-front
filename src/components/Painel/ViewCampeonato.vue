@@ -40,7 +40,7 @@
 
 <script>
     import BarraTitulo from "./BarraTitulo";
-    import EgpmApi from "@/services/EgpmApi";
+    import JogoApi from "@/services/JogoApi";
     import ItemTrCampeonato from "./ItemTrCampeonato";
 
     export default {
@@ -57,7 +57,7 @@
         },
         created() {
             var self = this;
-            EgpmApi.getAllCampeonatos(campeonatos => {
+            JogoApi.getAll(campeonatos => {
                 self.campeonatos = campeonatos.data;
                 this.limitaTamanhoDescricao();
             })
