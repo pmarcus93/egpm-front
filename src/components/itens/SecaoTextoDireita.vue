@@ -26,17 +26,11 @@
     }
 
     .bgcampeonatos {
-        background: url('../../assets/images/background-04.jpg') center/cover;
-        ::after {
-            //Antigo código de parallax.
-        }
+        background: $color-secondary-variant url('../../assets/images/background-04.jpg') center/cover;
     }
 
     .bgfreeplay {
-        background: url('../../assets/images/background-03.jpg') center/cover;
-        ::after {
-            //Antigo código de parallax.
-        }
+        background: $color-secondary-variant url('../../assets/images/background-03.jpg') center/cover;
     }
 
     .descricao {
@@ -50,20 +44,7 @@
         }
 
     }
-/*
-    .parallax::after {
-        content: " ";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
 
-        transform: translateZ(-1px) scale(2);
-        background-size: 100%;
-        z-index: -1;
-    }
-*/
     .secao-right-body {
         color: whitesmoke;
     }
