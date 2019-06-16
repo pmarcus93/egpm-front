@@ -48,13 +48,13 @@
                     <div class="col-6">
                         <h4>Dados básicos:</h4>
                         <div class="form-group">
-                            <label for="st_jogo">Nome do jogo:</label>
+                            <label for="st_nome">Nome do jogo:</label>
                             <input required
                                    v-model="campeonato.st_nome"
-                                   name="st_jogo"
+                                   name="st_nome"
                                    type="text"
                                    class="form-control"
-                                   id="st_jogo">
+                                   id="st_nome">
                         </div>
 
                         <div class="form-group">
@@ -293,11 +293,7 @@
                     st_video: null,
                     bl_campeonato: false,
                     st_classificacaoindicativa: null,
-                    datahorario: [{
-                        id_jogo: "",
-                        st_diasemana: "",
-                        st_hora: ""
-                    }]
+                    datahorario: []
                 },
                 editor: ClassicEditor,
                 editorConfig: {},
@@ -343,6 +339,10 @@
                         opts.text = result.data.erro.message;
                         opts.type = 'error';
                         PNotify.alert(opts);
+
+                        if (result.data.erro.data.classe) {
+                            $("#" + result.data.erro.data.classe).focus();
+                        }
 
                     }
                 })
