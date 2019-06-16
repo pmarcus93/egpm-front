@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <section class="py-5 text-center">
                 <h2 class="text-center"><span class="badge badge-pill badge-em-breve">Em breve!</span></h2>
-                <img loading="lazy" class="logo-full img-fluid d-block mx-auto my-4" src="../../assets/images/full-logo.png"
+                <img class="logo-full img-fluid d-block mx-auto my-4" src="../../assets/images/full-logo.png"
                      alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
                 <div class="descricao"><p>O maior evento de videogames da região.<br>Feito por gamers,
                     para gamers.</p></div>
