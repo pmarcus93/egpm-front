@@ -1,31 +1,14 @@
-import axios from 'axios';
+const urlsocial = 'Social/';
 
-const urlbase = 'http://egpmdeveloper.lucasjunior.com.br/';
+import ConfigServices from "@/services/ConfigServices";
 
 export default {
-    pushAutenticationobject: (object) => {
-        if (object === null) {
-            object = {};
-        }
-        object.st_token = localStorage.getItem('st_token');
-        object.id_usuario = localStorage.getItem('id_usuario');
-        return object;
-    },
 
     getAll: (callback) => {
-        var url = urlbase + "Social/";
-        axios.get(url).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
+        ConfigServices.get(urlsocial, callback);
     },
-    post: (patrocinador, callback) => {
-        var url = urlbase + "Social/";
-        axios.post(url, patrocinador).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
+
+    post: (social, callback) => {
+        ConfigServices.post(urlsocial, social, callback);
     }
 }

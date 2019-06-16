@@ -10,13 +10,13 @@
 
 <script>
     import SecaoTextoDireita from "../itens/SecaoTextoDireita";
-    import EgpmApi from "@/services/EgpmApi";
+    import SecaoApi from "@/services/SecaoApi";
 
     export default {
         name: "FreePlay",
         components: {SecaoTextoDireita},
         created() {
-            EgpmApi.getSecao(4, result => {
+            SecaoApi.getSecao(4, result => {
                 this.secao = result.data;
             })
         },

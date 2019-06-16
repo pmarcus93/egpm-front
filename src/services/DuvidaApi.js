@@ -1,49 +1,25 @@
-import axios from 'axios';
+const urlduvida = 'Duvida/';
 
-const urlbase = 'http://egpmdeveloper.lucasjunior.com.br/';
+import ConfigServices from "@/services/ConfigServices";
 
 export default {
-    pushAutenticationobject: (object) => {
-        if (object === null) {
-            object = {};
-        }
-        object.st_token = localStorage.getItem('st_token');
-        object.id_usuario = localStorage.getItem('id_usuario');
-        return object;
-    },
 
     getAllDuvidas: (callback) => {
-        var url = urlbase + "Duvida/";
-        axios.get(url).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-    getDuvida: (id_duvida, callback) => {
-        var url = urlbase + "Duvida/" + id_duvida;
-        axios.get(url).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-    postDuvida: (duvida, callback) => {
-        var url = urlbase + "Duvida/";
-        axios.post(url, duvida).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-    deleteDuvida: (id, token, callback) => {
-        var url = urlbase + "Duvida/" + id;
-        axios.delete(url, token).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
+        ConfigServices.get(urlduvida, callback);
     },
 
+    getDuvida: (id_duvida, callback) => {
+        var url = urlduvida + id_duvida;
+        ConfigServices.get(url, callback);
+    },
+
+    postDuvida: (duvida, callback) => {
+        ConfigServices.post(urlduvida, duvida, callback);
+    },
+
+    deleteDuvida: (id, callback) => {
+        var url = urlduvida + id;
+        ConfigServices.delete(url, callback);
+    },
 
 }

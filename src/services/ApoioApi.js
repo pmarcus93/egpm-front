@@ -1,57 +1,30 @@
-import axios from 'axios';
+const urlapoio = 'Apoio/';
 
-const urlbase = 'http://egpmdeveloper.lucasjunior.com.br/';
+import ConfigServices from "@/services/ConfigServices";
 
 export default {
-    pushAutenticationobject: (object) => {
-        if (object === null) {
-            object = {};
-        }
-        object.st_token = localStorage.getItem('st_token');
-        object.id_usuario = localStorage.getItem('id_usuario');
-        return object;
-    },
 
     getAll: (callback) => {
-        var url = urlbase + "Apoio/?id_usuario=" + localStorage.getItem('id_usuario') + "&st_token=" + localStorage.getItem('st_token');
-        axios.get(url).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-    getOne: (id, callback) => {
-        var url = urlbase + "Apoio/" + id + "/?id_usuario=" + localStorage.getItem('id_usuario') + "&st_token=" + localStorage.getItem('st_token');
-        axios.get(url).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-    post: (patrocinador, callback) => {
-        var url = urlbase + "Apoio/";
-        axios.post(url, patrocinador).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
-    delete: (id, token, callback) => {
-        var url = urlbase + "Apoio/" + id;
-        axios.delete(url, token).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
+        ConfigServices.get(urlapoio, callback);
     },
 
-    analisar: (id, token, callback) => {
-        var url = urlbase + "Apoio/" + id + "/analisar";
-        axios.post(url, token).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
+    getOne: (id, callback) => {
+        var url = urlapoio + id;
+        ConfigServices.get(url, callback);
+    },
+
+    post: (patrocinador, callback) => {
+        ConfigServices.post(urlapoio, patrocinador, callback);
+    },
+
+    delete: (id, callback) => {
+        var url = urlapoio + id;
+        ConfigServices.delete(url, callback);
+    },
+
+    analisar: (id, callback) => {
+        var url = urlapoio + id + "/analisar";
+        ConfigServices.post(url, null, callback);
     },
 
 }

@@ -32,7 +32,7 @@
         methods: {
 
             remover: function (id) {
-                ComentarioApi.deleteComentario(id, ComentarioApi.pushAutenticationobject(null), result => {
+                ComentarioApi.deleteComentario(id, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';

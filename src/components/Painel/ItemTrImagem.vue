@@ -22,7 +22,7 @@
 </template>
 
 <script>
-    import EgpmApi from "../../services/EgpmApi";
+    import ImagemApi from "@/services/ImagemApi";
 
     export default {
         name: "ItemTrImagem",
@@ -53,14 +53,14 @@
 
             },
             remover: function (id) {
-                EgpmApi.deleteImagem(id, EgpmApi.pushAutenticationobject(null), result => {
+                ImagemApi.delete(id, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
                         opts.text = "Imagem removida com sucesso.";
                         opts.type = 'success';
                         PNotify.alert(opts);
-                        EgpmApi.getAllImagens(retorno => {
+                        ImagemApi.getAll(retorno => {
                             this.$parent.imagens = retorno.data;
                         })
 

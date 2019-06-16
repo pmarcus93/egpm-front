@@ -33,7 +33,7 @@
         ],
         methods: {
             remover: function (id) {
-                ApoioApi.delete(id, ApoioApi.pushAutenticationobject(null), result => {
+                ApoioApi.delete(id, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
@@ -54,7 +54,7 @@
                 })
             },
             analisar: function (id) {
-                ApoioApi.analisar(id, ApoioApi.pushAutenticationobject(null), result => {
+                ApoioApi.analisar(id, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';

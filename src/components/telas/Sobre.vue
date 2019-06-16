@@ -20,13 +20,13 @@
 
     import BlocoIcons from "../itens/IconesSobre";
     import Secao from "../itens/Secao";
-    import EgpmApi from "@/services/EgpmApi";
+    import SecaoApi from "@/services/SecaoApi";
 
     export default {
         name: 'Sobre',
         components: {BlocoIcons, Secao},
         created() {
-            EgpmApi.getSecao(1, result => {
+            SecaoApi.getSecao(1, result => {
                 this.secao = result.data;
             })
         },

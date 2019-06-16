@@ -48,13 +48,13 @@
                     <div class="col-6">
                         <h4>Dados básicos:</h4>
                         <div class="form-group">
-                            <label for="st_jogo">Nome do jogo:</label>
+                            <label for="st_nome">Nome do jogo:</label>
                             <input required
                                    v-model="campeonato.st_nome"
-                                   name="st_jogo"
+                                   name="st_nome"
                                    type="text"
                                    class="form-control"
-                                   id="st_jogo">
+                                   id="st_nome">
                         </div>
 
                         <div class="form-group">
@@ -203,7 +203,8 @@
 
                         <h4>Dias e horários:</h4>
 
-                        <button v-if="!campeonato.datahorario[0]" v-on:click.prevent="adicionadatahorario" class=" btn btn-primary"><i
+                        <button v-if="!campeonato.datahorario[0]" v-on:click.prevent="adicionadatahorario"
+                                class=" btn btn-primary"><i
                                 class="fa fa-plus"></i></button>
 
                         <div v-for="(datahora, indice) in campeonato.datahorario" class="row">
@@ -269,7 +270,7 @@
 
 <script>
     import BarraTitulo from "./BarraTitulo";
-    import EgpmApi from "@/services/EgpmApi";
+    import JogoApi from "@/services/JogoApi";
     import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
     export default {
@@ -277,7 +278,7 @@
         components: {BarraTitulo},
         created() {
             if (this.$route.params.id_jogo) {
-                EgpmApi.getCampeonato(this.$route.params.id_jogo, campeonato => {
+                JogoApi.getOne(this.$route.params.id_jogo, campeonato => {
                     this.campeonato = campeonato.data;
                 })
             }
@@ -299,14 +300,10 @@
                     st_plataforma: null,
                     st_regra: null,
                     st_video: null,
-                    bl_campeonato: null,
+                    bl_campeonato: false,
                     st_classificacaoindicativa: null,
                     st_plataformacampeonato: null,
-                    datahorario: [{
-                        id_jogo: "",
-                        st_diasemana: "",
-                        st_hora: ""
-                    }]
+                    datahorario: []
                 },
                 editor: ClassicEditor,
                 editorConfig: {},
@@ -330,10 +327,11 @@
             marcacheckbox: function () {
                 this.campeonato.bl_campeonato = this.$refs.bl_campeonato.checked;
             },
+
             save: function () {
                 var data = this.campeonato;
                 data.datahorariocampeonatoremover = this.datahorariocampeonatoremover;
-                EgpmApi.postCampeonato(EgpmApi.pushAutenticationobject(this.campeonato), result => {
+                JogoApi.post(this.campeonato, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
@@ -352,9 +350,14 @@
                         opts.type = 'error';
                         PNotify.alert(opts);
 
+                        if (result.data.erro.data.classe) {
+                            $("#" + result.data.erro.data.classe).focus();
+                        }
+
                     }
                 })
             },
+
             abremodal: function () {
                 $('#modalimg').modal('show');
 

@@ -103,17 +103,18 @@
 
 <script>
     import BarraTitulo from "./BarraTitulo";
-    import EgpmApi from "@/services/EgpmApi";
+    import IconeApi from "@/services/IconeApi";
+    import SecaoApi from "@/services/SecaoApi";
 
     export default {
         name: "FormSecoes",
         components: {BarraTitulo},
         created() {
-            EgpmApi.getIconeSecao(1, result => {
+            IconeApi.getIconeSecao(1, result => {
                 this.iconessobre = result.data;
             });
 
-            EgpmApi.getAllSecao(result => {
+            SecaoApi.getAllSecao(result => {
                 this.secoes = result.data;
             })
         },
@@ -143,7 +144,7 @@
         methods: {
             save: function () {
                 var self = this;
-                EgpmApi.salvarsessao(EgpmApi.pushAutenticationobject(self.secoes), result => {
+                SecaoApi.salvarsessao(self.secoes, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
@@ -159,13 +160,13 @@
 
                     }
 
-                    EgpmApi.getAllSecao(result => {
+                    SecaoApi.getAllSecao(result => {
                         this.secoes = result.data;
                     })
 
                 });
 
-                EgpmApi.salvarIconeSobre(EgpmApi.pushAutenticationobject(self.iconessobre), result => {
+                IconeApi.salvarIconeSobre(self.iconessobre, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
@@ -181,7 +182,7 @@
 
                     }
 
-                    EgpmApi.getIconeSecao(1, result => {
+                    IconeApi.getIconeSecao(1, result => {
                         this.iconessobre = result.data;
                     });
 

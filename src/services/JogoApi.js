@@ -1,24 +1,29 @@
-import axios from 'axios';
+const urljogo = 'Jogo/';
 
-const urlbase = 'http://egpmdeveloper.lucasjunior.com.br/';
+import ConfigServices from "@/services/ConfigServices";
 
 export default {
-    pushAutenticationobject: (object) => {
-        if (object === null) {
-            object = {};
-        }
-        object.st_token = localStorage.getItem('st_token');
-        object.id_usuario = localStorage.getItem('id_usuario');
-        return object;
-    },
-
 
     getCampeonatos: (callback) => {
-        axios.get(urlbase + "Campeonato/").then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
+        ConfigServices.get("Campeonato", callback);
+    },
+
+    getAll: (callback) => {
+        ConfigServices.get(urljogo, callback);
+    },
+
+    getOne: (id_jogo, callback) => {
+        var url = urljogo + id_jogo;
+        ConfigServices.get(url, callback);
+    },
+
+    post: (jogo, callback) => {
+        ConfigServices.post(urljogo, jogo, callback);
+    },
+
+    delete: (id, callback) => {
+        var url = urljogo + id;
+        ConfigServices.delete(url, callback);
     },
 
 

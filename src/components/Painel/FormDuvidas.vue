@@ -66,7 +66,7 @@
         },
         methods: {
             save: function () {
-                DuvidaApi.postDuvida(DuvidaApi.pushAutenticationobject(this.duvida), result => {
+                DuvidaApi.postDuvida(this.duvida, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';

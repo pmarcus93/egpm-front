@@ -36,7 +36,7 @@
     import Secao from "../itens/Secao";
     import Depoimento from "../itens/Depoimento";
     import ComentarioApi from "@/services/ComentarioApi";
-    import EgpmApi from "@/services/EgpmApi";
+    import SecaoApi from "@/services/SecaoApi";
 
     export default {
         name: 'Midia',
@@ -47,7 +47,7 @@
                 this.comentarios = retorno.data;
             });
 
-            EgpmApi.getSecao(5, result => {
+            SecaoApi.getSecao(5, result => {
                 this.secao = result.data;
             })
         },

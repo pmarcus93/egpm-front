@@ -61,7 +61,7 @@
                     delete: this.diahorariosremover
                 };
 
-                DiaHorarioApi.post(DiaHorarioApi.pushAutenticationobject(data), result => {
+                DiaHorarioApi.post(data, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';

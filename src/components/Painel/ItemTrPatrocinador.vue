@@ -23,8 +23,8 @@
 </template>
 
 <script>
-    import EgpmApi from "../../services/EgpmApi";
-    import PatrocinadorApi from "../../services/PatrocinadorApi";
+
+    import PatrocinadorApi from "@/services/PatrocinadorApi";
 
     export default {
         name: "ItemTrPatrocinador",
@@ -37,14 +37,14 @@
         ],
         methods: {
             remover: function (id) {
-                PatrocinadorApi.deletePatrocinador(id, EgpmApi.pushAutenticationobject(null), result => {
+                PatrocinadorApi.deletePatrocinador(id, result => {
                     var opts = {};
                     if (result.data.status) {
                         opts.title = 'Sucesso';
                         opts.text = "Patrocinador removido com sucesso.";
                         opts.type = 'success';
                         PNotify.alert(opts);
-                        EgpmApi.getAllPatrocinadore(retorno => {
+                        PatrocinadorApi.getAll(retorno => {
                             this.$parent.patrocinadores = retorno.data;
                         })
 
