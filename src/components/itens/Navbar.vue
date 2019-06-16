@@ -3,7 +3,7 @@
         <nav class="navbar navbar-light bg-light">
 
             <router-link class="navbar-brand" to='/inicio'>
-                <img src="../../assets/images/logoegpm3.png" width="150px"
+                <img loading="lazy" src="../../assets/images/logoegpm3.png" width="150px"
                      class="d-inline-block align-top" alt="">
             </router-link>
 
