@@ -20,14 +20,10 @@
 <style lang="scss">
 
     @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
-
-    @font-face {
-        font-family: "Archive";
-        src: url("assets/fonts/Archive-Regular.ttf");
-    }
-
+    
     h1 {
         font-family: $font-archive;
+        text-transform: uppercase;
     }
 
     .site-contents {
