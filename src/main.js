@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 import routes from './routes';
 import jQuery from 'jquery';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap';
 import 'pnotify/dist/es/PNotify';
 import 'pnotify/dist/es/PNotifyButtons';
 import CKEditor from '@ckeditor/ckeditor5-vue';
