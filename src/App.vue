@@ -99,7 +99,7 @@
         min-height: 300px !important;
     }
 
-    :host ::ng-deep .ck-editor__editable_inline {
+    :host .ck-editor__editable_inline {
         min-height: 300px !important;
     }
 
