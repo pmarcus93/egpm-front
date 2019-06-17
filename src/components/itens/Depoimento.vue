@@ -1,5 +1,5 @@
 <template>
-    <div class="col-sm-12 col-xl-4 depoimento">
+    <div class="col-sm-12 col-xl-4 mx-auto depoimento">
         <div class="col-12 texto-depoimento py-4 text-justify">{{depoimento}}</div>
         <div class="col-12 autor-depoimento py-4">{{autor}}</div>
     </div>
