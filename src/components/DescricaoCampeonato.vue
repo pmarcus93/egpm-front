@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div v-if="campeonato.id_jogo" class="container-fluid">
+        <div v-if="campeonato.bl_campeonato == 1" class="container-fluid">
             <div class="container">
                 <div class="row">
                     <div class="col-12 my-4">
