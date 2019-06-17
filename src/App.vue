@@ -20,9 +20,9 @@
 <style lang="scss">
 
     @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
-    
+
     h1 {
-        font-family: $font-archive;
+        font-weight: bold;
         text-transform: uppercase;
     }
 
@@ -99,7 +99,7 @@
         min-height: 300px !important;
     }
 
-    :host ::ng-deep .ck-editor__editable_inline {
+    :host .ck-editor__editable_inline {
         min-height: 300px !important;
     }
 

@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div v-if="campeonato.id_jogo" class="container-fluid">
+        <div v-if="campeonato.bl_campeonato == 1" class="container-fluid">
             <div class="container">
                 <div class="row">
                     <div class="col-12 my-4">
@@ -61,21 +61,15 @@
 <script>
 
     import BannerJogo from "./itens/BannerJogo";
-    import ItemErro from "./itens/ItemErro";
-    import Campeonatos from "./telas/Campeonatos";
     import JogoApi from "@/services/JogoApi";
     import BlocoRodape from "./itens/BlocoRodape";
-    import Erro404 from "./Erro404";
     import Erro404Campeonato from "./Erro404Campeonato";
 
     export default {
         name: "DescricaoCampeonato",
         components: {
             Erro404Campeonato,
-            Erro404,
             BlocoRodape,
-            Campeonatos,
-            ItemErro,
             BannerJogo
         },
         data() {
