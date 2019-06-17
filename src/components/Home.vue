@@ -12,8 +12,6 @@
             <Midia></Midia>
             <Duvida></Duvida>
             <Localizacao></Localizacao>
-            <Patrocinadores></Patrocinadores>
-            <Rodape></Rodape>
         </div>
     </div>
 </template>
@@ -30,16 +28,12 @@
     import Duvida from "./telas/Duvida";
     import Localizacao from "./telas/Localizacao";
     import ButtonTicket from "./itens/ButtonTicket";
-    import Patrocinadores from "./telas/Patrocinadores";
-    import Rodape from "./telas/Rodape";
     import Toasty from "./itens/Toasty";
 
     export default {
         name: "Home",
         components: {
             Toasty,
-            Rodape,
-            Patrocinadores,
             ButtonTicket,
             Localizacao,
             Duvida,

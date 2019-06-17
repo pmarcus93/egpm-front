@@ -4,15 +4,17 @@
         <div class="site-contents">
             <router-view/>
         </div>
+        <BlocoRodape></BlocoRodape>
     </div>
 </template>
 
 <script>
     import Navbar from "./components/itens/Navbar";
+    import BlocoRodape from "./components/itens/BlocoRodape";
 
     export default {
         name: 'app',
-        components: {Navbar},
+        components: {BlocoRodape, Navbar},
     }
 
 </script>

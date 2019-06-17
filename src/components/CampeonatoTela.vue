@@ -27,7 +27,6 @@
                     ></ItemCampeonato>
                 </div>
             </div>
-            <BlocoRodape></BlocoRodape>
         </div>
     </div>
 
@@ -38,11 +37,10 @@
     import FundoFixo from "./itens/FundoFixo";
     import ItemCampeonato from "./itens/ItemCampeonato";
     import JogoApi from "@/services/JogoApi.js";
-    import BlocoRodape from "./itens/BlocoRodape";
 
     export default {
         name: "CampeonatoTela",
-        components: {BlocoRodape, ItemCampeonato, FundoFixo, BannerMenor},
+        components: {ItemCampeonato, FundoFixo, BannerMenor},
         created() {
             var self = this;
             JogoApi.getCampeonatos(campeonatos => {
