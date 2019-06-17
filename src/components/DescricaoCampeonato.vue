@@ -53,8 +53,6 @@
                 </div>
             </div>
         </div>
-
-        <BlocoRodape></BlocoRodape>
     </div>
 </template>
 
@@ -62,14 +60,12 @@
 
     import BannerJogo from "./itens/BannerJogo";
     import JogoApi from "@/services/JogoApi";
-    import BlocoRodape from "./itens/BlocoRodape";
     import Erro404Campeonato from "./Erro404Campeonato";
 
     export default {
         name: "DescricaoCampeonato",
         components: {
             Erro404Campeonato,
-            BlocoRodape,
             BannerJogo
         },
         data() {

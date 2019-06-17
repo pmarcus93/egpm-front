@@ -11,7 +11,6 @@
                 ></ItemErro>
                 <Links></Links>
             </div>
-            <BlocoRodape></BlocoRodape>
         </div>
     </div>
 </template>
@@ -20,11 +19,10 @@
     import FundoFixo from "./itens/FundoFixo";
     import Links from "./itens/Links";
     import ItemErro from "./itens/ItemErro";
-    import BlocoRodape from "./itens/BlocoRodape";
 
     export default {
         name: "Erro404",
-        components: {BlocoRodape, ItemErro, Links, FundoFixo}
+        components: {ItemErro, Links, FundoFixo}
     }
 </script>
 

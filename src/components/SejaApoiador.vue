@@ -53,8 +53,6 @@
                     </div>
                 </div>
             </div>
-
-            <BlocoRodape></BlocoRodape>
         </div>
         <vue-recaptcha
                 ref="recaptcha"
@@ -76,7 +74,7 @@
 
     export default {
         name: "SejaApoiador",
-        components: {BlocoRodape, BannerMenor, FundoFixo, 'vue-recaptcha': VueRecaptcha},
+        components: {BannerMenor, FundoFixo, 'vue-recaptcha': VueRecaptcha},
         data() {
             return {
                 apoio: {
