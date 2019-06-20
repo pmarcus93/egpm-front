@@ -19,7 +19,7 @@ export default {
     },
 
     upload: (formData, callback) => {
-        ConfigServices.upoloadFormData(urlimagem, formData, callback);
+        ConfigServices.uploadFormData(urlimagem, formData, callback);
     },
 
 

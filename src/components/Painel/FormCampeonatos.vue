@@ -10,7 +10,10 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img loading="lazy" :src="campeonato.st_imagem" :alt="'Imagem do jogo'+campeonato.st_nome" width="100%">
+                        <img loading="lazy" v-if="this.campeonato.imagens[0]"
+                             :src="this.campeonato.imagens[0].st_arquivo"
+                             :alt="'Imagem do jogo'+campeonato.st_nome"
+                             width="100%">
                     </div>
                 </div>
             </div>
@@ -39,6 +42,7 @@
                 icon="check"
                 texto-botao="Salvar"
                 action="save"
+                :loadingbutton="loadingbutton"
         >
         </BarraTitulo>
 
@@ -113,26 +117,32 @@
                                    class="form-control">
                         </div>
 
-                        <div class="form-group">
+                        <div v-if="campeonato.imagens[0] === undefined " class="form-group">
+                            <label for="st_plataforma">Imagem:</label>
+                            <div class="custom-file">
+                                <input v-on:change="handleFileUpload()" type="file" ref="file"
+                                       class="custom-file-input" id="st_arquivo" required>
+                                <label class="custom-file-label" for="st_arquivo">{{labelimputfile}}</label>
+                            </div>
+                        </div>
+
+                        <div v-else class="form-group">
                             <label for="st_imagem">Imagem (url):</label>
                             <div class="input-group">
                                 <input id="st_imagem"
                                        required
-                                       v-model="campeonato.st_imagem"
                                        type="text"
-                                       class="form-control">
+                                       class="form-control"
+                                       :value="campeonato.imagens[0].st_arquivo">
                                 <div class="input-group-append">
-                                    <span v-if="campeonato.st_imagem" v-on:click.prevent="abremodal"
-                                          class="input-group-text p-0">
-                                        <button class="btn btn-success">
-                                            <i class="fa fa-eye"></i>
-                                        </button>
-                                    </span>
-                                    <span v-else class="input-group-text p-0">
-                                        <button disabled class="btn btn-success disabled">
-                                            <i class="fa fa-eye"></i>
-                                        </button>
-                                    </span>
+                                        <span v-on:click.prevent="abremodal"
+                                              class=" btn btn-success">
+                                                <i class="fa fa-eye"></i>
+                                        </span>
+                                    <span v-on:click.prevent="removeimagem"
+                                          class="btn btn-danger">
+                                                <i class="fa fa-trash"></i>
+                                        </span>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +281,9 @@
 <script>
     import BarraTitulo from "./BarraTitulo";
     import JogoApi from "@/services/JogoApi";
+    import DataHorario from "@/services/DataHorarioApi";
     import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+    import PNotify from "@/services/PNotifyService";
 
     export default {
         name: "FormCampeonatos",
@@ -285,34 +297,52 @@
         },
         data() {
             return {
+                file: '',
+                labelimputfile: "Escolher Arquivo...",
+                loadingbutton: false,
                 campeonato: {
-                    dt_jogo: null,
-                    dt_lancamento: null,
-                    hr_jogo: null,
-                    id_jogo: null,
-                    nu_vaga: null,
-                    st_descricao: null,
-                    st_estilo: null,
-                    st_imagem: null,
-                    st_ingresso: null,
-                    st_nome: null,
-                    st_observacao: null,
-                    st_plataforma: null,
-                    st_regra: null,
-                    st_video: null,
-                    bl_campeonato: false,
-                    st_classificacaoindicativa: null,
-                    st_plataformacampeonato: null,
-                    datahorario: []
+                    dt_jogo: "",
+                    dt_lancamento: "",
+                    hr_jogo: "",
+                    id_jogo: "",
+                    nu_vaga: "",
+                    st_descricao: "",
+                    st_estilo: "",
+                    st_imagem: "",
+                    st_ingresso: "",
+                    st_nome: "",
+                    st_observacao: "",
+                    st_plataforma: "",
+                    st_regra: "",
+                    st_video: "",
+                    bl_campeonato: "",
+                    st_classificacaoindicativa: "",
+                    st_plataformacampeonato: "",
+                    nu_quantidadejogadores: "",
+                    datahorario: [],
+                    imagens: [
+
+                    ]
                 },
                 editor: ClassicEditor,
                 editorConfig: {},
                 datahorariocampeonatoremover: [],
-                nu_quantidadejogadores: ""
+                uploadimagem: 0,
 
             }
         },
         methods: {
+            removeimagem: function () {
+                this.campeonato.imagens = [];
+                this.uploadimagem = 1;
+            },
+
+            handleFileUpload() {
+                this.file = this.$refs.file.files[0];
+                this.labelimputfile = this.$refs.file.files[0].name;
+                this.uploadimagem = 1;
+            },
+
             adicionadatahorario: function () {
                 this.campeonato.datahorario.push({});
             },
@@ -325,37 +355,96 @@
             },
 
             marcacheckbox: function () {
-                this.campeonato.bl_campeonato = this.$refs.bl_campeonato.checked;
+                if (this.$refs.bl_campeonato.checked) {
+                    this.campeonato.bl_campeonato = 1;
+                    return true;
+                }
+
+                this.campeonato.bl_campeonato = 0;
+                return true;
+            },
+
+            validaformulario: function () {
+                if (this.file === "" && this.campeonato.imagens[0] == undefined) {
+                    PNotify.fail("É obrigatório informar uma imagem para o Jogo.");
+                    return false;
+                }
+
+                return true;
             },
 
             save: function () {
-                var data = this.campeonato;
-                data.datahorariocampeonatoremover = this.datahorariocampeonatoremover;
-                JogoApi.post(this.campeonato, result => {
-                    var opts = {};
-                    if (result.data.status) {
-                        opts.title = 'Sucesso';
-                        opts.text = "Campeonato salvo com sucesso.";
-                        opts.type = 'success';
-                        PNotify.alert(opts);
-                        this.$router.push({
-                            name: 'viewcampeonato',
-                        });
 
-                        this.datahorariocampeonatoremover = [];
+                if (!this.validaformulario()) {
+                    return false;
+                }
+
+                let formData = new FormData();
+                formData.append('st_file', this.file);
+                formData.append('dt_jogo', this.campeonato.dt_jogo);
+                formData.append('dt_lancamento', this.campeonato.dt_lancamento);
+                formData.append('hr_jogo', this.campeonato.hr_jogo);
+                formData.append('id_jogo', this.campeonato.id_jogo);
+                formData.append('nu_vaga', this.campeonato.nu_vaga);
+                formData.append('st_descricao', this.campeonato.st_descricao);
+                formData.append('st_estilo', this.campeonato.st_estilo);
+                formData.append('st_imagem', this.campeonato.st_imagem);
+                formData.append('st_ingresso', this.campeonato.st_ingresso);
+                formData.append('st_nome', this.campeonato.st_nome);
+                formData.append('st_observacao', this.campeonato.st_observacao);
+                formData.append('st_plataforma', this.campeonato.st_plataforma);
+                formData.append('nu_quantidadejogadores', this.campeonato.nu_quantidadejogadores);
+                formData.append('st_regra', this.campeonato.st_regra);
+                formData.append('st_video', this.campeonato.st_video);
+                formData.append('bl_campeonato', this.campeonato.bl_campeonato);
+                formData.append('st_classificacaoindicativa', this.campeonato.st_classificacaoindicativa);
+                formData.append('st_plataformacampeonato', this.campeonato.st_plataformacampeonato);
+                formData.append('uploadimagem', this.uploadimagem);
+
+                this.loadingbutton = true;
+
+                JogoApi.post(formData, result => {
+                    if (result.data.status) {
+                        PNotify.success("Campeonato salvo com sucesso.");
+
+                        if (this.salvadatahorario(result.data.data.id_jogo)) {
+                            this.$router.push({
+                                name: 'viewcampeonato',
+                            });
+
+                            this.datahorariocampeonatoremover = [];
+                        }
 
                     } else {
-                        opts.title = 'Erro';
-                        opts.text = result.data.erro.message;
-                        opts.type = 'error';
-                        PNotify.alert(opts);
-
+                        PNotify.fail(result.data.erro.message);
+                        this.loadingbutton = false;
                         if (result.data.erro.data.classe) {
                             $("#" + result.data.erro.data.classe).focus();
                         }
 
                     }
                 })
+            },
+
+            salvadatahorario: function (id_jogo) {
+                let data = {
+                    datahorario: this.campeonato.datahorario,
+                    datahorariocampeonatoremover: this.datahorariocampeonatoremover,
+                    id_jogo: id_jogo
+                };
+
+                DataHorario.post(data, result => {
+                    if (result.data.status) {
+                        PNotify.success("Data e Horários salvos com sucesso.");
+                    } else {
+                        PNotify.fail(result.data.erro.message);
+                        return false;
+                    }
+
+                });
+
+                return true;
+
             },
 
             abremodal: function () {

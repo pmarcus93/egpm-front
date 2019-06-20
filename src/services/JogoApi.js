@@ -18,7 +18,7 @@ export default {
     },
 
     post: (jogo, callback) => {
-        ConfigServices.post(urljogo, jogo, callback);
+        ConfigServices.uploadFormData(urljogo, jogo, callback);
     },
 
     delete: (id, callback) => {

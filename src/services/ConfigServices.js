@@ -40,7 +40,7 @@ export default {
         })
     },
 
-    upoloadFormData(rota, data, callback) {
+    uploadFormData(rota, data, callback) {
 
         var cabecalho = {
             'Authorization': header.Authorization,
