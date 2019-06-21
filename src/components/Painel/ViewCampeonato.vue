@@ -28,7 +28,7 @@
                                       :nome="item.st_nome"
                                       :descricao="item.st_descricao"
                                       :id="item.id_jogo"
-                                      :imagem="item.imagens[0].st_arquivo"
+                                      :imagem="item.imagens.default.st_arquivo"
                                       :iscampeonato="item.bl_campeonato"
                     ></ItemTrCampeonato>
                     </tbody>
@@ -60,8 +60,8 @@
             JogoApi.getAll(campeonatos => {
 
                 for (let i = 0; i < campeonatos.data.length; i++) {
-                    if (campeonatos.data[i].imagens[0] === undefined) {
-                        campeonatos.data[i].imagens = [{st_arquivo: ""}];
+                    if (campeonatos.data[i].imagens.default === undefined) {
+                        campeonatos.data[i].imagens.default = {st_arquivo: ""};
                     }
                 }
 

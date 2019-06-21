@@ -11,8 +11,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img loading="lazy" v-if="comentario.imagens[0]"
-                             :src="comentario.imagens[0].st_arquivo"
+                        <img loading="lazy" v-if="comentario.imagens.default"
+                             :src="comentario.imagens.default.st_arquivo"
                              :alt="'Imagem do autor '+comentario.st_nome"
                              width="100%">
                     </div>
@@ -46,7 +46,7 @@
                                       class="form-control"></textarea>
                         </div>
 
-                        <div v-if="comentario.imagens[0] === undefined " class="form-group">
+                        <div v-if="comentario.imagens.default === undefined " class="form-group">
                             <label>Imagem:</label>
                             <div class="custom-file">
                                 <input v-on:change="handleFileUpload()" type="file" ref="file"
@@ -62,7 +62,7 @@
                                        required
                                        type="text"
                                        class="form-control"
-                                       :value="comentario.imagens[0].st_arquivo"
+                                       :value="comentario.imagens.default.st_arquivo"
                                 >
                                 <div class="input-group-append">
                                     <span v-on:click.prevent="abremodal"
