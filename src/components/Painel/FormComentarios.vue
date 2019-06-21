@@ -1,10 +1,31 @@
 <template>
     <div class="row">
+
+        <div class="modal fade" id="modalimg" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Imagem</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img loading="lazy" v-if="comentario.imagens[0]"
+                             :src="comentario.imagens[0].st_arquivo"
+                             :alt="'Imagem do autor '+comentario.st_nome"
+                             width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <BarraTitulo
                 titulo="COMENTÁRIOS"
                 icon="check"
                 texto-botao="Salvar"
                 action="save"
+                :loadingbutton="loadingbutton"
         >
         </BarraTitulo>
 
@@ -25,9 +46,35 @@
                                       class="form-control"></textarea>
                         </div>
 
-                        <div class="form-group">
-                            <label for="st_imagem">Foto:</label>
-                            <input id="st_imagem" v-model="comentario.st_imagem" class="form-control">
+                        <div v-if="comentario.imagens[0] === undefined " class="form-group">
+                            <label>Imagem:</label>
+                            <div class="custom-file">
+                                <input v-on:change="handleFileUpload()" type="file" ref="file"
+                                       class="custom-file-input" id="st_arquivo" required>
+                                <label class="custom-file-label" for="st_arquivo">{{labelimputfile}}</label>
+                            </div>
+                        </div>
+
+                        <div v-else class="form-group">
+                            <label for="st_imagem">Imagem (url):</label>
+                            <div class="input-group">
+                                <input id="st_imagem"
+                                       required
+                                       type="text"
+                                       class="form-control"
+                                       :value="comentario.imagens[0].st_arquivo"
+                                >
+                                <div class="input-group-append">
+                                    <span v-on:click.prevent="abremodal"
+                                          class=" btn btn-success">
+                                                <i class="fa fa-eye"></i>
+                                        </span>
+                                    <span v-on:click.prevent="removeimagem"
+                                          class="btn btn-danger">
+                                                <i class="fa fa-trash"></i>
+                                        </span>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -41,6 +88,7 @@
 <script>
 
     import ComentarioApi from "@/services/ComentarioApi";
+    import PNotify from "@/services/PNotifyService";
     import BarraTitulo from "./BarraTitulo";
 
     export default {
@@ -55,33 +103,55 @@
         },
         data: function () {
             return {
+                file: '',
+                labelimputfile: "Escolher Arquivo...",
                 comentario: {
-                    id_comentario: null,
-                    st_imagem: null,
-                    st_autor: null,
-                    st_comentario: null
-                }
+                    id_comentario: "",
+                    st_imagem: "",
+                    st_autor: "",
+                    st_comentario: "",
+                    imagens: []
+                },
+                uploadimagem: 0,
+                loadingbutton: false
             }
         },
         methods: {
+            removeimagem: function () {
+                this.comentario.imagens = [];
+                this.uploadimagem = 1;
+            },
+
+            handleFileUpload() {
+                this.file = this.$refs.file.files[0];
+                this.labelimputfile = this.$refs.file.files[0].name;
+                this.uploadimagem = 1;
+            },
+
+            abremodal: function () {
+                $('#modalimg').modal('show');
+            },
+
             save: function () {
-                ComentarioApi.postComentario(this.comentario, result => {
-                    var opts = {};
+                this.loadingbutton = true;
+
+                let formData = new FormData();
+                formData.append("id_comentario", this.comentario.id_comentario);
+                formData.append("st_comentario", this.comentario.st_comentario);
+                formData.append("st_autor", this.comentario.st_autor);
+                formData.append("st_file", this.file);
+                formData.append("uploadimagem", this.uploadimagem);
+
+                ComentarioApi.postComentario(formData, result => {
                     if (result.data.status) {
-                        opts.title = 'Sucesso';
-                        opts.text = "Comentário salvo com sucesso.";
-                        opts.type = 'success';
-                        PNotify.alert(opts);
+                        PNotify.success("Comentário salvo com sucesso.");
                         this.$router.push({
                             name: 'viewcomentarios',
                         })
 
                     } else {
-                        opts.title = 'Erro';
-                        opts.text = result.data.erro.message;
-                        opts.type = 'error';
-                        PNotify.alert(opts);
-
+                        PNotify.fail(result.data.erro.message);
+                        this.loadingbutton =false;
                     }
                 })
             }
@@ -90,5 +160,9 @@
 </script>
 
 <style scoped>
+
+    #st_comentario {
+        height: 300px;
+    }
 
 </style>

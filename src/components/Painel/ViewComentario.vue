@@ -24,12 +24,11 @@
                     <tbody>
 
                     <ItemTrComentario v-for="(item) in comentarios"
-                                  :comentario="item.st_comentario"
-                                  :autor="item.st_autor"
-                                  :id="item.id_comentario"
-                                  :imagem="item.st_imagem"
-                    >
-                    </ItemTrComentario>
+                                      :comentario="item.st_comentario"
+                                      :autor="item.st_autor"
+                                      :id="item.id_comentario"
+                                      :imagem="item.imagens[0].st_arquivo"
+                    ></ItemTrComentario>
 
                     </tbody>
                 </table>
@@ -48,9 +47,28 @@
         components: {ItemTrComentario, BarraTitulo},
         created() {
             ComentarioApi.getAllComentarios(retorno => {
+
+                for (let i = 0; i < retorno.data.length; i++) {
+                    if (retorno.data[i].imagens[0] === undefined) {
+                        retorno.data[i].imagens = [{st_arquivo: ""}];
+                    }
+                }
+
                 this.comentarios = retorno.data;
+                this.limitaTamanhoDescricao();
             })
         },
+
+        methods: {
+            limitaTamanhoDescricao: function () {
+                for (let i = 0; i < this.comentarios.length; i++) {
+                    if (this.comentarios[i].st_comentario && this.comentarios[i].st_comentario.length > 100) {
+                        this.comentarios[i].st_comentario = this.comentarios[i].st_comentario.substring(0, 100) + "...";
+                    }
+                }
+            }
+        },
+
         data: function () {
             return {
                 comentarios: [],
