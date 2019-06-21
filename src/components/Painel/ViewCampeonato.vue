@@ -61,7 +61,7 @@
 
                 for (let i = 0; i < campeonatos.data.length; i++) {
                     if (campeonatos.data[i].imagens.default === undefined) {
-                        campeonatos.data[i].imagens.default = [{st_arquivo: ""}];
+                        campeonatos.data[i].imagens.default = {st_arquivo: ""};
                     }
                 }
 

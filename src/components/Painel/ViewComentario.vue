@@ -27,7 +27,7 @@
                                       :comentario="item.st_comentario"
                                       :autor="item.st_autor"
                                       :id="item.id_comentario"
-                                      :imagem="item.imagens[0].st_arquivo"
+                                      :imagem="item.imagens.default.st_arquivo"
                     ></ItemTrComentario>
 
                     </tbody>
@@ -49,8 +49,8 @@
             ComentarioApi.getAllComentarios(retorno => {
 
                 for (let i = 0; i < retorno.data.length; i++) {
-                    if (retorno.data[i].imagens[0] === undefined) {
-                        retorno.data[i].imagens = [{st_arquivo: ""}];
+                    if (retorno.data[i].imagens.default === undefined) {
+                        retorno.data[i].imagens.default = {st_arquivo: ""};
                     }
                 }
 
