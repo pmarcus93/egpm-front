@@ -1,5 +1,5 @@
 <template>
-    <tr class="align-items-center text-center">
+    <tr class="align-items-center">
         <td>
             <div class="capa" :style="'background: url(' + imagem + ') center/cover' ">
             </div>

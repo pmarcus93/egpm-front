@@ -449,7 +449,6 @@
 
             abremodal: function () {
                 $('#modalimg').modal('show');
-
             },
             abremodalvideo: function () {
                 $('#modalvideo').modal('show');

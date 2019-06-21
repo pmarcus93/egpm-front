@@ -1,5 +1,25 @@
 <template>
     <div class="row">
+
+        <div class="modal fade" id="modalimg" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Imagem</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img loading="lazy" v-if="comentario.imagens[0]"
+                             :src="comentario.imagens[0].st_arquivo"
+                             :alt="'Imagem do autor '+comentario.st_nome"
+                             width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <BarraTitulo
                 titulo="COMENTÁRIOS"
                 icon="check"
@@ -26,7 +46,7 @@
                                       class="form-control"></textarea>
                         </div>
 
-                        <div class="form-group">
+                        <div v-if="comentario.imagens[0] === undefined " class="form-group">
                             <label>Imagem:</label>
                             <div class="custom-file">
                                 <input v-on:change="handleFileUpload()" type="file" ref="file"
@@ -35,15 +55,20 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div v-else class="form-group">
                             <label for="st_imagem">Imagem (url):</label>
                             <div class="input-group">
                                 <input id="st_imagem"
                                        required
                                        type="text"
                                        class="form-control"
+                                       :value="comentario.imagens[0].st_arquivo"
                                 >
                                 <div class="input-group-append">
+                                    <span v-on:click.prevent="abremodal"
+                                          class=" btn btn-success">
+                                                <i class="fa fa-eye"></i>
+                                        </span>
                                     <span v-on:click.prevent="removeimagem"
                                           class="btn btn-danger">
                                                 <i class="fa fa-trash"></i>
@@ -81,10 +106,10 @@
                 file: '',
                 labelimputfile: "Escolher Arquivo...",
                 comentario: {
-                    id_comentario: null,
-                    st_imagem: null,
-                    st_autor: null,
-                    st_comentario: null,
+                    id_comentario: "",
+                    st_imagem: "",
+                    st_autor: "",
+                    st_comentario: "",
                     imagens: []
                 },
                 uploadimagem: 0,
@@ -93,7 +118,7 @@
         },
         methods: {
             removeimagem: function () {
-                this.campeonato.imagens = [];
+                this.comentario.imagens = [];
                 this.uploadimagem = 1;
             },
 
@@ -102,10 +127,16 @@
                 this.labelimputfile = this.$refs.file.files[0].name;
                 this.uploadimagem = 1;
             },
+
+            abremodal: function () {
+                $('#modalimg').modal('show');
+            },
+
             save: function () {
                 this.loadingbutton = true;
 
                 let formData = new FormData();
+                formData.append("id_comentario", this.comentario.id_comentario);
                 formData.append("st_comentario", this.comentario.st_comentario);
                 formData.append("st_autor", this.comentario.st_autor);
                 formData.append("st_file", this.file);
@@ -129,5 +160,9 @@
 </script>
 
 <style scoped>
+
+    #st_comentario {
+        height: 300px;
+    }
 
 </style>
