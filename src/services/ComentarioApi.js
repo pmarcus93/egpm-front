@@ -14,7 +14,7 @@ export default {
     },
 
     postComentario: (comentario, callback) => {
-        ConfigServices.post(urlcomentario, comentario, callback);
+        ConfigServices.uploadFormData(urlcomentario, comentario, callback);
     },
 
     deleteComentario: (id, callback) => {

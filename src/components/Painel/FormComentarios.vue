@@ -5,6 +5,7 @@
                 icon="check"
                 texto-botao="Salvar"
                 action="save"
+                :loadingbutton="loadingbutton"
         >
         </BarraTitulo>
 
@@ -26,8 +27,29 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="st_imagem">Foto:</label>
-                            <input id="st_imagem" v-model="comentario.st_imagem" class="form-control">
+                            <label>Imagem:</label>
+                            <div class="custom-file">
+                                <input v-on:change="handleFileUpload()" type="file" ref="file"
+                                       class="custom-file-input" id="st_arquivo" required>
+                                <label class="custom-file-label" for="st_arquivo">{{labelimputfile}}</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="st_imagem">Imagem (url):</label>
+                            <div class="input-group">
+                                <input id="st_imagem"
+                                       required
+                                       type="text"
+                                       class="form-control"
+                                >
+                                <div class="input-group-append">
+                                    <span v-on:click.prevent="removeimagem"
+                                          class="btn btn-danger">
+                                                <i class="fa fa-trash"></i>
+                                        </span>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -41,6 +63,7 @@
 <script>
 
     import ComentarioApi from "@/services/ComentarioApi";
+    import PNotify from "@/services/PNotifyService";
     import BarraTitulo from "./BarraTitulo";
 
     export default {
@@ -55,33 +78,49 @@
         },
         data: function () {
             return {
+                file: '',
+                labelimputfile: "Escolher Arquivo...",
                 comentario: {
                     id_comentario: null,
                     st_imagem: null,
                     st_autor: null,
-                    st_comentario: null
-                }
+                    st_comentario: null,
+                    imagens: []
+                },
+                uploadimagem: 0,
+                loadingbutton: false
             }
         },
         methods: {
+            removeimagem: function () {
+                this.campeonato.imagens = [];
+                this.uploadimagem = 1;
+            },
+
+            handleFileUpload() {
+                this.file = this.$refs.file.files[0];
+                this.labelimputfile = this.$refs.file.files[0].name;
+                this.uploadimagem = 1;
+            },
             save: function () {
-                ComentarioApi.postComentario(this.comentario, result => {
-                    var opts = {};
+                this.loadingbutton = true;
+
+                let formData = new FormData();
+                formData.append("st_comentario", this.comentario.st_comentario);
+                formData.append("st_autor", this.comentario.st_autor);
+                formData.append("st_file", this.file);
+                formData.append("uploadimagem", this.uploadimagem);
+
+                ComentarioApi.postComentario(formData, result => {
                     if (result.data.status) {
-                        opts.title = 'Sucesso';
-                        opts.text = "Comentário salvo com sucesso.";
-                        opts.type = 'success';
-                        PNotify.alert(opts);
+                        PNotify.success("Comentário salvo com sucesso.");
                         this.$router.push({
                             name: 'viewcomentarios',
                         })
 
                     } else {
-                        opts.title = 'Erro';
-                        opts.text = result.data.erro.message;
-                        opts.type = 'error';
-                        PNotify.alert(opts);
-
+                        PNotify.fail(result.data.erro.message);
+                        this.loadingbutton =false;
                     }
                 })
             }
