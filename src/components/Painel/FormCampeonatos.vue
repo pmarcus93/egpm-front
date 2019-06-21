@@ -10,8 +10,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img loading="lazy" v-if="this.campeonato.imagens[0]"
-                             :src="this.campeonato.imagens[0].st_arquivo"
+                        <img loading="lazy" v-if="this.campeonato.imagens.default"
+                             :src="this.campeonato.imagens.default.st_arquivo"
                              :alt="'Imagem do jogo'+campeonato.st_nome"
                              width="100%">
                     </div>
@@ -117,7 +117,7 @@
                                    class="form-control">
                         </div>
 
-                        <div v-if="campeonato.imagens[0] === undefined " class="form-group">
+                        <div v-if="campeonato.imagens.default === undefined " class="form-group">
                             <label for="st_plataforma">Imagem:</label>
                             <div class="custom-file">
                                 <input v-on:change="handleFileUpload()" type="file" ref="file"
@@ -133,7 +133,7 @@
                                        required
                                        type="text"
                                        class="form-control"
-                                       :value="campeonato.imagens[0].st_arquivo">
+                                       :value="campeonato.imagens.default.st_arquivo">
                                 <div class="input-group-append">
                                         <span v-on:click.prevent="abremodal"
                                               class=" btn btn-success">
@@ -365,7 +365,7 @@
             },
 
             validaformulario: function () {
-                if (this.file === "" && this.campeonato.imagens[0] == undefined) {
+                if (this.file === "" && this.campeonato.imagens.default == undefined) {
                     PNotify.fail("É obrigatório informar uma imagem para o Jogo.");
                     return false;
                 }
