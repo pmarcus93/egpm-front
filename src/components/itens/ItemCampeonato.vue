@@ -1,11 +1,17 @@
 <template>
-    <div class="col-md-6 col-lg-4 bloco-campeonato">
+    <div class="col-6 col-lg-4 bloco-campeonato" style="border: 1px solid red">
         <router-link :to="'/campeonatos/' + rota">
             <div class="row">
                 <div class="col-12 info-campeonatos">
                     <h3 class="nome-campeonato text-center">{{titulo}}</h3>
                 </div>
-                <div class="fundo-imagem" v-bind:style="{ 'background': 'url(' + imagem + ') center/cover' }">
+                <div class="wrapper">
+                    <picture>
+                        <source media="(min-width: 576px)" v-bind:srcset="imagens.sm.st_url">
+                        <source media="(min-width: 768px)" v-bind:srcset="imagens.md.st_url">
+                        <source media="(min-width: 992px)" v-bind:srcset="imagens.lg.st_url">
+                        <img v-bind:srcset="imagens.default.st_url">
+                    </picture>
                 </div>
                 <div class="sobre-imagem"></div>
                 <div class="icones">
@@ -14,7 +20,6 @@
                         <img src="../../assets/icons/swords.svg"
                              alt="Ícone indicativo de campeonato. Duas espadas cruzadas." class="icone-campeonato">
                     </div>
-
                 </div>
             </div>
         </router-link>
@@ -22,14 +27,25 @@
 </template>
 
 <script>
+
     export default {
         name: "ItemCampeonato",
-        props: ["titulo", "imagem", "texto", "rota", "iscampeonato"],
+        props: ["titulo", "imagens", "texto", "rota", "iscampeonato"],
     }
 </script>
 
 
 <style scoped lang="scss">
+
+    picture {
+        border: 5px solid green;
+        display: block;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
 
     .bloco-campeonato {
         padding-bottom: 90px;
@@ -56,11 +72,13 @@
         color: $color-primary;
     }
 
-    .fundo-imagem {
-        height: 100%;
+    .wrapper {
+        height: 200px;
+        width: auto;
+        margin: auto;
+        overflow: hidden;
         position: absolute;
         top: 0;
-        width: 100%;
         z-index: 1;
     }
 
@@ -85,9 +103,12 @@
 
     .nome-campeonato {
         color: $color-primary;
-        font-size: 2em;
+        font-size: 1.3em;
         font-weight: bold;
         text-transform: uppercase;
+        @include md {
+            font-size: 2em;
+        }
     }
 
     .sobre-imagem {
