@@ -133,7 +133,8 @@
                                        required
                                        type="text"
                                        class="form-control"
-                                       :value="campeonato.imagens.default.st_url">
+                                       :value="campeonato.imagens.default.st_url"
+                                       disabled>
                                 <div class="input-group-append">
                                         <span v-on:click.prevent="abremodal"
                                               class=" btn btn-success">

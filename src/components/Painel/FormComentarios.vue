@@ -63,6 +63,7 @@
                                        type="text"
                                        class="form-control"
                                        :value="comentario.imagens.default.st_url"
+                                       disabled
                                 >
                                 <div class="input-group-append">
                                     <span v-on:click.prevent="abremodal"
