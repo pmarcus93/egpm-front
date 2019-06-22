@@ -31,10 +31,10 @@
                                 </div>
                             </div>
 
-                            <div v-if="imagem.st_arquivo" class="col-6">
+                            <div v-if="imagem.st_url" class="col-6">
                                 <div class="form-group">
-                                    <label for="st_arquivo">Link:</label>
-                                    <input v-model="imagem.st_arquivo" id="st_arquivo" type="text"
+                                    <label for="st_url">Link:</label>
+                                    <input v-model="imagem.st_url" id="st_url" type="text"
                                            class="form-control disabled" disabled>
                                 </div>
                             </div>
@@ -42,8 +42,8 @@
                             <div v-else class="col-6">
                                 <div class="custom-file">
                                     <input v-on:change="handleFileUpload()" type="file" ref="file"
-                                           class="custom-file-input" id="st_arquivo" required>
-                                    <label class="custom-file-label" for="st_arquivo">{{labelimputfile}}</label>
+                                           class="custom-file-input" id="st_url" required>
+                                    <label class="custom-file-label" for="st_url">{{labelimputfile}}</label>
                                 </div>
                             </div>
 
@@ -76,7 +76,7 @@
                 formData.append('st_file', this.file);
                 formData.append('st_nome', this.imagem.st_nome);
                 formData.append('st_alt', this.imagem.st_alt);
-                formData.append('st_arquivo', this.imagem.st_arquivo);
+                formData.append('st_url', this.imagem.st_url);
                 formData.append('id_imagem', this.imagem.id_imagem);
 
                 this.loadingbutton = true;
@@ -113,7 +113,7 @@
                 imagem: {
                     st_nome: "",
                     st_alt: "",
-                    st_arquivo: "",
+                    st_url: "",
                     id_imagem: ""
                 },
                 file: '',

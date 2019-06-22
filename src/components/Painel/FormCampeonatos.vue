@@ -11,7 +11,7 @@
                     </div>
                     <div class="modal-body">
                         <img loading="lazy" v-if="this.campeonato.imagens.default"
-                             :src="this.campeonato.imagens.default.st_arquivo"
+                             :src="this.campeonato.imagens.default.st_url"
                              :alt="'Imagem do jogo'+campeonato.st_nome"
                              width="100%">
                     </div>
@@ -121,8 +121,8 @@
                             <label for="st_plataforma">Imagem:</label>
                             <div class="custom-file">
                                 <input v-on:change="handleFileUpload()" type="file" ref="file"
-                                       class="custom-file-input" id="st_arquivo" required>
-                                <label class="custom-file-label" for="st_arquivo">{{labelimputfile}}</label>
+                                       class="custom-file-input" id="st_url" required>
+                                <label class="custom-file-label" for="st_url">{{labelimputfile}}</label>
                             </div>
                         </div>
 
@@ -133,7 +133,7 @@
                                        required
                                        type="text"
                                        class="form-control"
-                                       :value="campeonato.imagens.default.st_arquivo">
+                                       :value="campeonato.imagens.default.st_url">
                                 <div class="input-group-append">
                                         <span v-on:click.prevent="abremodal"
                                               class=" btn btn-success">
