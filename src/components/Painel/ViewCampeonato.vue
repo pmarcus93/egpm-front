@@ -28,7 +28,7 @@
                                       :nome="item.st_nome"
                                       :descricao="item.st_descricao"
                                       :id="item.id_jogo"
-                                      :imagem="item.imagens.default.st_arquivo"
+                                      :imagem="item.imagens.default.st_url"
                                       :iscampeonato="item.bl_campeonato"
                     ></ItemTrCampeonato>
                     </tbody>
@@ -61,7 +61,7 @@
 
                 for (let i = 0; i < campeonatos.data.length; i++) {
                     if (campeonatos.data[i].imagens.default === undefined) {
-                        campeonatos.data[i].imagens.default = {st_arquivo: ""};
+                        campeonatos.data[i].imagens.default = {st_url: ""};
                     }
                 }
 

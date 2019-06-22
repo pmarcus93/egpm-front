@@ -12,7 +12,7 @@
                     </div>
                     <div class="modal-body">
                         <img loading="lazy" v-if="comentario.imagens.default"
-                             :src="comentario.imagens.default.st_arquivo"
+                             :src="comentario.imagens.default.st_url"
                              :alt="'Imagem do autor '+comentario.st_nome"
                              width="100%">
                     </div>
@@ -50,8 +50,8 @@
                             <label>Imagem:</label>
                             <div class="custom-file">
                                 <input v-on:change="handleFileUpload()" type="file" ref="file"
-                                       class="custom-file-input" id="st_arquivo" required>
-                                <label class="custom-file-label" for="st_arquivo">{{labelimputfile}}</label>
+                                       class="custom-file-input" id="st_url" required>
+                                <label class="custom-file-label" for="st_url">{{labelimputfile}}</label>
                             </div>
                         </div>
 
@@ -62,7 +62,7 @@
                                        required
                                        type="text"
                                        class="form-control"
-                                       :value="comentario.imagens.default.st_arquivo"
+                                       :value="comentario.imagens.default.st_url"
                                 >
                                 <div class="input-group-append">
                                     <span v-on:click.prevent="abremodal"

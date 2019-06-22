@@ -26,7 +26,7 @@
                     <ItemTrImagem v-for="(imagem) in imagens"
                             :id="imagem.id_imagem"
                             :nome="imagem.st_nome"
-                            :imagem="imagem.st_arquivo"
+                            :imagem="imagem.st_url"
                     ></ItemTrImagem>
                     </tbody>
                 </table>

@@ -27,7 +27,7 @@
                                       :comentario="item.st_comentario"
                                       :autor="item.st_autor"
                                       :id="item.id_comentario"
-                                      :imagem="item.imagens.default.st_arquivo"
+                                      :imagem="item.imagens.default.st_url"
                     ></ItemTrComentario>
 
                     </tbody>
@@ -50,7 +50,7 @@
 
                 for (let i = 0; i < retorno.data.length; i++) {
                     if (retorno.data[i].imagens.default === undefined) {
-                        retorno.data[i].imagens.default = {st_arquivo: ""};
+                        retorno.data[i].imagens.default = {st_url: ""};
                     }
                 }
 
