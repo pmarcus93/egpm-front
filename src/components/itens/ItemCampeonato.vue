@@ -1,5 +1,5 @@
 <template>
-    <div class="col-6 col-md-4 bloco-campeonato" style="padding-left: 0; padding-right:0">
+    <div class="col-6 col-md-4 bloco-campeonato">
         <router-link :to="'/campeonatos/' + rota">
             <div class="wrapper">
                 <h1 class="titulo-jogo">{{titulo}}</h1>
@@ -12,14 +12,6 @@
                 </picture>
 
                 <div class="sobre-imagem"></div>
-
-                <div class="icones">
-                    <div v-if="+iscampeonato === 1" class="d-flex align-items-center justify-content-center">
-                        <span class="campeonato-txt">CAMPEONATO</span>
-                        <img src="../../assets/icons/swords.svg"
-                             alt="Ícone indicativo de campeonato. Duas espadas cruzadas." class="icone-campeonato">
-                    </div>
-                </div>
             </div>
         </router-link>
     </div>
@@ -39,6 +31,8 @@
 
     .bloco-campeonato {
         text-decoration: none;
+        padding-left: 0;
+        padding-right: 0;
         @include md {
             :active .sobre-imagem {
                 background: rgba(0, 0, 0, .4);
