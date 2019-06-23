@@ -1,6 +1,6 @@
 <template>
     <div class="campeonatos">
-        <div class="container-fluid ">
+        <div class="container-fluid">
             <div class="row" v-if="campeonatos">
                 <ItemCampeonato
                         v-for="(campeonato) in campeonatos"
