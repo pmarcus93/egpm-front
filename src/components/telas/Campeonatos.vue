@@ -23,7 +23,6 @@
         components: {ItemCampeonato},
         created() {
             JogoApi.getAll(campeonatos => {
-                console.log(campeonatos.data);
                 this.campeonatos = campeonatos.data;
             })
         },
