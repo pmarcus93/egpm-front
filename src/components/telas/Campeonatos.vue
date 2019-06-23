@@ -1,11 +1,12 @@
 <template>
     <div class="campeonatos">
-        <div class="container-fluid ">
-            <div class="row">
-                <ItemCampeonato v-for="(campeonato) in campeonatos"
+        <div class="container-fluid">
+            <div class="row" v-if="campeonatos">
+                <ItemCampeonato
+                        v-for="(campeonato) in campeonatos"
                                 :titulo="campeonato.st_nome"
-                                :imagem="campeonato.st_imagem"
                                 :rota="campeonato.id_jogo"
+                                :imagens="campeonato.imagens"
                                 :iscampeonato="campeonato.bl_campeonato"
                 ></ItemCampeonato>
             </div>
