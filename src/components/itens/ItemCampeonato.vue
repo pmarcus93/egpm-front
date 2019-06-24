@@ -5,10 +5,10 @@
                 <h1 class="titulo-jogo">{{titulo}}</h1>
 
                 <picture>
-                    <source media="(min-width: 576px)" v-bind:srcset="imagens.sm.st_url">
-                    <source media="(min-width: 768px)" v-bind:srcset="imagens.md.st_url">
                     <source media="(min-width: 992px)" v-bind:srcset="imagens.lg.st_url">
-                    <img class="img-fluid" v-bind:srcset="imagens.default.st_url">
+                    <source media="(min-width: 768px)" v-bind:srcset="imagens.md.st_url">
+                    <source media="(min-width: 576px)" v-bind:srcset="imagens.sm.st_url">
+                    <img v-bind:srcset="imagens.default.st_url">
                 </picture>
 
                 <div class="sobre-imagem"></div>
@@ -87,19 +87,27 @@
         font-weight: bold;
         text-transform: uppercase;
         @include sm {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
         }
+        @include lg {
+            font-size: 2rem;
+        }
+
         z-index: 3;
     }
 
     .wrapper {
         position: relative;
         text-align: center;
+        height: 150px;
+
+        @include sm {
+            height: 300px;
+        }
+
         img {
-            height: 150px;
-            @include  sm {
-                height: 300px;
-            }
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
     }
