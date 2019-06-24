@@ -1,29 +1,10 @@
 <template>
 
-    <div :id="'accordion'+id_duvida">
-        <div class="card">
-            <div class="card-header" :id="'heading'+id_duvida">
-                <h5 class="mb-0">
-                    <button class="btn collapsed"
-                            type="button"
-                            data-toggle="collapse"
-                            :data-target="'#collapseOne'+id_duvida"
-                            aria-expanded="true"
-                            :aria-controls="'collapseOne'+id_duvida">
-                        {{duvida}}
-                    </button>
-                </h5>
-            </div>
-
-            <div :id="'collapseOne'+id_duvida"
-                 class="collapse"
-                 :aria-labelledby="'heading'+id_duvida"
-                 :data-parent="'#accordion'+id_duvida">
-
-                <div class="card-body">
-                    {{resposta}}
-                </div>
-
+    <div class="col-md-4 mt-3">
+        <div class="card border-dark">
+            <div class="card-body text-dark">
+                <h5 class="card-title">{{duvida}}</h5>
+                <p class="card-text">{{resposta}}</p>
             </div>
         </div>
     </div>
@@ -39,12 +20,8 @@
 
 <style scoped lang="scss">
 
-    .card-header {
-        background-color: $rainbow-blue;
-        
-        button {
-            color: $light-text;
-        }
+    .card {
+        height: 100%;
     }
 
 </style>
