@@ -90,7 +90,7 @@
             font-size: 1.5rem;
         }
         @include lg {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
 
         z-index: 3;
