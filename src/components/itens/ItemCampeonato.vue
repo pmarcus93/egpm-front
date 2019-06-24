@@ -83,7 +83,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
         font-weight: bold;
         text-transform: uppercase;
         @include sm {
