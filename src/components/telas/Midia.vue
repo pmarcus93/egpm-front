@@ -20,8 +20,10 @@
                 <div class="row">
                     <div class="col-12 titulo-depoimentos text-center">O QUE ELES ACHARAM DO #EGPM</div>
                     <Depoimento v-for="(item, indice) in comentarios" v-if="indice<3"
-                                :depoimento="item.st_comentario"
-                                :autor="item.st_autor">
+                                v-bind:depoimento="item.st_comentario"
+                                v-bind:autor="item.st_autor"
+                                v-bind:imagens="item.imagens"
+                    >
                     </Depoimento>
                 </div>
             </div>
