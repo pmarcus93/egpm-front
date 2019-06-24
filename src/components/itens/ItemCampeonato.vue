@@ -78,16 +78,16 @@
     }
 
     .titulo-jogo {
+        color: $color-primary;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 1.4rem;
-        color: $color-primary;
+        font-size: calc(12px + 6 * ((100vw - 320px) / 680));
         font-weight: bold;
         text-transform: uppercase;
-        @include md {
-            font-size: 1.7rem;
+        @include sm {
+            font-size: 1.6rem;
         }
         z-index: 3;
     }
@@ -96,7 +96,10 @@
         position: relative;
         text-align: center;
         img {
-            height: 300px;
+            height: 150px;
+            @include  sm {
+                height: 300px;
+            }
             object-fit: cover;
         }
     }
