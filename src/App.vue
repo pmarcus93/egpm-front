@@ -97,12 +97,4 @@
         background: #dad7d7;
     }
 
-    .ck-editor__editable_inline {
-        min-height: 300px !important;
-    }
-
-    :host .ck-editor__editable_inline {
-        min-height: 300px !important;
-    }
-
 </style>

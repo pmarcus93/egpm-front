@@ -42,11 +42,6 @@
         color: $color-title;
     }
 
-    .secao-duvidas {
-        display: flex;
-        align-self: center;
-    }
-
     .subtitulo {
         @include sm {
             text-align: center;
