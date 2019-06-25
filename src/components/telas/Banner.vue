@@ -4,8 +4,8 @@
             <section class="py-5 text-center">
                 <h2 class="text-center"><span class="badge badge-pill badge-em-breve">Em breve!</span></h2>
                 <picture class="my-5">
-                    <source media="(min-width: 576px)" srcset="../../assets/images/full-logo/full-logo-sm.png">
-                    <img class="d-block mx-auto my-4 logo-full" srcset="../../assets/images/full-logo/full-logo-default.png"
+                    <source media="(min-width: 576px)" srcset="../../assets/images/full-logo/full-logo-md.png">
+                    <img class="d-block mx-auto my-4 logo-full" srcset="../../assets/images/full-logo/full-logo-sm.png"
                          alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
                 </picture>
                 <div class="descricao"><p>O maior evento de videogames da região.<br>Feito por gamers,
