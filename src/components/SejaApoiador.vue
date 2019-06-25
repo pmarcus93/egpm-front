@@ -28,7 +28,8 @@
 
                                 <div class="form-group">
                                     <label for="st_empresa">Empresa:</label>
-                                    <input id="st_empresa" maxlength="25" v-model="apoio.st_empresa" required type="text"
+                                    <input id="st_empresa" maxlength="25" v-model="apoio.st_empresa" required
+                                           type="text"
                                            class="form-control">
                                 </div>
                                 <div class="form-group">
@@ -39,13 +40,18 @@
 
                                 <div class="form-group">
                                     <label for="st_telefone">Telefone:</label>
-                                    <input id="st_telefone" maxlength="11" v-model="apoio.st_telefone" required type="tel"
+                                    <input id="st_telefone" maxlength="11" v-model="apoio.st_telefone" required
+                                           type="tel"
                                            class="form-control">
                                 </div>
 
                                 <div class="form-group">
-                                    <button class="btn btn-primary float-right"><i class="fa fa-paper-plane"></i> Enviar
+                                    <button class="btn btn-primary btn-block"><i class="fa fa-paper-plane"></i> Enviar
                                     </button>
+                                </div>
+
+                                <div v-if="statusEnvioForm" class="alert" :class="statusMensagem.classe" role="alert">
+                                    {{statusMensagem.texto}}
                                 </div>
 
                             </form>
@@ -69,7 +75,6 @@
     import FundoFixo from "./itens/FundoFixo";
     import BannerMenor from "./itens/BannerMenor";
     import ApoioApi from "@/services/ApoioApi";
-    import BlocoRodape from "./itens/BlocoRodape";
     import VueRecaptcha from 'vue-recaptcha';
 
     export default {
@@ -77,6 +82,11 @@
         components: {BannerMenor, FundoFixo, 'vue-recaptcha': VueRecaptcha},
         data() {
             return {
+                statusEnvioForm: 0,
+                statusMensagem: {
+                    classe: '',
+                    texto: ''
+                },
                 apoio: {
                     st_nome: null,
                     st_empresa: null,
@@ -84,26 +94,19 @@
                     st_telefone: null,
                     bl_analisado: 0
                 },
-
             }
         },
         methods: {
             salvaapoio: function (recaptchaToken) {
                 this.apoio.recaptchatoken = recaptchaToken;
                 ApoioApi.post(this.apoio, result => {
-                        var opts = {};
-
+                        this.statusEnvioForm = 1;
                         if (result.data.status) {
-                            opts.title = 'Sucesso';
-                            opts.text = "Mensagem enviada com sucesso.";
-                            opts.type = 'success';
-                            PNotify.alert(opts);
-                            this.apoio = {};
+                            this.statusMensagem.texto = 'Formulário de contato enviado!';
+                            this.statusMensagem.classe = 'alert-success';
                         } else {
-                            opts.title = 'Erro';
-                            opts.text = result.data.erro.message;
-                            opts.type = 'error';
-                            PNotify.alert(opts);
+                            this.statusMensagem.texto = 'Não foi possível enviar o formulário de contato. 😕';
+                            this.statusMensagem.classe = 'alert-success';
                         }
                     }
                 )

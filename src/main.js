@@ -5,13 +5,7 @@ import routes from './routes';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
-import 'pnotify/dist/es/PNotify';
-import 'pnotify/dist/es/PNotifyButtons';
 
-
-global.PNotify = require('pnotify/dist/umd/PNotify');
-global.PNotify.defaults.delay = 3000;
-global.PNotify.defaults.styling = 'bootstrap4';
 
 Vue.use(VueRouter);
 

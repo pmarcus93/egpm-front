@@ -1,7 +1,6 @@
 <template>
     <div>
         <ButtonTicket></ButtonTicket>
-        <Toasty></Toasty>
         <div class="site-contents">
             <Banner></Banner>
             <Sobre></Sobre>

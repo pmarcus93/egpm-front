@@ -44,25 +44,6 @@
         }
     }
 
-    .campeonato-txt {
-        color: $color-primary;
-    }
-
-    .icone-campeonato {
-        color: $color-primary;
-        height: 30px;
-        margin-left: 10px;
-        width: 30px;
-    }
-
-    .icones {
-        bottom: 0;
-        padding: 15px;
-        position: absolute;
-        right: 0;
-        z-index: 3;
-    }
-
     .sobre-imagem {
         background: rgba(0, 0, 0, .5);
         height: 100%;

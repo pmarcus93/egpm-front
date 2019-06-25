@@ -70,14 +70,7 @@
     .depoimentos {
         background: $bg-light;
     }
-
-    .midia {
-        background: $bg-light;
-        color: $color-title;
-        padding-top: 5%;
-        padding-bottom: 5%;
-    }
-
+    
     .video {
         margin-top: 30px;
         border: none;

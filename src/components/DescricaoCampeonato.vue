@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div v-if="campeonato.bl_campeonato == 1" class="container-fluid">
+        <div v-if="campeonato.bl_campeonato === +1" class="container-fluid">
             <div class="container">
                 <div class="row">
                     <div class="col-12 my-4">
@@ -102,9 +102,6 @@
         position: relative;
     }
 
-    .conteudo-regra {
-        background: white;
-    }
 
     .detalhes-campeonato {
         i {
@@ -112,34 +109,10 @@
         }
     }
 
-    .icone {
-        font-size: 2.5em;
-    }
-
-
-    .lista-jogo-dados {
-        background: $bg-light;
-    }
-
     .list-group-item-primary {
         background-color: $color-primary;
         color: $color-secondary-variant;
         font-family: $font-archive;
-    }
-
-    .texto {
-        font-size: 1.5em;
-        font-weight: 600;
-    }
-
-    .titulo-regras {
-        font-family: $font-archive;
-        font-size: 3em;
-    }
-
-    .titulo-observacoes {
-        font-family: $font-archive;
-        font-size: 2.5em;
     }
 
 </style>
