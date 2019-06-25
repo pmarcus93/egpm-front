@@ -5,8 +5,6 @@
                 <h1 class="titulo-jogo">{{titulo}}</h1>
 
                 <picture>
-                    <source media="(min-width: 992px)" v-bind:srcset="imagens.lg.st_url">
-                    <source media="(min-width: 768px)" v-bind:srcset="imagens.md.st_url">
                     <source media="(min-width: 576px)" v-bind:srcset="imagens.sm.st_url">
                     <img v-bind:srcset="imagens.default.st_url">
                 </picture>
