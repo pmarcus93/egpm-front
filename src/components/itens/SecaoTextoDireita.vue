@@ -4,7 +4,7 @@
             <section class="col-12 section d-flex" :class="[classimage, type]">
                 <div class="col-md-6 my-auto box-info">
                     <h2 class="mb-2 titulo-secao-right content-title"><span>{{titulo}}</span></h2>
-                    <p class="mt-2 descricao">{{descricao}}</p>
+                    <p class="mt-2 content-description">{{descricao}}</p>
                 </div>
             </section>
         </div>

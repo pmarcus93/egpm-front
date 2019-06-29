@@ -7,7 +7,7 @@
                 <div class="container">
                     <div class="col-12">
                         <h1 class="titulo-secao content-title"><span>{{titulo}}</span></h1>
-                        <p class="mt-3">{{descricao}}</p>
+                        <p class="mt-3 content-description">{{descricao}}</p>
                     </div>
                 </div>
             </div>
