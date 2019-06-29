@@ -12,7 +12,7 @@
             </router-link>
 
             <router-link class="navbar-brand link" to='/campeonatos'>
-                CAMPEONATOS
+                GAMES
             </router-link>
 
             <router-link class="navbar-brand link" to='/apoie'>
