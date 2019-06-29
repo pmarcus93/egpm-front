@@ -19,7 +19,7 @@
 <script>
 
     import BlocoIcons from "../itens/IconesSobre";
-    import Secao from "../itens/Secao";
+    import Secao from "../itens/Section";
     import SecaoApi from "@/services/SecaoApi";
 
     export default {

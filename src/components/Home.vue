@@ -20,7 +20,7 @@
     import Banner from "./telas/Banner";
     import Sobre from "./telas/Sobre";
     import Midia from "./telas/Midia";
-    import Campeonatos from "./telas/Campeonatos";
+    import Campeonatos from "./telas/GameList";
     import Palestras from "./telas/Palestras";
     import Campeonato from "./telas/Campeonato";
     import FreePlay from "./telas/FreePlay";

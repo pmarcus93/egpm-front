@@ -10,7 +10,7 @@
 
 <script>
     import Navbar from "./components/itens/Navbar";
-    import BlocoRodape from "./components/itens/BlocoRodape";
+    import BlocoRodape from "./components/itens/Footer";
 
     export default {
         name: 'app',

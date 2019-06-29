@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import ItemCampeonato from "../itens/ItemCampeonato";
+    import ItemCampeonato from "../itens/Game";
     import JogoApi from "@/services/JogoApi";
 
     export default {
