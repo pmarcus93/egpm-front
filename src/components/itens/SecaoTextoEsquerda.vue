@@ -3,8 +3,8 @@
         <div class="row">
             <section class="col-12 section d-flex" :class="[classimage, type]">
                 <div class="col-md-6 my-auto box-info">
-                    <h1 class="mb-2 titulo-secao-left"><span>{{titulo}}</span></h1>
-                    <h2 class="mt-2 descricao">{{descricao}}</h2>
+                    <h1 class="mb-2 titulo-secao-left content-title"><span>{{titulo}}</span></h1>
+                    <p class="mt-2">{{descricao}}</p>
                 </div>
             </section>
         </div>
@@ -36,7 +36,7 @@
 
     .section {
         position: relative;
-        height: 50vh;
+        height: 45vh;
         justify-content: flex-start;
     }
 
@@ -47,17 +47,6 @@
     .box-info {
         text-align: center;
         z-index: 2;
-    }
-
-    .descricao {
-        font-size: 1.2rem;
-        @include sm {
-            font-size: 1.3rem;
-        }
-
-        @include md {
-            font-size: 1.5rem;
-        }
     }
 
     .titulo-secao-left {
@@ -76,13 +65,6 @@
             width: 100%;
         }
 
-        font-size: 2rem;
-        font-family: $font-archive;
-        text-align: center;
-
-        @include md {
-            font-size: 3em;
-        }
     }
 
 </style>

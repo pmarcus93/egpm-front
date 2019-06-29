@@ -64,15 +64,13 @@
 
 
 <script>
-    import FundoFixo from "./itens/FundoFixo";
-    import BannerMenor from "./itens/BannerMenor";
     import ApoioApi from "@/services/ApoioApi";
     import VueRecaptcha from 'vue-recaptcha';
-    import HeaderSubScreen from "./itens/HeaderSubScreen";
+    import HeaderSubScreen from "../itens/HeaderSubScreen";
 
     export default {
         name: "SejaApoiador",
-        components: {HeaderSubScreen, BannerMenor, FundoFixo, 'vue-recaptcha': VueRecaptcha},
+        components: {HeaderSubScreen, 'vue-recaptcha': VueRecaptcha},
         data() {
             return {
                 statusEnvioForm: 0,

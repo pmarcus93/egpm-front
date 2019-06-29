@@ -3,9 +3,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 my-auto">
-                    <Secao titulo="Sobre o #EGPM3"
-                           :descricao="secao.st_texto">
+                    <Secao titulo="Sobre o #EGPM3">
                     </Secao>
+                    <p class="text-justify">{{secao.st_texto}}</p>
                 </div>
                 <div class="col-lg-6">
                     <BlocoIcons>

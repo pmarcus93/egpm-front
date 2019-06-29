@@ -1,10 +1,10 @@
 // routes.js
 
 import Home from "./components/Home";
-import CampeonatoTela from "./components/CampeonatoTela";
+import CampeonatoTela from "./components/telas/Games";
 import DescricaoCampeonato from "./components/DescricaoCampeonato";
-import Erro404 from "./components/Erro404";
-import SejaApoiador from "./components/SejaApoiador";
+import Erro404 from "./components/Error404";
+import SejaApoiador from "./components/telas/SponsorUs";
 
 const routes = [
     {

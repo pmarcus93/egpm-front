@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-12">
                 <section>
-                    <h1 class="titulo-secao text-center">{{titulo}}</h1>
-                    <p class="text-justify">{{descricao}}</p>
+                    <h2 class="text-center content-title">{{titulo}}</h2>
+                    <p class="text-center">{{descricao}}</p>
                 </section>
             </div>
         </div>
@@ -20,14 +20,6 @@
     }
 </script>
 
-<style scoped lang="scss">
-
-    .titulo-secao {
-        font-family: $font-archive;
-        font-size: 2rem;
-        @include sm {
-            font-size: 2.5rem;
-        }
-    }
+<style>
 
 </style>

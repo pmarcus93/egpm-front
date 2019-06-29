@@ -8,7 +8,8 @@
                     <img class="d-block mx-auto my-4 logo-full" srcset="../../assets/images/full-logo/full-logo-sm.png"
                          alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
                 </picture>
-                <div class="descricao"><p>O maior evento de videogames da região.<br>Feito por gamers,
+                <div class="descricao"><p>O maior evento de videogames da região.</p>
+                    <p>Feito por gamers,
                     para gamers.</p></div>
             </section>
         </div>
@@ -41,6 +42,7 @@
         color: $color-primary;
         text-transform: uppercase;
         font-size: 2.7vh;
+        line-height: .5rem;
         @include sm {
             font-size: 1.5rem;
         }
