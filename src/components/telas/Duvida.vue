@@ -18,7 +18,7 @@
 
 <script>
     import DuvidaApi from "@/services/DuvidaApi";
-    import ItemDuvida from "../itens/ItemDuvida";
+    import ItemDuvida from "../itens/Question";
 
     export default {
         name: "Duvida",

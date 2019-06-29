@@ -28,7 +28,7 @@
 </template>
 
 <script>
-    import ItemPatrocinador from "../itens/ItemPatrocinador";
+    import ItemPatrocinador from "../itens/Sponsor";
     import PatrocinadorApi from "@/services/PatrocinadorApi"
 
     export default {

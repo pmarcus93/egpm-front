@@ -1,19 +1,12 @@
 <template>
-    <div>
-        <FundoFixo
-                sobreimagem="rgba(0,0,0,0)"></FundoFixo>
+    <section>
+        <HeaderSubScreen
+                titulo="Seja um apoiador"
+                descricao="Marque presença no maior evento de games da região! Preencha o formulário abaixo e entraremos em contato."
+                imagens="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        ></HeaderSubScreen>
 
-        <div>
-            <div class="container">
-                <div class="col-12">
-                    <BannerMenor
-                            titulo="Seja um apoiador"
-                            descricao="Marque presença no maior evento de games da região! Preencha o formulário abaixo e entraremos em contato."
-                    ></BannerMenor>
-                </div>
-            </div>
-
-            <div class="container-fluid py-5">
+        <div class="container-fluid py-5">
                 <div class="container">
 
                     <div class="row">
@@ -59,7 +52,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         <vue-recaptcha
                 ref="recaptcha"
                 @verify="onCaptchaVerified"
@@ -67,7 +59,7 @@
                 size="invisible"
                 sitekey="6Lf73qcUAAAAAJjQSVZEFcpseQNTGXCIhkNIEboT">
         </vue-recaptcha>
-    </div>
+    </section>
 </template>
 
 
@@ -76,10 +68,11 @@
     import BannerMenor from "./itens/BannerMenor";
     import ApoioApi from "@/services/ApoioApi";
     import VueRecaptcha from 'vue-recaptcha';
+    import HeaderSubScreen from "./itens/HeaderSubScreen";
 
     export default {
         name: "SejaApoiador",
-        components: {BannerMenor, FundoFixo, 'vue-recaptcha': VueRecaptcha},
+        components: {HeaderSubScreen, BannerMenor, FundoFixo, 'vue-recaptcha': VueRecaptcha},
         data() {
             return {
                 statusEnvioForm: 0,

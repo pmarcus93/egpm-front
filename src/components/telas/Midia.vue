@@ -35,8 +35,8 @@
 </template>
 
 <script>
-    import Secao from "../itens/Secao";
-    import Depoimento from "../itens/Depoimento";
+    import Secao from "../itens/Section";
+    import Depoimento from "../itens/Testimonial";
     import ComentarioApi from "@/services/ComentarioApi";
     import SecaoApi from "@/services/SecaoApi";
 

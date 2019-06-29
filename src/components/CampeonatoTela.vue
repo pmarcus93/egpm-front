@@ -1,46 +1,24 @@
 <template>
-    <div class="pagina-duvidas">
-        <FundoFixo
-        sobreimagem="rgba(0,0,0,0)"
-        ></FundoFixo>
-        <div>
-            <div class="container conteudo">
-                <div class="row">
-                    <div class="col-12">
-                        <BannerMenor
-                                titulo="Campeonatos"
-                                descricao="Selecione um game para conferir detalhes.
-                                Confira as regras do campeonato, quantidade de jogadores, plataforma, categoria, trailer e muito mais!"
-                        ></BannerMenor>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="container pb-5">
-                <div class="row">
-                    <ItemCampeonato v-for="(item) in campeonatos"
-                                    :titulo="item.st_nome"
-                                    :imagem="item.st_imagem"
-                                    :rota="item.id_jogo"
-                                    :iscampeonato="item.bl_campeonato"
-                    ></ItemCampeonato>
-                </div>
-            </div>
-        </div>
-    </div>
+    <section>
+        <HeaderSubScreen
+                titulo="Games"
+                descricao="Confira os detalhes dos games que estarão presentes no evento. Regras dos campeonatos, categoria, trailer,
+                    plataformas e muito mais!"
+                imagens="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">
+        </HeaderSubScreen>
+        <Campeonatos></Campeonatos>
+    </section>
 
 </template>
 
 <script>
-    import BannerMenor from "./itens/BannerMenor";
-    import FundoFixo from "./itens/FundoFixo";
-    import ItemCampeonato from "./itens/ItemCampeonato";
     import JogoApi from "@/services/JogoApi.js";
+    import HeaderSubScreen from "./itens/HeaderSubScreen";
+    import Campeonatos from "./telas/GameList";
 
     export default {
         name: "CampeonatoTela",
-        components: {ItemCampeonato, FundoFixo, BannerMenor},
+        components: {Campeonatos, HeaderSubScreen},
         created() {
             var self = this;
             JogoApi.getCampeonatos(campeonatos => {
@@ -56,5 +34,4 @@
 </script>
 
 <style scoped>
-
 </style>
