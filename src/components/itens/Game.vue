@@ -65,13 +65,13 @@
         font-size: calc(16px + 6 * ((100vw - 320px) / 680));
         font-weight: bold;
         text-transform: uppercase;
+        width: 100%;
         @include sm {
             font-size: 1.5rem;
         }
         @include lg {
             font-size: 1.7rem;
         }
-
         z-index: 3;
     }
 

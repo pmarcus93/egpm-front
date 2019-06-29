@@ -46,7 +46,7 @@
 
             <div class="col-12">
                 <router-link class="navbar-brand" to='/campeonatos'>
-                    <button class="btn btn-lg btn-link" v-on:click="toggleMenu">CAMPEONATOS</button>
+                    <button class="btn btn-lg btn-link" v-on:click="toggleMenu">GAMES</button>
                 </router-link>
             </div>
 

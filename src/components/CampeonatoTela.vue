@@ -2,8 +2,7 @@
     <section>
         <HeaderSubScreen
                 titulo="Games"
-                descricao="Confira os detalhes dos games que estarão presentes no evento. Regras dos campeonatos, categoria, trailer,
-                    plataformas e muito mais!"
+                descricao="Confira trailers, imagens, regras dos campeonatos e detalhes dos games presentes no evento."
                 imagens="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">
         </HeaderSubScreen>
         <Campeonatos></Campeonatos>

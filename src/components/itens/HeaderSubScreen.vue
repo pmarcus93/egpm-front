@@ -5,7 +5,7 @@
             <img v-bind:src="imagens">
             <div class="text text-center">
                 <h1 class="titulo-secao"><span>{{titulo}}</span></h1>
-                <p class="mt-3">{{descricao}}</p>
+                <h5 class="mt-3">{{descricao}}</h5>
             </div>
         </div>
     </section>
@@ -43,6 +43,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        width: 100%;
     }
 
     .titulo-secao {
