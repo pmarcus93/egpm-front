@@ -7,7 +7,6 @@
         </HeaderSubScreen>
         <Campeonatos></Campeonatos>
     </section>
-
 </template>
 
 <script>

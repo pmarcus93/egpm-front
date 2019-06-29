@@ -1,7 +1,7 @@
 <template>
     <div>
         <ButtonTicket></ButtonTicket>
-        <div class="site-contents">
+        <div>
             <Banner></Banner>
             <Sobre></Sobre>
             <Campeonato></Campeonato>
@@ -27,12 +27,10 @@
     import Duvida from "./telas/Duvida";
     import Localizacao from "./telas/Localizacao";
     import ButtonTicket from "./itens/ButtonTicket";
-    import Toasty from "./itens/Toasty";
 
     export default {
         name: "Home",
         components: {
-            Toasty,
             ButtonTicket,
             Localizacao,
             Duvida,
