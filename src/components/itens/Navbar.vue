@@ -52,7 +52,7 @@
 
             <div class="col-12">
                 <router-link class="navbar-brand" to='/apoie'>
-                    <button class="btn btn-lg btn-link" v-on:click="toggleMenu">APOIO</button>
+                    <button class="btn btn-lg btn-link" v-on:click="toggleMenu">QUERO SER APOIADOR</button>
                 </router-link>
             </div>
 
