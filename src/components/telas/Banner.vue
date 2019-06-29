@@ -42,7 +42,6 @@
         color: $color-primary;
         text-transform: uppercase;
         font-size: 2.7vh;
-        line-height: .5rem;
         @include sm {
             font-size: 1.5rem;
         }
