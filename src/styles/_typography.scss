@@ -12,12 +12,7 @@
   }
 }
 
-.content-description {
-
-}
-
 p {
-
   font-size: 1rem;
 
   @include sm {
@@ -31,6 +26,5 @@ p {
   @include lg {
     font-size: 1.3rem !important;
   }
-
 }
 
