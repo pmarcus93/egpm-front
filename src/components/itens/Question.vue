@@ -3,7 +3,7 @@
     <div class="col-md-4 mt-3">
         <div class="card border-dark">
             <div class="card-body text-dark">
-                <h5 class="card-title">{{duvida}}</h5>
+                <h5 class="card-title font-weight-bold">{{duvida}}</h5>
                 <p class="card-text">{{resposta}}</p>
             </div>
         </div>
