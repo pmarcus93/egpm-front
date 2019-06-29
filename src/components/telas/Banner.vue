@@ -8,9 +8,8 @@
                     <img class="d-block mx-auto my-4 logo-full" srcset="../../assets/images/full-logo/full-logo-sm.png"
                          alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
                 </picture>
-                <div class="descricao"><p>O maior evento de videogames da região.</p>
-                    <p>Feito por gamers,
-                    para gamers.</p></div>
+                <div class="descricao">O maior evento de games da região.<br>
+                    <p>Feito por gamers, para gamers.</p></div>
             </section>
         </div>
     </div>

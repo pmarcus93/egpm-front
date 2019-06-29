@@ -12,12 +12,8 @@
   }
 }
 
-p {
-  font-size: 1rem;
-
-  @include sm {
-    font-size: 1.1rem !important;
-  }
+.content-description {
+  font-size: 1rem !important;
 
   @include md {
     font-size: 1.2rem !important;
