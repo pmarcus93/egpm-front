@@ -28,6 +28,7 @@
         height: 50vh;
         position: relative;
         width: 100%;
+        background-color: black;
 
         img {
             filter: brightness(35%) grayscale(25%);
