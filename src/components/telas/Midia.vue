@@ -18,7 +18,9 @@
         <div class="container-fluid depoimentos py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 titulo-depoimentos text-center">O QUE ELES ACHARAM DO #EGPM</div>
+                    <Secao
+                            titulo="O que estão falando do #EGPM?"
+                    ></Secao>
                     <Depoimento v-for="(item, indice) in comentarios" v-if="indice<3"
                                 v-bind:depoimento="item.st_comentario"
                                 v-bind:autor="item.st_autor"

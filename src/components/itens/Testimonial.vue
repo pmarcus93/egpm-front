@@ -8,8 +8,8 @@
                 <img v-bind:srcset="imagens.default.st_url">
             </picture>
         </div>
-        <div class="col-12 pt-4"><p class="text-center"><b>{{autor}}</b></p></div>
-        <div class="col-12 text-justify">"{{depoimento}}"</div>
+        <h1 class="col-12 pt-4"><p class="text-center"><b>{{autor}}</b></p></h1>
+        <p class="col-12 text-justify">"{{depoimento}}"</p>
     </div>
 </template>
 
@@ -25,6 +25,7 @@
     .avatar {
         height: 150px;
         width: 150px;
+
         img {
             border-radius: 50%;
             width: 100%;

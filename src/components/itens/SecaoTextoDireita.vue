@@ -3,8 +3,8 @@
         <div class="row">
             <section class="col-12 section d-flex" :class="[classimage, type]">
                 <div class="col-md-6 my-auto box-info">
-                    <h1 class="mb-2 titulo-secao-right"><span>{{titulo}}</span></h1>
-                    <h2 class="mt-2 descricao">{{descricao}}</h2>
+                    <h2 class="mb-2 titulo-secao-right content-title"><span>{{titulo}}</span></h2>
+                    <p class="mt-2 descricao">{{descricao}}</p>
                 </div>
             </section>
         </div>
@@ -19,7 +19,7 @@
 </script>
 
 <style scoped lang="scss">
-    
+
     .box-info {
         text-align: center;
         z-index: 2;
@@ -33,25 +33,13 @@
         background: $color-secondary-variant url('../../assets/images/background-03.jpg') center/cover;
     }
 
-    .descricao {
-        font-size: 1.2rem;
-        @include sm {
-            font-size: 1.3rem;
-        }
-
-        @include md {
-            font-size: 1.5rem;
-        }
-
-    }
-
     .secao-right-body {
-        color: whitesmoke;
+        color: $light-text;
     }
 
     .section {
         position: relative;
-        height: 50vh;
+        height: 45vh;
         justify-content: flex-end;
     }
 
@@ -82,13 +70,8 @@
             width: 100%;
         }
 
-        font-size: 2rem;
         font-family: $font-archive;
         text-align: center;
-
-        @include md {
-            font-size: 3em;
-        }
     }
 
 </style>

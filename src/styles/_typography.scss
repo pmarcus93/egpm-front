@@ -1,0 +1,36 @@
+.content-title {
+  font-size: 2rem !important;
+  text-transform: uppercase !important;
+  font-weight: bold;
+
+  @include md {
+    font-size: 2.3rem !important;
+  }
+
+  @include lg {
+    font-size: 2.5rem !important;
+  }
+}
+
+.content-description {
+
+}
+
+p {
+
+  font-size: 1rem;
+
+  @include sm {
+    font-size: 1.1rem !important;
+  }
+
+  @include md {
+    font-size: 1.2rem !important;
+  }
+
+  @include lg {
+    font-size: 1.3rem !important;
+  }
+
+}
+

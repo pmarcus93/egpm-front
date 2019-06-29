@@ -2,7 +2,7 @@
     <div class="col-6 col-md-4 bloco-campeonato">
         <router-link :to="'/campeonatos/' + rota">
             <div class="wrapper">
-                <h1 class="titulo-jogo">{{titulo}}</h1>
+                <h4 class="titulo-jogo">{{titulo}}</h4>
 
                 <picture>
                     <source media="(min-width: 576px)" v-bind:srcset="imagens.sm.st_url">
@@ -66,6 +66,7 @@
         font-weight: bold;
         text-transform: uppercase;
         width: 100%;
+        padding: 0 10%;
         @include sm {
             font-size: 1.5rem;
         }
