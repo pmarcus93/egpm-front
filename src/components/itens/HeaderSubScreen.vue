@@ -4,8 +4,12 @@
             <!--TODO: Implementar imagens responsivas do back end. -->
             <img v-bind:src="imagens">
             <div class="text text-center">
-                <h1 class="titulo-secao"><span>{{titulo}}</span></h1>
-                <h5 class="mt-3">{{descricao}}</h5>
+                <div class="container">
+                    <div class="col-12">
+                        <h1 class="titulo-secao"><span>{{titulo}}</span></h1>
+                        <h5 class="mt-3">{{descricao}}</h5>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
