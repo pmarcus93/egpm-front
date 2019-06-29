@@ -6,8 +6,8 @@
             <div class="text text-center">
                 <div class="container">
                     <div class="col-12">
-                        <h1 class="titulo-secao"><span>{{titulo}}</span></h1>
-                        <h5 class="mt-3">{{descricao}}</h5>
+                        <h1 class="titulo-secao content-title"><span>{{titulo}}</span></h1>
+                        <p class="mt-3">{{descricao}}</p>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
 <style lang="scss" scoped>
 
     section {
-        color: $color-primary;
+        color: #ffffff;
     }
 
     .bg-img-container {
@@ -51,8 +51,6 @@
     }
 
     .titulo-secao {
-        font-family: $font-archive;
-        color: $color-primary;
 
         span {
             position: relative;
