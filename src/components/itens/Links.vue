@@ -2,7 +2,7 @@
     <div>
         <div class="col-12 py-4 links text-center align-content-center align-middle">
             <router-link to="/inicio">
-                <button class="btn btn-lg btn-outline-warning mx-3"> Inicio</button>
+                <button class="btn btn-lg btn-outline-warning mx-3">Inicio</button>
             </router-link>
             <router-link to="/campeonatos">
                 <button class="btn btn-lg btn-outline-warning"> Campeonatos</button>

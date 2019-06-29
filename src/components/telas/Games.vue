@@ -12,8 +12,8 @@
 
 <script>
     import JogoApi from "@/services/JogoApi.js";
-    import HeaderSubScreen from "./itens/HeaderSubScreen";
-    import Campeonatos from "./telas/GameList";
+    import HeaderSubScreen from "../itens/HeaderSubScreen";
+    import Campeonatos from "./GameList";
 
     export default {
         name: "CampeonatoTela",
