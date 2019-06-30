@@ -3,7 +3,7 @@
         <HeaderSubScreen
                 titulo="Seja um apoiador"
                 descricao="Marque presença no maior evento de games da região! Preencha o formulário abaixo e entraremos em contato."
-                imagens="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                imagens="http://egpmdeveloper.lucasjunior.com.br/upload/Imagens/20190630153438.jpeg"
         ></HeaderSubScreen>
 
         <div class="container-fluid py-5">
