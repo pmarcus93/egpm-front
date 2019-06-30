@@ -1,5 +1,5 @@
 <template>
-    <a class="ticket" target="_blank" rel="noopener" :href="btnticket.st_link">
+    <a v-if="btnticket.bl_ativo" class="ticket" target="_blank" rel="noopener" :href="btnticket.st_link">
         <i class="fa fa-ticket-alt fa-2x"></i>
     </a>
 </template>
@@ -21,7 +21,8 @@
                     st_cor: "",
                     st_icone: "",
                     st_link: "https://www.sympla.com.br/",
-                    st_texto: ""
+                    st_texto: "",
+                    bl_ativo: 0
                 }
             }
         }
