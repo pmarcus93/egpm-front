@@ -1,7 +1,6 @@
 <template>
     <section>
         <div class="bg-img-container">
-            <!--TODO: Implementar imagens responsivas do back end. -->
             <img v-bind:src="imagens">
             <div class="text text-center">
                 <div class="container">
@@ -35,7 +34,7 @@
         background-color: black;
 
         img {
-            filter: brightness(35%) grayscale(25%);
+            filter: brightness(35%) grayscale(25%) blur(2px);
             object-fit: cover;
             height: 100%;
             width: 100%;
