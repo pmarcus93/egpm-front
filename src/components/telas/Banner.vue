@@ -13,7 +13,8 @@
                 <img class="d-block mx-auto my-4 logo-full" srcset="../../assets/images/full-logo/full-logo-sm.png"
                      alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
             </picture>
-            <p class="content-description-banner">O maior evento de games da região.<br>Feito por gamers, para gamers.</p>
+            <p class="content-description-banner">O maior evento de games da região.<br>Feito por gamers, para gamers.
+            </p>
         </section>
     </div>
 </template>
@@ -27,6 +28,7 @@
 <style lang="scss" scoped>
 
     .banner {
+        min-height: 300px;
         height: 50vh;
         position: relative;
         background-color: black;
@@ -58,27 +60,17 @@
     }
 
     .content-description-banner {
-        font-size: 1rem !important;
         text-transform: uppercase;
         color: $color-primary;
-        @include md {
-            font-size: 1.2rem !important;
-        }
-
-        @include lg {
-            font-size: 1.3rem !important;
-        }
     }
 
     .logo-full {
         height: 17vh;
+        min-height: 100px;
         width: auto;
-
-        @include sm {
+        @include md {
             height: 20vh;
-            width: auto;
         }
-
     }
 
 </style>
