@@ -25,7 +25,7 @@
                         </div>
 
                         <div class="col-md-6 col-sm-12 align-middle my-5 mx-auto">
-                            <iframe v-if="video" width="100%" height="315" :src="video"
+                            <iframe v-if="video" width="100%" height="315" :src="'https://www.youtube.com/embed/' + video"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                         </div>
