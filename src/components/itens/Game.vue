@@ -3,12 +3,7 @@
         <router-link :to="'/campeonatos/' + rota">
             <div class="wrapper">
                 <h4 class="titulo-jogo">{{titulo}}</h4>
-
-                <picture>
-                    <source media="(min-width: 576px)" v-bind:srcset="imagens.sm.st_url">
-                    <img loading="lazy" v-bind:srcset="imagens.default.st_url">
-                </picture>
-
+                    <img v-lazy="imagens.default.st_url">
                 <div class="sobre-imagem"></div>
             </div>
         </router-link>

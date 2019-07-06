@@ -2,6 +2,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import routes from './routes';
+import VueLazyload from 'vue-lazyload'
+
+Vue.use(VueLazyload);
 
 import 'bootstrap/dist/css/bootstrap.css';
 
