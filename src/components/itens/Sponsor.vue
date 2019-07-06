@@ -8,7 +8,7 @@
 
 <script>
     export default {
-        name: "ItemPatrocinador",
+        name: "Sponsor",
         props: [
             "imagem",
             "link",
