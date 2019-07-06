@@ -5,7 +5,7 @@
                 <source media="(min-width: 992px)" v-bind:srcset="imagens.lg.st_url">
                 <source media="(min-width: 768px)" v-bind:srcset="imagens.md.st_url">
                 <source media="(min-width: 576px)" v-bind:srcset="imagens.sm.st_url">
-                <img v-bind:srcset="imagens.default.st_url">
+                <img class="lozad" v-bind:srcset="imagens.default.st_url">
             </picture>
         </div>
         <p class="col-12 pt-4"><p class="text-center"><b>{{autor}}</b></p>

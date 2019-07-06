@@ -6,7 +6,7 @@
 
                 <picture>
                     <source media="(min-width: 576px)" v-bind:srcset="imagens.sm.st_url">
-                    <img loading="lazy" v-bind:srcset="imagens.default.st_url">
+                    <img class="lozad" v-bind:srcset="imagens.default.st_url">
                 </picture>
 
                 <div class="sobre-imagem"></div>
