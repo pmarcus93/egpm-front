@@ -4,7 +4,7 @@
         <div>
             <Banner></Banner>
             <Sobre></Sobre>
-            <Campeonato></Campeonato>
+            <Tournament></Tournament>
             <Campeonatos></Campeonatos>
             <Palestras></Palestras>
             <FreePlay></FreePlay>
@@ -22,7 +22,7 @@
     import Midia from "./telas/Midia";
     import Campeonatos from "./telas/GameList";
     import Palestras from "./telas/Palestras";
-    import Campeonato from "./telas/Campeonato";
+    import Tournament from "./telas/Tournament";
     import FreePlay from "./telas/FreePlay";
     import Duvida from "./telas/Duvida";
     import Localizacao from "./telas/Localizacao";
@@ -35,7 +35,7 @@
             Localizacao,
             Duvida,
             FreePlay,
-            Campeonato,
+            Tournament,
             Palestras,
             Campeonatos,
             Midia,
