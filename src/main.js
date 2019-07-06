@@ -2,7 +2,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import routes from './routes';
-import lozad from 'lozad';
+import VueLazyload from 'vue-lazyload'
+
+Vue.use(VueLazyload);
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -22,6 +24,3 @@ new Vue({
     router,
     render: h => h(App),
 }).$mount('#app');
-
-const observer = lozad();
-observer.observe();
