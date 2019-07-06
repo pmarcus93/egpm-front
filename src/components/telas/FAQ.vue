@@ -24,7 +24,7 @@
     import Secao from "../itens/Section";
 
     export default {
-        name: "Duvida",
+        name: "FAQ",
         components: {Secao, Question},
         data() {
             return {

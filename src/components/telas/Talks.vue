@@ -13,7 +13,7 @@
     import SecaoApi from "@/services/SecaoApi";
 
     export default {
-        name: "Palestras",
+        name: "Talks",
         components: {SecaoTextoEsquerda},
         created() {
             SecaoApi.getSecao(3, result => {

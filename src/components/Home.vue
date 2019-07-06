@@ -9,7 +9,7 @@
             <Talks></Talks>
             <FreePlay></FreePlay>
             <Midia></Midia>
-            <Duvida></Duvida>
+            <FAQ></FAQ>
             <Locale></Locale>
         </div>
     </div>
@@ -24,7 +24,7 @@
     import Talks from "./telas/Talks";
     import Tournament from "./telas/Tournament";
     import FreePlay from "./telas/FreePlay";
-    import Duvida from "./telas/Duvida";
+    import FAQ from "./telas/FAQ";
     import Locale from "./telas/Locale";
     import ButtonTicket from "./itens/ButtonTicket";
 
@@ -33,7 +33,7 @@
         components: {
             ButtonTicket,
             Locale,
-            Duvida,
+            FAQ,
             FreePlay,
             Tournament,
             Talks,
