@@ -58,9 +58,9 @@
 
 <script>
 
-    import BannerJogo from "./itens/BannerJogo";
+    import BannerJogo from "../itens/BannerJogo";
     import JogoApi from "@/services/JogoApi";
-    import Erro404Campeonato from "./Erro404Campeonato";
+    import Erro404Campeonato from "../telas/Erro404Campeonato";
 
     export default {
         name: "DescricaoCampeonato",

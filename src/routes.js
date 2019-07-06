@@ -1,9 +1,9 @@
 // routes.js
 
-import Home from "./components/Home";
+import Home from "./components/telas/Home";
 import CampeonatoTela from "./components/telas/Games";
-import DescricaoCampeonato from "./components/DescricaoCampeonato";
-import Erro404 from "./components/Error404";
+import DescricaoCampeonato from "./components/content/DescricaoCampeonato";
+import Erro404 from "./components/telas/Error404";
 import SejaApoiador from "./components/telas/SponsorUs";
 
 const routes = [

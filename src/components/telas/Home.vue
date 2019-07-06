@@ -17,16 +17,16 @@
 
 <script>
 
-    import Banner from "./telas/Banner";
-    import Sobre from "./telas/Sobre";
-    import Midia from "./telas/Midia";
-    import Campeonatos from "./telas/GameList";
-    import Talks from "./telas/Talks";
-    import Tournament from "./telas/Tournament";
-    import FreePlay from "./telas/FreePlay";
-    import FAQ from "./telas/FAQ";
-    import Locale from "./telas/Locale";
-    import ButtonTicket from "./itens/ButtonTicket";
+    import Banner from "../content/Banner";
+    import Sobre from "../content/Sobre";
+    import Midia from "../content/Midia";
+    import Campeonatos from "../itens/GameList";
+    import Talks from "../content/Talks";
+    import Tournament from "../content/Tournament";
+    import FreePlay from "../content/FreePlay";
+    import FAQ from "../content/FAQ";
+    import Locale from "../content/Locale";
+    import ButtonTicket from "../itens/ButtonTicket";
 
     export default {
         name: "Home",

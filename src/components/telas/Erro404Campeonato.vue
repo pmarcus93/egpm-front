@@ -16,9 +16,9 @@
 </template>
 
 <script>
-    import FundoFixo from "./itens/FundoFixo";
-    import Links from "./itens/Links";
-    import Error from "./itens/Error";
+    import FundoFixo from "../itens/FundoFixo";
+    import Links from "../itens/Links";
+    import Error from "../itens/Error";
 
     export default {
         name: "Erro404Campeonato",

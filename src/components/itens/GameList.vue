@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import Game from "../itens/Game";
+    import Game from "./Game";
     import JogoApi from "@/services/JogoApi";
 
     export default {
