@@ -18,7 +18,7 @@
 <script>
 
     export default {
-        name: "ItemCampeonato",
+        name: "Game",
         props: ["titulo", "imagens", "texto", "rota", "iscampeonato"],
     }
 </script>

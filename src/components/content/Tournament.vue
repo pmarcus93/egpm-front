@@ -15,7 +15,7 @@
     import SecaoApi from  "@/services/SecaoApi";
 
     export default {
-        name: "Campeonato",
+        name: "Tournament",
         components: {SecaoTextoDireita},
         created() {
             SecaoApi.getSecao(2, result => {

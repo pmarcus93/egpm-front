@@ -8,8 +8,8 @@
 </template>
 
 <script>
-    import Rodape from "../telas/Rodape";
-    import Patrocinadores from "../telas/Patrocinadores";
+    import Rodape from "../content/Rodape";
+    import Patrocinadores from "../content/SponsorList";
     export default {
         name: "BlocoRodape",
         components: {Patrocinadores, Rodape}

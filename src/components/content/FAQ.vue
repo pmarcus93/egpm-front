@@ -7,11 +7,11 @@
                         descricao="Respostas para as dúvidas mais frequentes"
                 ></Secao>
                 <div class="row mb-5 mt-3">
-                    <ItemDuvida v-for="(item) in duvidas"
+                    <Question v-for="(item) in duvidas"
                                 v-bind:duvida="item.st_duvida"
                                 v-bind:resposta="item.st_resposta"
                                 v-bind:id_duvida="item.id_duvida"
-                    ></ItemDuvida>
+                    ></Question>
                 </div>
             </div>
         </div>
@@ -20,12 +20,12 @@
 
 <script>
     import DuvidaApi from "@/services/DuvidaApi";
-    import ItemDuvida from "../itens/Question";
+    import Question from "../itens/Question";
     import Secao from "../itens/Section";
 
     export default {
-        name: "Duvida",
-        components: {Secao, ItemDuvida},
+        name: "FAQ",
+        components: {Secao, Question},
         data() {
             return {
                 duvidas: []

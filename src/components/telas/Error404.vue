@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    import HeaderSubScreen from "./itens/HeaderSubScreen";
+    import HeaderSubScreen from "../itens/HeaderSubScreen";
 
     export default {
         name: "Erro404",

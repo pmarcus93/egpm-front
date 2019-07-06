@@ -4,12 +4,11 @@
         <h2 class="texto-secao">{{subtitulo}}<br>
             {{descricao}}</h2>
     </div>
-
 </template>
 
 <script>
     export default {
-        name: "ItemErro",
+        name: "Error",
         props: [
             'erro',
             'subtitulo',

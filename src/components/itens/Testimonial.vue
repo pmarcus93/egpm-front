@@ -8,7 +8,7 @@
                 <img v-bind:srcset="imagens.default.st_url">
             </picture>
         </div>
-        <p class="col-12 pt-4"><p class="text-center"><b>{{autor}}</b></p></p>
+        <p class="col-12 pt-4"><p class="text-center"><b>{{autor}}</b></p>
         <p class="col-12 text-justify">"{{depoimento}}"</p>
     </div>
 </template>
