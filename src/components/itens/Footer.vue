@@ -9,7 +9,7 @@
 
 <script>
     import Rodape from "../telas/Rodape";
-    import Patrocinadores from "../telas/Patrocinadores";
+    import Patrocinadores from "../telas/SponsorList";
     export default {
         name: "BlocoRodape",
         components: {Patrocinadores, Rodape}

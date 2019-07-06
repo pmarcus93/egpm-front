@@ -32,7 +32,7 @@
     import DiaHorarioApi from "@/services/DiaHorarioApi";
 
     export default {
-        name: "Localizacao",
+        name: "Locale",
 
         created() {
             LocalizacaoApi.getOne(1, result => {

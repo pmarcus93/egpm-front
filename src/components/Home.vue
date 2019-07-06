@@ -10,7 +10,7 @@
             <FreePlay></FreePlay>
             <Midia></Midia>
             <Duvida></Duvida>
-            <Localizacao></Localizacao>
+            <Locale></Locale>
         </div>
     </div>
 </template>
@@ -25,14 +25,14 @@
     import Tournament from "./telas/Tournament";
     import FreePlay from "./telas/FreePlay";
     import Duvida from "./telas/Duvida";
-    import Localizacao from "./telas/Localizacao";
+    import Locale from "./telas/Locale";
     import ButtonTicket from "./itens/ButtonTicket";
 
     export default {
         name: "Home",
         components: {
             ButtonTicket,
-            Localizacao,
+            Locale,
             Duvida,
             FreePlay,
             Tournament,
