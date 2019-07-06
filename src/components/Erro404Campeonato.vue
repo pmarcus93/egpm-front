@@ -4,11 +4,11 @@
         sobreimagem="rgba(0,0,0,0)"></FundoFixo>
         <div>
             <div class="container-fluid conteudo">
-                <ItemErro
+                <Error
                         erro="Erro 404"
                         subtitulo="Ops, parece que você acessou uma página de campeonato inválida."
                         descricao="Separamos alguns links que podem te ajudar!"
-                ></ItemErro>
+                ></Error>
                 <Links></Links>
             </div>
         </div>
@@ -18,11 +18,11 @@
 <script>
     import FundoFixo from "./itens/FundoFixo";
     import Links from "./itens/Links";
-    import ItemErro from "./itens/Error";
+    import Error from "./itens/Error";
 
     export default {
         name: "Erro404Campeonato",
-        components: {ItemErro, Links, FundoFixo}
+        components: {Error, Links, FundoFixo}
     }
 </script>
 
