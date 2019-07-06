@@ -1,5 +1,4 @@
 <template>
-
     <div class="col-md-4 mt-3">
         <div class="card border-dark">
             <div class="card-body text-dark">
@@ -8,12 +7,11 @@
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
     export default {
-        name: "ItemDuvida",
+        name: "Question",
         props: ["duvida", "resposta", "id_duvida"],
     }
 </script>
