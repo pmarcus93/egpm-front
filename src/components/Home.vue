@@ -6,7 +6,7 @@
             <Sobre></Sobre>
             <Tournament></Tournament>
             <Campeonatos></Campeonatos>
-            <Palestras></Palestras>
+            <Talks></Talks>
             <FreePlay></FreePlay>
             <Midia></Midia>
             <Duvida></Duvida>
@@ -21,7 +21,7 @@
     import Sobre from "./telas/Sobre";
     import Midia from "./telas/Midia";
     import Campeonatos from "./telas/GameList";
-    import Palestras from "./telas/Palestras";
+    import Talks from "./telas/Talks";
     import Tournament from "./telas/Tournament";
     import FreePlay from "./telas/FreePlay";
     import Duvida from "./telas/Duvida";
@@ -36,7 +36,7 @@
             Duvida,
             FreePlay,
             Tournament,
-            Palestras,
+            Talks,
             Campeonatos,
             Midia,
             Sobre,
