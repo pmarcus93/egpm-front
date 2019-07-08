@@ -1,10 +1,10 @@
 // routes.js
 
-import Home from "./components/telas/Home";
-import CampeonatoTela from "./components/telas/Games";
-import DescricaoCampeonato from "./components/content/DescricaoCampeonato";
-import Erro404 from "./components/telas/Error404";
-import SejaApoiador from "./components/telas/SponsorUs";
+const Home = () => import('./components/telas/Home');
+const CampeonatoTela = () => import('./components/telas/Games');
+const DescricaoCampeonato = () => import('./components/content/DescricaoCampeonato');
+const Erro404 = () => import('./components/telas/Error404');
+const SejaApoiador = () => import('./components/telas/SponsorUs');
 
 const routes = [
     {
