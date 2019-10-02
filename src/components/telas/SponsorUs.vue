@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="st_email">Email:</label>
-                                    <input id="st_email" maxlength="25" v-model="apoio.st_email" required type="email"
+                                    <input id="st_email" maxlength="50" v-model="apoio.st_email" required type="email"
                                            class="form-control">
                                 </div>
 
