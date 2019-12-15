@@ -13,14 +13,4 @@ export default {
         ConfigServices.get(urlimagem, callback);
     },
 
-    delete: (id, callback) => {
-        var url = urlimagem + id;
-        ConfigServices.delete(url, callback);
-    },
-
-    upload: (formData, callback) => {
-        ConfigServices.uploadFormData(urlimagem, formData, callback);
-    },
-
-
 }

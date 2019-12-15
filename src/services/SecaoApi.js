@@ -13,8 +13,4 @@ export default {
         ConfigServices.get(url, callback);
     },
 
-    salvarsessao: (data, callback) => {
-        ConfigServices.post(urlsecao, data, callback);
-    },
-
 }

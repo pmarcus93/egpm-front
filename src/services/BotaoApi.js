@@ -9,7 +9,4 @@ export default {
         ConfigServices.get(url, callback);
     },
 
-    post: (botao, callback) => {
-        ConfigServices.post(urlbotao, botao, callback);
-    },
 }

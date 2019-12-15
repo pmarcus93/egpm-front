@@ -7,9 +7,5 @@ export default {
     getOne: (id, callback) => {
         var url = urllocalizacao + id;
         ConfigServices.get(url, callback);
-    },
-
-    post: (dados, callback) => {
-        ConfigServices.post(urllocalizacao, dados, callback);
     }
 }

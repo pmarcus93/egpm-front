@@ -17,14 +17,4 @@ export default {
         ConfigServices.get(url, callback);
     },
 
-    post: (jogo, callback) => {
-        ConfigServices.uploadFormData(urljogo, jogo, callback);
-    },
-
-    delete: (id, callback) => {
-        var url = urljogo + id;
-        ConfigServices.delete(url, callback);
-    },
-
-
 }

@@ -13,13 +13,4 @@ export default {
         ConfigServices.get(url, callback);
     },
 
-    postComentario: (comentario, callback) => {
-        ConfigServices.uploadFormData(urlcomentario, comentario, callback);
-    },
-
-    deleteComentario: (id, callback) => {
-        var url = urlcomentario + id;
-        ConfigServices.delete(url, callback);
-    },
-
 }

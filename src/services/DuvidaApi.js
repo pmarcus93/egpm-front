@@ -13,13 +13,4 @@ export default {
         ConfigServices.get(url, callback);
     },
 
-    postDuvida: (duvida, callback) => {
-        ConfigServices.post(urlduvida, duvida, callback);
-    },
-
-    deleteDuvida: (id, callback) => {
-        var url = urlduvida + id;
-        ConfigServices.delete(url, callback);
-    },
-
 }
