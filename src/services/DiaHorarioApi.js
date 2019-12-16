@@ -8,7 +8,4 @@ export default {
         ConfigServices.get(urldiahorario, callback);
     },
 
-    post: (dados, callback) => {
-        ConfigServices.post(urldiahorario, dados, callback);
-    }
 }

@@ -9,8 +9,4 @@ export default {
         ConfigServices.get(url, callback);
     },
 
-    salvarIconeSobre: (data, callback) => {
-        ConfigServices.post(urlicone, data, callback);
-    },
-
 }

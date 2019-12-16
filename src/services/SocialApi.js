@@ -8,7 +8,4 @@ export default {
         ConfigServices.get(urlsocial, callback);
     },
 
-    post: (social, callback) => {
-        ConfigServices.post(urlsocial, social, callback);
-    }
 }
