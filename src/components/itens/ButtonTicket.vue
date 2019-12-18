@@ -1,31 +1,17 @@
 <template>
-    <a v-if="btnticket.bl_ativo" class="ticket" target="_blank" rel="noopener" :href="btnticket.st_link">
+    <a v-if="button.bl_ativo"
+       class="ticket"
+       target="_blank"
+       rel="noopener"
+       :href="button.st_link">
         <i class="fa fa-ticket-alt fa-2x"></i>
     </a>
 </template>
 
 <script>
-    import BotaoApi from "@/services/BotaoApi";
     export default {
         name: "ButtonTicket",
-        created() {
-            BotaoApi.getOne(1, result => {
-                this.btnticket = result.data;
-            });
-
-        },
-        data() {
-            return {
-                btnticket: {
-                    id_botao: "",
-                    st_cor: "",
-                    st_icone: "",
-                    st_link: "https://www.sympla.com.br/",
-                    st_texto: "",
-                    bl_ativo: 0
-                }
-            }
-        }
+        props: ["button"],
     }
 </script>
 
@@ -48,10 +34,12 @@
             z-index: 5;
             color: $bg-light;
             text-decoration: none;
-            :hover {
-                transform: scale(1.1);
-            }
         }
-
     }
+
+    .ticket :hover {
+        transition: all linear .2s;
+        transform: scale(1.1);
+    }
+
 </style>
