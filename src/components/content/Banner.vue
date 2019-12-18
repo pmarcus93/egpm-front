@@ -15,20 +15,28 @@
             </picture>
             <p class="content-description-banner">O maior evento de games da região.<br>Feito por gamers, para gamers.
             </p>
+
+            <a v-if="button.bl_ativo"
+               target="_blank"
+               rel="noopener"
+               :href="button.st_link"
+               class="btn btn-ingresso">
+                <i class="fa fa-ticket-alt"></i> ADQUIRA SEU INGRESSO </a>
         </section>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Banner'
+        name: 'Banner',
+        props: ["button"]
     }
 </script>
 
 <style lang="scss" scoped>
 
     .banner {
-        min-height: 300px;
+        min-height: 350px;
         height: 50vh;
         position: relative;
         background-color: black;
@@ -38,6 +46,14 @@
             object-fit: cover;
             width: 100%;
             height: 100%;
+        }
+    }
+
+    .btn-ingresso {
+        background: $color-primary;
+        font-weight: bold;
+        @include md {
+            display: none;
         }
     }
 
