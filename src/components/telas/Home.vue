@@ -1,8 +1,5 @@
 <template>
     <div>
-        <ButtonTicket
-                :button="btnticket"
-        ></ButtonTicket>
         <div>
             <Banner
                     :button="btnticket"
@@ -15,6 +12,10 @@
             <Midia></Midia>
             <FAQ></FAQ>
             <Locale></Locale>
+            <ButtonTicket
+                :button="btnticket"
+                :is-fixed="true">
+            </ButtonTicket>
         </div>
     </div>
 </template>

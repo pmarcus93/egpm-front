@@ -16,19 +16,36 @@
             <p class="content-description-banner">O maior evento de games da região.<br>Feito por gamers, para gamers.
             </p>
 
-            <a v-if="button.bl_ativo"
-               target="_blank"
-               rel="noopener"
-               :href="button.st_link"
-               class="btn btn-ingresso">
-                <i class="fa fa-ticket-alt"></i> ADQUIRA SEU INGRESSO </a>
+<!--            <a v-if="button.bl_ativo"-->
+<!--               target="_blank"-->
+<!--               rel="noopener"-->
+<!--               :href="button.st_link"-->
+<!--               class="btn btn-ingresso">-->
+<!--                <i class="fa fa-ticket-alt fa-2x align-middle mr-2"></i>-->
+<!--                <span class="align-middle">ADQUIRA SEU INGRESSO!</span>-->
+<!--            </a>-->
+
+<!--            <a-->
+<!--                    target="_blank"-->
+<!--                    rel="noopener"-->
+<!--                    :href="button.st_link"-->
+<!--                    class="btn btn-warning">-->
+<!--                <i class="fa fa-ticket-alt fa-2x align-middle mr-2"></i>-->
+<!--                <span class="align-middle">ADQUIRA SEU INGRESSO!</span>-->
+<!--            </a>-->
+            <ButtonTicket
+                    :button="button"
+                    :is-fixed="false"
+            ></ButtonTicket>
         </section>
     </div>
 </template>
 
 <script>
+    import ButtonTicket from "../itens/ButtonTicket";
     export default {
         name: 'Banner',
+        components: {ButtonTicket},
         props: ["button"]
     }
 </script>
@@ -49,13 +66,6 @@
         }
     }
 
-    .btn-ingresso {
-        background: $color-primary;
-        font-weight: bold;
-        @include md {
-            display: none;
-        }
-    }
 
     .badge-em-breve {
         color: #000;
