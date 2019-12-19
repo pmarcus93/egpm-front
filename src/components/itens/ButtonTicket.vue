@@ -23,6 +23,7 @@
         color: #000000;
         background: $color-primary;
         align-items: center;
+        display: none;
     }
 
     .ticket.fixed {
