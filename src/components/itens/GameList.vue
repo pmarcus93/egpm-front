@@ -23,7 +23,7 @@
         components: {Game},
         created() {
             JogoApi.getAll(campeonatos => {
-                this.campeonatos = campeonatos.data;
+                this.campeonatos = campeonatos.data.data;
             })
         },
         data: function () {

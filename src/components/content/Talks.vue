@@ -1,10 +1,10 @@
 <template>
     <SecaoTextoEsquerda
-    titulo="PALESTRAS"
-    :descricao="secao.st_texto"
-    colorborder="#3255A5"
-    classimage="bgpalestra"
-    type="parallax">
+            titulo="PALESTRAS"
+            :descricao="secao.st_texto"
+            colorborder="#3255A5"
+            classimage="bgpalestra"
+            type="parallax">
     </SecaoTextoEsquerda>
 </template>
 
@@ -16,14 +16,14 @@
         name: "Talks",
         components: {SecaoTextoEsquerda},
         created() {
-            SecaoApi.getSecao(3, result => {
-                this.secao = result.data;
+            SecaoApi.getSecao("palestras", result => {
+                this.secao = result.data.data;
             })
         },
         data() {
             return {
                 secao: {
-                    st_texto : "Carregando..."
+                    st_texto: "Carregando..."
                 }
             }
         }

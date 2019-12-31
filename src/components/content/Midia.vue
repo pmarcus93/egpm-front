@@ -8,7 +8,8 @@
                 </div>
                 <div class="col-12">
                     <div class="d-flex justify-content-center">
-                        <iframe class="video" width="560" height="315" :src="'https://www.youtube.com/embed/' + secao.st_video"
+                        <iframe class="video" width="560" height="315"
+                                :src="'https://www.youtube.com/embed/' + secao.st_video"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </div>
                 </div>
@@ -48,11 +49,11 @@
 
         created() {
             ComentarioApi.getAllComentarios(retorno => {
-                this.comentarios = retorno.data;
+                this.comentarios = retorno.data.data;
             });
 
-            SecaoApi.getSecao(5, result => {
-                this.secao = result.data;
+            SecaoApi.getSecao("na-midia", result => {
+                this.secao = result.data.data;
             })
         },
 
@@ -72,7 +73,7 @@
     .depoimentos {
         background: $bg-light;
     }
-    
+
     .video {
         margin-top: 30px;
         border: none;

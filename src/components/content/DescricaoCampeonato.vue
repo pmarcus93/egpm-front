@@ -76,7 +76,7 @@
         },
         created() {
             JogoApi.getOne(this.$route.params.jogo, campeonato => {
-                this.campeonato = campeonato.data;
+                this.campeonato = campeonato.data.data;
                 this.dadoscarregados = true;
             })
         }

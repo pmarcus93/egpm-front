@@ -8,21 +8,18 @@ export default {
         ConfigServices.get(urlpatrocinador, callback)
     },
 
-    // Realizador: 1
     getRealizadores: (callback) => {
-        var url = urlpatrocinador + "1/getAllTipo";
+        var url = urlpatrocinador + "getRealizadores";
         ConfigServices.get(url, callback);
     },
 
-    // Patrocinadores: 2
     getApoiadores: (callback) => {
-        var url = urlpatrocinador + "2/getAllTipo";
+        var url = urlpatrocinador + "getApoiadores";
         ConfigServices.get(url, callback);
     },
 
-    // Patrocinadores: 3
     getPatrocinadores: (callback) => {
-        var url = urlpatrocinador + "3/getAllTipo";
+        var url = urlpatrocinador + "getPatrocinadores";
         ConfigServices.get(url, callback);
     },
 

@@ -18,8 +18,8 @@
         name: "Tournament",
         components: {SecaoTextoDireita},
         created() {
-            SecaoApi.getSecao(2, result => {
-                this.secao = result.data;
+            SecaoApi.getSecao("campeonatos", result => {
+                this.secao = result.data.data;
             })
         },
         data() {

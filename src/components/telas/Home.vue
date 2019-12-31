@@ -13,8 +13,8 @@
             <FAQ></FAQ>
             <Locale></Locale>
             <ButtonTicket
-                :button="btnticket"
-                :is-fixed="true">
+                    :button="btnticket"
+                    :is-fixed="true">
             </ButtonTicket>
         </div>
     </div>
@@ -39,8 +39,8 @@
         name: "Home",
         props: ["button"],
         created() {
-            BotaoApi.getOne(1, result => {
-                this.btnticket = result.data;
+            BotaoApi.getOne(result => {
+                this.btnticket = result.data.data;
             });
         },
         data() {
