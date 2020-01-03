@@ -21,7 +21,7 @@
     import Sobre from "../content/Sobre";
     import Midia from "../content/Midia";
     import Campeonatos from "../itens/GameList";
-    import Talks from "../content/Talks";
+    import Talks from "../content/Quizzes";
     import Tournament from "../content/Tournament";
     import FreePlay from "../content/FreePlay";
     import FAQ from "../content/FAQ";

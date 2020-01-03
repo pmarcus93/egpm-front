@@ -1,6 +1,6 @@
 <template>
     <SecaoTextoEsquerda
-    titulo="PALESTRAS"
+    titulo="QUIZZES"
     :descricao="secao.st_texto"
     colorborder="#3255A5"
     classimage="bgpalestra"
