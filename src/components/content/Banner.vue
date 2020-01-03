@@ -15,20 +15,28 @@
             </picture>
             <p class="content-description-banner">O maior evento de games da região.<br>Feito por gamers, para gamers.
             </p>
+
+            <ButtonTicket
+                    :button="button"
+                    :is-fixed="false"
+            ></ButtonTicket>
         </section>
     </div>
 </template>
 
 <script>
+    import ButtonTicket from "../itens/ButtonTicket";
     export default {
-        name: 'Banner'
+        name: 'Banner',
+        components: {ButtonTicket},
+        props: ["button"]
     }
 </script>
 
 <style lang="scss" scoped>
 
     .banner {
-        min-height: 300px;
+        min-height: 350px;
         height: 50vh;
         position: relative;
         background-color: black;
@@ -40,6 +48,7 @@
             height: 100%;
         }
     }
+
 
     .badge-em-breve {
         color: #000;

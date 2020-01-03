@@ -1,8 +1,9 @@
 <template>
     <div>
-        <ButtonTicket></ButtonTicket>
         <div>
-            <Banner></Banner>
+            <Banner
+                    :button="btnticket"
+            ></Banner>
             <Sobre></Sobre>
             <Tournament></Tournament>
             <Campeonatos></Campeonatos>
@@ -11,6 +12,10 @@
             <Midia></Midia>
             <FAQ></FAQ>
             <Locale></Locale>
+            <ButtonTicket
+                :button="btnticket"
+                :is-fixed="true">
+            </ButtonTicket>
         </div>
     </div>
 </template>
@@ -28,8 +33,24 @@
     import Locale from "../content/Locale";
     import ButtonTicket from "../itens/ButtonTicket";
 
+    import BotaoApi from "@/services/BotaoApi";
+
     export default {
         name: "Home",
+        props: ["button"],
+        created() {
+            BotaoApi.getOne(1, result => {
+                this.btnticket = result.data;
+            });
+        },
+        data() {
+            return {
+                btnticket: {
+                    st_link: "",
+                    bl_ativo: 0
+                }
+            }
+        },
         components: {
             ButtonTicket,
             Locale,
@@ -41,7 +62,7 @@
             Midia,
             Sobre,
             Banner,
-        }
+        },
     }
 </script>
 
