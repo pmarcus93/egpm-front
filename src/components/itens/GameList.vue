@@ -2,13 +2,12 @@
     <div class="campeonatos">
         <div class="container-fluid">
             <div class="row" v-if="campeonatos">
-                <Game
-                        v-for="(campeonato) in campeonatos"
-                                :titulo="campeonato.st_nome"
-                                :rota="campeonato.id_jogo"
-                                :imagens="campeonato.imagens"
-                                :iscampeonato="campeonato.bl_campeonato"
-                ></Game>
+                <Game v-for="(campeonato) in campeonatos"
+                      :titulo="campeonato.st_nome"
+                      :rota="campeonato.id_jogo"
+                      :imagens="campeonato.imagens"
+                      :iscampeonato="campeonato.bl_campeonato"
+                />
             </div>
         </div>
     </div>
