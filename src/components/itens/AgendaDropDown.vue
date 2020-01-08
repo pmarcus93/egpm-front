@@ -2,28 +2,34 @@
     <div class="col-12 my-1 py-3 item-agenda">
         <div class="d-flex align-items-center pb-3 area-clicavel" v-on:click="isOpen = !isOpen">
             <div class="info-agenda-titulo">
-                <span class="badge badge-secondary mx-2"><i class="fa fa-clock"></i> {{agenda.nu_horario}}</span>
-                <span>{{agenda.st_assunto}}</span>
+                <span class="badge badge-secondary mx-2"><i class="fa fa-clock"></i> {{getHoratioSemMinutos(agenda.nu_horario)}}</span>
+                <span>{{agenda.st_nome}}</span>
             </div>
             <i v-if="isOpen" class="fa fa-times ml-auto"></i>
             <i v-else class="fa fa-plus ml-auto"></i>
         </div>
 
         <div v-if="isOpen" class="detalhes-agenda">
-            <span class="badge badge-secondary mr-1">DESCRIÇÃO</span>
-            <p>Just Dance 2020 é a nova versão do game de dança mais vendido no mundo. Com músicas
-                de Ariana Grande, Cardi B, BLACKPINK e Panic At The Disco, o game tem tudo para ser
-                um dos melhores da série. Será que você tem o que é necessário para ser o melhor
-                dançarino?</p>
+            <div v-if="agenda.st_descricao">
+                <span class="badge badge-secondary mr-1">DESCRIÇÃO</span>
+                <p>{{agenda.st_descricao}}</p>
+            </div>
+            <div v-if="agenda.st_observacao">
+                <span class="badge badge-secondary mr-1">OBSERVAÇÕES</span>
+                <p>{{agenda.st_observacao}}</p>
+            </div>
 
-            <span class="badge badge-secondary mr-1">OBSERVAÇÕES</span>
-            <p>Atividade para participates com idade superior a 5 anos.</p>
+            <div v-if="agenda.st_local">
+                <span class="badge badge-secondary mr-1">LOCAL</span>
+                <p>{{agenda.st_local}}</p>
+            </div>
 
-            <span class="badge badge-secondary mr-1">LOCAL</span>
-            <p>Hall de entrada do prédio verde.</p>
-
-            <span class="badge badge-secondary mr-1">CAMPEONATO</span>
-            <p>Para saber todas as informações deste campeonato <a href="">clique aqui.</a></p>
+            <div v-if="agenda.bl_jogo">
+                <span class="badge badge-secondary mr-1">CAMPEONATO</span>
+                <p>Para saber todas as informações deste campeonato <a href=""
+                                                                       v-on:click.prevent="() => goToCampeonato(agenda.id_jogo)">clique
+                    aqui.</a></p>
+            </div>
 
         </div>
 
@@ -35,6 +41,15 @@
     export default {
         name: "AgendaDropDown",
         props: ["agenda"],
+        methods: {
+            goToCampeonato: function (id) {
+                this.$router.push({path: 'campeonatos/' + id});
+            },
+            getHoratioSemMinutos: function (horario) {
+                return horario.slice(0, 5);
+            },
+        },
+
         data: function () {
             return {
                 isOpen: false,
@@ -44,6 +59,27 @@
 </script>
 
 <style lang="scss" scoped>
+
+    .detalhes-agenda {
+        animation: height-animate ease-in .2s forwards;
+        overflow: hidden;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    @keyframes height-animate {
+        to {
+            max-height: 500px;
+        }
+
+        from {
+            max-height: 0;
+        }
+    }
+
     .info-agenda-titulo {
         font-size: 1.6em;
         font-weight: 600;

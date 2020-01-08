@@ -26,8 +26,8 @@
         name: 'Sobre',
         components: {BlocoIcons, Secao},
         created() {
-            SecaoApi.getSecao(1, result => {
-                this.secao = result.data;
+            SecaoApi.getSecao("sobre-o-egpm", result => {
+                this.secao = result.data.data;
             })
         },
         data() {

@@ -37,7 +37,7 @@
         },
         created() {
             AgendaApi.retornarAgenda(response => {
-                this.agendamentos = response.data;
+                this.agendamentos = response.data.data;
             })
         }
     }

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const urlbase = 'http://egpmdeveloper.lucasjunior.com.br/';
+const urlbase = 'http://api-egpm.lucasjunior.com.br/Api/';
 var header = "";
 
 function setTokenHeader() {

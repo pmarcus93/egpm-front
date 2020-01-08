@@ -16,8 +16,8 @@
         name: "FreePlay",
         components: {SecaoTextoDireita},
         created() {
-            SecaoApi.getSecao(4, result => {
-                this.secao = result.data;
+            SecaoApi.getSecao("free-play", result => {
+                this.secao = result.data.data;
             })
         },
         data() {

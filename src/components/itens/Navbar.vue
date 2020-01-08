@@ -86,7 +86,7 @@
         },
         created() {
             SocialApi.getAll(result => {
-                this.social = result.data;
+                this.social = result.data.data;
             });
         },
         data: function () {

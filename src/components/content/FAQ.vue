@@ -33,7 +33,7 @@
         },
         created() {
             DuvidaApi.getAllDuvidas(retorno => {
-                this.duvidas = retorno.data;
+                this.duvidas = retorno.data.data;
             })
         },
     }

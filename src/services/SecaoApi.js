@@ -4,12 +4,8 @@ import ConfigServices from "@/services/ConfigServices";
 
 export default {
 
-    getAllSecao: (callback) => {
-        ConfigServices.get(urlsecao, callback);
-    },
-
-    getSecao: (id, callback) => {
-        var url = urlsecao + id;
+    getSecao: (st_rota, callback) => {
+        var url = urlsecao + st_rota;
         ConfigServices.get(url, callback);
     },
 
