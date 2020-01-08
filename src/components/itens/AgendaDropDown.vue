@@ -2,7 +2,7 @@
     <div class="col-12 my-1 py-3 item-agenda">
         <div class="d-flex align-items-center area-clicavel" v-on:click="isOpen = !isOpen">
             <div class="info-agenda-titulo">
-                <span class="badge badge-secondary mr-2"><i class="fa fa-clock"></i> {{getHoratioSemMinutos(agenda.nu_horario)}}</span>
+                <span class="badge badge-dark mr-2"><i class="fa fa-clock"></i> {{getHoratioSemMinutos(agenda.nu_horario)}}</span>
                 <span>{{agenda.st_nome}}</span>
             </div>
 
@@ -10,7 +10,9 @@
             <i v-else-if="expand" class="fa fa-plus ml-auto"></i>
         </div>
 
-        <div v-if="expand && isOpen" class="detalhes-agenda mt-3">
+        <div class="detalhes-agenda"
+             :class="isOpen && expand ? 'detalhes-agenda-active' : 'detalhes-agenda-unactive'">
+            <div class="mt-3"></div>
             <div v-if="agenda.st_descricao">
                 <span class="badge badge-secondary mr-1">DESCRIÇÃO</span>
                 <p>{{agenda.st_descricao}}</p>
@@ -33,7 +35,6 @@
             </div>
 
         </div>
-
     </div>
 
 </template>
@@ -62,13 +63,20 @@
 <style lang="scss" scoped>
 
     .detalhes-agenda {
-        animation: height-animate ease-in .2s forwards;
         overflow: hidden;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+    }
+
+    .detalhes-agenda-unactive {
+        animation: height-animate-reverse ease-in .5s forwards;
+    }
+
+    .detalhes-agenda-active {
+        animation: height-animate ease-in .5s forwards;
     }
 
     @keyframes height-animate {
@@ -81,13 +89,24 @@
         }
     }
 
+    @keyframes height-animate-reverse {
+        to {
+            max-height: 0;
+        }
+
+        from {
+            max-height: 200px;
+        }
+    }
+
     .info-agenda-titulo {
         font-size: 1.2em;
+        font-weight: 600;
     }
 
     .item-agenda {
         border-radius: 5px;
-        background: $light-text;
+        background: $color-primary;
     }
 
     .area-clicavel {
