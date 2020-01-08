@@ -1,15 +1,16 @@
 <template>
     <div class="col-12 my-1 py-3 item-agenda">
-        <div class="d-flex align-items-center pb-3 area-clicavel" v-on:click="isOpen = !isOpen">
+        <div class="d-flex align-items-center area-clicavel" v-on:click="isOpen = !isOpen">
             <div class="info-agenda-titulo">
-                <span class="badge badge-secondary mx-2"><i class="fa fa-clock"></i> {{getHoratioSemMinutos(agenda.nu_horario)}}</span>
+                <span class="badge badge-secondary mr-2"><i class="fa fa-clock"></i> {{getHoratioSemMinutos(agenda.nu_horario)}}</span>
                 <span>{{agenda.st_nome}}</span>
             </div>
-            <i v-if="isOpen" class="fa fa-times ml-auto"></i>
-            <i v-else class="fa fa-plus ml-auto"></i>
+
+            <i v-if="isOpen && expand" class="fa fa-times ml-auto"></i>
+            <i v-else-if="expand" class="fa fa-plus ml-auto"></i>
         </div>
 
-        <div v-if="isOpen" class="detalhes-agenda">
+        <div v-if="expand && isOpen" class="detalhes-agenda mt-3">
             <div v-if="agenda.st_descricao">
                 <span class="badge badge-secondary mr-1">DESCRIÇÃO</span>
                 <p>{{agenda.st_descricao}}</p>
@@ -40,7 +41,7 @@
 <script>
     export default {
         name: "AgendaDropDown",
-        props: ["agenda"],
+        props: ["agenda", "expand"],
         methods: {
             goToCampeonato: function (id) {
                 this.$router.push({path: 'campeonatos/' + id});
