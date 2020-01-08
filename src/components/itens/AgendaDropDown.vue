@@ -82,8 +82,7 @@
     }
 
     .info-agenda-titulo {
-        font-size: 1.6em;
-        font-weight: 600;
+        font-size: 1.2em;
     }
 
     .item-agenda {

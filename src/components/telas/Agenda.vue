@@ -11,7 +11,7 @@
 
                 <div v-for="(data) in datasAgenda" :key="data" class="row pb-4">
                     <div class="col-12 py-2">
-                        <h2 class="titulo"><i class="fa fa-calendar mx-1"></i> {{formatarData(data)}}</h2>
+                        <h3 class="titulo"><i class="fa fa-calendar mx-1"></i> {{formatarData(data)}}</h3>
                     </div>
 
                     <agenda-drop-down
