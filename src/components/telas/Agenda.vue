@@ -3,11 +3,19 @@
         <HeaderSubScreen
                 titulo="Agenda"
                 descricao="Programe-se e aproveite ao máximo o #EGPM3!"
-                imagens="http://egpmdeveloper.lucasjunior.com.br/upload/Imagens/20190630153438.jpeg"
-        ></HeaderSubScreen>
+                imagens="http://egpmdeveloper.lucasjunior.com.br/upload/Imagens/90e1a0980ba0b94ea05956a46213aa1d8567ade5914476645f63b0b8096de100.jpg"
+        />
 
         <div class="container-fluid">
             <div class="container py-5">
+
+                <div v-if="agendamentos.length === 0 && loaded === true" class="row pb-4">
+                    <div class="col-12 my-1 py-3 item-agenda">
+                        <div class="info-agenda-titulo text-center">
+                            A agenda será disponibilizada em breve, fique ligado!
+                        </div>
+                    </div>
+                </div>
 
                 <div v-for="(data) in datasAgenda" :key="data" class="row pb-4">
                     <div class="col-12 py-2">
@@ -41,7 +49,8 @@
             return {
                 agendamentos: [],
                 agendamentosPorData: [],
-                datasAgenda: []
+                datasAgenda: [],
+                loaded: false,
             }
         },
         methods: {
@@ -79,8 +88,15 @@
         },
         created() {
             AgendaApi.retornarAgenda(response => {
-                this.agendamentos = response.data.data;
-                this.agruparDatas(response.data.data);
+
+                if (response.data.data === undefined) {
+                    this.agendamentos = [];
+                } else {
+                    this.agendamentos = response.data.data;
+                    this.agruparDatas(response.data.data);
+                }
+
+                this.loaded = true;
             })
         }
     }
@@ -90,5 +106,16 @@
     .titulo {
         color: $color-title;
     }
+
+    .info-agenda-titulo {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    .item-agenda {
+        border-radius: 5px;
+        background: $color-primary;
+    }
+
 
 </style>
