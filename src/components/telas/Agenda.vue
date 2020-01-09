@@ -2,7 +2,7 @@
     <section>
         <HeaderSubScreen
                 titulo="Agenda"
-                descricao="Saiba tudo que vai acontecer no 3º Encontro Gamer."
+                descricao="Programe-se e aproveite ao máximo o #EGPM3!"
                 imagens="http://egpmdeveloper.lucasjunior.com.br/upload/Imagens/20190630153438.jpeg"
         ></HeaderSubScreen>
 
