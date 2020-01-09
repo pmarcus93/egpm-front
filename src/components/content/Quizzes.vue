@@ -16,8 +16,8 @@
         name: "Talks",
         components: {SecaoTextoEsquerda},
         created() {
-            SecaoApi.getSecao(3, result => {
-                this.secao = result.data;
+            SecaoApi.getSecao("quizzes", result => {
+                this.secao = result.data.data;
             })
         },
         data() {
