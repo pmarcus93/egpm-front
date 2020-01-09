@@ -1,12 +1,11 @@
-const urlbotao = 'Botao/';
+const urlbotao = 'Ingresso/';
 
 import ConfigServices from "@/services/ConfigServices";
 
 export default {
 
-    getOne: (id, callback) => {
-        var url = urlbotao + id;
-        ConfigServices.get(url, callback);
+    getOne: (callback) => {
+        ConfigServices.get(urlbotao, callback);
     },
 
 }

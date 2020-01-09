@@ -2,11 +2,10 @@
     <div>
 
         <div v-if="!campeonato.id_jogo && dadoscarregados">
-            <Erro404Campeonato
-            ></Erro404Campeonato>
+            <Erro404Campeonato/>
         </div>
 
-        <div v-if="campeonato.id_jogo">
+        <div v-else>
             <div class="container-fluid conteudo p-0">
                 <BannerJogo
                         :titulo="campeonato.st_nome"
@@ -14,11 +13,11 @@
                         :lancamento="campeonato.dt_lancamento"
                         :estilo="campeonato.st_estilo"
                         :video="campeonato.st_video"
-                        :imagem="campeonato.st_imagem"
+                        :imagem="campeonato.imagens.default.st_url"
                         :plataforma="campeonato.st_plataforma"
                         :classificacaoindicativa="campeonato.st_classificacaoindicativa"
                         :quantidadejogadores="campeonato.nu_quantidadejogadores"
-                ></BannerJogo>
+                />
             </div>
         </div>
 
@@ -76,7 +75,7 @@
         },
         created() {
             JogoApi.getOne(this.$route.params.jogo, campeonato => {
-                this.campeonato = campeonato.data;
+                this.campeonato = campeonato.data.data;
                 this.dadoscarregados = true;
             })
         }

@@ -10,24 +10,12 @@
 </template>
 
 <script>
-    import JogoApi from "@/services/JogoApi.js";
     import HeaderSubScreen from "../itens/HeaderSubScreen";
     import Campeonatos from "../itens/GameList";
 
     export default {
         name: "CampeonatoTela",
         components: {Campeonatos, HeaderSubScreen},
-        created() {
-            var self = this;
-            JogoApi.getCampeonatos(campeonatos => {
-                self.campeonatos = campeonatos.data;
-            })
-        },
-        data: function () {
-            return {
-                campeonatos: []
-            }
-        }
     }
 </script>
 
