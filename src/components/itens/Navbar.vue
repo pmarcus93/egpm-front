@@ -11,7 +11,7 @@
                 INÍCIO
             </router-link>
 
-            <router-link class="navbar-brand link" to='/campeonatos'>
+            <router-link class="navbar-brand link" to='/games'>
                 GAMES
             </router-link>
 
@@ -45,7 +45,7 @@
             </div>
 
             <div class="col-12">
-                <router-link class="navbar-brand" to='/campeonatos'>
+                <router-link class="navbar-brand" to='/games'>
                     <button class="btn btn-lg btn-link" v-on:click="toggleMenu">GAMES</button>
                 </router-link>
             </div>

@@ -18,11 +18,11 @@ const routes = [
         component: Home
     },
     {
-        path: '/campeonatos',
+        path: '/games',
         component: Games,
     },
     {
-        path: '/campeonatos/:jogo',
+        path: '/games/:jogo',
         component: DescricaoCampeonato
     },
     {
