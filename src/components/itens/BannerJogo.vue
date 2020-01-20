@@ -1,14 +1,23 @@
 <template>
-    <div class="row mx-0 py-3 position-relative">
+    <div class="row mx-0 position-relative">
         <div class="col-12 banner-foto" :style="'background: url(' + imagem + ') center/cover' "></div>
         <div class="col-12 sobre-banner"></div>
         <div class="col-12">
             <div class="row">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-st-12 my-5 info-game">
-                            <h1 class="titulo-secao mb-4">{{titulo}}</h1>
+                    <div class="row info-game my-3">
 
+                        <div class="col-12">
+                            <h1 class="titulo-secao">{{titulo}}</h1>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 align-middle mx-auto my-4">
+                            <iframe v-if="video" width="100%" height="315" :src="'https://www.youtube.com/embed/' + video"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 my-auto">
                             <p class="text-justify texto-info" v-if="descricao">
                                 {{descricao}}
                             </p>
@@ -21,18 +30,13 @@
                                     indicativa: </b>{{classificacaoindicativa}}
                                 </div>
                             </div>
-
                         </div>
 
-                        <div class="col-md-6 col-sm-12 align-middle my-5 mx-auto">
-                            <iframe v-if="video" width="100%" height="315" :src="'https://www.youtube.com/embed/' + video"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </template>
 
