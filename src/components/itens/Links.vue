@@ -4,7 +4,7 @@
             <router-link to="/inicio">
                 <button class="btn btn-lg btn-outline-warning mx-3">Inicio</button>
             </router-link>
-            <router-link to="/campeonatos">
+            <router-link to="/games">
                 <button class="btn btn-lg btn-outline-warning"> Campeonatos</button>
             </router-link>
         </div>

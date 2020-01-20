@@ -3,7 +3,7 @@
             classimage="bgcampeonatos"
             titulo="JOGOS"
             :descricao="secao.st_texto"
-            rota="/campeonatos"
+            rota="/games"
             textobotao="Lista de Campeonatos"
             colorborder="yellow"
             type="parallax">

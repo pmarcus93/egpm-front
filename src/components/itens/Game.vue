@@ -1,6 +1,6 @@
 <template>
     <div class="col-6 col-md-4 bloco-campeonato">
-        <router-link :to="'/campeonatos/' + rota">
+        <router-link :to="'/games/' + rota">
             <div class="wrapper">
                 <h4 class="titulo-jogo">{{titulo}}</h4>
                     <img v-lazy="imagens.default.st_url">
