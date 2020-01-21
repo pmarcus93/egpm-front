@@ -3,7 +3,7 @@
         <HeaderSubScreen
                 titulo="Agenda"
                 descricao="Programe-se e aproveite ao máximo o #EGPM3!"
-                imagens="http://egpmdeveloper.lucasjunior.com.br/upload/Imagens/90e1a0980ba0b94ea05956a46213aa1d8567ade5914476645f63b0b8096de100.jpg"
+                imagens="https://egpmdeveloper.lucasjunior.com.br/upload/Imagens/90e1a0980ba0b94ea05956a46213aa1d8567ade5914476645f63b0b8096de100.jpg"
         />
 
         <div class="container-fluid">

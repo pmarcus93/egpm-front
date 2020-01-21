@@ -3,7 +3,7 @@
         <HeaderSubScreen
                 titulo="Games"
                 descricao="Confira trailers, imagens, regras dos campeonatos e detalhes dos games presentes no evento."
-                imagens="http://egpmdeveloper.lucasjunior.com.br/upload/Imagens/20190630152915.jpeg">
+                imagens="https://egpmdeveloper.lucasjunior.com.br/upload/Imagens/20190630152915.jpeg">
         </HeaderSubScreen>
         <Campeonatos></Campeonatos>
     </section>
