@@ -6,7 +6,12 @@
                     <Secao titulo="Sobre o #EGPM3">
                     </Secao>
                     <p class="text-justify">{{secao.st_texto}}</p>
+                    <a class="btn btn-success btn-lg btn-block" href="https://chat.whatsapp.com/CEibDiGSwKiLrixb4KQgbF" target="_blank">
+                        <img class="whatsapp-svg" src="../../assets/icons/whatsapp.svg">
+                        <span class="ml-2 text-white">Faça parte do nosso grupo no WhatsApp!</span>
+                    </a>
                 </div>
+
                 <div class="col-lg-6">
                     <BlocoIcons>
                     </BlocoIcons>
