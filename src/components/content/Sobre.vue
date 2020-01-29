@@ -8,7 +8,7 @@
                     <p class="text-justify">{{secao.st_texto}}</p>
                     <a class="whatsapp btn btn-block" href="https://chat.whatsapp.com/CEibDiGSwKiLrixb4KQgbF" target="_blank">
                         <img class="whatsapp-svg" src="../../assets/icons/whatsapp.svg">
-                        <span class="ml-2 text-whatsapp">PARTICIPE DE NOSSO GRUPO NO WHATSAPP</span>
+                        <span class="ml-sm-1 ml-md-2 text-whatsapp">PARTICIPE DE NOSSO GRUPO</span>
                     </a>
                 </div>
 
