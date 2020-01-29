@@ -6,7 +6,7 @@
        class="btn ticket"
        :class="isFixed ? 'fixed btn-lg' : 'not-fixed'" >
        <i class="fa fa-ticket-alt fa-2x mr-2 mr-md-3"></i>
-        <span>ADQUIRA SEU INGRESSO!</span>
+        <span>ADQUIRA SEU INGRESSO</span>
     </a>
 </template>
 

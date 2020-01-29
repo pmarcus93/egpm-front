@@ -6,9 +6,9 @@
                     <Secao titulo="Sobre o #EGPM3">
                     </Secao>
                     <p class="text-justify">{{secao.st_texto}}</p>
-                    <a class="btn btn-success btn-lg btn-block" href="https://chat.whatsapp.com/CEibDiGSwKiLrixb4KQgbF" target="_blank">
+                    <a class="whatsapp btn btn-block" href="https://chat.whatsapp.com/CEibDiGSwKiLrixb4KQgbF" target="_blank">
                         <img class="whatsapp-svg" src="../../assets/icons/whatsapp.svg">
-                        <span class="ml-2 text-white">Faça parte do nosso grupo no WhatsApp!</span>
+                        <span class="ml-2 text-whatsapp">PARTICIPE DE NOSSO GRUPO NO WHATSAPP</span>
                     </a>
                 </div>
 
@@ -57,4 +57,20 @@
         padding: 5% 0;
         color: #545457;
     }
+
+    .whatsapp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #28a745;
+    }
+
+    .btn {
+        border: 1px solid #28a745;
+    }
+
+    .btn:hover {
+        color: #28a745;
+    }
+
 </style>
