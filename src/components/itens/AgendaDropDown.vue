@@ -45,7 +45,7 @@
         props: ["agenda", "expand"],
         methods: {
             goToCampeonato: function (id) {
-                this.$router.push({path: 'campeonatos/' + id});
+                this.$router.push({path: 'games/' + id});
             },
             getHoratioSemMinutos: function (horario) {
                 return horario.slice(0, 5);
