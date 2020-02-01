@@ -81,21 +81,21 @@
 
     @keyframes height-animate {
         to {
-            max-height: 500px;
+            height: auto;
         }
 
         from {
-            max-height: 0;
+            height: 0;
         }
     }
 
     @keyframes height-animate-reverse {
         to {
-            max-height: 0;
+            height: 0;
         }
 
         from {
-            max-height: 200px;
+            height: auto;
         }
     }
 
