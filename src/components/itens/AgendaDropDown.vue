@@ -72,11 +72,11 @@
     }
 
     .detalhes-agenda-unactive {
-        animation: height-animate-reverse ease-in .5s forwards;
+        animation: height-animate-reverse ease-in 0s forwards;
     }
 
     .detalhes-agenda-active {
-        animation: height-animate ease-in .5s forwards;
+        animation: height-animate ease-in 0s forwards;
     }
 
     @keyframes height-animate {
