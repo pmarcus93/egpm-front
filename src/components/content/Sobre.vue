@@ -7,7 +7,7 @@
                     </Secao>
                     <p class="text-justify">{{secao.st_texto}}</p>
                     <a class="whatsapp btn btn-block" href="https://chat.whatsapp.com/CEibDiGSwKiLrixb4KQgbF" target="_blank">
-                        <img class="whatsapp-svg" src="../../assets/icons/whatsapp.svg">
+                        <i class="fab fa-whatsapp fa-2x"></i>
                         <span class="ml-2 text-whatsapp">PARTICIPE DO NOSSO GRUPO</span>
                     </a>
                 </div>

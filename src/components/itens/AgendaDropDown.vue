@@ -45,7 +45,7 @@
         props: ["agenda", "expand"],
         methods: {
             goToCampeonato: function (id) {
-                this.$router.push({path: 'campeonatos/' + id});
+                this.$router.push({path: 'games/' + id});
             },
             getHoratioSemMinutos: function (horario) {
                 return horario.slice(0, 5);
@@ -72,30 +72,30 @@
     }
 
     .detalhes-agenda-unactive {
-        animation: height-animate-reverse ease-in .5s forwards;
+        animation: height-animate-reverse ease-in 0s forwards;
     }
 
     .detalhes-agenda-active {
-        animation: height-animate ease-in .5s forwards;
+        animation: height-animate ease-in 0s forwards;
     }
 
     @keyframes height-animate {
         to {
-            max-height: 500px;
+            height: auto;
         }
 
         from {
-            max-height: 0;
+            height: 0;
         }
     }
 
     @keyframes height-animate-reverse {
         to {
-            max-height: 0;
+            height: 0;
         }
 
         from {
-            max-height: 200px;
+            height: auto;
         }
     }
 
