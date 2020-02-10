@@ -3,7 +3,7 @@
         <HeaderSubScreen
                 titulo="Seja um apoiador"
                 descricao="Marque presença no maior evento de games da região! Preencha o formulário abaixo e entraremos em contato."
-                imagens="https://egpmdeveloper.lucasjunior.com.br/upload/Imagens/20190630153438.jpeg"
+                :imagem="imgBanner"
         ></HeaderSubScreen>
 
         <div class="container-fluid py-5">
@@ -67,12 +67,14 @@
     import ApoioApi from "@/services/ApoioApi";
     import VueRecaptcha from 'vue-recaptcha';
     import HeaderSubScreen from "../itens/HeaderSubScreen";
+    import ImgBanner from "../../assets/images/sponser-us-banner.jpeg";
 
     export default {
         name: "SejaApoiador",
         components: {HeaderSubScreen, 'vue-recaptcha': VueRecaptcha},
         data() {
             return {
+                imgBanner: ImgBanner,
                 statusEnvioForm: 0,
                 statusMensagem: {
                     classe: '',

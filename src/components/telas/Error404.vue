@@ -4,7 +4,7 @@
         <HeaderSubScreen
                 titulo="Nada por aqui..."
                 descricao="Essa página não existe. Acesse o menu para navegar pelas opções!"
-                imagens="https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                :imagem="imgBanner"
         ></HeaderSubScreen>
 
     </div>
@@ -12,10 +12,16 @@
 
 <script>
     import HeaderSubScreen from "../itens/HeaderSubScreen";
+    import ImgBanner from "../../assets/images/not-found-banner.jpeg";
 
     export default {
         name: "Erro404",
-        components: {HeaderSubScreen}
+        components: {HeaderSubScreen},
+        data() {
+            return {
+                imgBanner: ImgBanner,
+            }
+        }
     }
 </script>
 
