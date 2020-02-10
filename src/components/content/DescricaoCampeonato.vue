@@ -2,7 +2,7 @@
     <div>
 
         <div v-if="!campeonato.id_jogo && dadoscarregados">
-            <Erro404Campeonato/>
+            <Erro404/>
         </div>
 
         <div v-else>
@@ -41,7 +41,7 @@
                                     <li v-if="campeonato.nu_vaga" class="list-group-item"><i
                                             class="fas fa-user-friends"></i> {{campeonato.nu_vaga}} Vagas
                                     </li>
-                                    <li v-for="item in campeonato.datahorario" class="list-group-item">
+                                    <li v-for="item in campeonato.datahorario" :key="item.id_datahorario" class="list-group-item">
                                         <i class="fas fa-calendar-alt"></i> {{item.st_diasemana}}, {{item.st_hora}}
                                     </li>
                                 </ul>
@@ -59,12 +59,12 @@
 
     import BannerJogo from "../itens/BannerJogo";
     import JogoApi from "@/services/JogoApi";
-    import Erro404Campeonato from "../telas/Erro404Campeonato";
+    import Erro404 from "../telas/Error404";
 
     export default {
         name: "DescricaoCampeonato",
         components: {
-            Erro404Campeonato,
+            Erro404,
             BannerJogo
         },
         data() {
