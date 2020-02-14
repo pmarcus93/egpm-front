@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="bg-img-container">
-            <img v-bind:src="imagens">
+            <img v-bind:src="imagem">
             <div class="text text-center">
                 <div class="container">
                     <div class="col-12">
@@ -17,7 +17,7 @@
 <script>
     export default {
         name: "HeaderSubScreen",
-        props: ['titulo', 'descricao', 'imagens']
+        props: ['titulo', 'descricao', 'imagem']
     }
 </script>
 

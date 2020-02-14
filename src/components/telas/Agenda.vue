@@ -3,7 +3,7 @@
         <HeaderSubScreen
                 titulo="Agenda"
                 descricao="Programe-se e aproveite ao máximo o #EGPM3!"
-                imagens="https://egpmdeveloper.lucasjunior.com.br/upload/Imagens/90e1a0980ba0b94ea05956a46213aa1d8567ade5914476645f63b0b8096de100.jpg"
+                :imagem="imgBanner"
         />
 
         <div class="container-fluid">
@@ -41,12 +41,14 @@
     import AgendaApi from "@/services/AgendaApi";
     import HeaderSubScreen from "../itens/HeaderSubScreen";
     import AgendaDropDown from "../itens/AgendaDropDown";
+    import ImgBanner from "../../assets/images/agenda-banner.jpg";
 
     export default {
         name: "Agenda",
         components: {AgendaDropDown, HeaderSubScreen},
         data() {
             return {
+                imgBanner: ImgBanner,
                 agendamentos: [],
                 agendamentosPorData: [],
                 datasAgenda: [],

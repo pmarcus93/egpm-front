@@ -3,7 +3,7 @@
         <HeaderSubScreen
                 titulo="Games"
                 descricao="Confira trailers, imagens, regras dos campeonatos e detalhes dos games presentes no evento."
-                imagens="https://egpmdeveloper.lucasjunior.com.br/upload/Imagens/20190630152915.jpeg">
+                :imagem="imgBanner">
         </HeaderSubScreen>
         <Campeonatos></Campeonatos>
     </section>
@@ -12,10 +12,17 @@
 <script>
     import HeaderSubScreen from "../itens/HeaderSubScreen";
     import Campeonatos from "../itens/GameList";
+    import ImgBanner from "../../assets/images/games-banner.jpeg"
 
     export default {
         name: "CampeonatoTela",
         components: {Campeonatos, HeaderSubScreen},
+        data() {
+            return {
+                imgBanner: ImgBanner,
+            }
+        }
+
     }
 </script>
 
