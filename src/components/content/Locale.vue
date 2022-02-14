@@ -5,15 +5,14 @@
                 <div class="col-sm-12 col-md-6 my-auto conteudo-texto">
                     <h1 class="mb-4 titulo-secao">#EGMP3</h1>
                     <h4>LOCAL</h4>
-                    <p>
+                    <p v-if="localizacao">
                         {{localizacao.st_local}} <br>
                         {{localizacao.st_endereco}} <br>
                     </p>
 
                     <h4>DATAS & HORÁRIOS</h4>
-                    <p>
-                        <span v-if="diahorario.data"
-                              v-for="(item) in diahorario.data">{{item.st_diahorario}} <br></span>
+                    <p v-if="diahorario.data">
+                        <span v-for="(item) in diahorario.data">{{item.st_diahorario}} <br></span>
                     </p>
 
                 </div>

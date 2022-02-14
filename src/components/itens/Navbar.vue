@@ -20,7 +20,7 @@
             </router-link>
 
 
-            <div class="navbar-icons">
+            <div v-if="social" class="navbar-icons">
                 <a v-if="social[0].st_link" :href="social[0].st_link" target="_blank" rel="noopener"
                    class="color-facebook social"><i
                         class="fab fa-facebook fa-2x ml-3"></i></a>
@@ -57,7 +57,7 @@
             </div>
 
             <div class="col-12">
-                <div class="navbar-icons ">
+                <div class="navbar-icons">
                     <a v-if="social[0].st_link" :href="social[0].st_link" target="_blank" rel="noopener"
                     class="color-facebook "><i
                         class="fab fa-facebook fa-2x mx-3"></i></a>
