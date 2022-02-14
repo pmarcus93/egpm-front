@@ -9,8 +9,8 @@
 </template>
 
 <script>
-    import Navbar from "./components/itens/Navbar";
-    import BlocoRodape from "./components/itens/Footer";
+    const Navbar = () => import("./components/itens/Navbar");
+    const BlocoRodape = () => import("./components/itens/Footer");
 
     export default {
         name: 'app',

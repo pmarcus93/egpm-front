@@ -73,7 +73,7 @@
 </template>
 
 <script>
-    import Rainbow from "./Rainbow";
+    const Rainbow = () => import("./Rainbow");
     import SocialApi from "@/services/SocialApi";
 
     export default {

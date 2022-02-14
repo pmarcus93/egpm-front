@@ -17,7 +17,7 @@
 </template>
 
 <script>
-    import Rainbow from "../itens/Rainbow";
+    const Rainbow = () => import("../itens/Rainbow");
 
     export default {
         name: "Rodape",

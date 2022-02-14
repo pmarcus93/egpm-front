@@ -25,7 +25,7 @@
 </template>
 
 <script>
-    import ButtonTicket from "../itens/ButtonTicket";
+    const ButtonTicket = () => import("../itens/ButtonTicket");
     export default {
         name: 'Banner',
         components: {ButtonTicket},

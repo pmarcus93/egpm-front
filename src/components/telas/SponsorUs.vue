@@ -64,10 +64,10 @@
 
 
 <script>
-    import ApoioApi from "@/services/ApoioApi";
-    import VueRecaptcha from 'vue-recaptcha';
-    import HeaderSubScreen from "../itens/HeaderSubScreen";
-    import ImgBanner from "../../assets/images/sponser-us-banner.jpeg";
+    const ApoioApi = () => import( "@/services/ApoioApi");
+    const VueRecaptcha = () => import( 'vue-recaptcha');
+    const HeaderSubScreen = () => import( "../itens/HeaderSubScreen");
+    const ImgBanner = () => import( "../../assets/images/sponser-us-banner.jpeg");
 
     export default {
         name: "SejaApoiador",

@@ -10,9 +10,9 @@
 </template>
 
 <script>
-    import HeaderSubScreen from "../itens/HeaderSubScreen";
-    import Campeonatos from "../itens/GameList";
-    import ImgBanner from "../../assets/images/games-banner.jpeg"
+    const HeaderSubScreen = () => import( "../itens/HeaderSubScreen");
+    const Campeonatos = () => import( "../itens/GameList");
+    const ImgBanner = () => import( "../../assets/images/games-banner.jpeg");
 
     export default {
         name: "CampeonatoTela",

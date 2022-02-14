@@ -11,8 +11,8 @@
 </template>
 
 <script>
-    import HeaderSubScreen from "../itens/HeaderSubScreen";
-    import ImgBanner from "../../assets/images/not-found-banner.jpeg";
+    const HeaderSubScreen = () => import("../itens/HeaderSubScreen");
+    const ImgBanner = () => import("../../assets/images/not-found-banner.jpeg");
 
     export default {
         name: "Erro404",

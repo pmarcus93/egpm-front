@@ -1,14 +1,13 @@
 import Vue from 'vue';
-import App from './App.vue';
 import VueRouter from 'vue-router';
 import routes from './routes';
 import VueLazyload from 'vue-lazyload'
+const App = () => import('./App.vue');
 
 Vue.use(VueLazyload);
-
-import 'bootstrap/dist/css/bootstrap.css';
-
 Vue.use(VueRouter);
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = new VueRouter({
     mode: 'history',
