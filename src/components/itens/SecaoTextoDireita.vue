@@ -71,6 +71,7 @@
         }
 
         font-family: $font-archive;
+        font-display: swap;
         text-align: center;
     }
 

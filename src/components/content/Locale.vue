@@ -71,6 +71,7 @@
     .titulo-secao {
         text-align: center;
         font-family: $font-archive;
+        font-display: swap;
         font-size: 2.5rem;
         @include sm {
             font-size: 3rem;

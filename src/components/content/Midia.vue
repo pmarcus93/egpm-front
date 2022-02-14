@@ -85,7 +85,7 @@
     .titulo-depoimentos {
         font-size: 2em;
         font-family: $font-archive;
-
+        font-display: swap;
         @include sm {
             font-size: 2.5em;
         }
