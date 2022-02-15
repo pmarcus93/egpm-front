@@ -4,7 +4,8 @@
 
             <router-link class="navbar-brand" to='/inicio' aria-current-value="Página Inicial">
                 <img src="../../assets/images/logoegpm3.webp"
-                     class="d-inline-block align-top" alt="Logo do EGPM">
+                     class="d-inline-block align-top"
+                     alt="Logo do EGPM">
             </router-link>
 
             <router-link class="navbar-brand link" to='/inicio'>

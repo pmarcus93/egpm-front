@@ -4,7 +4,7 @@
             <source media="(min-width: 576px)" srcset="../../assets/images/backgrounds/banner/banner-background-sm.jpg">
             <source media="(min-width: 768px)" srcset="../../assets/images/backgrounds/banner/banner-background-md.jpg">
             <img class="img-background" srcset="../../assets/images/backgrounds/banner/banner-background-default.jpg"
-                 alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
+                 alt="Foto de fundo, mostrando o auditório da FAPAM cheio.">
         </picture>
         <section class="content py-5 text-center">
             <h2 class="text-center"><span class="badge badge-pill badge-em-breve">01 e 02 de fevereiro</span></h2>
