@@ -2,9 +2,9 @@
     <div class="fixed-top">
         <nav class="navbar navbar-light bg-light">
 
-            <router-link class="navbar-brand" to='/inicio'>
-                <img src="../../assets/images/logoegpm3.png" width="150px"
-                     class="d-inline-block align-top" alt="">
+            <router-link class="navbar-brand" to='/inicio' aria-current-value="Página Inicial">
+                <img src="../../assets/images/logoegpm3.webp"
+                     class="d-inline-block align-top" alt="Logo do EGPM">
             </router-link>
 
             <router-link class="navbar-brand link" to='/inicio'>
@@ -28,7 +28,7 @@
                    class="color-instagram social"><i
                         class="fab fa-instagram fa-2x ml-3"></i></a>
 
-                <button class="burger" v-on:click="toggleMenu">
+                <button class="burger" aria-label="Menu" v-on:click="toggleMenu">
                     <i v-if="!menuAtivo" class=" fa fa-bars fa-2x ml-3"></i>
                     <i v-else class=" fa fa-times fa-2x ml-3 animatescale"></i>
                 </button>

@@ -9,6 +9,7 @@
                 <div class="col-12">
                     <div class="d-flex justify-content-center">
                         <iframe class="video" width="560" height="315"
+                                title="Vídeo do Youtube"
                                 :src="'https://www.youtube.com/embed/' + secao.st_video"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </div>

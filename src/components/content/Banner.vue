@@ -9,8 +9,8 @@
         <section class="content py-5 text-center">
             <h2 class="text-center"><span class="badge badge-pill badge-em-breve">01 e 02 de fevereiro</span></h2>
             <picture class="my-5">
-                <source media="(min-width: 576px)" srcset="../../assets/images/full-logo/full-logo-sm.png">
-                <img class="d-block mx-auto my-4 logo-full" srcset="../../assets/images/full-logo/full-logo-sm.png"
+                <source media="(min-width: 576px)" srcset="../../assets/images/full-logo/full-logo.webp">
+                <img class="d-block mx-auto my-4 logo-full" srcset="../../assets/images/full-logo/full-logo.webp"
                      alt="Logo do Terceiro Encontro Gamer de Pará de Minas">
             </picture>
             <p class="content-description-banner">O maior evento de games da região.<br>Feito por gamers, para gamers.
