@@ -5,7 +5,7 @@ import ConfigServices from "@/services/ConfigServices";
 export default {
 
     getSecao: (st_rota, callback) => {
-        var url = urlsecao + st_rota;
+        const url = urlsecao + st_rota;
         ConfigServices.get(url, callback);
     },
 

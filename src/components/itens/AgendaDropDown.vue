@@ -71,14 +71,6 @@
         user-select: none;
     }
 
-    .detalhes-agenda-unactive {
-        animation: height-animate-reverse ease-in 0s forwards;
-    }
-
-    .detalhes-agenda-active {
-        animation: height-animate ease-in 0s forwards;
-    }
-
     @keyframes height-animate {
         to {
             height: auto;

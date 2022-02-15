@@ -83,14 +83,5 @@
         -moz-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
     }
 
-    .titulo-depoimentos {
-        font-size: 2em;
-        font-family: $font-archive;
-        font-display: swap;
-        @include sm {
-            font-size: 2.5em;
-        }
-    }
-
 </style>
 

@@ -13,7 +13,7 @@ export default {
     },
 
     getOne: (id_jogo, callback) => {
-        var url = urljogo + id_jogo;
+        const url = urljogo + id_jogo;
         ConfigServices.get(url, callback);
     },
 

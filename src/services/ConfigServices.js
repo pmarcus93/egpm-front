@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const urlbase = 'https://blooming-springs-31144.herokuapp.com/Api/';
-var header = "";
+let header = "";
 
 function setTokenHeader() {
     header = { Authorization: `Bearer ${localStorage.getItem("st_token")}` };
@@ -42,7 +42,7 @@ export default {
 
     uploadFormData(rota, data, callback) {
 
-        var cabecalho = {
+        const cabecalho = {
             'Authorization': header.Authorization,
             'Content-Type': 'multipart/form-data'
         };

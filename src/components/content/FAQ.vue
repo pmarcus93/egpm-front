@@ -45,12 +45,6 @@
         color: $color-title;
     }
 
-    .subtitulo {
-        @include sm {
-            text-align: center;
-        }
-    }
-
     .titulo-secao {
         font-family: $font-archive;
         font-size: 3em;

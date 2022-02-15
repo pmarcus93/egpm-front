@@ -112,7 +112,6 @@
         background-color: $color-primary;
         color: $color-secondary-variant;
         font-family: $font-archive;
-        font-display: swap;
     }
 
 </style>

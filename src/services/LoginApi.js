@@ -9,12 +9,12 @@ export default {
     },
 
     verificaLogin: (credenciais, callback) => {
-        var url = urllogin + credenciais.id_usuario + "/verificalogin";
+        const url = urllogin + credenciais.id_usuario + "/verificalogin";
         ConfigServices.post(url, credenciais, callback);
     },
 
     logout: (credenciais, callback) => {
-        var url = urllogin + credenciais.id_usuario + "/logout";
+        const url = urllogin + credenciais.id_usuario + "/logout";
         ConfigServices.post(url, credenciais, callback);
     },
 
