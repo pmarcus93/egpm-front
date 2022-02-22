@@ -33,6 +33,7 @@
     @import "bootstrap/scss/images";
     @import "bootstrap/scss/utilities";
     @import "bootstrap/scss/bootstrap-grid";
+    @import "bootstrap/scss/_buttons.scss";
 
     h1 {
         font-weight: bold;
