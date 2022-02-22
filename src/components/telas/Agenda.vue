@@ -41,7 +41,7 @@
     const AgendaApi = () => import("@/services/AgendaApi");
     const HeaderSubScreen = () => import("../itens/HeaderSubScreen");
     const AgendaDropDown = () => import("../itens/AgendaDropDown");
-    const ImgBanner = () => import("../../assets/images/agenda-banner.jpg");
+    import ImgBanner from "../../assets/images/agenda-banner.jpg";
 
     export default {
         name: "Agenda",
