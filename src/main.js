@@ -1,10 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import routes from './routes';
-import VueLazyload from 'vue-lazyload'
 const App = () => import('./App.vue');
 
-Vue.use(VueLazyload);
 Vue.use(VueRouter);
 
 import 'bootstrap/dist/css/bootstrap.min.css';
