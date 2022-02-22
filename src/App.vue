@@ -35,6 +35,8 @@
     @import "bootstrap/scss/bootstrap-grid";
     @import "bootstrap/scss/_buttons";
     @import "bootstrap/scss/badge";
+    @import "bootstrap/scss/card";
+    @import "bootstrap/scss/_type";
 
     h1 {
         font-weight: bold;
