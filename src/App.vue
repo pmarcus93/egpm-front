@@ -23,6 +23,17 @@
 
     @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
 
+    // Importação customizada do Boostrap!
+    @import "bootstrap/scss/functions";
+    @import "bootstrap/scss/variables";
+    @import "bootstrap/scss/mixins";
+
+    @import "bootstrap/scss/navbar";
+    @import "bootstrap/scss/reboot";
+    @import "bootstrap/scss/images";
+    @import "bootstrap/scss/utilities";
+    @import "bootstrap/scss/bootstrap-grid";
+
     h1 {
         font-weight: bold;
         text-transform: uppercase;

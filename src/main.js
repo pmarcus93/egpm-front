@@ -5,8 +5,6 @@ const App = () => import('./App.vue');
 
 Vue.use(VueRouter);
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 const router = new VueRouter({
     mode: 'history',
     routes,
