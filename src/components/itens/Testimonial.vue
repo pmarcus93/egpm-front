@@ -1,7 +1,7 @@
 <template>
     <div class="col-sm-12 col-xl-6 mt-5 mx-auto depoimento">
         <div class="avatar mx-auto">
-            <img srcset="imagens.sm.st_url"
+            <img :src="imagens.sm.st_url"
                  loading="lazy"
               alt="Foto do autor(a).">
         </div>
