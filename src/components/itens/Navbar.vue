@@ -78,31 +78,33 @@
     import SocialApi from "@/services/SocialApi";
 
     export default {
-        name: 'Navbar',
-        components: {Rainbow},
-        methods: {
-            toggleMenu: function () {
-                this.menuAtivo = !this.menuAtivo;
+      name: 'Navbar',
+      components: {Rainbow},
+      methods: {
+        toggleMenu: function () {
+          this.menuAtivo = !this.menuAtivo;
+        },
+      },
+      created() {
+        SocialApi.getAll(result => {
+          if (result.data.data.social) {
+            this.social = result.data.data;
+          }
+        });
+      },
+      data: function () {
+        return {
+          menuAtivo: false,
+          social: [
+            {
+              st_link: "https://www.facebook.com/FAPAM/"
             },
-        },
-        created() {
-            SocialApi.getAll(result => {
-                this.social = result.data.data;
-            });
-        },
-        data: function () {
-            return {
-                menuAtivo: false,
-                social: [
-                    {
-                        st_link: "https://www.facebook.com/FAPAM/"
-                    },
-                    {
-                        st_link: "https://www.instagram.com/fapam_oficial/1"
-                    }
-                ]
+            {
+              st_link: "https://www.instagram.com/fapam_oficial/"
             }
+          ]
         }
+      }
     }
 </script>
 
