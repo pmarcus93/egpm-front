@@ -12,7 +12,9 @@
                         </div>
 
                         <div class="col-sm-12 col-md-6 align-middle mx-auto my-4">
-                            <iframe v-if="video" width="100%" height="315" :src="'https://www.youtube.com/embed/' + video"
+                            <iframe v-if="video" width="100%" height="315"
+                                    title="Vídeo do Youtube"
+                                    :src="'https://www.youtube.com/embed/' + video"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                         </div>

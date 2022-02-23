@@ -38,9 +38,9 @@
 
 
 <script>
-    import AgendaApi from "@/services/AgendaApi";
-    import HeaderSubScreen from "../itens/HeaderSubScreen";
-    import AgendaDropDown from "../itens/AgendaDropDown";
+    const AgendaApi = () => import("@/services/AgendaApi");
+    const HeaderSubScreen = () => import("../itens/HeaderSubScreen");
+    const AgendaDropDown = () => import("../itens/AgendaDropDown");
     import ImgBanner from "../../assets/images/agenda-banner.jpg";
 
     export default {

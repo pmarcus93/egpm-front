@@ -12,7 +12,7 @@
 <script>
     import HeaderSubScreen from "../itens/HeaderSubScreen";
     import Campeonatos from "../itens/GameList";
-    import ImgBanner from "../../assets/images/games-banner.jpeg"
+    import ImgBanner from "../../assets/images/games-banner.jpeg";
 
     export default {
         name: "CampeonatoTela",
@@ -22,9 +22,5 @@
                 imgBanner: ImgBanner,
             }
         }
-
     }
 </script>
-
-<style scoped>
-</style>

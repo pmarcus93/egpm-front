@@ -3,7 +3,9 @@
         <router-link :to="'/games/' + rota">
             <div class="wrapper">
                 <h4 class="titulo-jogo">{{titulo}}</h4>
-                    <img v-lazy="imagens.default.st_url">
+                    <img :src="imagens.default.st_url"
+                         loading="lazy"
+                      alt="Imagem do jogo.">
                 <div class="sobre-imagem"></div>
             </div>
         </router-link>
@@ -20,7 +22,6 @@
 
 
 <style scoped lang="scss">
-
 
     .bloco-campeonato {
         text-decoration: none;

@@ -4,18 +4,20 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 my-auto conteudo-texto">
                     <h1 class="mb-4 titulo-secao">#EGMP3</h1>
-                    <h4>LOCAL</h4>
-                    <p>
-                        {{localizacao.st_local}} <br>
-                        {{localizacao.st_endereco}} <br>
+                  <h4>LOCAL</h4>
+                    <span v-if="localizacao">
+                      {{localizacao.st_local}} <br>
+                      {{localizacao.st_endereco}} <br>
+                    </span>
+                    <p v-else>
+                      FAPAM, Faculdade De Pará de Minas <br>
+                      R. Ricardo Marinho, 110 - São Geraldo, Pará de Minas - MG
                     </p>
 
                     <h4>DATAS & HORÁRIOS</h4>
-                    <p>
-                        <span v-if="diahorario.data"
-                              v-for="(item) in diahorario.data">{{item.st_diahorario}} <br></span>
+                    <p v-if="diahorario.data">
+                        <span v-for="(item) in diahorario.data">{{item.st_diahorario}} <br></span>
                     </p>
-
                 </div>
                 <div class="col-sm-12 col-md-6 mapa">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.8677220905865!2d-44.61226498529925!3d-19.845549140813137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa73c0a76f18ba9%3A0x18a18e6f43c7f071!2sFaculdade+de+Par%C3%A1+de+Minas+-+FAPAM!5e0!3m2!1spt-BR!2sbr!4v1557353297848!5m2!1spt-BR!2sbr"

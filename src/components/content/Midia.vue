@@ -9,6 +9,7 @@
                 <div class="col-12">
                     <div class="d-flex justify-content-center">
                         <iframe class="video" width="560" height="315"
+                                title="Vídeo do Youtube"
                                 :src="'https://www.youtube.com/embed/' + secao.st_video"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </div>
@@ -80,15 +81,6 @@
         box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
         -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.75);
-    }
-
-    .titulo-depoimentos {
-        font-size: 2em;
-        font-family: $font-archive;
-
-        @include sm {
-            font-size: 2.5em;
-        }
     }
 
 </style>

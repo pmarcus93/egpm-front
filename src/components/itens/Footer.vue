@@ -8,8 +8,9 @@
 </template>
 
 <script>
-    import Rodape from "../content/Rodape";
-    import Patrocinadores from "../content/SponsorList";
+    const Rodape = () => import("../content/Rodape");
+    const Patrocinadores = () => import("../content/SponsorList");
+
     export default {
         name: "BlocoRodape",
         components: {Patrocinadores, Rodape}

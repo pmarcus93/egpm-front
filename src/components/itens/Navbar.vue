@@ -2,9 +2,10 @@
     <div class="fixed-top">
         <nav class="navbar navbar-light bg-light">
 
-            <router-link class="navbar-brand" to='/inicio'>
-                <img src="../../assets/images/logoegpm3.png" width="150px"
-                     class="d-inline-block align-top" alt="">
+            <router-link class="navbar-brand" to='/inicio' aria-current-value="Página Inicial">
+                <img src="../../assets/images/logoegpm3.webp"
+                     class="d-inline-block align-top"
+                     alt="Logo do EGPM">
             </router-link>
 
             <router-link class="navbar-brand link" to='/inicio'>
@@ -20,7 +21,7 @@
             </router-link>
 
 
-            <div class="navbar-icons">
+            <div v-if="social" class="navbar-icons">
                 <a v-if="social[0].st_link" :href="social[0].st_link" target="_blank" rel="noopener"
                    class="color-facebook social"><i
                         class="fab fa-facebook fa-2x ml-3"></i></a>
@@ -28,7 +29,7 @@
                    class="color-instagram social"><i
                         class="fab fa-instagram fa-2x ml-3"></i></a>
 
-                <button class="burger" v-on:click="toggleMenu">
+                <button class="burger" aria-label="Menu" v-on:click="toggleMenu">
                     <i v-if="!menuAtivo" class=" fa fa-bars fa-2x ml-3"></i>
                     <i v-else class=" fa fa-times fa-2x ml-3 animatescale"></i>
                 </button>
@@ -57,7 +58,7 @@
             </div>
 
             <div class="col-12">
-                <div class="navbar-icons ">
+                <div class="navbar-icons">
                     <a v-if="social[0].st_link" :href="social[0].st_link" target="_blank" rel="noopener"
                     class="color-facebook "><i
                         class="fab fa-facebook fa-2x mx-3"></i></a>
@@ -73,35 +74,37 @@
 </template>
 
 <script>
-    import Rainbow from "./Rainbow";
+    const Rainbow = () => import("./Rainbow");
     import SocialApi from "@/services/SocialApi";
 
     export default {
-        name: 'Navbar',
-        components: {Rainbow},
-        methods: {
-            toggleMenu: function () {
-                this.menuAtivo = !this.menuAtivo;
+      name: 'Navbar',
+      components: {Rainbow},
+      methods: {
+        toggleMenu: function () {
+          this.menuAtivo = !this.menuAtivo;
+        },
+      },
+      created() {
+        SocialApi.getAll(result => {
+          if (result.data.data.social) {
+            this.social = result.data.data;
+          }
+        });
+      },
+      data: function () {
+        return {
+          menuAtivo: false,
+          social: [
+            {
+              st_link: "https://www.facebook.com/FAPAM/"
             },
-        },
-        created() {
-            SocialApi.getAll(result => {
-                this.social = result.data.data;
-            });
-        },
-        data: function () {
-            return {
-                menuAtivo: false,
-                social: [
-                    {
-                        st_link: "https://www.facebook.com/FAPAM/"
-                    },
-                    {
-                        st_link: "https://www.instagram.com/fapam_oficial/1"
-                    }
-                ]
+            {
+              st_link: "https://www.instagram.com/fapam_oficial/"
             }
+          ]
         }
+      }
     }
 </script>
 

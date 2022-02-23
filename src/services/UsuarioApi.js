@@ -5,7 +5,7 @@ import ConfigServices from "@/services/ConfigServices";
 export default {
 
     get: (id, callback) => {
-        var url = urlusuario + id;
+        const url = urlusuario + id;
         ConfigServices.get(url, callback);
     },
 

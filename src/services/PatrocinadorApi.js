@@ -9,22 +9,22 @@ export default {
     },
 
     getRealizadores: (callback) => {
-        var url = urlpatrocinador + "getRealizadores";
+        const url = urlpatrocinador + "getRealizadores";
         ConfigServices.get(url, callback);
     },
 
     getApoiadores: (callback) => {
-        var url = urlpatrocinador + "getApoiadores";
+        const url = urlpatrocinador + "getApoiadores";
         ConfigServices.get(url, callback);
     },
 
     getPatrocinadores: (callback) => {
-        var url = urlpatrocinador + "getPatrocinadores";
+        const url = urlpatrocinador + "getPatrocinadores";
         ConfigServices.get(url, callback);
     },
 
     getOne: (id_patrocinador, callback) => {
-        var url = urlpatrocinador + id_patrocinador;
+        const url = urlpatrocinador + id_patrocinador;
         ConfigServices.get(url, callback);
     },
 

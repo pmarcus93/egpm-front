@@ -9,8 +9,8 @@
 </template>
 
 <script>
-    import Navbar from "./components/itens/Navbar";
-    import BlocoRodape from "./components/itens/Footer";
+    const Navbar = () => import("./components/itens/Navbar");
+    const BlocoRodape = () => import("./components/itens/Footer");
 
     export default {
         name: 'app',
@@ -22,6 +22,21 @@
 <style lang="scss">
 
     @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+
+    // Importação customizada do Boostrap!
+    @import "bootstrap/scss/functions";
+    @import "bootstrap/scss/variables";
+    @import "bootstrap/scss/mixins";
+
+    @import "bootstrap/scss/navbar";
+    @import "bootstrap/scss/reboot";
+    @import "bootstrap/scss/images";
+    @import "bootstrap/scss/utilities";
+    @import "bootstrap/scss/bootstrap-grid";
+    @import "bootstrap/scss/_buttons";
+    @import "bootstrap/scss/badge";
+    @import "bootstrap/scss/card";
+    @import "bootstrap/scss/_type";
 
     h1 {
         font-weight: bold;
