@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const urlbase = 'https://blooming-springs-31144.herokuapp.com/Api/';
+const urlbase = process.env.VUE_APP_API_BASE_ENDPOINT;
 let header = "";
 
 function setTokenHeader() {
