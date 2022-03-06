@@ -1,8 +1,8 @@
 <template>
-    <div class="patrocinadores py-4">
+    <div v-if="realizadores.length && patrocinadores.length" class="patrocinadores py-4">
         <div class="container">
 
-            <div v-if="realizadores.length > 0" class="row" :v-if="realizadores[0]">
+            <div class="row" :v-if="realizadores[0]">
                 <div class="col-12 py-2 tipo-patrocinador">
                     <h4>Realização</h4>
                 </div>
@@ -45,7 +45,6 @@
                          :altimg="apoiador.st_nome">
                 </Sponsor>
             </div>
-
         </div>
     </div>
 </template>
@@ -98,5 +97,4 @@
     .tipo-patrocinador {
         border-bottom: #afafb2 solid 2px;
     }
-
 </style>
