@@ -23,7 +23,9 @@
                     <Secao
                             titulo="O que estão falando do #EGPM?"
                     ></Secao>
-                    <Depoimento v-for="(item, indice) in comentarios" v-if="indice<3"
+
+                    <div></div>
+                    <Depoimento v-for="(item, indice) in comentarios"
                                 v-bind:depoimento="item.st_comentario"
                                 v-bind:autor="item.st_autor"
                                 v-bind:imagens="item.imagens"
