@@ -8,10 +8,17 @@
                 </div>
                 <div class="col-12">
                     <div class="d-flex justify-content-center">
-                        <iframe class="video" width="560" height="315"
-                                title="Vídeo do Youtube"
-                                :src="'https://www.youtube.com/embed/' + secao.st_video"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                      <iframe
+                          width="560"
+                          height="315"
+                          :src="'https://www.youtube.com/embed/' + secao.st_video + '&autoplay=1'"
+                          srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+                          span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                          <a href=https://www.youtube.com/embed/qBsfiDiZjV4?autoplay=1><img src=https://img.youtube.com/vi/qBsfiDiZjV4/hqdefault.jpg alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen
+                          title="Vídeo do Youtube"
+                      ></iframe>
                     </div>
                 </div>
             </div>
@@ -25,7 +32,7 @@
                     ></Secao>
 
                     <div></div>
-                    <Depoimento v-for="(item, indice) in comentarios"
+                    <Depoimento v-for="(item) in comentarios"
                                 v-bind:depoimento="item.st_comentario"
                                 v-bind:autor="item.st_autor"
                                 v-bind:imagens="item.imagens"
@@ -45,10 +52,11 @@
     import Depoimento from "../itens/Testimonial";
     import ComentarioApi from "@/services/ComentarioApi";
     import SecaoApi from "@/services/SecaoApi";
+    import VueLazyYoutubeVideo from 'vue-lazy-youtube-video';
 
     export default {
         name: 'Midia',
-        components: {Depoimento, Secao},
+        components: {Depoimento, Secao, VueLazyYoutubeVideo},
 
         created() {
             ComentarioApi.getAllComentarios(retorno => {
@@ -72,6 +80,8 @@
 </script>
 
 <style lang="scss">
+
+    @import 'vue-lazy-youtube-video/dist/style.css';
 
     .depoimentos {
         background: $bg-light;
