@@ -52,11 +52,10 @@
     import Depoimento from "../itens/Testimonial";
     import ComentarioApi from "@/services/ComentarioApi";
     import SecaoApi from "@/services/SecaoApi";
-    import VueLazyYoutubeVideo from 'vue-lazy-youtube-video';
 
     export default {
         name: 'Midia',
-        components: {Depoimento, Secao, VueLazyYoutubeVideo},
+        components: {Depoimento, Secao},
 
         created() {
             ComentarioApi.getAllComentarios(retorno => {
@@ -80,8 +79,6 @@
 </script>
 
 <style lang="scss">
-
-    @import 'vue-lazy-youtube-video/dist/style.css';
 
     .depoimentos {
         background: $bg-light;
