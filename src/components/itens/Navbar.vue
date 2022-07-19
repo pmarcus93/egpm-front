@@ -4,7 +4,7 @@
 
             <router-link class="navbar-brand" to='/inicio' aria-current-value="Página Inicial">
                 <img src="../../assets/images/logoegpm3.webp"
-                     class="d-inline-block align-top"
+                     class="d-inline-block align-top egpm-logo"
                      alt="Logo do EGPM">
             </router-link>
 
@@ -109,6 +109,11 @@
 </script>
 
 <style lang="scss">
+
+    .egpm-logo {
+      width: 150px;
+      height: 32px;
+    }
 
     .burger {
         background: none;
