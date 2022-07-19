@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const urlbase = process.env.VUE_APP_API_BASE_ENDPOINT;
+const urlbase = import.meta.env.VITE_VUE_APP_API_BASE_ENDPOINT;
+
+console.log("URL BASE:", urlbase);
+
 let header = "";
 
 function setTokenHeader() {
