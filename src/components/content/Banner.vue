@@ -74,12 +74,8 @@
     }
 
     .logo-full {
-        height: 17vh;
-        min-height: 100px;
-        width: auto;
-        @include md {
-            height: 20vh;
-        }
+      width: 378px;
+      height: 157px;
     }
 
 </style>
