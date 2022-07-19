@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import Vue from "@vue/compat";
 import VueRouter from 'vue-router';
 import routes from './routes';
 const App = () => import('./App.vue');
