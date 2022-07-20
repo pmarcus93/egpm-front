@@ -12,21 +12,14 @@
 
 <script>
     import SecaoTextoDireita from "../itens/SecaoTextoDireita";
-    import SecaoApi from  "@/services/SecaoApi";
+    import {jogosData} from "../../demodata/DemoData";
 
     export default {
         name: "Tournament",
         components: {SecaoTextoDireita},
-        created() {
-            SecaoApi.getSecao("campeonatos", result => {
-                this.secao = result.data.data;
-            })
-        },
         data() {
             return {
-                secao: {
-                    st_texto : "Carregando..."
-                }
+                secao: jogosData
             }
         }
     }

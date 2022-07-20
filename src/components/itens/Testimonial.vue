@@ -1,5 +1,5 @@
 <template>
-    <div class="col-sm-12 col-xl-6 mt-5 mx-auto depoimento">
+    <div class="col-sm-6 col-xl-6 mt-5 mx-auto depoimento">
         <div class="avatar mx-auto">
             <img :src="imagens.sm.st_url"
                  loading="lazy"

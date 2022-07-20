@@ -44,13 +44,7 @@
     }
 
     .site-contents {
-        margin-top: 62px
-    }
-
-    .animate {
-        display: block;
-        position: relative;
-        animation: animacao 1s;
+        margin-top: 66px;
     }
 
     @keyframes animacao {

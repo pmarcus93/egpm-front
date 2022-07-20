@@ -27,16 +27,6 @@
         display: none;
     }
 
-    .ticket.fixed {
-        @include md {
-            display: flex;
-            bottom: 20px;
-            position: fixed;
-            right: 30px;
-            z-index: 5;
-        }
-    }
-
     .ticket.not-fixed {
         display: inline-flex;
         @include md {

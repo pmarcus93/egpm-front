@@ -10,21 +10,14 @@
 
 <script>
     import SecaoTextoDireita from "../itens/SecaoTextoDireita";
-    import SecaoApi from "@/services/SecaoApi";
+    import {freePlayData} from "../../demodata/DemoData";
 
     export default {
         name: "FreePlay",
         components: {SecaoTextoDireita},
-        created() {
-            SecaoApi.getSecao("free-play", result => {
-                this.secao = result.data.data;
-            })
-        },
         data() {
             return {
-                secao: {
-                    st_texto : "Carregando..."
-                }
+                secao: freePlayData
             }
         }
     }

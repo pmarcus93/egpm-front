@@ -95,13 +95,6 @@
         }
     }
 
-    .animate {
-        animation: animacao 0.6s;
-        display: block;
-        position: relative;
-    }
-
-
     .detalhes-campeonato {
         i {
             margin-right: 10px;

@@ -2,8 +2,9 @@
     <div class="col-6 col-md-4 bloco-campeonato">
         <router-link :to="'/games/' + rota">
             <div class="wrapper">
-                <h4 class="titulo-jogo">{{titulo}}</h4>
-                    <img :src="imagens.default.st_url"
+                <h4 class="titulo-jogo" v-if="titulo">{{titulo}}</h4>
+                    <img v-if="imagens.default"
+                         :src="imagens.default.st_url"
                          loading="lazy"
                       alt="Imagem do jogo.">
                 <div class="sobre-imagem"></div>

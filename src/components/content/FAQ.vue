@@ -19,22 +19,17 @@
 </template>
 
 <script>
-    import DuvidaApi from "@/services/DuvidaApi";
     import Question from "../itens/Question";
     import Secao from "../itens/Section";
+    import {duvidasData} from "../../demodata/DemoData";
 
     export default {
         name: "FAQ",
         components: {Secao, Question},
         data() {
-            return {
-                duvidas: []
-            }
-        },
-        created() {
-            DuvidaApi.getAllDuvidas(retorno => {
-                this.duvidas = retorno.data.data;
-            })
+          return {
+            duvidas: duvidasData
+          }
         },
     }
 </script>
