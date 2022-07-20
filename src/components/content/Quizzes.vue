@@ -10,17 +10,11 @@
 
 <script>
     import SecaoTextoEsquerda from "../itens/SecaoTextoEsquerda";
-    import SecaoApi from "@/services/SecaoApi";
     import {quizzesData} from "../../demodata/DemoData";
 
     export default {
         name: "Talks",
         components: {SecaoTextoEsquerda},
-        created() {
-            // SecaoApi.getSecao("quizzes", result => {
-            //     this.secao = result.data.data;
-            // })
-        },
         data() {
             return {
                 secao: quizzesData

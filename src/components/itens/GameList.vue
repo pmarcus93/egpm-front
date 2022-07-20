@@ -21,17 +21,11 @@
 
 <script>
 import Game from "./Game";
-import JogoApi from "@/services/JogoApi";
 import {listaJogosData} from "../../demodata/DemoData";
 
 export default {
   name: "Campeonatos",
   components: {Game},
-  created() {
-    // JogoApi.getAll(campeonatos => {
-    //     this.campeonatos = campeonatos.data.data;
-    // })
-  },
   data: function () {
     return {
       campeonatos: listaJogosData,

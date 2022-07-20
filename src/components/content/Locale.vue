@@ -33,16 +33,11 @@
 
 <script>
 
-    import LocalizacaoApi from "@/services/LocalizacaoApi";
-    import DiaHorarioApi from "@/services/DiaHorarioApi";
     import {datasHorariosData, localizacaoData} from "../../demodata/DemoData";
 
     export default {
         name: "Locale",
-
-        created() {
-        },
-        data() {
+       data() {
             return {
                 localizacao: localizacaoData,
                 diahorario: {

@@ -25,17 +25,11 @@
 
     import BlocoIcons from "../itens/IconesSobre";
     import Secao from "../itens/Section";
-    import SecaoApi from "@/services/SecaoApi";
     import {sobreData} from "../../demodata/DemoData";
 
     export default {
         name: 'Sobre',
         components: {BlocoIcons, Secao},
-        created() {
-            // SecaoApi.getSecao("sobre-o-egpm", result => {
-                // this.secao = result.data.data;
-            // })
-        },
         data() {
             return {
                 secao: sobreData

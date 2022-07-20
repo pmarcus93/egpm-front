@@ -33,16 +33,9 @@
     import Locale from "../content/Locale";
     import ButtonTicket from "../itens/ButtonTicket";
 
-    import BotaoApi from "@/services/BotaoApi";
-
     export default {
         name: "Home",
         props: ["button"],
-        created() {
-            // BotaoApi.getOne(result => {
-            //     this.btnticket = result.data.data;
-            // });
-        },
         data() {
             return {
                 btnticket: {

@@ -2,7 +2,7 @@
     <div v-if="realizadores.length && patrocinadores.length" class="patrocinadores py-4">
         <div class="container">
 
-            <div class="row" :v-if="realizadores[0]">
+            <div class="row" v-if="realizadores[0]">
                 <div class="col-12 py-2 tipo-patrocinador">
                     <h4>Realização</h4>
                 </div>
@@ -51,24 +51,10 @@
 
 <script>
     import Sponsor from "../itens/Sponsor";
-    import PatrocinadorApi from "@/services/PatrocinadorApi"
 
     export default {
         name: "Patrocinadores",
         components: {Sponsor},
-        mounted() {
-            // PatrocinadorApi.getPatrocinadores(retorno => {
-            //     this.patrocinadores = retorno.data.data;
-            // });
-            //
-            // PatrocinadorApi.getApoiadores(retorno => {
-            //     this.apoiadores = retorno.data.data;
-            // });
-            //
-            // PatrocinadorApi.getRealizadores(retorno => {
-            //     this.realizadores = retorno.data.data;
-            // });
-        },
         data: function () {
             return {
                 patrocinadores: [],
