@@ -684,6 +684,6 @@ const datasHorariosData = [
 ];
 
 const localizacaoData = {
-    st_local: 'FAPAM, Faculdade De Pará de Minas',
-    st_endereco: 'R. Ricardo Marinho, 110 - São Geraldo, Pará de Minas - MG',
+    st_local: 'FAPAM, Faculdade De Pará de Minas\n',
+    st_endereco: 'R. Ricardo Marinho, 110 - São Geraldo, Pará de Minas - MG\n',
 }
