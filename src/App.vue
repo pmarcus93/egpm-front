@@ -44,7 +44,7 @@
     }
 
     .site-contents {
-        margin-top: 62px
+        margin-top: 66px;
     }
 
     @keyframes animacao {
