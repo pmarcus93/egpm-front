@@ -3,7 +3,7 @@
     <section class="col-12 d-flex" :class="[classimage, type]">
       <div class="container">
         <div class="row">
-          <div class="offset-md-6 col-md-6 my-auto box-info">
+          <div class="offset-md-6 col-md-6 box-info">
             <h2 class="mb-2 titulo-secao-right content-title"><span>{{ titulo }}</span></h2>
             <p class="mt-2 content-description">{{ descricao }}</p>
           </div>

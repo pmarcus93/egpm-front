@@ -3,11 +3,9 @@
     <section class="col-12 d-flex" :class="[classimage, type]">
       <div class="container">
         <div class="row">
-          <div class="box-info">
-            <div class="col-md-6">
-              <h1 class="mb-2 titulo-secao-left content-title"><span>{{ titulo }}</span></h1>
-              <p class="mt-2 content-description">{{ descricao }}</p>
-            </div>
+          <div class="col-md-6 box-info">
+            <h1 class="mb-2 titulo-secao-left content-title"><span>{{ titulo }}</span></h1>
+            <p class="mt-2 content-description">{{ descricao }}</p>
           </div>
         </div>
       </div>
