@@ -57,17 +57,17 @@
         name: "Patrocinadores",
         components: {Sponsor},
         mounted() {
-            PatrocinadorApi.getPatrocinadores(retorno => {
-                this.patrocinadores = retorno.data.data;
-            });
-
-            PatrocinadorApi.getApoiadores(retorno => {
-                this.apoiadores = retorno.data.data;
-            });
-
-            PatrocinadorApi.getRealizadores(retorno => {
-                this.realizadores = retorno.data.data;
-            });
+            // PatrocinadorApi.getPatrocinadores(retorno => {
+            //     this.patrocinadores = retorno.data.data;
+            // });
+            //
+            // PatrocinadorApi.getApoiadores(retorno => {
+            //     this.apoiadores = retorno.data.data;
+            // });
+            //
+            // PatrocinadorApi.getRealizadores(retorno => {
+            //     this.realizadores = retorno.data.data;
+            // });
         },
         data: function () {
             return {

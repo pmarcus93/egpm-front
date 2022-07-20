@@ -90,14 +90,12 @@
         },
         created() {
             AgendaApi.retornarAgenda(response => {
-
                 if (response.data.data === undefined) {
                     this.agendamentos = [];
                 } else {
                     this.agendamentos = response.data.data;
                     this.agruparDatas(response.data.data);
                 }
-
                 this.loaded = true;
             })
         }

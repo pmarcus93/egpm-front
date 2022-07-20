@@ -67,24 +67,24 @@
     import Depoimento from "../itens/Testimonial";
     import ComentarioApi from "@/services/ComentarioApi";
     import SecaoApi from "@/services/SecaoApi";
+    import {depoimentosData} from "../../demodata/DemoData";
 
     export default {
         name: 'Midia',
         components: {Depoimento, Secao},
 
         created() {
-            ComentarioApi.getAllComentarios(retorno => {
-                this.comentarios = retorno.data.data;
-            });
-
-            SecaoApi.getSecao("na-midia", result => {
-                this.secao = result.data.data;
-            })
+            // ComentarioApi.getAllComentarios(retorno => {
+            //     this.comentarios = retorno.data.data;
+            // });
+            // SecaoApi.getSecao("na-midia", result => {
+            //     this.secao = result.data.data;
+            // })
         },
 
         data() {
             return {
-                comentarios: [],
+                comentarios: depoimentosData,
                 secao: {
                     st_link: ""
                 }

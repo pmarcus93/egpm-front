@@ -39,9 +39,9 @@
         name: "Home",
         props: ["button"],
         created() {
-            BotaoApi.getOne(result => {
-                this.btnticket = result.data.data;
-            });
+            // BotaoApi.getOne(result => {
+            //     this.btnticket = result.data.data;
+            // });
         },
         data() {
             return {

@@ -35,30 +35,25 @@
 
     import LocalizacaoApi from "@/services/LocalizacaoApi";
     import DiaHorarioApi from "@/services/DiaHorarioApi";
+    import {datasHorariosData, localizacaoData} from "../../demodata/DemoData";
 
     export default {
         name: "Locale",
 
         created() {
-            LocalizacaoApi.getOne(1, result => {
-                this.localizacao = result.data.data;
-            });
-
-            DiaHorarioApi.getAll(result => {
-                this.diahorario.data = result.data.data;
-            })
+            // LocalizacaoApi.getOne(1, result => {
+            //     this.localizacao = result.data.data;
+            // });
+            //
+            // DiaHorarioApi.getAll(result => {
+            //     this.diahorario.data = result.data.data;
+            // })
         },
         data() {
             return {
-                localizacao: {
-                    id_localizacao: "",
-                    st_cep: "",
-                    st_endereco: "",
-                    st_local: "",
-                    st_mapa: "",
-                },
+                localizacao: localizacaoData,
                 diahorario: {
-                    data: null
+                    data: datasHorariosData
                 }
             }
         }

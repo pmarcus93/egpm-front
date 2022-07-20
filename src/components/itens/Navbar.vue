@@ -86,11 +86,11 @@
         },
       },
       created() {
-        SocialApi.getAll(result => {
-          if (result.data.data.social) {
-            this.social = result.data.data;
-          }
-        });
+        // SocialApi.getAll(result => {
+        //   if (result.data.data.social) {
+        //     this.social = result.data.data;
+        //   }
+        // });
       },
       data: function () {
         return {

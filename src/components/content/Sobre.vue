@@ -26,25 +26,19 @@
     import BlocoIcons from "../itens/IconesSobre";
     import Secao from "../itens/Section";
     import SecaoApi from "@/services/SecaoApi";
+    import {sobreData} from "../../demodata/DemoData";
 
     export default {
         name: 'Sobre',
         components: {BlocoIcons, Secao},
         created() {
-            SecaoApi.getSecao("sobre-o-egpm", result => {
-                this.secao = result.data.data;
-            })
+            // SecaoApi.getSecao("sobre-o-egpm", result => {
+                // this.secao = result.data.data;
+            // })
         },
         data() {
             return {
-                secao: {
-                    st_texto :
-                        'Realizado na FAPAM pelos alunos do curso de Gestão da Tecnologia da Informação, o Encontro ' +
-                        'Gamer de Pará de Minas é o maior evento de videogames da cidade. Com campeonatos, palestras ' +
-                        'e free play, são dois dias de muito aprendizado, competição e diversão. Traga a família' +
-                        ' para se divertir com os últimos lançamentos ou reviver os clássicos. Acompanhe a hashtag' +
-                        ' #EGPM3 nas redes sociais e fique por dentro de datas e atrações!'
-                }
+                secao: sobreData
             }
         }
     }

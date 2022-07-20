@@ -5,7 +5,9 @@
                 descricao="Confira trailers, imagens, regras dos campeonatos e detalhes dos games presentes no evento."
                 :imagem="imgBanner">
         </HeaderSubScreen>
+
         <Campeonatos></Campeonatos>
+
     </section>
 </template>
 
