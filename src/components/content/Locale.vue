@@ -41,13 +41,6 @@
         name: "Locale",
 
         created() {
-            // LocalizacaoApi.getOne(1, result => {
-            //     this.localizacao = result.data.data;
-            // });
-            //
-            // DiaHorarioApi.getAll(result => {
-            //     this.diahorario.data = result.data.data;
-            // })
         },
         data() {
             return {
