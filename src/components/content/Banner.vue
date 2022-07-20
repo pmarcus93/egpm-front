@@ -74,8 +74,12 @@
     }
 
     .logo-full {
-      width: 378px;
-      height: 157px;
+      height: 115px;
+      width: auto;
+      @include sm() {
+        width: 378px;
+        height: 157px;
+      }
     }
 
 </style>
