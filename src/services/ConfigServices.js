@@ -1,13 +1,10 @@
 import axios from 'axios';
 
 const urlbase = import.meta.env.VITE_VUE_APP_API_BASE_ENDPOINT;
-
-console.log("URL BASE:", urlbase);
-
 let header = "";
 
 function setTokenHeader() {
-    header = { Authorization: `Bearer ${localStorage.getItem("st_token")}` };
+    header = {Authorization: `Bearer ${localStorage.getItem("st_token")}`};
 }
 
 export default {
@@ -18,7 +15,7 @@ export default {
 
     get(rota, callback) {
         setTokenHeader();
-        axios.get(urlbase + rota, { headers: header }).then((retorno) => {
+        axios.get(urlbase + rota, {headers: header}).then((retorno) => {
             if (callback) {
                 callback(retorno);
             }
@@ -27,7 +24,7 @@ export default {
 
     post(rota, data, callback) {
         setTokenHeader();
-        axios.post(urlbase + rota, data, { headers: header }).then((retorno) => {
+        axios.post(urlbase + rota, data, {headers: header}).then((retorno) => {
             if (callback) {
                 callback(retorno);
             }
@@ -36,7 +33,7 @@ export default {
 
     delete(rota, callback) {
         setTokenHeader();
-        axios.delete(urlbase + rota, { headers: header }).then((retorno) => {
+        axios.delete(urlbase + rota, {headers: header}).then((retorno) => {
             if (callback) {
                 callback(retorno);
             }
@@ -50,7 +47,7 @@ export default {
             'Content-Type': 'multipart/form-data'
         };
 
-        axios.post(urlbase + rota, data, { headers: cabecalho }).then((retorno) => {
+        axios.post(urlbase + rota, data, {headers: cabecalho}).then((retorno) => {
             if (callback) {
                 callback(retorno);
             }
