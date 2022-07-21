@@ -72,8 +72,11 @@ export default {
     width: 100%;
   }
 
-  font-family: $font-archive;
   text-align: center;
+}
+
+.content-title {
+  font-family: $title-font;
 }
 
 </style>

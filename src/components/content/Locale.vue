@@ -59,7 +59,7 @@
 
     .titulo-secao {
         text-align: center;
-        font-family: $font-archive;
+        font-family: $title-font;
         font-size: 2.5rem;
         @include sm {
             font-size: 3rem;

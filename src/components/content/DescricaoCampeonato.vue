@@ -104,7 +104,7 @@
     .list-group-item-primary {
         background-color: $color-primary;
         color: $color-secondary-variant;
-        font-family: $font-archive;
+        font-family: $title-font;
     }
 
 </style>
