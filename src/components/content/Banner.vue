@@ -25,7 +25,9 @@
 </template>
 
 <script>
-    const ButtonTicket = () => import("../itens/ButtonTicket");
+    import {defineAsyncComponent} from "vue";
+
+    const ButtonTicket = defineAsyncComponent(() => import("../itens/ButtonTicket"));
     export default {
         name: 'Banner',
         components: {ButtonTicket},

@@ -8,8 +8,10 @@
 </template>
 
 <script>
-    const Rodape = () => import("../content/Rodape");
-    const Patrocinadores = () => import("../content/SponsorList");
+    import {defineAsyncComponent} from "vue";
+
+    const Rodape = defineAsyncComponent(() => import("../content/Rodape"));
+    const Patrocinadores = defineAsyncComponent(() => import("../content/SponsorList"));
 
     export default {
         name: "BlocoRodape",

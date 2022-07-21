@@ -17,7 +17,9 @@
 </template>
 
 <script>
-    const Rainbow = () => import("../itens/Rainbow");
+    import {defineAsyncComponent} from "vue";
+
+    const Rainbow = defineAsyncComponent(() => import("../itens/Rainbow"));
 
     export default {
         name: "Rodape",

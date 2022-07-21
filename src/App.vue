@@ -9,8 +9,10 @@
 </template>
 
 <script>
-    const Navbar = () => import("./components/itens/Navbar");
-    const BlocoRodape = () => import("./components/itens/Footer");
+    import {defineAsyncComponent} from "vue";
+
+    const Navbar = defineAsyncComponent(() => import("./components/itens/Navbar"));
+    const BlocoRodape = defineAsyncComponent(() => import("./components/itens/Footer"));
 
     export default {
         name: 'app',
