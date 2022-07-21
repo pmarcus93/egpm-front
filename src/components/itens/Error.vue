@@ -26,7 +26,7 @@
     }
 
     .titulo-secao {
-        font-family: $font-archive;
+        font-family: $title-font;
         font-size: 2rem;
         color: $color-primary;
 

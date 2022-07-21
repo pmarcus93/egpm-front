@@ -41,7 +41,7 @@
     }
 
     .titulo-secao {
-        font-family: $font-archive;
+        font-family: $title-font;
         font-size: 3em;
         text-align: center;
     }

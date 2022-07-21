@@ -20,6 +20,9 @@
     }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
+.content-title {
+  font-family: $title-font;
+}
 </style>

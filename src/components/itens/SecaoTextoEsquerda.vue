@@ -68,5 +68,8 @@ export default {
   }
 
 }
+.content-title {
+  font-family: $title-font;
+}
 
 </style>
