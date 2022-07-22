@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <div class="container py-5">
 
-                <div v-if="agendamentos.length === 0 && loaded === true" class="row pb-4">
+                <div v-if="agendamentos.length === 0" class="row pb-4">
                     <div class="col-12 my-1 py-3 item-agenda">
                         <div class="info-agenda-titulo text-center">
                             A agenda será disponibilizada em breve, fique ligado!
@@ -38,7 +38,7 @@
 
 
 <script>
-    const AgendaApi = () => import("@/services/AgendaApi");
+    import agendaApi from "../../services/AgendaApi";
     const HeaderSubScreen = () => import("../itens/HeaderSubScreen");
     const AgendaDropDown = () => import("../itens/AgendaDropDown");
     import ImgBanner from "../../assets/images/agenda-banner.jpg";
@@ -52,7 +52,6 @@
                 agendamentos: [],
                 agendamentosPorData: [],
                 datasAgenda: [],
-                loaded: false,
             }
         },
         methods: {
@@ -89,14 +88,14 @@
             }
         },
         created() {
-            AgendaApi.retornarAgenda(response => {
+            agendaApi.retornarAgenda(response => {
                 if (response.data.data === undefined) {
                     this.agendamentos = [];
                 } else {
-                    this.agendamentos = response.data.data;
-                    this.agruparDatas(response.data.data);
+                  console.log(response.data.data)
+                    // this.agendamentos = response.data.data;
+                    // this.agruparDatas(response.data.data);
                 }
-                this.loaded = true;
             })
         }
     }
