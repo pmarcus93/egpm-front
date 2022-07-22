@@ -1,28 +1,28 @@
 <template>
-    <SecaoTextoDireita
-            classimage="bgcampeonatos"
-            titulo="JOGOS"
-            :descricao="secao.st_texto"
-            rota="/games"
-            textobotao="Lista de Campeonatos"
-            colorborder="yellow"
-            type="parallax">
-    </SecaoTextoDireita>
+  <SecaoTextoDireita
+      classimage="bgcampeonatos"
+      titulo="JOGOS"
+      :descricao="secao.st_texto"
+      rota="/games"
+      textobotao="Lista de Campeonatos"
+      colorborder="yellow"
+      type="parallax">
+  </SecaoTextoDireita>
 </template>
 
 <script>
-    import SecaoTextoDireita from "./SectionRightText";
-    import {jogosData} from "../../demodata/DemoData";
+import SecaoTextoDireita from "./SectionRightText";
+import {jogosData} from "../../demodata/DemoData";
 
-    export default {
-        name: "Tournament",
-        components: {SecaoTextoDireita},
-        data() {
-            return {
-                secao: jogosData
-            }
-        }
+export default {
+  name: "Tournament",
+  components: {SecaoTextoDireita},
+  data() {
+    return {
+      secao: jogosData
     }
+  }
+}
 </script>
 
 <style scoped>

@@ -1,33 +1,32 @@
 <template>
-    <div>
-        <Rainbow></Rainbow>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 rodape my-auto py-3 text-center">
-                    <p>Made with ❤ in Pará de Minas<br>
-                        <a href="https://github.com/pmarcus93">@pmarcus93</a>
-                        | <a href="https://github.com/Lucasmg37">@lucasmg37</a>
-                        | <a href="https://github.com/educmsilva">@educmsilva</a>
-                    </p>
-                </div>
-            </div>
+  <div>
+    <Rainbow></Rainbow>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 rodape my-auto py-3 text-center">
+          <p>Made with ❤ in Pará de Minas<br>
+            <a href="https://github.com/pmarcus93">@pmarcus93</a>
+            | <a href="https://github.com/Lucasmg37">@lucasmg37</a>
+            | <a href="https://github.com/educmsilva">@educmsilva</a>
+          </p>
         </div>
+      </div>
     </div>
-
+  </div>
 </template>
 
 <script>
-    const Rainbow = () => import("./Rainbow");
+const Rainbow = () => import("./Rainbow");
 
-    export default {
-        name: "Footer",
-        components: {Rainbow}
-    }
+export default {
+  name: "Footer",
+  components: {Rainbow}
+}
 </script>
 
 <style scoped>
-    .rodape {
-        background: #111;
-        color: whitesmoke;
-    }
+.rodape {
+  background: #111;
+  color: whitesmoke;
+}
 </style>
