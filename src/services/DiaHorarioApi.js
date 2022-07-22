@@ -4,8 +4,7 @@ import ConfigServices from "@/services/ConfigServices";
 
 export default {
 
-    getAll: (callback) => {
-        ConfigServices.get(urldiahorario, callback);
-    },
-
+  getAll: (callback) => {
+    ConfigServices.get(urldiahorario, callback);
+  },
 }
