@@ -49,7 +49,7 @@
 <script>
 
 import BannerJogo from "../itens/BannerJogo";
-import Erro404 from "../telas/Error404";
+import Erro404 from "../pages/Error404";
 import {detalhesJogoData} from "../../demodata/DemoData";
 
 export default {
