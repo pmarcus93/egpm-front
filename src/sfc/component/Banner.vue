@@ -15,21 +15,13 @@
       </picture>
       <p class="content-description-banner">O maior evento de games da região.<br>Feito por gamers, para gamers.
       </p>
-
-      <ButtonTicket
-          :button="button"
-          :is-fixed="false"
-      ></ButtonTicket>
     </section>
   </div>
 </template>
 
 <script>
-const ButtonTicket = () => import("./TicketButton");
 export default {
   name: 'Banner',
-  components: {ButtonTicket},
-  props: ["button"]
 }
 </script>
 
