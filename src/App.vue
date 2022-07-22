@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <Navbar></Navbar>
+    <Navbar/>
     <div class="site-contents">
       <router-view/>
     </div>
-    <BlocoRodape></BlocoRodape>
+    <Footer/>
   </div>
 </template>
 
 <script>
-const Navbar = () => import("./components/itens/Navbar");
-const BlocoRodape = () => import("./components/itens/Footer");
+const Navbar = () => import("./sfc/component/Navbar");
+const Footer = () => import("./sfc/component/Footer");
 
 export default {
   name: 'app',
-  components: {BlocoRodape, Navbar},
+  components: {Footer, Navbar},
 }
 
 </script>
