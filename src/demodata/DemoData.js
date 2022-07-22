@@ -9,6 +9,7 @@ export {
     datasHorariosData,
     localizacaoData,
     detalhesJogoData,
+    agendaData,
 };
 
 const sobreData = {
@@ -1276,3 +1277,127 @@ const detalhesJogoData = [
         }
     ]
 ;
+
+const agendaData =
+    [
+        {
+            "id_agenda": 1,
+            "st_nome": "Teste",
+            "st_descricao": "Teste",
+            "st_local": "Teste",
+            "dt_data": "2022-02-16",
+            "nu_horario": "19:59:00",
+            "st_observacao": "Teste",
+            "bl_ativo": 1,
+            "bl_jogo": 1,
+            "id_jogo": 1,
+            "jogo": {
+                "id_jogo": null,
+                "st_nome": null,
+                "st_descricao": null,
+                "dt_lancamento": null,
+                "st_estilo": null,
+                "st_video": null,
+                "st_ingresso": null,
+                "nu_vaga": null,
+                "st_plataforma": null,
+                "st_regra": null,
+                "bl_campeonato": null,
+                "st_classificacaoindicativa": null,
+                "st_plataformacampeonato": null,
+                "nu_quantidadejogadores": null,
+                "datahorario": [],
+                "imagens": []
+            }
+        },
+        {
+            "id_agenda": 1,
+            "st_nome": "Teste",
+            "st_descricao": "Teste",
+            "st_local": "Teste",
+            "dt_data": "2022-02-16",
+            "nu_horario": "19:59:00",
+            "st_observacao": "Teste",
+            "bl_ativo": 1,
+            "bl_jogo": 1,
+            "id_jogo": 1,
+            "jogo": {
+                "id_jogo": null,
+                "st_nome": null,
+                "st_descricao": null,
+                "dt_lancamento": null,
+                "st_estilo": null,
+                "st_video": null,
+                "st_ingresso": null,
+                "nu_vaga": null,
+                "st_plataforma": null,
+                "st_regra": null,
+                "bl_campeonato": null,
+                "st_classificacaoindicativa": null,
+                "st_plataformacampeonato": null,
+                "nu_quantidadejogadores": null,
+                "datahorario": [],
+                "imagens": []
+            }
+        },
+        {
+            "id_agenda": 1,
+            "st_nome": "Teste",
+            "st_descricao": "Teste",
+            "st_local": "Teste",
+            "dt_data": "2022-02-16",
+            "nu_horario": "19:59:00",
+            "st_observacao": "Teste",
+            "bl_ativo": 1,
+            "bl_jogo": 1,
+            "id_jogo": 1,
+            "jogo": {
+                "id_jogo": null,
+                "st_nome": null,
+                "st_descricao": null,
+                "dt_lancamento": null,
+                "st_estilo": null,
+                "st_video": null,
+                "st_ingresso": null,
+                "nu_vaga": null,
+                "st_plataforma": null,
+                "st_regra": null,
+                "bl_campeonato": null,
+                "st_classificacaoindicativa": null,
+                "st_plataformacampeonato": null,
+                "nu_quantidadejogadores": null,
+                "datahorario": [],
+                "imagens": []
+            }
+        },
+        {
+            "id_agenda": 1,
+            "st_nome": "Teste",
+            "st_descricao": "Teste",
+            "st_local": "Teste",
+            "dt_data": "2022-02-16",
+            "nu_horario": "19:59:00",
+            "st_observacao": "Teste",
+            "bl_ativo": 1,
+            "bl_jogo": 1,
+            "id_jogo": 1,
+            "jogo": {
+                "id_jogo": null,
+                "st_nome": null,
+                "st_descricao": null,
+                "dt_lancamento": null,
+                "st_estilo": null,
+                "st_video": null,
+                "st_ingresso": null,
+                "nu_vaga": null,
+                "st_plataforma": null,
+                "st_regra": null,
+                "bl_campeonato": null,
+                "st_classificacaoindicativa": null,
+                "st_plataformacampeonato": null,
+                "nu_quantidadejogadores": null,
+                "datahorario": [],
+                "imagens": []
+            }
+        }
+    ];
