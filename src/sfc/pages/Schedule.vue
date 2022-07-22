@@ -21,8 +21,7 @@
 
 
 <script>
-const HeaderSubScreen = () => import("../component/HeaderSubScreen");
-const AgendaDropDown = () => import("../component/AgendaDropDown");
+const HeaderSubScreen = () => import("../component/SubscreenHeader");
 import ImgBanner from "../../assets/images/agenda-banner.jpg";
 
 export default {

@@ -23,7 +23,7 @@
 <script>
 
     import Banner from "../component/Banner";
-    import Sobre from "../component/Sobre";
+    import Sobre from "../component/About";
     import Midia from "../component/Midia";
     import Campeonatos from "../component/GameList";
     import Talks from "../component/Quizzes";
@@ -31,7 +31,7 @@
     import FreePlay from "../component/FreePlay";
     import FAQ from "../component/FAQ";
     import Locale from "../component/Locale";
-    import ButtonTicket from "../component/ButtonTicket";
+    import ButtonTicket from "../component/TicketButton";
 
     export default {
         name: "Home",

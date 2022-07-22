@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    const HeaderSubScreen = () => import("../component/HeaderSubScreen");
+    const HeaderSubScreen = () => import("../component/SubscreenHeader");
     const ImgBanner = () => import("../../assets/images/not-found-banner.jpeg");
 
     export default {

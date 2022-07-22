@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import HeaderSubScreen from "../component/HeaderSubScreen";
+    import HeaderSubScreen from "../component/SubscreenHeader";
     import Campeonatos from "../component/GameList";
     import ImgBanner from "../../assets/images/games-banner.jpeg";
 
