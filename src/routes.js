@@ -1,6 +1,6 @@
 // routes.js
 
-const Agenda = () => import ("./sfc/pages/Schedule");
+const Schedule = () => import ("./sfc/pages/Schedule");
 const Home = () => import ("./sfc/pages/Home");
 const Games = () => import ("./sfc/pages/Games");
 const DescricaoCampeonato = () => import ("./sfc/component/DescricaoCampeonato");
@@ -8,7 +8,7 @@ const Error404 = () => import ("./sfc/pages/404");
 
 const routes = [
     {
-        path: '/inicio',
+        path: '/home',
         component: Home
     },
     {
@@ -24,8 +24,8 @@ const routes = [
         component: DescricaoCampeonato
     },
     {
-        path: '/agenda',
-        component: Agenda
+        path: '/schedule',
+        component: Schedule
     },
 
     {

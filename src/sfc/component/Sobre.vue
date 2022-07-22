@@ -23,7 +23,7 @@
 
 <script>
 
-import BlocoIcons from "./IconesSobre";
+import BlocoIcons from "./Showcase";
 import Secao from "./Section";
 import {sobreData} from "../../demodata/DemoData";
 
