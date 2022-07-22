@@ -4,55 +4,55 @@ const urlbase = import.meta.env.VITE_VUE_APP_API_BASE_ENDPOINT;
 let header = "";
 
 function setTokenHeader() {
-    header = {Authorization: `Bearer ${localStorage.getItem("st_token")}`};
+  header = {Authorization: `Bearer ${localStorage.getItem("st_token")}`};
 }
 
 export default {
 
-    getUrl() {
-        return urlbase;
-    },
+  getUrl() {
+    return urlbase;
+  },
 
-    get(rota, callback) {
-        setTokenHeader();
-        axios.get(urlbase + rota, {headers: header}).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
+  get(rota, callback) {
+    setTokenHeader();
+    axios.get(urlbase + rota, {headers: header}).then((retorno) => {
+      if (callback) {
+        callback(retorno);
+      }
+    })
+  },
 
-    post(rota, data, callback) {
-        setTokenHeader();
-        axios.post(urlbase + rota, data, {headers: header}).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
+  post(rota, data, callback) {
+    setTokenHeader();
+    axios.post(urlbase + rota, data, {headers: header}).then((retorno) => {
+      if (callback) {
+        callback(retorno);
+      }
+    })
+  },
 
-    delete(rota, callback) {
-        setTokenHeader();
-        axios.delete(urlbase + rota, {headers: header}).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
-    },
+  delete(rota, callback) {
+    setTokenHeader();
+    axios.delete(urlbase + rota, {headers: header}).then((retorno) => {
+      if (callback) {
+        callback(retorno);
+      }
+    })
+  },
 
-    uploadFormData(rota, data, callback) {
+  uploadFormData(rota, data, callback) {
 
-        const cabecalho = {
-            'Authorization': header.Authorization,
-            'Content-Type': 'multipart/form-data'
-        };
+    const cabecalho = {
+      'Authorization': header.Authorization,
+      'Content-Type': 'multipart/form-data'
+    };
 
-        axios.post(urlbase + rota, data, {headers: cabecalho}).then((retorno) => {
-            if (callback) {
-                callback(retorno);
-            }
-        })
+    axios.post(urlbase + rota, data, {headers: cabecalho}).then((retorno) => {
+      if (callback) {
+        callback(retorno);
+      }
+    })
 
-    }
+  }
 
 }
