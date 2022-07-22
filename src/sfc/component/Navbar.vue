@@ -8,7 +8,7 @@
              alt="Logo do EGPM">
       </router-link>
 
-      <router-link class="navbar-brand link" to='/inicio'>
+      <router-link class="navbar-brand link" to='/home'>
         INÍCIO
       </router-link>
 
@@ -16,7 +16,7 @@
         GAMES
       </router-link>
 
-      <router-link class="navbar-brand link" to='/agenda'>
+      <router-link class="navbar-brand link" to='/schedule'>
         AGENDA
       </router-link>
 
@@ -52,7 +52,7 @@
       </div>
 
       <div class="col-12">
-        <router-link class="navbar-brand" to='/agenda'>
+        <router-link class="navbar-brand" to='/schedule'>
           <button class="btn btn-lg btn-link" v-on:click="toggleMenu">AGENDA</button>
         </router-link>
       </div>
@@ -76,7 +76,6 @@
 
 <script>
 const Rainbow = () => import("./Rainbow");
-import SocialApi from "@/services/SocialApi";
 
 export default {
   name: 'Navbar',

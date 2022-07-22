@@ -26,7 +26,7 @@ import ImgBanner from "../../assets/images/agenda-banner.jpg";
 
 export default {
   name: "Agenda",
-  components: {AgendaDropDown, HeaderSubScreen},
+  components: {HeaderSubScreen},
   data() {
     return {
       imgBanner: ImgBanner,
