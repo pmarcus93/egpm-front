@@ -21,8 +21,6 @@
 
 
 <script>
-import agendaApi from "../../services/AgendaApi";
-
 const HeaderSubScreen = () => import("../itens/HeaderSubScreen");
 const AgendaDropDown = () => import("../itens/AgendaDropDown");
 import ImgBanner from "../../assets/images/agenda-banner.jpg";
