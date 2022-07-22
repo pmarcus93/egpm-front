@@ -6,10 +6,6 @@
           <Secao titulo="Sobre o #EGPM3"></Secao>
           <div class="container">
             <p class="text-justify">{{ secao.st_texto }}</p>
-            <a class="whatsapp btn btn-block" href="https://chat.whatsapp.com/CEibDiGSwKiLrixb4KQgbF" target="_blank">
-              <i class="fab fa-whatsapp fa-2x"></i>
-              <span class="ml-2 text-whatsapp">PARTICIPE DO NOSSO GRUPO</span>
-            </a>
           </div>
         </div>
         <div class="col-lg-6">
@@ -28,7 +24,7 @@ import Secao from "./Section";
 import {sobreData} from "../../demodata/DemoData";
 
 export default {
-  name: 'Sobre',
+  name: 'About',
   components: {BlocoIcons, Secao},
   data() {
     return {
@@ -50,15 +46,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #28a745;
-}
-
-.btn {
-  border: 1px solid #28a745;
-}
-
-.btn:hover {
-  color: #28a745;
+  color: $rainbow-green;
+  border: 1px solid $rainbow-green;
+  :hover {
+    background: $rainbow-green;
+    color: white;
+  }
 }
 
 </style>
