@@ -50,7 +50,7 @@
     }
 
     .titulo-secao {
-
+        font-family: $title-font;
         span {
             position: relative;
             padding-bottom: 1px;
