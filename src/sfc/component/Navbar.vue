@@ -86,13 +86,6 @@
           this.menuAtivo = !this.menuAtivo;
         },
       },
-      created() {
-        // SocialApi.getAll(result => {
-        //   if (result.data.data.social) {
-        //     this.social = result.data.data;
-        //   }
-        // });
-      },
       data: function () {
         return {
           menuAtivo: false,

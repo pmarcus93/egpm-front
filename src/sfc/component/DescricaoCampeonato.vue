@@ -48,8 +48,8 @@
 
 <script>
 
-import BannerJogo from "./BannerJogo";
-import Erro404 from "../pages/Error404";
+import BannerJogo from "./GameBanner";
+import Erro404 from "../pages/404";
 import {detalhesJogoData} from "../../demodata/DemoData";
 
 export default {

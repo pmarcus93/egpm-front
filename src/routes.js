@@ -1,10 +1,10 @@
 // routes.js
 
-const Agenda = () => import ("./sfc/pages/Agenda");
+const Agenda = () => import ("./sfc/pages/Schedule");
 const Home = () => import ("./sfc/pages/Home");
 const Games = () => import ("./sfc/pages/Games");
 const DescricaoCampeonato = () => import ("./sfc/component/DescricaoCampeonato");
-const Error404 = () => import ("./sfc/pages/Error404");
+const Error404 = () => import ("./sfc/pages/404");
 
 const routes = [
     {
