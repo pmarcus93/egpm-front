@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import SecaoTextoDireita from "../itens/SecaoTextoDireita";
+    import SecaoTextoDireita from "./SectionRightText";
     import {freePlayData} from "../../demodata/DemoData";
 
     export default {

@@ -48,7 +48,7 @@
 
 <script>
 
-import BannerJogo from "../itens/BannerJogo";
+import BannerJogo from "./BannerJogo";
 import Erro404 from "../pages/Error404";
 import {detalhesJogoData} from "../../demodata/DemoData";
 

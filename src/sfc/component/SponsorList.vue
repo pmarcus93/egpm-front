@@ -50,7 +50,7 @@
 </template>
 
 <script>
-    import Sponsor from "../itens/Sponsor";
+    import Sponsor from "./Sponsor";
 
     export default {
         name: "Patrocinadores",

@@ -66,7 +66,7 @@
 <script>
     const ApoioApi = () => import( "@/services/ApoioApi");
     const VueRecaptcha = () => import( 'vue-recaptcha');
-    const HeaderSubScreen = () => import( "../itens/HeaderSubScreen");
+    const HeaderSubScreen = () => import( "../component/HeaderSubScreen");
     const ImgBanner = () => import( "../../assets/images/sponser-us-banner.jpeg");
 
     export default {

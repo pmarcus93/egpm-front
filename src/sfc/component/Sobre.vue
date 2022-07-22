@@ -23,8 +23,8 @@
 
 <script>
 
-import BlocoIcons from "../itens/IconesSobre";
-import Secao from "../itens/Section";
+import BlocoIcons from "./IconesSobre";
+import Secao from "./Section";
 import {sobreData} from "../../demodata/DemoData";
 
 export default {

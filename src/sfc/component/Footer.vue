@@ -17,10 +17,10 @@
 </template>
 
 <script>
-    const Rainbow = () => import("../itens/Rainbow");
+    const Rainbow = () => import("./Rainbow");
 
     export default {
-        name: "Rodape",
+        name: "Footer",
         components: {Rainbow}
     }
 </script>

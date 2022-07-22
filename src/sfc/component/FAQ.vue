@@ -19,8 +19,8 @@
 </template>
 
 <script>
-    import Question from "../itens/Question";
-    import Secao from "../itens/Section";
+    import Question from "./Question";
+    import Secao from "./Section";
     import {duvidasData} from "../../demodata/DemoData";
 
     export default {

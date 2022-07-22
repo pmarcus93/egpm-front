@@ -63,8 +63,8 @@
 </template>
 
 <script>
-    import Secao from "../itens/Section";
-    import Depoimento from "../itens/Testimonial";
+    import Secao from "./Section";
+    import Depoimento from "./Testimonial";
     import {depoimentosData} from "../../demodata/DemoData";
 
     export default {

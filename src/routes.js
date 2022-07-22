@@ -1,10 +1,10 @@
 // routes.js
 
-const Agenda = () => import ("./components/pages/Agenda");
-const Home = () => import ("./components/pages/Home");
-const Games = () => import ("./components/pages/Games");
-const DescricaoCampeonato = () => import ("./components/content/DescricaoCampeonato");
-const Error404 = () => import ("./components/pages/Error404");
+const Agenda = () => import ("./sfc/pages/Agenda");
+const Home = () => import ("./sfc/pages/Home");
+const Games = () => import ("./sfc/pages/Games");
+const DescricaoCampeonato = () => import ("./sfc/component/DescricaoCampeonato");
+const Error404 = () => import ("./sfc/pages/Error404");
 
 const routes = [
     {

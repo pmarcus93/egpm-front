@@ -12,8 +12,8 @@
 </template>
 
 <script>
-    import HeaderSubScreen from "../itens/HeaderSubScreen";
-    import Campeonatos from "../itens/GameList";
+    import HeaderSubScreen from "../component/HeaderSubScreen";
+    import Campeonatos from "../component/GameList";
     import ImgBanner from "../../assets/images/games-banner.jpeg";
 
     export default {

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    import SecaoTextoDireita from "../itens/SecaoTextoDireita";
+    import SecaoTextoDireita from "./SectionRightText";
     import {jogosData} from "../../demodata/DemoData";
 
     export default {

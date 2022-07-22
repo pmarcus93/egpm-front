@@ -21,8 +21,8 @@
 
 
 <script>
-const HeaderSubScreen = () => import("../itens/HeaderSubScreen");
-const AgendaDropDown = () => import("../itens/AgendaDropDown");
+const HeaderSubScreen = () => import("../component/HeaderSubScreen");
+const AgendaDropDown = () => import("../component/AgendaDropDown");
 import ImgBanner from "../../assets/images/agenda-banner.jpg";
 
 export default {

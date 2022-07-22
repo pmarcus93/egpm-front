@@ -22,16 +22,16 @@
 
 <script>
 
-    import Banner from "../content/Banner";
-    import Sobre from "../content/Sobre";
-    import Midia from "../content/Midia";
-    import Campeonatos from "../itens/GameList";
-    import Talks from "../content/Quizzes";
-    import Tournament from "../content/Tournament";
-    import FreePlay from "../content/FreePlay";
-    import FAQ from "../content/FAQ";
-    import Locale from "../content/Locale";
-    import ButtonTicket from "../itens/ButtonTicket";
+    import Banner from "../component/Banner";
+    import Sobre from "../component/Sobre";
+    import Midia from "../component/Midia";
+    import Campeonatos from "../component/GameList";
+    import Talks from "../component/Quizzes";
+    import Tournament from "../component/Tournament";
+    import FreePlay from "../component/FreePlay";
+    import FAQ from "../component/FAQ";
+    import Locale from "../component/Locale";
+    import ButtonTicket from "../component/ButtonTicket";
 
     export default {
         name: "Home",

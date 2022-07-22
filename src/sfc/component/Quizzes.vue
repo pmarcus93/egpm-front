@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import SecaoTextoEsquerda from "../itens/SecaoTextoEsquerda";
+    import SecaoTextoEsquerda from "./SectionLeftText";
     import {quizzesData} from "../../demodata/DemoData";
 
     export default {
