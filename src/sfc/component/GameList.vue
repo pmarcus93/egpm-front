@@ -10,11 +10,6 @@
               :iscampeonato="campeonato.bl_campeonato"
         />
       </div>
-      <div v-else-if="placeHolder" class="row">
-        <Game v-for="index in 9" :key="index"
-              :imagens="placeHolder.imagens"
-        />
-      </div>
     </div>
   </div>
 </template>
