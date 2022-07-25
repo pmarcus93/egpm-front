@@ -5,19 +5,16 @@
         <div class="col-sm-12 col-md-6 my-auto conteudo-texto">
           <h1 class="mb-4 titulo-secao">#EGMP3</h1>
           <h4>LOCAL</h4>
-          <span v-if="localizacao">
-                      {{ localizacao.st_local }} <br>
-                      {{ localizacao.st_endereco }} <br>
-                    </span>
-          <p v-else>
-            FAPAM, Faculdade De Pará de Minas <br>
-            R. Ricardo Marinho, 110 - São Geraldo, Pará de Minas - MG
-          </p>
-
+          <div v-if="localizacao">
+            <span>{{ localizacao.st_local }}</span> <br>
+            <span>{{ localizacao.st_endereco }}</span>
+          </div>
+          <br>
           <h4>DATAS & HORÁRIOS</h4>
-          <p v-if="diahorario.data">
-            <span v-for="(item) in diahorario.data">{{ item.st_diahorario }} <br></span>
-          </p>
+          <div v-if="diahorario.data">
+            <span>01/02/2022 - 09 às 18h</span> <br>
+            <span>02/02/2022 - 09 às 18h</span>
+          </div>
         </div>
         <div class="col-sm-12 col-md-6 mapa">
           <iframe
