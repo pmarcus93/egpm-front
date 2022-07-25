@@ -2,7 +2,7 @@
   <div class="fixed-top nav-wrapper">
     <nav class="navbar navbar-light bg-light container">
 
-      <router-link class="navbar-brand" to='/inicio' aria-current-value="Página Inicial">
+      <router-link class="navbar-brand" to='/home' aria-current-value="Página Inicial">
         <img src="../../assets/images/logoegpm3.webp"
              class="d-inline-block align-top egpm-logo"
              alt="Logo do EGPM">
@@ -40,7 +40,7 @@
     <div class="menu-mobile col-12 navbar bg-light animateslice" v-if="menuAtivo">
 
       <div class="col-12">
-        <router-link class="navbar-brand" to='/inicio'>
+        <router-link class="navbar-brand" to='/home'>
           <button class="btn btn btn-lg btn-link" v-on:click="toggleMenu">INÍCIO</button>
         </router-link>
       </div>
