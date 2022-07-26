@@ -8,7 +8,7 @@ const Error404 = () => import ("./sfc/pages/404");
 
 const routes = [
   {
-    path: '/home',
+    path: '/#',
     component: Home
   },
   {
