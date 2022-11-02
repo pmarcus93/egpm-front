@@ -1,22 +1,22 @@
 <template>
   <section>
-    <HeaderSubScreen
+    <SubscreenHeader
         titulo="Games"
         descricao="Confira trailers, imagens, regras dos campeonatos e detalhes dos games presentes no evento."
         :imagem="imgBanner">
-    </HeaderSubScreen>
+    </SubscreenHeader>
     <SectionGameList></SectionGameList>
   </section>
 </template>
 
 <script>
-import HeaderSubScreen from "../component/SubscreenHeader";
+import SubscreenHeader from "../component/SubscreenHeader";
 import SectionGameList from "../component/SectionGameList";
 import ImgBanner from "../../assets/images/games-banner.jpeg";
 
 export default {
   name: "CampeonatoTela",
-  components: {SectionGameList, HeaderSubScreen},
+  components: {SectionGameList, SubscreenHeader},
   data() {
     return {
       imgBanner: ImgBanner,

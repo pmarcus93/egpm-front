@@ -1,10 +1,10 @@
 <template>
   <div class="pagina-duvidas">
-    <HeaderSubScreen
+    <SubscreenHeader
         titulo="Nada por aqui..."
         descricao="Essa página não existe. Acesse o menu para navegar pelas opções!"
         :imagem="imgBanner"
-    ></HeaderSubScreen>
+    ></SubscreenHeader>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <section>
-    <HeaderSubScreen
+    <SubscreenHeader
         titulo="Agenda"
         descricao="Programe-se e aproveite ao máximo o #EGPM3!"
         :imagem="imgBanner"
@@ -21,12 +21,12 @@
 
 
 <script>
-const HeaderSubScreen = () => import("../component/SubscreenHeader");
+import SubscreenHeader from "../component/SubscreenHeader";
 import ImgBanner from "../../assets/images/agenda-banner.jpg";
 
 export default {
   name: "Agenda",
-  components: {HeaderSubScreen},
+  components: {SubscreenHeader},
   data() {
     return {
       imgBanner: ImgBanner,
