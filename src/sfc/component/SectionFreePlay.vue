@@ -13,7 +13,7 @@ import SecaoTextoDireita from "./SectionRightText";
 import {freePlayData} from "../../demodata/DemoData";
 
 export default {
-  name: "FreePlay",
+  name: "SectionFreePlay",
   components: {SecaoTextoDireita},
   data() {
     return {

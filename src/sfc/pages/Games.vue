@@ -5,18 +5,18 @@
         descricao="Confira trailers, imagens, regras dos campeonatos e detalhes dos games presentes no evento."
         :imagem="imgBanner">
     </HeaderSubScreen>
-    <Campeonatos></Campeonatos>
+    <SectionGameList></SectionGameList>
   </section>
 </template>
 
 <script>
 import HeaderSubScreen from "../component/SubscreenHeader";
-import Campeonatos from "../component/GameList";
+import SectionGameList from "../component/SectionGameList";
 import ImgBanner from "../../assets/images/games-banner.jpeg";
 
 export default {
   name: "CampeonatoTela",
-  components: {Campeonatos, HeaderSubScreen},
+  components: {SectionGameList, HeaderSubScreen},
   data() {
     return {
       imgBanner: ImgBanner,

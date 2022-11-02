@@ -19,7 +19,7 @@ import Game from "./Game";
 import {listaJogosData} from "../../demodata/DemoData";
 
 export default {
-  name: "Campeonatos",
+  name: "SectionGameList",
   components: {Game},
   data: function () {
     return {

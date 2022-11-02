@@ -15,7 +15,7 @@ import SecaoTextoDireita from "./SectionRightText";
 import {jogosData} from "../../demodata/DemoData";
 
 export default {
-  name: "Tournament",
+  name: "SectionTournament",
   components: {SecaoTextoDireita},
   data() {
     return {
