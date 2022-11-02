@@ -1,8 +1,7 @@
 import { createApp } from "vue";
 import { createRouter, createWebHashHistory } from 'vue-router';
 import routes from './routes';
-
-const App = () => import('./App.vue');
+import App from './App.vue';
 
 const app = createApp(App);
 

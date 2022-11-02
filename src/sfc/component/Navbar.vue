@@ -75,7 +75,7 @@
 </template>
 
 <script>
-const Rainbow = () => import("./Rainbow");
+import Rainbow from "@/sfc/component/Rainbow";
 
 export default {
   name: 'Navbar',
