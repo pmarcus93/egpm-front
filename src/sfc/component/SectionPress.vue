@@ -64,7 +64,7 @@ import Depoimento from "./Testimonial";
 import {depoimentosData} from "../../demodata/DemoData";
 
 export default {
-  name: 'Midia',
+  name: 'SectionPress',
   components: {Depoimento, Secao},
   data() {
     return {

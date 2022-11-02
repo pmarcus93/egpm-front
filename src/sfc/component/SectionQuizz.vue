@@ -13,7 +13,7 @@ import SecaoTextoEsquerda from "./SectionLeftText";
 import {quizzesData} from "../../demodata/DemoData";
 
 export default {
-  name: "Talks",
+  name: "Quizz",
   components: {SecaoTextoEsquerda},
   data() {
     return {
