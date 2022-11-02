@@ -49,13 +49,11 @@
 <script>
 
 import BannerJogo from "./GameBanner";
-import Erro404 from "../pages/404";
-import {detalhesJogoData} from "../../demodata/DemoData";
+import {detalhesJogoData} from "@/demodata/DemoData";
 
 export default {
   name: "DescricaoCampeonato",
   components: {
-    Erro404,
     BannerJogo
   },
   data() {

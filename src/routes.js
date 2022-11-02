@@ -3,7 +3,7 @@
 const Schedule = () => import ("./sfc/pages/Schedule");
 const Home = () => import ("./sfc/pages/Home");
 const Games = () => import ("./sfc/pages/Games");
-const DescricaoCampeonato = () => import ("./sfc/component/TournmentDescription");
+const TournamentDescription = () => import ("./sfc/component/TournamentDescription");
 const Error404 = () => import ("./sfc/pages/404");
 
 const routes = [
@@ -21,15 +21,14 @@ const routes = [
   },
   {
     path: '/games/:jogo',
-    component: DescricaoCampeonato
+    component: TournamentDescription
   },
   {
     path: '/schedule',
     component: Schedule
   },
-
   {
-    path: '*',
+    path: '/:pathMatch(.*)',
     component: Error404
   },
 ];

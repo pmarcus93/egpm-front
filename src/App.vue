@@ -9,8 +9,8 @@
 </template>
 
 <script>
-const Navbar = () => import("./sfc/component/Navbar");
-const Footer = () => import("./sfc/component/Footer");
+import Navbar from "@/sfc/component/Navbar";
+import Footer from "@/sfc/component/Footer";
 
 export default {
   name: 'app',

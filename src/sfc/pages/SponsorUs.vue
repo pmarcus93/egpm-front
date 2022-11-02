@@ -1,10 +1,10 @@
 <template>
   <section>
-    <HeaderSubScreen
+    <SubscreenHeader
         titulo="Seja um apoiador"
         descricao="Marque presença no maior evento de games da região! Preencha o formulário abaixo e entraremos em contato."
         :imagem="imgBanner"
-    ></HeaderSubScreen>
+    ></SubscreenHeader>
 
     <div class="container-fluid py-5">
       <div class="container">
@@ -64,14 +64,14 @@
 
 
 <script>
+import SubscreenHeader from "@/sfc/component/SubscreenHeader";
 const ApoioApi = () => import( "@/services/ApoioApi");
 const VueRecaptcha = () => import( 'vue-recaptcha');
-const HeaderSubScreen = () => import( "../component/SubscreenHeader");
 const ImgBanner = () => import( "../../assets/images/sponser-us-banner.jpeg");
 
 export default {
   name: "SejaApoiador",
-  components: {HeaderSubScreen, 'vue-recaptcha': VueRecaptcha},
+  components: {SubscreenHeader, 'vue-recaptcha': VueRecaptcha},
   data() {
     return {
       imgBanner: ImgBanner,
