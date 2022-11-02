@@ -9,12 +9,12 @@
 </template>
 
 <script>
-const HeaderSubScreen = () => import("../component/SubscreenHeader");
+import SubscreenHeader from "@/sfc/component/SubscreenHeader";
 const ImgBanner = () => import("../../assets/images/not-found-banner.jpeg");
 
 export default {
   name: "Erro404",
-  components: {HeaderSubScreen},
+  components: {SubscreenHeader},
   data() {
     return {
       imgBanner: ImgBanner,
