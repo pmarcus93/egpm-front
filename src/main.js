@@ -9,7 +9,7 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes,
   scrollBehavior: function () {
-    return {x: 0, y: 0};
+    return {left: 0, top: 0};
   }
 })
 
