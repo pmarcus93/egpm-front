@@ -4,12 +4,12 @@
       <Banner
           :button="btnticket"
       ></Banner>
-      <Sobre></Sobre>
-      <Tournament></Tournament>
-      <Campeonatos></Campeonatos>
-      <Talks></Talks>
-      <FreePlay></FreePlay>
-      <Midia></Midia>
+      <SectionAbout></SectionAbout>
+      <SectionTournament></SectionTournament>
+      <SectionGameList></SectionGameList>
+      <SectionQuizz></SectionQuizz>
+      <SectionFreePlay></SectionFreePlay>
+      <SectionPress></SectionPress>
       <FAQ></FAQ>
       <Locale></Locale>
       <ButtonTicket
@@ -23,15 +23,15 @@
 <script>
 
 import Banner from "../component/Banner";
-import Sobre from "../component/About";
-import Midia from "../component/Midia";
-import Campeonatos from "../component/GameList";
-import Talks from "../component/Quizzes";
-import Tournament from "../component/Tournament";
-import FreePlay from "../component/FreePlay";
+import SectionAbout from "../component/SectionAbout";
+import SectionPress from "../component/SectionPress";
+import SectionQuizz from "../component/SectionQuizz";
+import SectionTournament from "../component/SectionTournament";
+import SectionFreePlay from "../component/SectionFreePlay";
 import FAQ from "../component/FAQ";
 import Locale from "../component/Locale";
 import ButtonTicket from "../component/TicketButton";
+import SectionGameList from "../component/SectionGameList";
 
 export default {
   name: "Home",
@@ -45,15 +45,15 @@ export default {
     }
   },
   components: {
+    SectionQuizz,
+    SectionGameList,
+    SectionAbout,
+    SectionPress,
+    SectionFreePlay,
     ButtonTicket,
     Locale,
     FAQ,
-    FreePlay,
-    Tournament,
-    Talks,
-    Campeonatos,
-    Midia,
-    Sobre,
+    SectionTournament,
     Banner,
   },
 }

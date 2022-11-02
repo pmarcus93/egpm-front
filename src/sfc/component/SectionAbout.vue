@@ -24,7 +24,7 @@ import Secao from "./Section";
 import {sobreData} from "../../demodata/DemoData";
 
 export default {
-  name: 'About',
+  name: 'SectionAbout',
   components: {BlocoIcons, Secao},
   data() {
     return {
