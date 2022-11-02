@@ -1,22 +1,19 @@
-import Vue from "@vue/compat";
-import VueRouter from 'vue-router';
+import { createApp } from "vue";
+import { createRouter, createWebHashHistory } from 'vue-router';
 import routes from './routes';
 
 const App = () => import('./App.vue');
 
-Vue.use(VueRouter);
+const app = createApp(App);
 
-const router = new VueRouter({
-  mode: 'history',
+const router = createRouter({
+  history: createWebHashHistory(),
   routes,
-  scrollBehavior() {
+  scrollBehavior: function () {
     return {x: 0, y: 0};
   }
-});
+})
 
-Vue.config.productionTip = false;
+app.use(router)
 
-new Vue({
-  router,
-  render: h => h(App),
-}).$mount('#app');
+app.mount('#app')
