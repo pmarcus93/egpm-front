@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^3.0.1",
-    "axios": "^1.6.0",
+    "axios": "^1.7.4",
     "bootstrap": "^4.6.0",
     "rollup-plugin-vue": "^6.0.0",
     "vite": "^3.2.10",
