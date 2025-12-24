@@ -1,13 +1,12 @@
-import {defineConfig} from "vite";
-import vue from '@vitejs/plugin-vue';
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
 const path = require("path");
 
 export default defineConfig({
-  plugins: [vue({
-  })],
+  plugins: [vue({})],
   resolve: {
-    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
+    extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
@@ -15,15 +14,18 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `
-                    @import "@/styles/_variables.scss";
-                    @import "@/styles/_mixins.scss";
-                    @import "@/styles/_typography.scss";
-                `
-      }
-    }
+        additionalData: `@use "@/styles" as *;`,
+        silenceDeprecations: [
+          "import",
+          "global-builtin",
+          "color-functions",
+          "if-function",
+          "abs-percent",
+        ],
+      },
+    },
   },
   build: {
-    rollupOptions: {}
-  }
-})
+    rollupOptions: {},
+  },
+});
