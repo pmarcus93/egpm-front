@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <Navbar/>
-    <div class="site-contents">
+    <main class="site-contents">
       <router-view/>
-    </div>
+    </main>
     <Footer/>
   </div>
 </template>
@@ -38,12 +38,19 @@ export default {
 @import "bootstrap/scss/card";
 @import "bootstrap/scss/_type";
 
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 h1 {
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .site-contents {
+  flex: 1;
   margin-top: 62px;
 }
 

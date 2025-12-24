@@ -1,31 +1,45 @@
-![Código Fonte do Site 3º Encontro Gamer De Pará de Minas. Vue + Webpack](https://user-images.githubusercontent.com/25160385/57738272-2d0c0080-7685-11e9-80a9-756e1e97dc9a.jpg)
+![EGPM - 3rd Gamer Meeting of Pará de Minas. Vue + Vite](https://user-images.githubusercontent.com/25160385/57738272-2d0c0080-7685-11e9-80a9-756e1e97dc9a.jpg)
 
-## Do que se trata?
-Este é o repositório do site do terceiro Encontro Gamer de Pará de Minas, realizado pela FAPAM.
-Trabalho interdisciplinar desenvolvido pelos alunos Marcus, Lucas e Eduardo.
+## About
 
-v2 (atual) - Vue 3x + Vite
-v1 - Vue.JS 2x + Webpack
+This is the website repository for the 3rd Gamer Meeting of Pará de Minas (Encontro Gamer de Pará de Minas - EGPM), a gaming event organized by FAPAM (Faculdade de Pará de Minas) in Brazil.
 
-## Requerimentos
-- Node.js
+The project was originally developed as an interdisciplinary academic work by students Marcus, Lucas, and Eduardo. It served as the official website for the event, providing information about tournaments, games, schedules, and more.
 
-## Como instalar o projeto?
-- Faça o clone do repositório
-- Abra o terminal de sua preferência, navegue até a pasta do projeto e instale as dependências com
+**This repository is kept public for preservation purposes.**
 
-```
+**Demo:** https://egpm.netlify.app/
+
+## Requirements
+
+- Node.js >= 18.0.0
+
+## Installation
+
+Clone the repository and install dependencies:
+
+```bash
 npm install
 ```
 
-## Desenvolvimento & Deploy
-Para abrir um servidor local de desenvolvimento com hot-reloading, execute
+## Development
 
-```
+Start the local development server with hot-reloading:
+
+```bash
 npm run dev
 ```
 
-Para gerar os arquivos de produção, execute
-```
+## Build
+
+Generate production files:
+
+```bash
 npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run serve
 ```
